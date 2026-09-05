@@ -17,8 +17,7 @@
   --radius-sm: 4px;
   --radius-md: 8px;
   --radius-lg: 12px;
-  --bg-obsidian: #0f1117;
-  --bg-midnight: #171923;
+  --bg-canvas: #ffffff;
   --bg-cream: #fff9d5;
   --bg-ivory: #fffdf5;
   --bg-white: #fffdf0;
@@ -45,7 +44,7 @@
   body {
     margin: 0;
     padding: 0;
-    background-color: #0f1117;
+    background-color: #ffffff;
     color: #111118;
     font-family: 'Plus Jakarta Sans', sans-serif;
     -webkit-font-smoothing: antialiased;
