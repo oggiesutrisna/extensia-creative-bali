@@ -1,10 +1,12 @@
 /**
- * Extensia Creative Bali — Main Script & Tailwind Configuration
+ * Extensia Creative Bali — Main Script & Tailwind Configuration (CDN fallback only)
+ * Production uses assets/css/compiled.css. This config is ignored when CDN is removed.
  */
 
 // ==========================================================================
-// 1. Tailwind CSS Configuration
+// 1. Tailwind CSS Configuration (guarded for compiled.css production mode)
 // ==========================================================================
+if (typeof tailwind !== "undefined") {
 tailwind.config = {
   darkMode: "class",
   theme: {
@@ -63,6 +65,7 @@ tailwind.config = {
     },
   },
 };
+} // end CDN guard
 
 // ==========================================================================
 // 2. Interactive Features
@@ -154,4 +157,44 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+
+  // --- Language Switcher (ID / EN) ---
+  const initLanguageSwitcher = () => {
+    const btnId = document.getElementById("btn-lang-id");
+    const btnEn = document.getElementById("btn-lang-en");
+    if (!btnId || !btnEn) return;
+
+    const setLanguage = (lang) => {
+      document.documentElement.lang = lang;
+      try {
+        localStorage.setItem("extensia_lang", lang);
+        localStorage.setItem("zivopos_preferred_lang", lang);
+      } catch (e) {}
+
+      if (lang === "en") {
+        btnEn.classList.add("bg-[#D4FF00]", "border", "border-[#111118]");
+        btnEn.classList.remove("bg-transparent");
+        btnId.classList.remove("bg-[#D4FF00]", "border", "border-[#111118]");
+        btnId.classList.add("bg-transparent");
+      } else {
+        btnId.classList.add("bg-[#D4FF00]", "border", "border-[#111118]");
+        btnId.classList.remove("bg-transparent");
+        btnEn.classList.remove("bg-[#D4FF00]", "border", "border-[#111118]");
+        btnEn.classList.add("bg-transparent");
+      }
+    };
+
+    btnId.addEventListener("click", () => setLanguage("id"));
+    btnEn.addEventListener("click", () => setLanguage("en"));
+
+    // Check saved preference
+    try {
+      const savedLang = localStorage.getItem("extensia_lang") || localStorage.getItem("zivopos_preferred_lang");
+      if (savedLang === "en" || savedLang === "id") {
+        setLanguage(savedLang);
+      }
+    } catch (e) {}
+  };
+
+  initLanguageSwitcher();
 });

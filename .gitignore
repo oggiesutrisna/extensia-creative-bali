@@ -1,0 +1,7 @@
+node_modules/
+.npm/
+*.log
+.DS_Store
+Thumbs.db
+# Keep optimized build output committed for zero-config Vercel static deploy
+!assets/css/compiled.css

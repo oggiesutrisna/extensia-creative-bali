@@ -1,0 +1,24 @@
+{
+  "name": "Extensia Creative Bali",
+  "short_name": "Extensia Bali",
+  "description": "Studio Pengembangan Aplikasi & Software Kustom di Bali — Laravel, TanStack, Python.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFF9D5",
+  "theme_color": "#FFF9D5",
+  "lang": "id",
+  "icons": [
+    {
+      "src": "assets/images/extensia-logo-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/images/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

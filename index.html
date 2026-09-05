@@ -5,349 +5,495 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <title>Extensia Creative Bali — Custom App Studio #1 di Bali</title>
   <meta name="description" content="Extensia Creative Bali: Solusi Cerdas Aplikasi Kustom untuk Efisiensi dan Kemudahan Tracking Bisnis Anda. Dibuat di Bali dengan standar arsitektur modern." />
-  <link rel="icon" type="image/png" href="assets/images/extensia-creative-bali-logo-no-bg.png" />
+  <link rel="canonical" href="https://extensia-creative-bali.vercel.app/" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Extensia Creative Bali" />
+  <meta name="theme-color" content="#FFF9D5" />
+  <meta name="geo.region" content="ID-BA" />
+  <meta name="geo.placename" content="Canggu, Bali" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Extensia Creative Bali" />
+  <meta property="og:title" content="Extensia Creative Bali — Custom App Studio #1 di Bali" />
+  <meta property="og:description" content="Arsitektur aplikasi berkinerja tinggi untuk Beach Club, Hospitality & Ritel di Bali. 50+ sistem beroperasi, SLA 99.9%." />
+  <meta property="og:url" content="https://extensia-creative-bali.vercel.app/" />
+  <meta property="og:image" content="https://extensia-creative-bali.vercel.app/assets/images/og-cover.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="id_ID" />
+  <meta property="og:locale:alternate" content="en_US" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Extensia Creative Bali — Custom App Studio #1 di Bali" />
+  <meta name="twitter:description" content="Custom software, POS multi-outlet, villa & fleet systems. Built in Bali." />
+  <meta name="twitter:image" content="https://extensia-creative-bali.vercel.app/assets/images/og-cover.jpg" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+
+  <!-- Structured data: ProfessionalService -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Extensia Creative Bali",
+    "url": "https://extensia-creative-bali.vercel.app/",
+    "description": "Studio pengembangan aplikasi & software kustom di Bali (Canggu & Denpasar). Laravel 11, TanStack, Python.",
+    "email": "info@extensiacreativebali.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Canggu",
+      "addressRegion": "Bali",
+      "addressCountry": "ID"
+    },
+    "areaServed": "Bali",
+    "priceRange": "$$"
+  }
+  </script>
+
+  <!-- GA4 placeholder: replace G-XXXXXXX with real ID, then uncomment -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
+  </script>
+  -->
+  <!-- Google Search Console verification placeholder -->
+  <!-- <meta name="google-site-verification" content="PASTE_TOKEN_HERE" /> -->
 
   <!-- Google Fonts -->
   <!-- Typography Fonts (Clash Display + Plus Jakarta Sans + Space Mono) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Space+Mono:wght@700&amp;display=swap" rel="stylesheet" />
-  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700,800&amp;display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;display=swap" rel="stylesheet" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Space+Mono:wght@700&amp;display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Space+Mono:wght@700&amp;display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Space+Mono:wght@700&amp;display=swap" rel="stylesheet" /></noscript>
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700,800&amp;display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700,800&amp;display=swap" rel="stylesheet" /></noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;display=swap" rel="stylesheet" /></noscript>
 
   <!-- Custom Styles -->
   <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/compiled.css" />
 
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Production Tailwind: compiled.css (CDN removed for performance).
+       Regenerate with `npm run build:css` after editing HTML/JS.
+       CDN fallback kept commented for emergency debugging: -->
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
-  <!-- Tailwind Configuration & Scripts -->
-  <script src="assets/js/script.js"></script>
+  <!-- Site Scripts -->
+  <script defer src="assets/js/script.js"></script>
 </head>
 
 <body class="bg-[#FFFFFF] font-body text-[#111118] min-h-screen p-2 sm:p-4 lg:p-6 selection:bg-[#D4FF00] selection:text-[#111118]">
 
   <!-- ============================== MASTER CONTAINER ============================== -->
-  <div class="max-w-[1560px] mx-auto bg-[#FFF9D5] border-[3px] border-[#111118] shadow-[8px_8px_0px_#111118] rounded-xl overflow-hidden">
-    <div class="grid grid-cols-1 lg:grid-cols-12 min-h-[920px] border-b-[3px] border-[#111118]">
+  <div class="max-w-[1560px] mx-auto flex flex-col gap-5 sm:gap-7 lg:gap-9">
+    <!-- ========================================================================
+         HERO SECTION: FULL-WIDTH EXECUTIVE ARCHITECTURE & TECH ART SHOWCASE
+         ======================================================================== -->
+    <section class="p-6 sm:p-10 lg:p-12 flex flex-col justify-between relative overflow-hidden bg-[#FFF9D5] border-[3px] border-[#111118] shadow-[4px_4px_0px_#111118] sm:shadow-[6px_6px_0px_#111118] rounded-xl min-h-[660px] lg:min-h-[720px]">
 
-      <!-- ========================================================================
-           LEFT COLUMN: HERO, LOGO, HEADLINE & BALINESE TECH ART
-           ======================================================================== -->
-      <section class="lg:col-span-7 xl:col-span-7 p-5 sm:p-8 lg:p-10 flex flex-col justify-between relative overflow-hidden bg-[#FFF9D5] min-h-[750px] lg:min-h-full">
+      <!-- Full-Width Studio Header & Navigation -->
+      <header class="flex flex-wrap items-center justify-between gap-4 z-20 w-full">
+        <!-- Logo: Official Extensia Creative Bali Emblem + Wordmark -->
+        <a href="#" class="flex items-center gap-3 group">
+          <img
+            src="assets/images/extensia-logo-512.png"
+            alt="Extensia Creative Bali Official Logo"
+            width="96"
+            height="96"
+            fetchpriority="high"
+            decoding="async"
+            class="h-10 sm:h-12 w-auto object-contain transition-transform group-hover:scale-105 filter drop-shadow-[1px_1px_0px_#111118]"
+          />
+          <div class="flex flex-col justify-center">
+            <span class="font-heading font-extrabold text-[20px] sm:text-[23px] leading-[1.05] tracking-tight text-[#111118]">Extensia Creative Bali</span>
+            <span class="font-mono font-bold text-[9px] sm:text-[10px] leading-tight tracking-[0.08em] uppercase text-[#111118]/80">
+              <span class="lang-en">SOFTWARE ARCHITECTURE &amp; ENGINEERING • BALI</span>
+              <span class="lang-id">ARSITEKTUR &amp; REKAYASA PERANGKAT LUNAK • BALI</span>
+            </span>
+          </div>
+        </a>
 
-        <!-- Top Header & Navigation -->
-        <header class="flex flex-wrap items-center justify-between gap-4 z-20">
-          <!-- Logo: Official Extensia Creative Bali Emblem + Wordmark -->
-          <a href="#" class="flex items-center gap-3 group">
-            <img
-              src="assets/images/extensia-creative-bali-logo-no-bg.png"
-              alt="Extensia Creative Bali Official Logo"
-              class="h-10 sm:h-12 w-auto object-contain transition-transform group-hover:scale-105 filter drop-shadow-[1px_1px_0px_#111118]"
-            />
-            <div class="flex flex-col justify-center">
-              <span class="font-heading font-extrabold text-[20px] sm:text-[23px] leading-[1.05] tracking-tight text-[#111118]">Extensia Creative Bali</span>
-              <span class="font-mono font-bold text-[9px] sm:text-[10px] leading-tight tracking-[0.08em] uppercase text-[#111118]/80">SOFTWARE ARCHITECTURE &amp; ENGINEERING • BALI</span>
-            </div>
+        <!-- Executive Studio Navbar + Language Switcher -->
+        <div class="flex flex-wrap items-center gap-2 sm:gap-3">
+          <nav class="flex flex-wrap items-center gap-1.5 sm:gap-2" data-active-classes="bg-[#D4FF00] text-[#111118]">
+            <a aria-current="page" class="font-mono text-[11px] sm:text-[12px] font-bold px-3 py-1.5 bg-[#D4FF00] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-md transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none" data-path="services" href="#capabilities">
+              <span class="lang-en">SERVICES</span><span class="lang-id">LAYANAN</span>
+            </a>
+            <a class="font-mono text-[11px] sm:text-[12px] font-bold px-3 py-1.5 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-md hover:bg-[#D4FF00] transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none" data-path="projects" href="#projects">
+              <span class="lang-en">SELECTED WORK</span><span class="lang-id">PORTOFOLIO</span>
+            </a>
+            <a class="font-mono text-[11px] sm:text-[12px] font-bold px-3 py-1.5 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-md hover:bg-[#D4FF00] transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none" data-path="capabilities" href="#capabilities">
+              <span class="lang-en">CAPABILITIES</span><span class="lang-id">KAPABILITAS</span>
+            </a>
+            <a class="font-mono text-[11px] sm:text-[12px] font-bold px-3 py-1.5 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-md hover:bg-[#D4FF00] transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none" data-path="methodology" href="#methodology">
+              <span class="lang-en">METHODOLOGY</span><span class="lang-id">METODOLOGI</span>
+            </a>
+            <a class="font-mono text-[11px] sm:text-[12px] font-bold px-3 py-1.5 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-md hover:bg-[#D4FF00] transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none" data-path="contact" href="#contact">
+              <span class="lang-en">CONTACT</span><span class="lang-id">KONTAK</span>
+            </a>
+          </nav>
+
+          <!-- Interactive Neubrutalist Language Switcher (ID / EN) -->
+          <div class="inline-flex items-center p-1 bg-[#FFFDF0] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg font-mono text-[11px] font-bold flex-shrink-0" role="group" aria-label="Pilih Bahasa / Language Selection">
+            <button type="button" id="btn-lang-id" class="lang-btn px-2 sm:px-2.5 py-1 bg-[#D4FF00] text-[#111118] border border-[#111118] rounded transition-all cursor-pointer">ID</button>
+            <button type="button" id="btn-lang-en" class="lang-btn px-2 sm:px-2.5 py-1 bg-transparent text-[#111118] rounded hover:bg-[#FFF9D5] transition-all cursor-pointer">EN</button>
+          </div>
+        </div>
+      </header>
+
+      <!-- Hero Body: Full-Width Centered Executive Narrative Flow -->
+      <div class="max-w-[960px] mx-auto flex flex-col items-center text-center gap-6 my-auto py-8 sm:py-14 z-20 w-full">
+        <!-- Engineered System Status Bar -->
+        <div class="flex flex-wrap items-center justify-center gap-2">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-md font-mono text-[10px] sm:text-[11px] font-bold">
+            <span class="w-2.5 h-2.5 bg-[#10B981] rounded-full animate-pulse border border-[#059669] flex-shrink-0"></span>
+            <span>
+              <span class="lang-en"><span class="whitespace-nowrap">SYSTEM STATUS: PRODUCTION OPERATIONAL</span> <span class="whitespace-nowrap">(DPS-01)</span></span>
+              <span class="lang-id"><span class="whitespace-nowrap">STATUS SISTEM: OPERASIONAL PRODUKSI</span> <span class="whitespace-nowrap">(DPS-01)</span></span>
+            </span>
+          </div>
+          <div class="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-[#D4FF00] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-md font-mono text-[10px] sm:text-[11px] font-bold">
+            <span class="lang-en">SPRINT CAPACITY: ACTIVE</span>
+            <span class="lang-id">KAPASITAS SPRINT: AKTIF</span>
+          </div>
+          <div class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-md font-mono text-[10px] sm:text-[11px] font-bold">
+            <span id="bali-time">BALI TIME (WITA): --:--</span>
+          </div>
+        </div>
+
+        <!-- Heavy Clash Display Executive Headline (Centered) -->
+        <h1 class="font-heading font-extrabold text-[32px] sm:text-[44px] md:text-[52px] lg:text-[58px] leading-[1.08] tracking-tight uppercase text-[#111118] max-w-[920px]">
+          <span class="lang-en">
+            HIGH-PERFORMANCE APPLICATION ARCHITECTURE &amp;<br class="hidden sm:inline" />
+            <span class="bg-[#D4FF00] px-3.5 py-1 inline-flex items-center gap-1.5 border-2 border-[#111118] shadow-[3px_3px_0px_#111118] -rotate-1 my-1"><span>BUSINESS</span><span>SYSTEMS</span></span> <span class="inline-flex items-center gap-1.5"><span>IN</span><span>BALI</span></span>
+          </span>
+          <span class="lang-id">
+            ARSITEKTUR APLIKASI BERKINERJA TINGGI &amp;<br class="hidden sm:inline" />
+            <span class="bg-[#D4FF00] px-3.5 py-1 inline-flex items-center gap-1.5 border-2 border-[#111118] shadow-[3px_3px_0px_#111118] -rotate-1 my-1"><span>SISTEM</span><span>BISNIS</span></span> <span class="inline-flex items-center gap-1.5"><span>DI</span><span>BALI</span></span>
+          </span>
+        </h1>
+
+        <!-- Executive B2B Subtitle (Centered) -->
+        <p class="font-body text-[14px] sm:text-[16px] md:text-[17.5px] text-[#111118]/85 font-medium leading-relaxed max-w-[760px] mx-auto">
+          <span class="lang-en">
+            We architect and engineer enterprise-grade custom software systems for Beach Clubs, Luxury Hospitality, and modern Retail in Bali. High-performance, offline-ready, and seamlessly integrated with your operational ecosystem.
+          </span>
+          <span class="lang-id">
+            Kami merancang dan membangun arsitektur perangkat lunak kustom kelas enterprise untuk Beach Club, Luxury Hospitality, dan Ritel modern di Bali. Berkinerja tinggi, offline-ready, dan terintegrasi penuh dengan ekosistem operasional Anda.
+          </span>
+        </p>
+
+        <!-- Executive Conversion CTA & Trust Badges (Centered) -->
+        <div class="flex flex-col items-center justify-center gap-4 pt-2 w-full">
+          <!-- Electric Acid Lime Primary CTA (Canonical Neubrutalist Physics) -->
+          <a href="https://wa.me/6285338000872?text=Halo%20Extensia%20Bali,%20saya%20tertarik%20konsultasi%20arsitektur%20aplikasi" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2.5 font-heading font-extrabold text-[12.5px] sm:text-[15px] uppercase px-5 sm:px-7 py-3.5 sm:py-4 bg-[#D4FF00] text-[#111118] border-[2.5px] border-[#111118] shadow-[4px_4px_0px_#111118] rounded-xl hover:bg-[#bcf000] hover:shadow-[6px_6px_0px_#111118] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-[3px] active:translate-y-[3px] active:shadow-none transition-all cursor-pointer">
+            <span class="lang-en inline-flex items-center gap-1.5 sm:gap-2">
+              <span>SCHEDULE</span>
+              <span>ARCHITECTURE</span>
+              <span>CONSULTATION</span>
+            </span>
+            <span class="lang-id inline-flex items-center gap-1.5 sm:gap-2">
+              <span>JADWALKAN</span>
+              <span>KONSULTASI</span>
+              <span>ARSITEKTUR</span>
+            </span>
+            <span class="font-mono text-[16px]">➔</span>
           </a>
 
-          <!-- Executive Studio Navbar -->
-          <nav class="flex flex-wrap items-center gap-1.5 sm:gap-2" data-active-classes="bg-[#D4FF00] text-[#111118]">
-            <a aria-current="page" class="font-mono text-[11px] sm:text-[12px] font-bold px-3 py-1.5 bg-[#D4FF00] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-md transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none" data-path="services" href="#capabilities">SERVICES</a>
-            <a class="font-mono text-[11px] sm:text-[12px] font-bold px-3 py-1.5 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-md hover:bg-[#D4FF00] transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none" data-path="projects" href="#projects">SELECTED WORK</a>
-            <a class="font-mono text-[11px] sm:text-[12px] font-bold px-3 py-1.5 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-md hover:bg-[#D4FF00] transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none" data-path="capabilities" href="#capabilities">CAPABILITIES</a>
-            <a class="font-mono text-[11px] sm:text-[12px] font-bold px-3 py-1.5 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-md hover:bg-[#D4FF00] transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none" data-path="methodology" href="#methodology">METHODOLOGY</a>
-            <a class="font-mono text-[11px] sm:text-[12px] font-bold px-3 py-1.5 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-md hover:bg-[#D4FF00] transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none" data-path="contact" href="#contact">CONTACT</a>
-          </nav>
-        </header>
+          <!-- Enterprise Trust Metrics Badges -->
+          <div class="flex flex-wrap items-center justify-center gap-2 font-mono text-[11px] sm:text-[12px] font-bold text-[#111118]">
+            <span class="px-3.5 py-1.5 bg-[#FFFDF0] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg">
+              <span class="lang-en">50+ Deployed Systems</span>
+              <span class="lang-id">50+ Sistem Beroperasi</span>
+            </span>
+            <span class="px-3.5 py-1.5 bg-[#FFFDF0] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg">
+              <span class="lang-en">99.9% Production SLA</span>
+              <span class="lang-id">SLA Produksi 99.9%</span>
+            </span>
+            <span class="px-3.5 py-1.5 bg-[#FFFDF0] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg">
+              <span class="lang-en">Zero Vendor Lock-in</span>
+              <span class="lang-id">Bebas Keterikatan Vendor</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <!-- Hero Content Area (Aligned to Top Cream Zone to prevent illustration overlap) -->
-        <div class="flex flex-col gap-3.5 sm:gap-4 z-20 mt-3 sm:mt-5 mb-auto max-w-[560px]">
-          <!-- Engineered System Status Bar -->
+    <!-- ========================================================================
+         STUDIO MATRIX SECTION: CAPABILITIES, STANDARDS, SPRINT & DIRECT CONTACT
+         (STACKED NATURALLY BELOW HERO)
+         ======================================================================== -->
+    <section id="capabilities" class="p-6 sm:p-10 lg:p-12 bg-[#FFFDF0] border-[3px] border-[#111118] shadow-[4px_4px_0px_#111118] sm:shadow-[6px_6px_0px_#111118] rounded-xl flex flex-col gap-8">
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div class="flex flex-col gap-2 max-w-[900px]">
           <div class="flex flex-wrap items-center gap-2">
-            <div class="inline-flex items-center gap-2 px-3 py-1 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-md font-mono text-[10px] sm:text-[11px] font-bold">
-              <span class="w-2.5 h-2.5 bg-[#10B981] rounded-full animate-pulse border border-[#059669]"></span>
-              <span>SYSTEM STATUS: PRODUCTION OPERATIONAL (DPS-01)</span>
-            </div>
-            <div class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-[#D4FF00] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-md font-mono text-[10px] sm:text-[11px] font-bold">
-              <span>SPRINT CAPACITY: ACTIVE</span>
-            </div>
-            <div class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-md font-mono text-[10px] sm:text-[11px] font-bold">
-              <span id="bali-time">BALI TIME (WITA): --:--</span>
-            </div>
+            <span class="font-mono text-[10px] sm:text-[11px] font-bold bg-[#D4FF00] text-[#111118] px-2.5 py-1 border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-md uppercase">
+              <span class="lang-en">ENGINEERING MATRIX</span>
+              <span class="lang-id">MATRIKS REKAYASA SISTEM</span>
+            </span>
+            <span class="font-mono text-[10px] sm:text-[11px] font-bold bg-[#FFF9D5] text-[#111118] px-2.5 py-1 border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-md uppercase">
+              <span class="lang-en">ENTERPRISE GOVERNANCE &amp; METHODOLOGY</span>
+              <span class="lang-id">TATA KELOLA ENTERPRISE &amp; METODOLOGI</span>
+            </span>
           </div>
-
-          <!-- Heavy Clash Display Executive Headline -->
-          <h1 class="font-heading font-extrabold text-[28px] sm:text-[36px] md:text-[42px] xl:text-[46px] leading-[1.08] tracking-tight uppercase text-[#111118]">
-            ARSITEKTUR APLIKASI BERKINERJA TINGGI &amp;<br />
-            <span class="bg-[#D4FF00] px-2.5 py-0.5 inline-block border-2 border-[#111118] shadow-[3px_3px_0px_#111118] -rotate-1">SISTEM BISNIS</span><br />
-            DI BALI
-          </h1>
-
-          <!-- Executive B2B Subtitle -->
-          <p class="font-body text-[13px] sm:text-[15px] xl:text-[15.5px] text-[#111118] font-medium leading-relaxed max-w-[500px] bg-[#FFF9D5]/90 sm:bg-transparent p-2 sm:p-0 rounded-md border border-[#111118]/30 sm:border-0 shadow-sm sm:shadow-none">
-            Kami merancang dan membangun arsitektur perangkat lunak kustom kelas enterprise untuk Beach Club, Luxury Hospitality, dan Ritel modern di Bali. Berkinerja tinggi, offline-ready, dan terintegrasi penuh dengan ekosistem operasional Anda.
+          <h2 class="font-heading font-extrabold text-[24px] sm:text-[30px] md:text-[34px] leading-tight uppercase text-[#111118]">
+            <span class="lang-en">TECHNICAL ARCHITECTURE, QUALITY STANDARDS &amp; SPRINT ROADMAP</span>
+            <span class="lang-id">ARSITEKTUR TEKNIS, STANDAR KUALITAS &amp; SPRINT ROADMAP</span>
+          </h2>
+          <p class="font-body text-[13px] sm:text-[15px] text-[#111118]/80 font-medium">
+            <span class="lang-en">Our modern software engineering foundation delivering high-performance, secure, and scalable systems for enterprises in Bali.</span>
+            <span class="lang-id">Fondasi rekayasa perangkat lunak modern kami untuk menghadirkan sistem berkinerja tinggi, aman, dan terukur bagi bisnis di Bali.</span>
           </p>
+        </div>
+      </div>
 
-          <!-- Executive Conversion CTA & Trust Badges -->
-          <div class="flex flex-wrap items-center gap-3 pt-1">
-            <!-- Electric Acid Lime Primary CTA (Canonical Neubrutalist Physics) -->
-            <a href="https://wa.me/6281234567890?text=Halo%20Extensia%20Bali,%20saya%20tertarik%20konsultasi%20arsitektur%20aplikasi" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 font-heading font-extrabold text-[13px] sm:text-[14px] uppercase px-6 py-3.5 bg-[#D4FF00] text-[#111118] border-[2.5px] border-[#111118] shadow-[4px_4px_0px_#111118] rounded-xl hover:bg-[#bcf000] hover:shadow-[6px_6px_0px_#111118] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-[3px] active:translate-y-[3px] active:shadow-none transition-all cursor-pointer">
-              <span>JADWALKAN KONSULTASI ARSITEKTUR</span>
-              <span class="font-mono text-[16px]">➔</span>
-            </a>
+      <!-- 3 Symmetrical Cards Grid -->
+      <div class="grid grid-cols-1 xl:grid-cols-3 gap-6 items-stretch">
 
-            <!-- Enterprise Trust Metrics Badges -->
-            <div class="flex flex-wrap items-center gap-1.5 font-mono text-[11px] sm:text-[12px] font-bold text-[#111118]">
-              <span class="px-2.5 py-1.5 bg-[#FFFDF0] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg">50+ Deployed Systems</span>
-              <span class="px-2.5 py-1.5 bg-[#FFFDF0] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg">99.9% Production SLA</span>
-              <span class="px-2.5 py-1.5 bg-[#FFFDF0] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg">Zero Vendor Lock-in</span>
+        <!-- Card 1: ARSITEKTUR & KAPABILITAS TEKNIS -->
+        <div class="bg-[#FFF9D5] border-[2.5px] border-[#111118] shadow-[4px_4px_0px_#111118] rounded-xl p-5 sm:p-6 flex flex-col gap-5 min-w-0">
+          <div class="flex flex-col gap-2">
+            <div class="flex flex-col items-start gap-3">
+              <h3 class="font-heading font-extrabold text-[15px] sm:text-[16px] uppercase tracking-wide text-[#111118]">
+                <span class="lang-en">TECHNICAL ARCHITECTURE &amp; CAPABILITIES</span>
+                <span class="lang-id">ARSITEKTUR &amp; KAPABILITAS TEKNIS</span>
+              </h3>
+              <span class="font-mono text-[9px] sm:text-[10px] font-bold bg-[#D4FF00] text-[#111118] px-2 py-0.5 border border-[#111118] rounded">
+                <span class="lang-en">ENGINEERING</span>
+                <span class="lang-id">REKAYASA</span>
+              </span>
             </div>
+            <p class="font-body text-[13px] text-[#111118]/80 font-medium leading-relaxed">
+              <span class="lang-en">Modern software engineering standards for enterprise scalability and operational reliability in Bali.</span>
+              <span class="lang-id">Standar rekayasa perangkat lunak modern untuk skalabilitas dan keandalan operasional bisnis di Bali.</span>
+            </p>
           </div>
 
-        </div>
-
-        <!-- Integrated Clean Balinese Tech Illustration Background -->
-        <div class="absolute inset-0 z-10 pointer-events-none select-none">
-          <img
-            src="assets/images/hero-bg-clean.webp"
-            alt="Extensia Creative Bali Art - Balinese Culture meets Modern Software Architecture"
-            class="w-full h-full object-cover object-bottom opacity-95"
-          />
-        </div>
-
-      </section>
-
-
-      <!-- ========================================================================
-           RIGHT COLUMN: 3 SYMMETRICAL CARDS + INTEGRATED FOOTER (SKY BLUE THEME)
-           ======================================================================== -->
-      <aside class="lg:col-span-5 xl:col-span-5 bg-[#FFFDF0] p-4 sm:p-5 lg:p-6 flex flex-col justify-between gap-3.5 border-t-[3px] lg:border-t-0 lg:border-l-[3px] border-[#111118] relative">
-
-        <!-- ==================== CARD 1: ARSITEKTUR & KAPABILITAS TEKNIS ==================== -->
-        <div id="capabilities" class="bg-[#FFF9D5] border-[2.5px] border-[#111118] shadow-[4px_4px_0px_#111118] rounded-lg p-3.5 sm:p-4 flex flex-col gap-2 hover:shadow-[6px_6px_0px_#111118] transition-all">
-          <div class="flex items-center justify-between">
-            <h2 class="font-heading font-extrabold text-[14px] sm:text-[16px] uppercase tracking-wide text-[#111118] flex items-center gap-1.5">
-              <span>ARSITEKTUR &amp; KAPABILITAS TEKNIS</span>
-            </h2>
-            <span class="font-mono text-[9px] sm:text-[10px] font-bold bg-[#D4FF00] text-[#111118] px-2 py-0.5 border border-[#111118] rounded">ENGINEERING MATRIX</span>
-          </div>
-          <p class="font-body text-[11.5px] sm:text-[12px] text-[#111118]/80 font-medium">
-            Standar rekayasa perangkat lunak modern untuk skalabilitas dan keandalan operasional bisnis di Bali.
-          </p>
-
-          <!-- 4 Discrete Engineering Modules -->
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-1">
+          <!-- 4 Discrete Engineering Modules (2x2 grid) -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-auto">
             <!-- Module 1 -->
-            <div class="bg-[#FFFDF0] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-md p-2 flex flex-col gap-1 hover:-translate-y-0.5 transition-transform">
-              <div class="w-6 h-6 rounded bg-[#2563EB] border border-[#111118] flex items-center justify-center text-white">
-                <span class="material-symbols-outlined text-[15px]">cloud</span>
+            <div class="bg-[#FFFDF0] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg p-4 flex flex-col gap-2">
+              <div class="w-7 h-7 rounded bg-[#2563EB] border border-[#111118] flex items-center justify-center text-white">
+                <span class="material-symbols-outlined text-[16px]">cloud</span>
               </div>
-              <h3 class="font-heading font-bold text-[10.5px] uppercase text-[#111118] leading-tight">Cloud REST &amp; GraphQL</h3>
-              <p class="font-body text-[9.5px] text-[#111118]/70 leading-snug">Microservices &amp; PostgreSQL.</p>
+              <h4 class="font-heading font-bold text-[13px] uppercase text-[#111118] leading-snug">Cloud REST &amp; GraphQL</h4>
+              <p class="font-body text-[12px] text-[#111118]/70 leading-relaxed">Microservices &amp; PostgreSQL.</p>
             </div>
 
             <!-- Module 2 -->
-            <div class="bg-[#FFFDF0] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-md p-2 flex flex-col gap-1 hover:-translate-y-0.5 transition-transform">
-              <div class="w-6 h-6 rounded bg-[#D4FF00] border border-[#111118] flex items-center justify-center text-[#111118]">
-                <span class="material-symbols-outlined text-[15px]">wifi_off</span>
+            <div class="bg-[#FFFDF0] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg p-4 flex flex-col gap-2">
+              <div class="w-7 h-7 rounded bg-[#D4FF00] border border-[#111118] flex items-center justify-center text-[#111118]">
+                <span class="material-symbols-outlined text-[16px]">wifi_off</span>
               </div>
-              <h3 class="font-heading font-bold text-[10.5px] uppercase text-[#111118] leading-tight">Offline-First Mobile</h3>
-              <p class="font-body text-[9.5px] text-[#111118]/70 leading-snug">PWA &amp; Native local cache sync.</p>
+              <h4 class="font-heading font-bold text-[13px] uppercase text-[#111118] leading-snug">Offline-First Mobile</h4>
+              <p class="font-body text-[12px] text-[#111118]/70 leading-relaxed">
+                <span class="lang-en">PWA &amp; Native cache sync.</span>
+                <span class="lang-id">Sinkronisasi cache PWA &amp; Native.</span>
+              </p>
             </div>
 
             <!-- Module 3 -->
-            <div class="bg-[#FFFDF0] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-md p-2 flex flex-col gap-1 hover:-translate-y-0.5 transition-transform">
-              <div class="w-6 h-6 rounded bg-[#FF9D50] border border-[#111118] flex items-center justify-center text-[#111118]">
-                <span class="material-symbols-outlined text-[15px]">point_of_sale</span>
+            <div class="bg-[#FFFDF0] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg p-4 flex flex-col gap-2">
+              <div class="w-7 h-7 rounded bg-[#FF9D50] border border-[#111118] flex items-center justify-center text-[#111118]">
+                <span class="material-symbols-outlined text-[16px]">point_of_sale</span>
               </div>
-              <h3 class="font-heading font-bold text-[10.5px] uppercase text-[#111118] leading-tight">POS &amp; Payment Gateway</h3>
-              <p class="font-body text-[9.5px] text-[#111118]/70 leading-snug">QRIS &amp; multi-terminal sync.</p>
+              <h4 class="font-heading font-bold text-[13px] uppercase text-[#111118] leading-snug">POS &amp; Payment Gateway</h4>
+              <p class="font-body text-[12px] text-[#111118]/70 leading-relaxed">
+                <span class="lang-en">QRIS &amp; multi-terminal sync.</span>
+                <span class="lang-id">Sinkronisasi QRIS &amp; multi-terminal.</span>
+              </p>
             </div>
 
             <!-- Module 4 -->
-            <div class="bg-[#FFFDF0] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-md p-2 flex flex-col gap-1 hover:-translate-y-0.5 transition-transform">
-              <div class="w-6 h-6 rounded bg-[#10B981] border border-[#111118] flex items-center justify-center text-white">
-                <span class="material-symbols-outlined text-[15px]">build_circle</span>
+            <div class="bg-[#FFFDF0] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg p-4 flex flex-col gap-2">
+              <div class="w-7 h-7 rounded bg-[#10B981] border border-[#111118] flex items-center justify-center text-white">
+                <span class="material-symbols-outlined text-[16px]">build_circle</span>
               </div>
-              <h3 class="font-heading font-bold text-[10.5px] uppercase text-[#111118] leading-tight">On-Site Deployment &amp; SLA</h3>
-              <p class="font-body text-[9.5px] text-[#111118]/70 leading-snug">Teknisi lokal siap on-site di Bali.</p>
+              <h4 class="font-heading font-bold text-[13px] uppercase text-[#111118] leading-snug">On-Site Deployment &amp; SLA</h4>
+              <p class="font-body text-[12px] text-[#111118]/70 leading-relaxed">
+                <span class="lang-en">Local Bali engineers on-site.</span>
+                <span class="lang-id">Teknisi lokal on-site di Bali.</span>
+              </p>
             </div>
           </div>
         </div>
 
-
-        <!-- ==================== CARD 2: STANDAR KUALITAS ENTERPRISE ==================== -->
-        <div id="standards" class="bg-[#FFF9D5] border-[2.5px] border-[#111118] shadow-[4px_4px_0px_#111118] rounded-lg p-3.5 sm:p-4 flex flex-col gap-2 hover:shadow-[6px_6px_0px_#111118] transition-all">
-          <div class="flex items-center justify-between">
-            <h2 class="font-heading font-extrabold text-[14px] sm:text-[16px] uppercase tracking-wide text-[#111118] flex items-center gap-1.5">
-              <span>STANDAR KUALITAS ENTERPRISE</span>
-            </h2>
-            <span class="font-mono text-[9px] sm:text-[10px] font-bold bg-[#3B82F6] text-white px-2 py-0.5 border border-[#111118] rounded">GOVERNANCE &amp; SECURITY</span>
+        <!-- Card 2: STANDAR KUALITAS ENTERPRISE -->
+        <div id="standards" class="bg-[#FFF9D5] border-[2.5px] border-[#111118] shadow-[4px_4px_0px_#111118] rounded-xl p-5 sm:p-6 flex flex-col gap-5 min-w-0">
+          <div class="flex flex-col gap-2">
+            <div class="flex flex-col items-start gap-3">
+              <h3 class="font-heading font-extrabold text-[15px] sm:text-[16px] uppercase tracking-wide text-[#111118]">
+                <span class="lang-en">ENTERPRISE QUALITY STANDARDS</span>
+                <span class="lang-id">STANDAR KUALITAS ENTERPRISE</span>
+              </h3>
+              <span class="font-mono text-[9px] sm:text-[10px] font-bold bg-[#3B82F6] text-white px-2 py-0.5 border border-[#111118] rounded">
+                <span class="lang-en">SECURITY</span>
+                <span class="lang-id">KEAMANAN</span>
+              </span>
+            </div>
+            <p class="font-body text-[13px] text-[#111118]/80 font-medium leading-relaxed">
+              <span class="lang-en">Enterprise governance compliance, bank-grade data security, and uncompromised performance guarantee.</span>
+              <span class="lang-id">Jaminan kepatuhan tata kelola, keamanan data tingkat bank, dan performa tinggi tanpa kompromi.</span>
+            </p>
           </div>
-          <p class="font-body text-[11.5px] sm:text-[12px] text-[#111118]/80 font-medium">
-            Jaminan kepatuhan tata kelola, keamanan data tingkat bank, dan performa tinggi tanpa kompromi.
-          </p>
 
-          <!-- 4 Governance Pillars -->
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-1">
+          <!-- 4 Governance Pillars (2x2 grid) -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-auto">
             <!-- Pillar 1 -->
-            <div class="bg-[#FFFDF0] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-md p-2 flex flex-col gap-1 hover:-translate-y-0.5 transition-transform">
-              <div class="w-6 h-6 rounded bg-[#10B981] border border-[#111118] flex items-center justify-center text-white">
-                <span class="material-symbols-outlined text-[15px]">verified</span>
+            <div class="bg-[#FFFDF0] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg p-4 flex flex-col gap-2">
+              <div class="w-7 h-7 rounded bg-[#10B981] border border-[#111118] flex items-center justify-center text-white">
+                <span class="material-symbols-outlined text-[16px]">verified</span>
               </div>
-              <h3 class="font-heading font-bold text-[10.5px] uppercase text-[#111118] leading-tight">99.9% Uptime Guarantee</h3>
-              <p class="font-body text-[9.5px] text-[#111118]/70 leading-snug">Infrastruktur cloud redundan.</p>
+              <h4 class="font-heading font-bold text-[13px] uppercase text-[#111118] leading-snug">
+                <span class="lang-en">99.9% Uptime Guarantee</span>
+                <span class="lang-id">Garansi 99.9% Uptime</span>
+              </h4>
+              <p class="font-body text-[12px] text-[#111118]/70 leading-relaxed">
+                <span class="lang-en">Redundant cloud infrastructure.</span>
+                <span class="lang-id">Infrastruktur cloud redundan.</span>
+              </p>
             </div>
 
             <!-- Pillar 2 -->
-            <div class="bg-[#FFFDF0] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-md p-2 flex flex-col gap-1 hover:-translate-y-0.5 transition-transform">
-              <div class="w-6 h-6 rounded bg-[#D4FF00] border border-[#111118] flex items-center justify-center text-[#111118]">
-                <span class="material-symbols-outlined text-[15px]">code</span>
+            <div class="bg-[#FFFDF0] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg p-4 flex flex-col gap-2">
+              <div class="w-7 h-7 rounded bg-[#D4FF00] border border-[#111118] flex items-center justify-center text-[#111118]">
+                <span class="material-symbols-outlined text-[16px]">code</span>
               </div>
-              <h3 class="font-heading font-bold text-[10.5px] uppercase text-[#111118] leading-tight">Full Code &amp; IP Ownership</h3>
-              <p class="font-body text-[9.5px] text-[#111118]/70 leading-snug">100% hak cipta milik klien.</p>
+              <h4 class="font-heading font-bold text-[13px] uppercase text-[#111118] leading-snug">
+                <span class="lang-en">Full Code &amp; IP Ownership</span>
+                <span class="lang-id">Kepemilikan Penuh Kode &amp; IP</span>
+              </h4>
+              <p class="font-body text-[12px] text-[#111118]/70 leading-relaxed">
+                <span class="lang-en">100% client intellectual property.</span>
+                <span class="lang-id">100% hak cipta milik klien.</span>
+              </p>
             </div>
 
             <!-- Pillar 3 -->
-            <div class="bg-[#FFFDF0] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-md p-2 flex flex-col gap-1 hover:-translate-y-0.5 transition-transform">
-              <div class="w-6 h-6 rounded bg-[#2563EB] border border-[#111118] flex items-center justify-center text-white">
-                <span class="material-symbols-outlined text-[15px]">security</span>
+            <div class="bg-[#FFFDF0] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg p-4 flex flex-col gap-2">
+              <div class="w-7 h-7 rounded bg-[#2563EB] border border-[#111118] flex items-center justify-center text-white">
+                <span class="material-symbols-outlined text-[16px]">security</span>
               </div>
-              <h3 class="font-heading font-bold text-[10.5px] uppercase text-[#111118] leading-tight">Bank-Grade Encryption</h3>
-              <p class="font-body text-[9.5px] text-[#111118]/70 leading-snug">TLS 1.3 &amp; proteksi AES-256.</p>
+              <h4 class="font-heading font-bold text-[13px] uppercase text-[#111118] leading-snug">
+                <span class="lang-en">Bank-Grade Encryption</span>
+                <span class="lang-id">Enkripsi Tingkat Bank</span>
+              </h4>
+              <p class="font-body text-[12px] text-[#111118]/70 leading-relaxed">
+                <span class="lang-en">TLS 1.3 &amp; AES-256 protection.</span>
+                <span class="lang-id">TLS 1.3 &amp; proteksi AES-256.</span>
+              </p>
             </div>
 
             <!-- Pillar 4 -->
-            <div class="bg-[#FFFDF0] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-md p-2 flex flex-col gap-1 hover:-translate-y-0.5 transition-transform">
-              <div class="w-6 h-6 rounded bg-[#FF9D50] border border-[#111118] flex items-center justify-center text-[#111118]">
-                <span class="material-symbols-outlined text-[15px]">monitoring</span>
+            <div class="bg-[#FFFDF0] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg p-4 flex flex-col gap-2">
+              <div class="w-7 h-7 rounded bg-[#FF9D50] border border-[#111118] flex items-center justify-center text-[#111118]">
+                <span class="material-symbols-outlined text-[16px]">monitoring</span>
               </div>
-              <h3 class="font-heading font-bold text-[10.5px] uppercase text-[#111118] leading-tight">24/7 Incident Response</h3>
-              <p class="font-body text-[9.5px] text-[#111118]/70 leading-snug">Monitoring proaktif &amp; siaga.</p>
+              <h4 class="font-heading font-bold text-[13px] uppercase text-[#111118] leading-snug">
+                <span class="lang-en">24/7 Incident Response</span>
+                <span class="lang-id">Respon Insiden 24/7</span>
+              </h4>
+              <p class="font-body text-[12px] text-[#111118]/70 leading-relaxed">
+                <span class="lang-en">Proactive monitoring &amp; standby.</span>
+                <span class="lang-id">Monitoring proaktif &amp; siaga.</span>
+              </p>
             </div>
           </div>
         </div>
 
-
-        <!-- ==================== CARD 3: METHODOLOGY / SPRINT ROADMAP ==================== -->
-        <div id="methodology" class="bg-[#FFF9D5] border-[2.5px] border-[#111118] shadow-[4px_4px_0px_#111118] rounded-lg p-3.5 sm:p-4 flex flex-col gap-2 hover:shadow-[6px_6px_0px_#111118] transition-all">
-          <div class="flex items-center justify-between">
-            <h2 class="font-heading font-extrabold text-[14px] sm:text-[16px] uppercase tracking-wide text-[#111118] flex items-center gap-1.5">
-              <span>METHODOLOGY &amp; SPRINT ROADMAP</span>
-            </h2>
-            <span class="font-mono text-[9px] sm:text-[10px] font-bold bg-[#D4FF00] text-[#111118] px-2 py-0.5 border border-[#111118] rounded">4-STAGE SPRINT</span>
+        <!-- Card 3: METHODOLOGY & SPRINT ROADMAP -->
+        <div id="methodology" class="bg-[#FFF9D5] border-[2.5px] border-[#111118] shadow-[4px_4px_0px_#111118] rounded-xl p-5 sm:p-6 flex flex-col gap-5 min-w-0">
+          <div class="flex flex-col gap-2">
+            <div class="flex flex-col items-start gap-3">
+              <h3 class="font-heading font-extrabold text-[15px] sm:text-[16px] uppercase tracking-wide text-[#111118]">
+                <span class="lang-en">METHODOLOGY &amp; SPRINT ROADMAP</span>
+                <span class="lang-id">METODOLOGI &amp; SPRINT ROADMAP</span>
+              </h3>
+              <span class="font-mono text-[9px] sm:text-[10px] font-bold bg-[#D4FF00] text-[#111118] px-2 py-0.5 border border-[#111118] rounded">
+                <span class="lang-en">4-STAGE SPRINT</span>
+                <span class="lang-id">SPRINT 4 TAHAP</span>
+              </span>
+            </div>
+            <p class="font-body text-[13px] text-[#111118]/80 font-medium leading-relaxed">
+              <span class="lang-en">Structured agile engineering lifecycle from technical blueprint to active production rollout.</span>
+              <span class="lang-id">Siklus rekayasa tangkas terstruktur dari konsepsi teknis hingga produksi aktif.</span>
+            </p>
           </div>
-          <p class="font-body text-[11.5px] sm:text-[12px] text-[#111118]/80 font-medium">
-            Siklus rekayasa tangkas terstruktur dari konsepsi teknis hingga produksi aktif.
-          </p>
 
-          <!-- 4 Structured Milestones -->
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-1">
+          <!-- 4 Structured Milestones (2x2 grid) -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-auto">
             <!-- Milestone 01 -->
-            <div class="bg-[#FFFDF0] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-md p-2 flex flex-col gap-1 hover:-translate-y-0.5 transition-transform relative">
-              <div class="flex items-center justify-between">
+            <div class="bg-[#FFFDF0] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg p-4 flex flex-col gap-2 relative">
+              <div class="flex flex-col items-start gap-3">
                 <span class="w-5 h-5 rounded bg-[#2563EB] border border-[#111118] font-mono font-bold text-[9px] flex items-center justify-center text-white">01</span>
-                <span class="material-symbols-outlined text-[14px] text-[#111118]/60">description</span>
+                <span class="material-symbols-outlined text-[15px] text-[#111118]/60">description</span>
               </div>
-              <h3 class="font-heading font-bold text-[10.5px] uppercase text-[#111118] leading-tight">Discovery &amp; Blueprint</h3>
-              <p class="font-body text-[9.5px] text-[#111118]/70 leading-snug">Arsitektur, skema DB &amp; PRD.</p>
+              <h4 class="font-heading font-bold text-[13px] uppercase text-[#111118] leading-snug">Discovery &amp; Blueprint</h4>
+              <p class="font-body text-[12px] text-[#111118]/70 leading-relaxed">
+                <span class="lang-en">Architecture, DB schema &amp; PRD.</span>
+                <span class="lang-id">Arsitektur, skema DB &amp; PRD.</span>
+              </p>
             </div>
 
             <!-- Milestone 02 -->
-            <div class="bg-[#FFFDF0] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-md p-2 flex flex-col gap-1 hover:-translate-y-0.5 transition-transform relative">
-              <div class="flex items-center justify-between">
+            <div class="bg-[#FFFDF0] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg p-4 flex flex-col gap-2 relative">
+              <div class="flex flex-col items-start gap-3">
                 <span class="w-5 h-5 rounded bg-[#D4FF00] border border-[#111118] font-mono font-bold text-[9px] flex items-center justify-center text-[#111118]">02</span>
-                <span class="material-symbols-outlined text-[14px] text-[#111118]/60">architecture</span>
+                <span class="material-symbols-outlined text-[15px] text-[#111118]/60">architecture</span>
               </div>
-              <h3 class="font-heading font-bold text-[10.5px] uppercase text-[#111118] leading-tight">Architecture &amp; Prototype</h3>
-              <p class="font-body text-[9.5px] text-[#111118]/70 leading-snug">Design system &amp; UI prototipe.</p>
+              <h4 class="font-heading font-bold text-[13px] uppercase text-[#111118] leading-snug">Architecture &amp; Prototype</h4>
+              <p class="font-body text-[12px] text-[#111118]/70 leading-relaxed">
+                <span class="lang-en">Design system &amp; UI prototype.</span>
+                <span class="lang-id">Design system &amp; UI prototipe.</span>
+              </p>
             </div>
 
             <!-- Milestone 03 -->
-            <div class="bg-[#FFFDF0] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-md p-2 flex flex-col gap-1 hover:-translate-y-0.5 transition-transform relative">
-              <div class="flex items-center justify-between">
+            <div class="bg-[#FFFDF0] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg p-4 flex flex-col gap-2 relative">
+              <div class="flex flex-col items-start gap-3">
                 <span class="w-5 h-5 rounded bg-[#FF9D50] border border-[#111118] font-mono font-bold text-[9px] flex items-center justify-center text-[#111118]">03</span>
-                <span class="material-symbols-outlined text-[14px] text-[#111118]/60">terminal</span>
+                <span class="material-symbols-outlined text-[15px] text-[#111118]/60">terminal</span>
               </div>
-              <h3 class="font-heading font-bold text-[10.5px] uppercase text-[#111118] leading-tight">Engineering &amp; QA</h3>
-              <p class="font-body text-[9.5px] text-[#111118]/70 leading-snug">Laravel, TanStack, stress test.</p>
+              <h4 class="font-heading font-bold text-[13px] uppercase text-[#111118] leading-snug">Engineering &amp; QA</h4>
+              <p class="font-body text-[12px] text-[#111118]/70 leading-relaxed">
+                <span class="lang-en">Laravel, TanStack, stress testing.</span>
+                <span class="lang-id">Laravel, TanStack, stress test.</span>
+              </p>
             </div>
 
             <!-- Milestone 04 -->
-            <div class="bg-[#FFFDF0] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-md p-2 flex flex-col gap-1 hover:-translate-y-0.5 transition-transform relative">
-              <div class="flex items-center justify-between">
+            <div class="bg-[#FFFDF0] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg p-4 flex flex-col gap-2 relative">
+              <div class="flex flex-col items-start gap-3">
                 <span class="w-5 h-5 rounded bg-[#10B981] border border-[#111118] font-mono font-bold text-[9px] flex items-center justify-center text-white">04</span>
-                <span class="material-symbols-outlined text-[14px] text-[#111118]/60">rocket_launch</span>
+                <span class="material-symbols-outlined text-[15px] text-[#111118]/60">rocket_launch</span>
               </div>
-              <h3 class="font-heading font-bold text-[10.5px] uppercase text-[#111118] leading-tight">Production Rollout</h3>
-              <p class="font-body text-[9.5px] text-[#111118]/70 leading-snug">Deploy multi-server &amp; SLA aktif.</p>
+              <h4 class="font-heading font-bold text-[13px] uppercase text-[#111118] leading-snug">Production Rollout</h4>
+              <p class="font-body text-[12px] text-[#111118]/70 leading-relaxed">
+                <span class="lang-en">Multi-server deploy &amp; active SLA.</span>
+                <span class="lang-id">Deploy multi-server &amp; SLA aktif.</span>
+              </p>
             </div>
           </div>
         </div>
 
+      </div>
 
-        <!-- ==================== CARD 4: STUDIO CONTACT STRIP ==================== -->
-        <footer id="contact" class="bg-[#FFF9D5] border-[2.5px] border-[#111118] shadow-[4px_4px_0px_#111118] rounded-lg p-3 sm:p-3.5 flex flex-col gap-2.5 relative overflow-hidden">
-          <!-- Top Row: Logo Emblem + Social Badges + WhatsApp CTA -->
-          <div class="flex flex-wrap items-center justify-between gap-2 z-10">
-            <!-- Emblem + Studio Lockup -->
-            <div class="flex items-center gap-2">
-              <img
-                src="assets/images/extensia-creative-bali-logo-no-bg.png"
-                alt="Extensia Bali Emblem"
-                class="h-7 w-auto object-contain"
-              />
-              <div class="flex flex-col">
-                <span class="font-heading font-extrabold text-[12px] leading-tight text-[#111118]">Extensia Studio</span>
-                <span class="font-mono text-[9px] text-[#111118]/70">Bali Architecture Center</span>
-              </div>
-            </div>
-
-            <!-- WhatsApp Direct Button (Canonical Physics) -->
-            <a href="https://wa.me/6281234567890?text=Halo%20Extensia%20Bali,%20saya%20tertarik%20konsultasi%20arsitektur%20aplikasi" target="_blank" rel="noopener" class="px-3 py-1.5 bg-[#D4FF00] hover:bg-[#bcf000] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded font-mono text-[10.5px] font-bold transition-all active:translate-x-0.5 active:translate-y-0.5 flex items-center gap-1.5 cursor-pointer">
-              <span>WHATSAPP DIRECT ➔</span>
-            </a>
-          </div>
-
-          <!-- Divider -->
-          <div class="w-full h-[1.5px] bg-[#111118]/15"></div>
-
-          <!-- Bottom Row: Copyright, Email, & Bali Tag -->
-          <div class="flex flex-col sm:flex-row items-center justify-between gap-2 font-mono text-[9.5px] sm:text-[10px] text-[#111118]/80 z-10 text-center sm:text-left pr-14">
-            <div>
-              &copy; 2026 <strong>Extensia Creative Bali</strong>. Enterprise Standards.
-            </div>
-            <div class="flex items-center gap-2">
-              <a href="mailto:info@extensiacreativebali.com" class="hover:underline text-[#111118]">info@extensiacreativebali.com</a>
-              <span>•</span>
-              <span class="font-bold text-[#111118]">CANGGU &amp; DENPASAR, BALI</span>
-            </div>
-          </div>
-
-          <!-- Corner Decorative Mandala Artwork -->
-          <img
-            src="assets/images/mandala-corner.webp"
-            alt="Balinese Mandala Corner Art"
-            class="absolute bottom-0 right-0 w-16 h-auto pointer-events-none select-none z-0 opacity-80"
-          />
-
-          <!-- Floating Frangipani (Bunga Jepun) Flower -->
-          <img
-            src="assets/images/frangipani.webp"
-            alt="Balinese Frangipani Flower"
-            class="absolute top-2 right-2 w-6 h-6 pointer-events-none select-none z-0 opacity-70 animate-spin"
-            style="animation-duration: 25s;"
-          />
-        </footer>
-
-      </aside>
-
-    </div>
+    </section>
     <!-- ========================================================================
          SECTION: SELECTED PROJECTS & PORTFOLIO SHOWCASE
          ======================================================================== -->
-    <section id="projects" class="p-6 sm:p-10 lg:p-12 bg-[#FFF9D5] flex flex-col gap-8 relative overflow-hidden">
+    <section id="projects" class="p-6 sm:p-10 lg:p-12 bg-[#FFF9D5] border-[3px] border-[#111118] shadow-[4px_4px_0px_#111118] sm:shadow-[6px_6px_0px_#111118] rounded-xl flex flex-col gap-8 relative overflow-hidden">
 
       <!-- Section Header -->
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
@@ -355,30 +501,45 @@
           <!-- Top Badges -->
           <div class="flex flex-wrap items-center gap-2">
             <div class="inline-flex items-center gap-1.5 px-3 py-1 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-md font-mono text-[10px] sm:text-[11px] font-bold">
-              <span>B2B CASE STUDIES</span>
+              <span class="lang-en">PROJECT SHOWCASE</span>
+              <span class="lang-id">PILIHAN PROYEK</span>
             </div>
             <div class="inline-flex items-center gap-1.5 px-3 py-1 bg-[#D4FF00] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-md font-mono text-[10px] sm:text-[11px] font-bold">
-              <span>PROVEN PRODUCTION IN BALI</span>
+              <span class="lang-en">PRODUCTS &amp; APP CONCEPTS</span>
+              <span class="lang-id">PRODUK &amp; KONSEP APLIKASI</span>
             </div>
           </div>
 
           <!-- Section Title -->
           <h2 class="font-heading font-extrabold text-[26px] sm:text-[36px] md:text-[42px] leading-[1.1] uppercase tracking-tight text-[#111118]">
-            ARSITEKTUR APLIKASI KUSTOM DENGAN <span class="bg-[#D4FF00] px-2.5 py-0.5 inline-block border-2 border-[#111118] shadow-[3px_3px_0px_#111118] -rotate-1">ROI TERUKUR</span>
+            <span class="lang-en">CUSTOM APPLICATION ARCHITECTURE WITH <span class="bg-[#D4FF00] px-2.5 py-0.5 inline-block border-2 border-[#111118] shadow-[3px_3px_0px_#111118] -rotate-1">MEASURABLE ROI</span></span>
+            <span class="lang-id">ARSITEKTUR APLIKASI KUSTOM DENGAN <span class="bg-[#D4FF00] px-2.5 py-0.5 inline-block border-2 border-[#111118] shadow-[3px_3px_0px_#111118] -rotate-1">ROI TERUKUR</span></span>
           </h2>
 
           <!-- Subtitle -->
           <p class="font-body text-[13.5px] sm:text-[15.5px] text-[#111118]/85 font-medium leading-relaxed">
-            Studi kasus implementasi sistem nyata untuk Beach Club ternama di Canggu, Luxury Hospitality di Ubud, hingga ritel multi-cabang di Bali.
+            <span class="lang-en">Explore our application portfolio and concepts for commerce, hospitality, fleet tracking, and nutrition.</span>
+            <span class="lang-id">Jelajahi portofolio dan konsep aplikasi untuk perdagangan, hospitality, pelacakan armada, hingga nutrisi dan gizi.</span>
           </p>
         </div>
 
         <!-- Interactive Category Filters -->
         <div class="flex flex-wrap items-center gap-2 self-start md:self-end" id="project-filters">
-          <button class="project-filter-btn px-3.5 py-1.5 bg-[#D4FF00] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg font-mono text-[11px] sm:text-[12px] font-bold active:translate-x-0.5 active:translate-y-0.5 transition-all cursor-pointer" data-category="all">ALL CASE STUDIES (4)</button>
-          <button class="project-filter-btn px-3.5 py-1.5 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg font-mono text-[11px] sm:text-[12px] font-bold hover:bg-[#D4FF00] active:translate-x-0.5 active:translate-y-0.5 transition-all cursor-pointer" data-category="pos">F&amp;B &amp; COMMERCE</button>
-          <button class="project-filter-btn px-3.5 py-1.5 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg font-mono text-[11px] sm:text-[12px] font-bold hover:bg-[#D4FF00] active:translate-x-0.5 active:translate-y-0.5 transition-all cursor-pointer" data-category="villa">HOSPITALITY</button>
-          <button class="project-filter-btn px-3.5 py-1.5 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg font-mono text-[11px] sm:text-[12px] font-bold hover:bg-[#D4FF00] active:translate-x-0.5 active:translate-y-0.5 transition-all cursor-pointer" data-category="tracking">LOGISTICS &amp; IOT</button>
+          <button class="project-filter-btn px-3.5 py-1.5 bg-[#D4FF00] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg font-mono text-[11px] sm:text-[12px] font-bold active:translate-x-0.5 active:translate-y-0.5 transition-all cursor-pointer" data-category="all">
+            <span class="lang-en">ALL PROJECTS (4)</span><span class="lang-id">SEMUA PROYEK (4)</span>
+          </button>
+          <button class="project-filter-btn px-3.5 py-1.5 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg font-mono text-[11px] sm:text-[12px] font-bold hover:bg-[#D4FF00] active:translate-x-0.5 active:translate-y-0.5 transition-all cursor-pointer" data-category="pos">
+            <span class="lang-en">F&amp;B &amp; COMMERCE</span><span class="lang-id">F&amp;B &amp; RITEL</span>
+          </button>
+          <button class="project-filter-btn px-3.5 py-1.5 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg font-mono text-[11px] sm:text-[12px] font-bold hover:bg-[#D4FF00] active:translate-x-0.5 active:translate-y-0.5 transition-all cursor-pointer" data-category="villa">
+            <span class="lang-en">HOSPITALITY</span><span class="lang-id">PERHOTELAN &amp; VILLA</span>
+          </button>
+          <button class="project-filter-btn px-3.5 py-1.5 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg font-mono text-[11px] sm:text-[12px] font-bold hover:bg-[#D4FF00] active:translate-x-0.5 active:translate-y-0.5 transition-all cursor-pointer" data-category="tracking">
+            <span class="lang-en">LOGISTICS &amp; IOT</span><span class="lang-id">LOGISTIK &amp; IOT</span>
+          </button>
+          <button class="project-filter-btn px-3.5 py-1.5 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg font-mono text-[11px] sm:text-[12px] font-bold hover:bg-[#D4FF00] active:translate-x-0.5 active:translate-y-0.5 transition-all cursor-pointer" data-category="nutrition">
+            <span class="lang-en">NUTRITION</span><span class="lang-id">NUTRISI &amp; GIZI</span>
+          </button>
         </div>
       </div>
 
@@ -416,13 +577,17 @@
             <!-- Content Area -->
             <div class="p-4 flex flex-col gap-2">
               <div class="flex flex-col">
-                <span class="font-mono text-[10.5px] font-bold text-[#2563EB] uppercase tracking-wide">F&amp;B &amp; Multi-Outlet Commerce</span>
+                <span class="font-mono text-[10.5px] font-bold text-[#2563EB] uppercase tracking-wide">
+                  <span class="lang-en">F&amp;B &amp; Multi-Outlet Commerce</span>
+                  <span class="lang-id">F&amp;B &amp; Perdagangan Multi-Outlet</span>
+                </span>
                 <a href="zivopos.html" class="hover:text-[#2563EB] transition-colors">
                   <h3 class="font-heading font-bold text-[17px] uppercase text-[#111118] leading-snug">zivoPOS — Cloud &amp; Multi-Outlet Engine</h3>
                 </a>
               </div>
               <p class="font-body text-[12.5px] text-[#111118]/80 leading-relaxed">
-                Sistem kasir &amp; inventaris terdistribusi untuk Beach Club dan F&amp;B skala besar di Bali dengan sinkronisasi offline seketika.
+                <span class="lang-en">Distributed POS &amp; inventory engine for Bali's premier beach clubs and multi-outlet F&amp;B with sub-second offline sync.</span>
+                <span class="lang-id">Sistem kasir &amp; inventaris terdistribusi untuk Beach Club dan F&amp;B skala besar di Bali dengan sinkronisasi offline seketika.</span>
               </p>
             </div>
           </div>
@@ -430,12 +595,12 @@
           <!-- Bottom Card Footer -->
           <div class="p-4 pt-0 flex flex-col gap-3">
             <div class="p-2 bg-[#FFF9D5] border border-[#111118] rounded-lg font-mono text-[10.5px] font-bold text-[#111118] flex items-center justify-between">
-              <span>120k+ Transaksi/Bln</span>
+              <span><span class="lang-en">120k+ Monthly Tx</span><span class="lang-id">120k+ Transaksi/Bln</span></span>
               <span class="text-[#059669]">● &lt; 0.8s Latency</span>
             </div>
             <a href="zivopos.html" class="w-full py-2.5 bg-[#D4FF00] hover:bg-[#bcf000] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg font-heading font-extrabold text-[12px] uppercase text-[#111118] text-center transition-all active:translate-x-[3px] active:translate-y-[3px] active:shadow-none flex items-center justify-center gap-1.5">
-              <span>PELAJARI CASE STUDY ZIVOPOS</span>
-              <span>➔</span>
+              <span class="lang-en">EXPLORE ZIVOPOS CASE STUDY ➔</span>
+              <span class="lang-id">PELAJARI CASE STUDY ZIVOPOS ➔</span>
             </a>
           </div>
         </article>
@@ -472,11 +637,15 @@
             <!-- Content Area -->
             <div class="p-4 flex flex-col gap-2">
               <div class="flex flex-col">
-                <span class="font-mono text-[10.5px] font-bold text-[#059669] uppercase tracking-wide">Luxury Hospitality &amp; Villas</span>
+                <span class="font-mono text-[10.5px] font-bold text-[#059669] uppercase tracking-wide">
+                  <span class="lang-en">Luxury Hospitality &amp; Villas</span>
+                  <span class="lang-id">Perhotelan Mewah &amp; Villa</span>
+                </span>
                 <h3 class="font-heading font-bold text-[17px] uppercase text-[#111118] leading-snug">Ubud Retreats Concierge &amp; Butler Platform</h3>
               </div>
               <p class="font-body text-[12.5px] text-[#111118]/80 leading-relaxed">
-                Otomatisasi operasional private luxury villa: pemesanan spa in-villa, floating breakfast, digital butler, dan integrasi smart-lock.
+                <span class="lang-en">Operational automation for private luxury villas: in-villa spa booking, floating breakfast dispatch, digital butler, and smart-lock integration.</span>
+                <span class="lang-id">Otomatisasi operasional private luxury villa: pemesanan spa in-villa, floating breakfast, digital butler, dan integrasi smart-lock.</span>
               </p>
             </div>
           </div>
@@ -487,8 +656,9 @@
               <span>98% Guest CSAT</span>
               <span class="text-[#059669]">● Check-in &lt; 1m</span>
             </div>
-            <a href="https://wa.me/6281234567890?text=Halo%20Extensia%20Bali,%20saya%20tertarik%20konsultasi%20sistem%20aplikasi%20Luxury%20Villa" target="_blank" rel="noopener" class="w-full py-2.5 bg-[#FFFDF0] hover:bg-[#D4FF00] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg font-heading font-extrabold text-[12px] uppercase text-[#111118] text-center transition-all active:translate-x-[3px] active:translate-y-[3px] active:shadow-none">
-              KONSULTASI ARSITEKTUR ➔
+            <a href="https://wa.me/6285338000872?text=Halo%20Extensia%20Bali,%20saya%20tertarik%20konsultasi%20sistem%20aplikasi%20Luxury%20Villa" target="_blank" rel="noopener" class="w-full py-2.5 bg-[#FFFDF0] hover:bg-[#D4FF00] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg font-heading font-extrabold text-[12px] uppercase text-[#111118] text-center transition-all active:translate-x-[3px] active:translate-y-[3px] active:shadow-none">
+              <span class="lang-en">CONSULT ARCHITECTURE ➔</span>
+              <span class="lang-id">KONSULTASI ARSITEKTUR ➔</span>
             </a>
           </div>
         </article>
@@ -525,11 +695,15 @@
             <!-- Content Area -->
             <div class="p-4 flex flex-col gap-2">
               <div class="flex flex-col">
-                <span class="font-mono text-[10.5px] font-bold text-[#2563EB] uppercase tracking-wide">Logistics &amp; IoT Telematics</span>
+                <span class="font-mono text-[10.5px] font-bold text-[#2563EB] uppercase tracking-wide">
+                  <span class="lang-en">Logistics &amp; IoT Telematics</span>
+                  <span class="lang-id">Logistik &amp; Telemetri IoT</span>
+                </span>
                 <h3 class="font-heading font-bold text-[17px] uppercase text-[#111118] leading-snug">Bali Telematics &amp; Fleet GPS Platform</h3>
               </div>
               <p class="font-body text-[12.5px] text-[#111118]/80 leading-relaxed">
-                Pelacakan telemetri armada real-time dan perimeter keamanan geofencing cerdas untuk sewa armada di Canggu, Kuta, dan Uluwatu.
+                <span class="lang-en">Real-time fleet telemetry tracking and intelligent geofence perimeter monitoring for luxury vehicle rentals in Canggu, Kuta, and Uluwatu.</span>
+                <span class="lang-id">Pelacakan telemetri armada real-time dan perimeter keamanan geofencing cerdas untuk sewa armada di Canggu, Kuta, dan Uluwatu.</span>
               </p>
             </div>
           </div>
@@ -540,14 +714,15 @@
               <span>24/7 Geofence Alert</span>
               <span class="text-[#059669]">● 0 Unit Lost</span>
             </div>
-            <a href="https://wa.me/6281234567890?text=Halo%20Extensia%20Bali,%20saya%20tertarik%20dengan%20sistem%20GPS%20Tracking%20Armada" target="_blank" rel="noopener" class="w-full py-2.5 bg-[#FFFDF0] hover:bg-[#D4FF00] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg font-heading font-extrabold text-[12px] uppercase text-[#111118] text-center transition-all active:translate-x-[3px] active:translate-y-[3px] active:shadow-none">
-              KONSULTASI ARSITEKTUR ➔
+            <a href="https://wa.me/6285338000872?text=Halo%20Extensia%20Bali,%20saya%20tertarik%20dengan%20sistem%20GPS%20Tracking%20Armada" target="_blank" rel="noopener" class="w-full py-2.5 bg-[#FFFDF0] hover:bg-[#D4FF00] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg font-heading font-extrabold text-[12px] uppercase text-[#111118] text-center transition-all active:translate-x-[3px] active:translate-y-[3px] active:shadow-none">
+              <span class="lang-en">CONSULT ARCHITECTURE ➔</span>
+              <span class="lang-id">KONSULTASI ARSITEKTUR ➔</span>
             </a>
           </div>
         </article>
 
-        <!-- Case Study 4: Seminyak Wellness & Recurring Membership Engine -->
-        <article class="project-card bg-[#FFFDF0] border-[2.5px] border-[#111118] shadow-[4px_4px_0px_#111118] rounded-lg overflow-hidden flex flex-col justify-between hover:-translate-y-1 hover:shadow-[6px_6px_0px_#111118] transition-all" data-category="pos">
+        <!-- Project Example 4: Nutrition Calculator -->
+        <article class="project-card bg-[#FFFDF0] border-[2.5px] border-[#111118] shadow-[4px_4px_0px_#111118] rounded-lg overflow-hidden flex flex-col justify-between hover:-translate-y-1 hover:shadow-[6px_6px_0px_#111118] transition-all" data-category="nutrition">
           <div>
             <!-- Card Browser Bar -->
             <div class="h-9 bg-[#FFFDF0] text-[#111118] border-b-2 border-[#111118] flex items-center justify-between px-3">
@@ -556,33 +731,37 @@
                 <span class="w-2.5 h-2.5 rounded-full bg-[#FFD93D] border border-[#111118]"></span>
                 <span class="w-2.5 h-2.5 rounded-full bg-[#6BCB77] border border-[#111118]"></span>
               </div>
-              <span class="font-mono text-[10.5px] font-bold text-[#111118]">seminyak-wellness.app</span>
-              <span class="font-mono text-[9px] bg-[#FFF9D5] text-[#111118] px-1.5 py-0.2 border border-[#111118] rounded font-bold">3.5k MEMBERS</span>
+              <span class="font-mono text-[10.5px] font-bold text-[#111118]">nutrition-calculator</span>
+              <span class="font-mono text-[9px] bg-[#FFF9D5] text-[#111118] px-1.5 py-0.2 border border-[#111118] rounded font-bold"><span class="lang-en">CONCEPT</span><span class="lang-id">KONSEP</span></span>
             </div>
 
             <!-- Graphic & Tech Tags -->
             <div class="p-4 bg-[#FFF9D5] border-b-2 border-[#111118] relative flex flex-col gap-2.5">
               <div class="flex items-center justify-between">
                 <span class="w-9 h-9 rounded-lg bg-[#FF9D50] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] flex items-center justify-center text-[#111118]">
-                  <span class="material-symbols-outlined text-[20px]">self_improvement</span>
+                  <span class="material-symbols-outlined text-[20px]">nutrition</span>
                 </span>
-                <span class="font-mono text-[10px] font-bold bg-[#D4FF00] text-[#111118] px-2 py-0.5 border border-[#111118] rounded">QR GATE PASS</span>
+                <span class="font-mono text-[10px] font-bold bg-[#D4FF00] text-[#111118] px-2 py-0.5 border border-[#111118] rounded">KCAL &amp; MACROS</span>
               </div>
               <div class="flex flex-wrap gap-1.5">
-                <span class="font-mono text-[9.5px] font-bold bg-[#FFFDF0] px-2 py-0.5 border border-[#111118] rounded">Laravel Engine</span>
-                <span class="font-mono text-[9.5px] font-bold bg-[#FFFDF0] px-2 py-0.5 border border-[#111118] rounded">TanStack State</span>
-                <span class="font-mono text-[9.5px] font-bold bg-[#FFFDF0] px-2 py-0.5 border border-[#111118] rounded">Auto QRIS</span>
+                <span class="font-mono text-[9.5px] font-bold bg-[#FFFDF0] px-2 py-0.5 border border-[#111118] rounded"><span class="lang-en">Calorie Estimate</span><span class="lang-id">Estimasi Kalori</span></span>
+                <span class="font-mono text-[9.5px] font-bold bg-[#FFFDF0] px-2 py-0.5 border border-[#111118] rounded"><span class="lang-en">Macronutrients</span><span class="lang-id">Makronutrien</span></span>
+                <span class="font-mono text-[9.5px] font-bold bg-[#FFFDF0] px-2 py-0.5 border border-[#111118] rounded"><span class="lang-en">Food Diary</span><span class="lang-id">Catatan Makan</span></span>
               </div>
             </div>
 
             <!-- Content Area -->
             <div class="p-4 flex flex-col gap-2">
               <div class="flex flex-col">
-                <span class="font-mono text-[10.5px] font-bold text-[#D97706] uppercase tracking-wide">Wellness &amp; Recurring Subscriptions</span>
-                <h3 class="font-heading font-bold text-[17px] uppercase text-[#111118] leading-snug">Seminyak Wellness &amp; Membership Engine</h3>
+                <span class="font-mono text-[10.5px] font-bold text-[#D97706] uppercase tracking-wide">
+                  <span class="lang-en">Nutrition &amp; Wellness</span>
+                  <span class="lang-id">Nutrisi &amp; Kebugaran</span>
+                </span>
+                <h3 class="font-heading font-bold text-[17px] uppercase text-[#111118] leading-snug"><span class="lang-en">Nutrition &amp; Calorie Calculator</span><span class="lang-id">Kalkulator Nutrisi &amp; Gizi</span></h3>
               </div>
               <p class="font-body text-[12.5px] text-[#111118]/80 leading-relaxed">
-                Mesin penagihan langganan membership otomatis QRIS, reservasi kelas studio, dan integrasi akses gate digital via smartphone.
+                <span class="lang-en">An application concept for estimating daily calorie needs, calculating protein, carbohydrate and fat intake, and keeping a food diary.</span>
+                <span class="lang-id">Contoh aplikasi untuk estimasi kebutuhan kalori harian, menghitung asupan protein, karbohidrat, dan lemak, serta mencatat konsumsi makanan.</span>
               </p>
             </div>
           </div>
@@ -590,11 +769,12 @@
           <!-- Bottom Card Footer -->
           <div class="p-4 pt-0 flex flex-col gap-3">
             <div class="p-2 bg-[#FFF9D5] border border-[#111118] rounded-lg font-mono text-[10.5px] font-bold text-[#111118] flex items-center justify-between">
-              <span>3,500+ Member</span>
-              <span class="text-[#059669]">● Auto QRIS Sync</span>
+              <span><span class="lang-en">Daily Intake</span><span class="lang-id">Asupan Harian</span></span>
+              <span class="text-[#059669]">● <span class="lang-en">Food Diary</span><span class="lang-id">Catatan Makan</span> Sync</span>
             </div>
-            <a href="https://wa.me/6281234567890?text=Halo%20Extensia%20Bali,%20saya%20tertarik%20dengan%20aplikasi%20Gym%20Yoga%20Membership" target="_blank" rel="noopener" class="w-full py-2.5 bg-[#FFFDF0] hover:bg-[#D4FF00] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg font-heading font-extrabold text-[12px] uppercase text-[#111118] text-center transition-all active:translate-x-[3px] active:translate-y-[3px] active:shadow-none">
-              KONSULTASI ARSITEKTUR ➔
+            <a href="https://wa.me/6285338000872?text=Halo%20Extensia%20Bali,%20saya%20tertarik%20dengan%20aplikasi%20Kalkulator%20Nutrisi%20dan%20Gizi" target="_blank" rel="noopener" class="w-full py-2.5 bg-[#FFFDF0] hover:bg-[#D4FF00] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg font-heading font-extrabold text-[12px] uppercase text-[#111118] text-center transition-all active:translate-x-[3px] active:translate-y-[3px] active:shadow-none">
+              <span class="lang-en">DISCUSS NUTRITION APP ➔</span>
+              <span class="lang-id">DISKUSIKAN APLIKASI GIZI ➔</span>
             </a>
           </div>
         </article>
@@ -605,23 +785,94 @@
       <div class="bg-[#FFF9D5] text-[#111118] border-[3px] border-[#111118] shadow-[6px_6px_0px_#111118] rounded-xl p-6 sm:p-8 flex flex-col lg:flex-row items-center justify-between gap-6 mt-4">
         <div class="flex flex-col gap-2.5 text-center lg:text-left">
           <span class="font-mono text-[11px] font-bold uppercase tracking-wider bg-[#D4FF00] text-[#111118] px-3 py-1 self-center lg:self-start border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-md">
-            TECHNICAL CONSULTATION &amp; DISCOVERY
+            <span class="lang-en">TECHNICAL CONSULTATION &amp; DISCOVERY</span>
+            <span class="lang-id">KONSULTASI TEKNIS &amp; DISCOVERY</span>
           </span>
           <h3 class="font-heading font-extrabold text-[22px] sm:text-[28px] uppercase tracking-tight text-[#111118]">
-            Siap Mengakselerasi Efisiensi &amp; Sistem Bisnis Anda di Bali?
+            <span class="lang-en">Ready to Accelerate Your Operational Efficiency &amp; Systems in Bali?</span>
+            <span class="lang-id">Siap Mengakselerasi Efisiensi &amp; Sistem Bisnis Anda di Bali?</span>
           </h3>
           <p class="font-body text-[13.5px] sm:text-[15px] text-[#111118]/85 font-medium max-w-[650px]">
-            Konsultasikan blueprint teknis bersama tech lead kami. Kami siap hadir langsung untuk technical discovery session di outlet atau kantor Anda di Bali.
+            <span class="lang-en">Consult your technical blueprint with our tech leads. We are available for on-site discovery sessions directly at your venue or office in Bali.</span>
+            <span class="lang-id">Konsultasikan blueprint teknis bersama tech lead kami. Kami siap hadir langsung untuk technical discovery session di outlet atau kantor Anda di Bali.</span>
           </p>
         </div>
 
-        <a href="https://wa.me/6281234567890?text=Halo%20Extensia%20Bali,%20saya%20ingin%20jadwalkan%20technical%20meeting%20arsitektur%20aplikasi" target="_blank" rel="noopener" class="px-7 py-4 bg-[#D4FF00] hover:bg-[#bcf000] text-[#111118] border-[3px] border-[#111118] shadow-[4px_4px_0px_#111118] rounded-xl font-heading font-extrabold text-[14px] sm:text-[15px] uppercase tracking-wide hover:shadow-[6px_6px_0px_#111118] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-[3px] active:translate-y-[3px] active:shadow-none transition-all whitespace-nowrap flex items-center gap-2 cursor-pointer">
-          <span>JADWALKAN TECHNICAL MEETING</span>
+        <a href="https://wa.me/6285338000872?text=Halo%20Extensia%20Bali,%20saya%20ingin%20jadwalkan%20technical%20meeting%20arsitektur%20aplikasi" target="_blank" rel="noopener" class="px-7 py-4 bg-[#D4FF00] hover:bg-[#bcf000] text-[#111118] border-[3px] border-[#111118] shadow-[4px_4px_0px_#111118] rounded-xl font-heading font-extrabold text-[14px] sm:text-[15px] uppercase tracking-wide hover:shadow-[6px_6px_0px_#111118] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-[3px] active:translate-y-[3px] active:shadow-none transition-all whitespace-nowrap flex items-center gap-2 cursor-pointer">
+          <span class="lang-en">SCHEDULE TECHNICAL MEETING</span>
+          <span class="lang-id">JADWALKAN TECHNICAL MEETING</span>
           <span class="font-mono text-[16px]">➔</span>
         </a>
       </div>
 
     </section>
+    <!-- ========================================================================
+         FOOTER: STUDIO DIRECT CONTACT & BOTTOM SIGNATURE
+         ======================================================================== -->
+    <footer id="contact" class="border-[3px] border-[#111118] shadow-[4px_4px_0px_#111118] sm:shadow-[6px_6px_0px_#111118] rounded-xl p-6 sm:p-10 lg:p-12 bg-[#FFFDF0] flex flex-col gap-6 relative overflow-hidden">
+      <div class="flex flex-col lg:flex-row items-center justify-between gap-6 pb-6 border-b-2 border-[#111118]/20">
+        <!-- Left: Logo Lockup -->
+        <div class="flex items-center gap-3.5">
+          <img
+            src="assets/images/extensia-logo-512.png"
+            alt="Extensia Creative Bali Logo"
+            width="96"
+            height="96"
+            loading="lazy"
+            decoding="async"
+            class="h-10 sm:h-12 w-auto object-contain"
+          />
+          <div class="flex flex-col">
+            <span class="font-heading font-extrabold text-[18px] sm:text-[20px] leading-tight text-[#111118]">Extensia Creative Bali</span>
+            <span class="font-mono text-[10px] sm:text-[11px] font-bold text-[#111118]/70 uppercase tracking-wider">
+              <span class="lang-en">Software Architecture &amp; Engineering Center</span>
+              <span class="lang-id">Pusat Arsitektur &amp; Rekayasa Perangkat Lunak</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- Center: Contact & Location Info -->
+        <div class="flex flex-col sm:flex-row items-center gap-3 sm:gap-6 font-mono text-[11px] sm:text-[12.5px] text-[#111118]/80 text-center">
+          <a href="mailto:info@extensiacreativebali.com" class="hover:underline font-bold text-[#111118] flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-[16px]">mail</span>
+            <span>info@extensiacreativebali.com</span>
+          </a>
+          <span class="hidden sm:inline">•</span>
+          <span class="font-bold text-[#111118] flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-[16px]">location_on</span>
+            <span>CANGGU &amp; DENPASAR, BALI</span>
+          </span>
+        </div>
+
+        <!-- Right: WhatsApp Direct Action -->
+        <div>
+          <a href="https://wa.me/6285338000872?text=Halo%20Extensia%20Bali,%20saya%20tertarik%20konsultasi%20arsitektur%20aplikasi" target="_blank" rel="noopener" class="px-5 py-2.5 bg-[#D4FF00] hover:bg-[#bcf000] text-[#111118] border-2 border-[#111118] shadow-[3px_3px_0px_#111118] rounded-xl font-heading font-extrabold text-[12px] sm:text-[13px] uppercase tracking-wide transition-all active:translate-x-0.5 active:translate-y-0.5 flex items-center gap-2 cursor-pointer">
+            <span>WHATSAPP DIRECT</span>
+            <span class="font-mono text-[16px]">➔</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Bottom Micro-Bar: Copyright, SLA & Legal -->
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-3 font-mono text-[10.5px] sm:text-[11.5px] text-[#111118]/70 text-center sm:text-left">
+        <div>
+          <span class="lang-en">&copy; 2026 <strong>Extensia Creative Bali</strong>. All Rights Reserved. Enterprise Standards &amp; SLA.</span>
+          <span class="lang-id">&copy; 2026 <strong>Extensia Creative Bali</strong>. Hak Cipta Dilindungi. Standar Enterprise &amp; SLA.</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="inline-flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-[#10B981]"></span>
+            <span class="lang-en">DPS-01 Production Node Active</span>
+            <span class="lang-id">DPS-01 Node Produksi Aktif</span>
+          </span>
+          <span>•</span>
+          <span>
+            <span class="lang-en">Zero Vendor Lock-in</span>
+            <span class="lang-id">Bebas Keterikatan Vendor</span>
+          </span>
+        </div>
+      </div>
+    </footer>
   </div>
 
 </body>

@@ -25,18 +25,26 @@ extensia-creative-bali/
 │
 ├── assets/
 │   ├── css/
-│   │   └── style.css                            # Reset layer base, scrollbar, & styling global
+│   │   ├── style.css                            # Reset layer base, scrollbar, & styling global
+│   │   ├── input.css                            # Tailwind directives (source)
+│   │   └── compiled.css                         # Tailwind production build (25KB, commit ke Vercel)
 │   ├── js/
-│   │   └── script.js                            # Konfigurasi Tailwind CDN & interaktivitas (jam WITA, filter, nav)
+│   │   └── script.js                            # Interaktivitas (jam WITA, filter, nav, lang ID/EN)
 │   └── images/
-│       ├── extensia-creative-bali-logo-no-bg.png# Logo resmi Extensia Bali (transparent PNG)
-│       ├── hero-bg-clean.webp                   # Ilustrasi seni Balinese tech resolusi tinggi
-│       ├── mandala-corner.webp                  # Ornamen dekorasi sudut mandala Bali
-│       ├── frangipani.webp                      # Ornamen bunga jepun / kamboja Bali
-│       └── Gemini_Generated_Image_2swt3h2swt3h2swt.jpg # Gambar referensi desain
+│       ├── extensia-logo-512.png                # Logo header/footer optimized (116KB)
+│       ├── favicon-32.png                       # Favicon 32px (~2KB)
+│       ├── apple-touch-icon.png                 # Apple touch 180px (~24KB)
+│       ├── og-cover.jpg                         # OG social 1200x630 (~28KB)
+│       ├── hero-bg-clean.webp                   # Ilustrasi seni Balinese tech (unreferenced, opsional)
+│       ├── mandala-corner.webp                  # Ornamen mandala (unreferenced, opsional)
+│       ├── frangipani.webp                      # Ornamen bunga jepun (unreferenced, opsional)
+│       └── logo.svg / hero-mockup.svg / og-preview.svg
 │
 ├── index.html                                   # Landing page utama Extensia Creative Bali
 ├── zivopos.html                                 # Halaman produk & showcase klien zivoPOS
+├── vercel.json                                  # Clean URLs, cache & security headers
+├── robots.txt / sitemap.xml / site.webmanifest
+├── tailwind.config.js / postcss.config.js / package.json  # Build: npm run build:css
 └── README.md
 ```
 

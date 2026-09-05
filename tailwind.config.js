@@ -1,0 +1,52 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./*.html", "./assets/js/*.js"],
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "brand-obsidian": "#0F1117",
+        "brand-midnight": "#171923",
+        "brand-cream": "#FFF9D5",
+        "brand-ivory": "#FFFDF5",
+        "brand-cream-light": "#FFFDF0",
+        "brand-blue": "#2563EB",
+        "brand-blue-tech": "#3B82F6",
+        "brand-lime": "#D4FF00",
+        "brand-orange": "#FF9D50",
+        "brand-amber": "#D97706",
+        "brand-dark": "#111118",
+        "brand-green": "#10B981",
+        "brand-emerald": "#059669",
+        tertiary: "#006D31",
+        "on-surface-variant": "#544338",
+        "on-primary-container": "#703700",
+        background: "#FFFFFF",
+        "on-background": "#111118",
+        "secondary-container": "#FFFDF0",
+        surface: "#FFF9D5",
+        "primary-container": "#D4FF00",
+      },
+      fontFamily: {
+        heading: ["'Clash Display'", "sans-serif"],
+        body: ["'Plus Jakarta Sans'", "sans-serif"],
+        mono: ["'Space Mono'", "monospace"],
+      },
+      boxShadow: {
+        "brutal-sm": "3px 3px 0 0 #111118",
+        brutal: "5px 5px 0 0 #111118",
+        "brutal-lg": "7px 7px 0 0 #111118",
+        "brutal-xl": "10px 10px 0 0 #111118",
+      },
+      borderRadius: {
+        sm: "4px",
+        DEFAULT: "4px",
+        md: "6px",
+        lg: "8px",
+        xl: "12px",
+        "2xl": "14px",
+      },
+    },
+  },
+  plugins: [],
+};

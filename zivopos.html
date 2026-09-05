@@ -5,26 +5,94 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ZIVO POS — Sistem Kasir Cloud &amp; Bisnis Multi-Outlet di Bali | Extensia Creative Bali</title>
   <meta name="description" content="ZIVO adalah aplikasi POS dan manajemen bisnis modern. Catat penjualan cepat, kontrol inventaris multi-outlet, 100% offline-ready, dan terhubung langsung ke dashboard owner." />
-  <link rel="icon" type="image/png" href="assets/images/extensia-creative-bali-logo-no-bg.png" />
+  <link rel="canonical" href="https://extensia-creative-bali.vercel.app/zivopos" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Extensia Creative Bali" />
+  <meta name="theme-color" content="#FFF9D5" />
+
+  <meta property="og:type" content="product" />
+  <meta property="og:site_name" content="Extensia Creative Bali" />
+  <meta property="og:title" content="ZIVO POS — Sistem Kasir Cloud & Multi-Outlet di Bali" />
+  <meta property="og:description" content="Transaksi <0.8s, 100% offline-ready, 25+ outlet aktif di Bali. Bronze Rp 750k/90 hari." />
+  <meta property="og:url" content="https://extensia-creative-bali.vercel.app/zivopos" />
+  <meta property="og:image" content="https://extensia-creative-bali.vercel.app/assets/images/og-cover.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="id_ID" />
+  <meta property="og:locale:alternate" content="en_US" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ZIVO POS — Cloud POS Multi-Outlet Bali" />
+  <meta name="twitter:description" content="100% offline-ready POS, KDS dapur, owner dashboard real-time." />
+  <meta name="twitter:image" content="https://extensia-creative-bali.vercel.app/assets/images/og-cover.jpg" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "zivoPOS",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web, Android, iOS",
+    "url": "https://extensia-creative-bali.vercel.app/zivopos",
+    "description": "Sistem kasir cloud & inventaris multi-outlet, 100% offline-ready untuk hospitality & ritel Bali.",
+    "offers": {
+      "@type": "Offer",
+      "price": "750000",
+      "priceCurrency": "IDR",
+      "description": "Bronze Plan / 90 hari"
+    },
+    "provider": {
+      "@type": "Organization",
+      "name": "Extensia Creative Bali",
+      "url": "https://extensia-creative-bali.vercel.app/"
+    }
+  }
+  </script>
+
+  <!-- GA4 placeholder -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
+  </script>
+  -->
+  <!-- <meta name="google-site-verification" content="PASTE_TOKEN_HERE" /> -->
 
   <!-- Typography Fonts (Clash Display + Plus Jakarta Sans + Space Mono) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Space+Mono:wght@700&amp;display=swap" rel="stylesheet" />
-  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700,800&amp;display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Space+Mono:wght@700&amp;display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Space+Mono:wght@700&amp;display=swap" rel="stylesheet" /></noscript>
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700,800&amp;display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700,800&amp;display=swap" rel="stylesheet" /></noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;display=swap" rel="stylesheet" /></noscript>
 
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/compiled.css" />
 
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Production Tailwind: compiled.css (CDN removed for performance).
+       Regenerate with `npm run build:css` after editing HTML/JS. -->
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
-  <!-- Tailwind Configuration & Scripts -->
-  <script src="assets/js/script.js"></script>
+  <!-- Site Scripts -->
+  <script defer src="assets/js/script.js"></script>
 
   <!-- Custom Styles for Neubrutalism Details & Translation System -->
   <style>
+    /* Upcoming service areas: show the tooltip on hover or keyboard focus. */
+    .area-soon-tooltip { visibility: hidden; pointer-events: none; }
+    .area-soon:hover .area-soon-tooltip,
+    .area-soon:focus .area-soon-tooltip { visibility: visible; }
+    .area-soon:focus-visible { outline: 2px solid #2563EB; outline-offset: 3px; border-radius: 0.5rem; }
     /* FAQ Smooth CSS Grid Accordion (Zero Stutter, No Color Shift) */
     .faq-collapse {
       display: grid;
@@ -97,30 +165,32 @@
 
 <body class="bg-[#FFFFFF] font-body text-[#111118] min-h-screen p-2 sm:p-4 lg:p-6 selection:bg-[#D4FF00] selection:text-[#111118]">
 
-  <!-- ============================== MASTER CONTAINER ============================== -->
-  <div class="max-w-[1560px] mx-auto bg-[#FFF9D5] border-[3px] border-[#111118] shadow-[8px_8px_0px_#111118] rounded-xl overflow-hidden flex flex-col">
+  <!-- ============================== WRAPPER CONTAINER WITH SEPARATING GAP ============================== -->
+  <div class="max-w-[1560px] mx-auto flex flex-col gap-5 sm:gap-7 lg:gap-9">
 
     <!-- ========================================================================
-         STICKY HEADER & NAVIGATION
+         SEPARATED HEADER & NAVIGATION CARD
          ======================================================================== -->
-    <header class="h-20 bg-[#FFF9D5] border-b-[3px] border-[#111118] px-4 sm:px-8 flex items-center justify-between gap-4 sticky top-0 z-50">
+    <header class="h-20 bg-[#FFF9D5] border-[3px] border-[#111118] shadow-[6px_6px_0px_#111118] rounded-xl px-4 sm:px-8 flex items-center justify-between gap-4">
       
       <!-- Left: Back to Home + Logo -->
-      <div class="flex items-center gap-3 sm:gap-5">
-        <a href="index.html" class="inline-flex items-center gap-1.5 font-mono text-[12px] sm:text-[13px] font-bold px-3 py-2 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg hover:bg-[#D4FF00] transition-all active:translate-x-[3px] active:translate-y-[3px] active:shadow-none whitespace-nowrap">
+      <div class="flex items-center gap-2 sm:gap-4">
+        <a href="index.html" class="inline-flex items-center gap-1.5 font-mono text-[12px] sm:text-[13px] font-bold px-2.5 sm:px-3 py-2 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg hover:bg-[#D4FF00] transition-all active:translate-x-[3px] active:translate-y-[3px] active:shadow-none whitespace-nowrap" title="Kembali ke Extensia">
           <span class="material-symbols-outlined text-[16px]">arrow_back</span>
-          <span class="lang-en">BACK TO EXTENSIA</span>
-          <span class="lang-id">KEMBALI KE EXTENSIA</span>
+          <span class="hidden md:inline">
+            <span class="lang-en">BACK TO EXTENSIA</span>
+            <span class="lang-id">KEMBALI KE EXTENSIA</span>
+          </span>
         </a>
 
         <!-- Logo Brand -->
-        <a href="zivopos.html" class="flex items-center gap-2.5 group">
-          <div class="w-9 h-9 rounded-lg bg-[#111118] border-2 border-[#111118] flex items-center justify-center text-white shadow-[2px_2px_0px_#D4FF00] group-hover:scale-105 transition-transform">
-            <img src="assets/images/logo.svg" alt="ZIVO logo" class="w-7 h-7 object-contain" />
+        <a href="zivopos.html" class="flex items-center gap-2 sm:gap-2.5 group">
+          <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-[#111118] border-2 border-[#111118] flex items-center justify-center text-white shadow-[2px_2px_0px_#D4FF00] group-hover:scale-105 transition-transform flex-shrink-0">
+            <img src="assets/images/logo.svg" alt="ZIVO logo" class="w-6 h-6 sm:w-7 sm:h-7 object-contain" />
           </div>
           <div class="flex flex-col">
-            <span class="font-heading font-extrabold text-[20px] sm:text-[24px] tracking-tight leading-none text-[#111118]">ZIVO<span class="text-[#2563EB]">POS</span></span>
-            <span class="font-mono text-[9.5px] sm:text-[10.5px] font-bold text-[#111118]/80 uppercase tracking-wider leading-none">ENTERPRISE CLOUD POS &amp; INVENTORY</span>
+            <span class="font-heading font-extrabold text-[18px] sm:text-[24px] tracking-tight leading-none text-[#111118]">ZIVO<span class="text-[#2563EB]">POS</span></span>
+            <span class="font-mono text-[9px] sm:text-[10.5px] font-bold text-[#111118]/80 uppercase tracking-wider leading-none hidden sm:inline">ENTERPRISE CLOUD POS &amp; INVENTORY</span>
           </div>
         </a>
       </div>
@@ -130,23 +200,9 @@
         <a href="#features" class="font-mono text-[12px] font-bold px-3 py-1.5 bg-[#FFFDF0] hover:bg-[#D4FF00] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-md transition-all">
           <span class="lang-en">FEATURES</span><span class="lang-id">FITUR</span>
         </a>
-        <a href="#benefits" class="font-mono text-[12px] font-bold px-3 py-1.5 bg-[#FFFDF0] hover:bg-[#D4FF00] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-md transition-all">
-          <span class="lang-en">BENEFITS</span><span class="lang-id">KEUNGGULAN</span>
-        </a>
-        <a href="#architecture" class="font-mono text-[12px] font-bold px-3 py-1.5 bg-[#FFFDF0] hover:bg-[#D4FF00] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-md transition-all">TECH STACK</a>
-        <a href="#clients" class="font-mono text-[12px] font-bold px-3 py-1.5 bg-[#FFFDF0] hover:bg-[#D4FF00] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-md transition-all">
-          <span class="lang-en">CASE STUDIES</span><span class="lang-id">KLIEN</span>
-        </a>
         <a href="#pricing" class="font-mono text-[12px] font-bold px-3 py-1.5 bg-[#FFFDF0] hover:bg-[#D4FF00] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-md transition-all">
           <span class="lang-en">PRICING</span><span class="lang-id">HARGA</span>
         </a>
-        <a href="#security" class="font-mono text-[12px] font-bold px-3 py-1.5 bg-[#FFFDF0] hover:bg-[#D4FF00] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-md transition-all">
-          <span class="lang-en">SECURITY</span><span class="lang-id">KEAMANAN</span>
-        </a>
-        <a href="#demo" class="font-mono text-[12px] font-bold px-3 py-1.5 bg-[#FFFDF0] hover:bg-[#D4FF00] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-md transition-all">
-          <span class="lang-en">BALI DEMO</span><span class="lang-id">DEMO BALI</span>
-        </a>
-        <a href="#faq" class="font-mono text-[12px] font-bold px-3 py-1.5 bg-[#FFFDF0] hover:bg-[#D4FF00] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-md transition-all">FAQ</a>
       </nav>
 
       <!-- Right Actions: Language Switcher + Book Demo CTA -->
@@ -158,134 +214,88 @@
           <button type="button" id="btn-lang-en" class="lang-btn px-2.5 py-1 bg-transparent text-[#111118] rounded hover:bg-[#FFF9D5] transition-all cursor-pointer">EN</button>
         </div>
 
-        <a href="#demo" class="inline-flex items-center gap-1.5 font-heading font-extrabold text-[13px] sm:text-[14px] uppercase px-4 sm:px-5 py-2.5 bg-[#D4FF00] text-[#111118] border-2 border-[#111118] shadow-[3px_3px_0px_#111118] rounded-lg hover:bg-[#bcf000] hover:shadow-[5px_5px_0px_#111118] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-[3px] active:translate-y-[3px] active:shadow-none transition-all whitespace-nowrap">
+        <a href="#demo" class="hidden sm:inline-flex items-center gap-1.5 font-heading font-extrabold text-[13px] sm:text-[14px] uppercase px-4 sm:px-5 py-2.5 bg-[#D4FF00] text-[#111118] border-2 border-[#111118] shadow-[3px_3px_0px_#111118] rounded-lg hover:bg-[#bcf000] hover:shadow-[5px_5px_0px_#111118] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-[3px] active:translate-y-[3px] active:shadow-none transition-all whitespace-nowrap">
           <span class="lang-en">BOOK DEMO</span>
           <span class="lang-id">JADWALKAN DEMO</span>
           <span class="font-mono text-[15px]">➔</span>
         </a>
       </div>
-
     </header>
-
-
+    <!-- ============================== MASTER CONTENT CONTAINER ============================== -->
+    <main class="flex flex-col gap-5 sm:gap-7 lg:gap-9">
     <!-- ========================================================================
-         HERO SECTION: MORE THAN A POS. YOUR BUSINESS, MADE EASIER
+         HERO SECTION: MORE THAN A POS. YOUR BUSINESS, MADE EASIER (CENTERED)
          ======================================================================== -->
-    <section class="p-6 sm:p-10 lg:p-14 bg-[#FFF9D5] border-b-[3px] border-[#111118] flex flex-col gap-10 relative overflow-hidden">
+    <section class="p-6 sm:p-10 lg:p-16 bg-[#FFF9D5] border-[3px] border-[#111118] shadow-[4px_4px_0px_#111118] sm:shadow-[6px_6px_0px_#111118] rounded-xl flex flex-col items-center text-center gap-8 relative overflow-hidden">
       
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+      <div class="max-w-[960px] mx-auto flex flex-col items-center text-center gap-6 my-auto z-10 w-full">
         
-        <!-- Hero Copy (Left Column) -->
-        <div class="lg:col-span-7 flex flex-col gap-5 max-w-[720px] z-10">
-          
-          <!-- Engineered Status Badges -->
-          <div class="flex flex-wrap items-center gap-2">
-            <div class="inline-flex items-center gap-2 px-3 py-1 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-md font-mono text-[10.5px] sm:text-[11.5px] font-bold">
-              <span class="w-2 h-2 rounded-full bg-[#10B981] animate-pulse"></span>
-              <span class="lang-en">ENTERPRISE PRODUCT BY EXTENSIA BALI</span>
-              <span class="lang-id">PRODUK ENTERPRISE RESMI EXTENSIA BALI</span>
-            </div>
-            <div class="inline-flex items-center gap-1.5 px-3 py-1 bg-[#D4FF00] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-md font-mono text-[10.5px] sm:text-[11.5px] font-bold">
-              <span class="lang-en">BUILT FOR BALI HIGH-VOLUME HOSPITALITY &amp; RETAIL</span>
-              <span class="lang-id">DIRANCANG UNTUK HOSPITALITY &amp; RITEL SKALA BESAR DI BALI</span>
-            </div>
+        <!-- Engineered Status Badges -->
+        <div class="flex flex-wrap items-center justify-center gap-2">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-md font-mono text-[10.5px] sm:text-[11.5px] font-bold">
+            <span class="w-2 h-2 rounded-full bg-[#10B981] animate-pulse flex-shrink-0"></span>
+            <span class="lang-en">ENTERPRISE PRODUCT BY EXTENSIA BALI</span>
+            <span class="lang-id">PRODUK ENTERPRISE RESMI EXTENSIA BALI</span>
           </div>
-
-          <!-- Heavy Clash Display Headline -->
-          <h1 class="font-heading font-extrabold text-[32px] sm:text-[44px] md:text-[50px] xl:text-[56px] leading-[1.05] tracking-tight uppercase text-[#111118]">
-            <span class="lang-en">
-              ENTERPRISE CLOUD POS &amp;<br />
-              MULTI-OUTLET <span class="bg-[#D4FF00] px-2 py-0.5 inline-block border-2 border-[#111118] shadow-[4px_4px_0px_#111118] -rotate-1">INVENTORY SYSTEM</span>
-            </span>
-            <span class="lang-id">
-              SISTEM KASIR CLOUD ENTERPRISE &amp;<br />
-              MANAJEMEN <span class="bg-[#D4FF00] px-2 py-0.5 inline-block border-2 border-[#111118] shadow-[4px_4px_0px_#111118] -rotate-1">MULTI-OUTLET BALI</span>
-            </span>
-          </h1>
-
-          <!-- Subparagraph -->
-          <p class="font-body text-[14.5px] sm:text-[16px] text-[#111118]/90 font-medium leading-relaxed">
-            <span class="lang-en">
-              Built specifically for the high-throughput rhythm of luxury hospitality, high-volume beach clubs, and modern retail in Bali. Sub-second transaction latency, 100% offline resilience, and unified real-time multi-warehouse control.
-            </span>
-            <span class="lang-id">
-              Dibangun khusus untuk ritme operasional hospitality mewah, beach club bervolume tinggi, dan ritel modern di Bali. Latensi transaksi sub-detik, ketahanan 100% offline saat koneksi internet Bali drop, dan kontrol inventaris multi-cabang terpadu secara real-time.
-            </span>
-          </p>
-
-          <!-- CTA Buttons -->
-          <div class="flex flex-wrap items-center gap-3.5 pt-1">
-            <a href="#demo" class="inline-flex items-center justify-center gap-2 font-heading font-extrabold text-[13.5px] sm:text-[14.5px] uppercase px-7 py-3.5 bg-[#D4FF00] text-[#111118] border-[2.5px] border-[#111118] shadow-[4px_4px_0px_#111118] rounded-xl hover:bg-[#bcf000] hover:shadow-[6px_6px_0px_#111118] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-[3px] active:translate-y-[3px] active:shadow-none transition-all cursor-pointer">
-              <span class="lang-en">BOOK A DISCOVERY DEMO</span>
-              <span class="lang-id">JADWALKAN DEMO ON-SITE</span>
-              <span class="font-mono text-[16px]">➔</span>
-            </a>
-
-            <a href="#clients" class="inline-flex items-center justify-center gap-2 font-heading font-extrabold text-[13.5px] sm:text-[14.5px] uppercase px-6 py-3.5 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[3px_3px_0px_#111118] rounded-xl hover:bg-[#FFF9D5] hover:shadow-[5px_5px_0px_#111118] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-[3px] active:translate-y-[3px] active:shadow-none transition-all cursor-pointer">
-              <span class="lang-en">CLIENT CASE STUDIES ↓</span>
-              <span class="lang-id">LIHAT STUDI KASUS ↓</span>
-            </a>
+          <div class="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-[#D4FF00] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-md font-mono text-[10.5px] sm:text-[11.5px] font-bold">
+            <span class="lang-en">BUILT FOR BALI HIGH-VOLUME HOSPITALITY &amp; RETAIL</span>
+            <span class="lang-id">DIRANCANG UNTUK HOSPITALITY &amp; RITEL SKALA BESAR DI BALI</span>
           </div>
-
-          <!-- 4 Hard Enterprise Proof Metrics -->
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-2">
-            <div class="p-2.5 bg-[#FFFDF0] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg flex flex-col">
-              <span class="font-heading font-extrabold text-[16px] sm:text-[18px] text-[#111118]">25+ Outlets</span>
-              <span class="font-mono text-[9.5px] text-[#111118]/70 font-bold uppercase">Active in Bali</span>
-            </div>
-            <div class="p-2.5 bg-[#FFFDF0] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg flex flex-col">
-              <span class="font-heading font-extrabold text-[16px] sm:text-[18px] text-[#2563EB]">&lt; 0.8s</span>
-              <span class="font-mono text-[9.5px] text-[#111118]/70 font-bold uppercase">Tx Latency</span>
-            </div>
-            <div class="p-2.5 bg-[#FFFDF0] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg flex flex-col">
-              <span class="font-heading font-extrabold text-[16px] sm:text-[18px] text-[#059669]">100%</span>
-              <span class="font-mono text-[9.5px] text-[#111118]/70 font-bold uppercase">Offline Resilience</span>
-            </div>
-            <div class="p-2.5 bg-[#FFFDF0] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg flex flex-col">
-              <span class="font-heading font-extrabold text-[16px] sm:text-[18px] text-[#D97706]">0% Drift</span>
-              <span class="font-mono text-[9.5px] text-[#111118]/70 font-bold uppercase">Zero Shrinkage</span>
-            </div>
-          </div>
-
         </div>
 
-        <!-- Hero Mockup Display (Right Column) -->
-        <div class="lg:col-span-5 flex flex-col gap-3 z-10">
-          <div class="bg-[#FFFDF0] border-[3px] border-[#111118] shadow-[6px_6px_0px_#111118] rounded-xl overflow-hidden">
-            <!-- Window Browser Bar -->
-            <div class="h-10 bg-[#FFFDF0] text-[#111118] border-b-2 border-[#111118] flex items-center justify-between px-3.5">
-              <div class="flex items-center gap-1.5">
-                <span class="w-3 h-3 rounded-full bg-[#FF6B6B] border border-[#111118]"></span>
-                <span class="w-3 h-3 rounded-full bg-[#FFD93D] border border-[#111118]"></span>
-                <span class="w-3 h-3 rounded-full bg-[#6BCB77] border border-[#111118]"></span>
-              </div>
-              <span class="font-mono text-[11px] font-bold text-[#111118]">zivo-cashier.system.app</span>
-                <span class="lang-en">OFFLINE READY</span>
-                <span class="lang-id">SIAP OFFLINE</span>
-              </span>
-            </div>
+        <!-- Heavy Clash Display Headline (Centered) -->
+        <h1 class="font-heading font-extrabold text-[34px] sm:text-[46px] md:text-[54px] xl:text-[62px] leading-[1.05] tracking-tight uppercase text-[#111118] text-center max-w-[940px]">
+          <span class="lang-en">
+            ENTERPRISE CLOUD POS &amp;<br />
+            MULTI-OUTLET <span class="bg-[#D4FF00] px-2.5 py-0.5 inline-block border-2 border-[#111118] shadow-[4px_4px_0px_#111118] -rotate-1 my-1">INVENTORY SYSTEM</span>
+          </span>
+          <span class="lang-id">
+            SISTEM KASIR CLOUD ENTERPRISE &amp;<br />
+            MANAJEMEN <span class="bg-[#D4FF00] px-2.5 py-0.5 inline-block border-2 border-[#111118] shadow-[4px_4px_0px_#111118] -rotate-1 my-1">MULTI-OUTLET BALI</span>
+          </span>
+        </h1>
 
-            <!-- SVG Mockup Graphic -->
-            <div class="p-3 bg-[#1E293B]">
-              <img
-                src="assets/images/hero-mockup.svg"
-                alt="ZIVO POS cashier interface mockup"
-                class="w-full h-auto object-contain rounded-lg border border-[#24365F]"
-              />
-            </div>
+        <!-- Subparagraph (Centered) -->
+        <p class="font-body text-[15px] sm:text-[17px] text-[#111118]/90 font-medium leading-relaxed max-w-[760px] mx-auto text-center">
+          <span class="lang-en">
+            Built specifically for the high-throughput rhythm of luxury hospitality, high-volume beach clubs, and modern retail in Bali. Sub-second transaction latency, 100% offline resilience, and unified real-time multi-warehouse control.
+          </span>
+          <span class="lang-id">
+            Dibangun khusus untuk ritme operasional hospitality mewah, beach club bervolume tinggi, dan ritel modern di Bali. Latensi transaksi sub-detik, ketahanan 100% offline saat koneksi internet Bali drop, dan kontrol inventaris multi-cabang terpadu secara real-time.
+          </span>
+        </p>
 
-            <!-- Card Footbar Data Ticker -->
-            <div class="p-2.5 bg-[#FFF9D5] border-t-2 border-[#111118] flex items-center justify-between font-mono text-[11px] font-bold text-[#111118]">
-              <span class="flex items-center gap-1.5 text-[#059669]">
-                <span class="w-2 h-2 rounded-full bg-[#10B981] animate-pulse"></span>
-                <span class="lang-en">AUTO SYNC: ACTIVE</span>
-                <span class="lang-id">SINKRONISASI: AKTIF</span>
-              </span>
-              <span>
-                <span class="lang-en">TX SPEED: &lt; 0.8s</span>
-                <span class="lang-id">KECEPATAN: &lt; 0.8s</span>
-              </span>
-            </div>
+        <!-- CTA Buttons (Centered) -->
+        <div class="flex flex-wrap items-center justify-center gap-3.5 pt-1">
+          <a href="#demo" class="inline-flex items-center justify-center gap-2 font-heading font-extrabold text-[13.5px] sm:text-[15px] uppercase px-7 py-4 bg-[#D4FF00] text-[#111118] border-[2.5px] border-[#111118] shadow-[4px_4px_0px_#111118] rounded-xl hover:bg-[#bcf000] hover:shadow-[6px_6px_0px_#111118] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-[3px] active:translate-y-[3px] active:shadow-none transition-all cursor-pointer">
+            <span class="lang-en">BOOK A DISCOVERY DEMO</span>
+            <span class="lang-id">JADWALKAN DEMO ON-SITE</span>
+            <span class="font-mono text-[16px]">➔</span>
+          </a>
+
+          <a href="#clients" class="inline-flex items-center justify-center gap-2 font-heading font-extrabold text-[13.5px] sm:text-[15px] uppercase px-6 py-4 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[3px_3px_0px_#111118] rounded-xl hover:bg-[#FFF9D5] hover:shadow-[5px_5px_0px_#111118] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-[3px] active:translate-y-[3px] active:shadow-none transition-all cursor-pointer">
+            <span class="lang-en">CLIENT CASE STUDIES ↓</span>
+            <span class="lang-id">LIHAT STUDI KASUS ↓</span>
+          </a>
+        </div>
+
+        <!-- 4 Hard Enterprise Proof Metrics (Centered) -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-3 w-full max-w-[860px] mx-auto">
+          <div class="p-3 bg-[#FFFDF0] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg flex flex-col items-center text-center">
+            <span class="font-heading font-extrabold text-[18px] sm:text-[22px] text-[#111118]">25+ Outlets</span>
+            <span class="font-mono text-[10px] sm:text-[11px] text-[#111118]/70 font-bold uppercase">Active in Bali</span>
+          </div>
+          <div class="p-3 bg-[#FFFDF0] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg flex flex-col items-center text-center">
+            <span class="font-heading font-extrabold text-[18px] sm:text-[22px] text-[#2563EB]">&lt; 0.8s</span>
+            <span class="font-mono text-[10px] sm:text-[11px] text-[#111118]/70 font-bold uppercase">Tx Latency</span>
+          </div>
+          <div class="p-3 bg-[#FFFDF0] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg flex flex-col items-center text-center">
+            <span class="font-heading font-extrabold text-[18px] sm:text-[22px] text-[#059669]">100%</span>
+            <span class="font-mono text-[10px] sm:text-[11px] text-[#111118]/70 font-bold uppercase">Offline Resilience</span>
+          </div>
+          <div class="p-3 bg-[#FFFDF0] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg flex flex-col items-center text-center">
+            <span class="font-heading font-extrabold text-[18px] sm:text-[22px] text-[#D97706]">0% Drift</span>
+            <span class="font-mono text-[10px] sm:text-[11px] text-[#111118]/70 font-bold uppercase">Zero Shrinkage</span>
           </div>
         </div>
 
@@ -297,7 +307,7 @@
     <!-- ========================================================================
          SECTION 1: ONE SIMPLE POS, FROM CHECKOUT TO BUSINESS REPORTS
          ======================================================================== -->
-    <section id="features" class="p-6 sm:p-10 lg:p-14 bg-[#FFFDF0] border-b-[3px] border-[#111118] flex flex-col gap-8">
+    <section id="features" class="p-6 sm:p-10 lg:p-14 bg-[#FFFDF0] border-[3px] border-[#111118] shadow-[4px_4px_0px_#111118] sm:shadow-[6px_6px_0px_#111118] rounded-xl flex flex-col gap-8">
       
       <div class="flex flex-col gap-2 max-w-[760px]">
         <div class="inline-flex items-center self-start gap-1.5 px-3 py-1 bg-[#FFF9D5] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-md font-mono text-[10.5px] sm:text-[11.5px] font-bold">
@@ -385,7 +395,7 @@
     <!-- ========================================================================
          SECTION 2: FASTER SERVICE & CLEARER CONTROL (BENEFITS)
          ======================================================================== -->
-    <section id="benefits" class="p-6 sm:p-10 lg:p-14 bg-[#FFF9D5] border-b-[3px] border-[#111118] flex flex-col gap-8">
+    <section id="benefits" class="p-6 sm:p-10 lg:p-14 bg-[#FFF9D5] border-[3px] border-[#111118] shadow-[4px_4px_0px_#111118] sm:shadow-[6px_6px_0px_#111118] rounded-xl flex flex-col gap-8">
 
       <!-- Top Row: Heading + 3 Metric Pills -->
       <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
@@ -492,7 +502,7 @@
     <!-- ========================================================================
          SECTION 3: TECH STACK ARCHITECTURE STRIP (LARAVEL + TANSTACK + PYTHON)
          ======================================================================== -->
-    <section id="architecture" class="p-6 sm:p-10 lg:p-14 bg-[#FFF9D5] border-b-[3px] border-[#111118] flex flex-col gap-6">
+    <section id="architecture" class="p-6 sm:p-10 lg:p-14 bg-[#FFF9D5] border-[3px] border-[#111118] shadow-[4px_4px_0px_#111118] sm:shadow-[6px_6px_0px_#111118] rounded-xl flex flex-col gap-6">
       <div class="flex flex-col gap-2 max-w-[800px]">
         <span class="font-mono text-[11px] sm:text-[12px] font-bold uppercase tracking-wider bg-[#D4FF00] text-[#111118] px-3 py-1 self-start border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-md">
           <span class="lang-en">ROBUST &amp; SCALABLE ARCHITECTURE</span>
@@ -572,7 +582,7 @@
     <!-- ========================================================================
          SECTION 3.5: EXECUTIVE CLIENT STORIES & SOCIAL PROOF
          ======================================================================== -->
-    <section id="clients" class="p-6 sm:p-10 lg:p-14 bg-[#FFF9D5] border-b-[3px] border-[#111118] flex flex-col gap-8">
+    <section id="clients" class="p-6 sm:p-10 lg:p-14 bg-[#FFF9D5] border-[3px] border-[#111118] shadow-[4px_4px_0px_#111118] sm:shadow-[6px_6px_0px_#111118] rounded-xl flex flex-col gap-8">
       
       <div class="flex flex-col gap-2 max-w-[780px]">
         <div class="inline-flex items-center self-start gap-1.5 px-3 py-1 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-md font-mono text-[10.5px] sm:text-[11.5px] font-bold">
@@ -700,7 +710,7 @@
     <!-- ========================================================================
          SECTION 4: PRICING (SIMPLE, TRANSPARENT PRICING)
          ======================================================================== -->
-    <section id="pricing" class="p-6 sm:p-10 lg:p-14 bg-[#FFFDF0] border-b-[3px] border-[#111118] flex flex-col gap-8">
+    <section id="pricing" class="p-6 sm:p-10 lg:p-14 bg-[#FFFDF0] border-[3px] border-[#111118] shadow-[4px_4px_0px_#111118] sm:shadow-[6px_6px_0px_#111118] rounded-xl flex flex-col gap-8">
 
       <div class="flex flex-col gap-2 text-center max-w-[760px] mx-auto">
         <div class="inline-flex items-center self-center gap-1.5 px-3 py-1 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-md font-mono text-[10.5px] sm:text-[11.5px] font-bold">
@@ -986,7 +996,7 @@
     <!-- ========================================================================
          SECTION 5: PRIVACY & SECURITY
          ======================================================================== -->
-    <section id="security" class="p-6 sm:p-10 lg:p-14 bg-[#FFF9D5] border-b-[3px] border-[#111118] flex flex-col gap-8">
+    <section id="security" class="p-6 sm:p-10 lg:p-14 bg-[#FFF9D5] border-[3px] border-[#111118] shadow-[4px_4px_0px_#111118] sm:shadow-[6px_6px_0px_#111118] rounded-xl flex flex-col gap-8">
 
       <div class="flex flex-col gap-2 max-w-[760px]">
         <div class="inline-flex items-center self-start gap-1.5 px-3 py-1 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-md font-mono text-[10.5px] sm:text-[11.5px] font-bold">
@@ -1070,15 +1080,15 @@
     <!-- ========================================================================
          SECTION 6: INTERACTIVE BALI DEMO BOOKING (20 MINUTES)
          ======================================================================== -->
-    <section id="demo" class="p-6 sm:p-10 lg:p-14 bg-[#FFFDF0] border-b-[3px] border-[#111118] flex flex-col gap-8">
+    <section id="demo" class="p-6 sm:p-10 lg:p-14 bg-[#FFFDF0] border-[3px] border-[#111118] shadow-[4px_4px_0px_#111118] sm:shadow-[6px_6px_0px_#111118] rounded-xl flex flex-col gap-8">
 
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         
         <!-- Copy Column -->
         <div class="lg:col-span-6 flex flex-col gap-5">
           <div class="inline-flex items-center self-start gap-1.5 px-3 py-1 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-md font-mono text-[10.5px] sm:text-[11.5px] font-bold">
-            <span class="lang-en">BALI ON-SITE DEPLOYMENT &amp; DISCOVERY</span>
-            <span class="lang-id">LAYANAN DEPLOYMENT ON-SITE DI BALI</span>
+            <span class="lang-en">BADUNG &amp; DENPASAR ON-SITE DEPLOYMENT &amp; DISCOVERY</span>
+            <span class="lang-id">LAYANAN DEPLOYMENT ON-SITE DI BADUNG &amp; DENPASAR</span>
           </div>
           <h2 class="font-heading font-extrabold text-[28px] sm:text-[40px] uppercase tracking-tight text-[#111118]">
             <span class="lang-en">
@@ -1089,8 +1099,8 @@
             </span>
           </h2>
           <p class="font-body text-[15px] sm:text-[16px] text-[#111118]/85 font-medium leading-relaxed">
-            <span class="lang-en">Select your store location in Bali, and our team will arrange a free on-site walkthrough. Schedule confirmation continues conveniently via WhatsApp.</span>
-            <span class="lang-id">Tentukan area lokasi toko atau bisnis Anda di Bali, dan tim kami akan mengatur kunjungan demo on-site gratis. Konfirmasi jadwal dilanjutkan melalui WhatsApp secara praktis.</span>
+            <span class="lang-en">We serve Badung and Denpasar, with more areas coming soon. Select your store location, and our team will arrange a free on-site walkthrough. Schedule confirmation continues conveniently via WhatsApp.</span>
+            <span class="lang-id">Kami melayani Badung dan Denpasar, dengan perluasan layanan ke area lainnya segera hadir. Pilih lokasi toko atau bisnis Anda, dan tim kami akan mengatur kunjungan demo on-site gratis. Konfirmasi jadwal dilanjutkan melalui WhatsApp secara praktis.</span>
           </p>
 
           <!-- 3 Step Guide -->
@@ -1098,8 +1108,8 @@
             <div class="p-3 bg-[#FFF9D5] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg flex items-center gap-3">
               <span class="w-7 h-7 rounded bg-[#FF9D50] border border-[#111118] font-mono font-bold text-[12px] flex items-center justify-center">1</span>
               <span class="font-body text-[13px] font-bold">
-                <span class="lang-en">Select your outlet location in Bali</span>
-                <span class="lang-id">Pilih area lokasi outlet Anda di Bali</span>
+                <span class="lang-en">Select your outlet location in Badung or Denpasar</span>
+                <span class="lang-id">Pilih area lokasi outlet Anda di Badung atau Denpasar</span>
               </span>
             </div>
             <div class="p-3 bg-[#FFF9D5] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg flex items-center gap-3">
@@ -1123,55 +1133,134 @@
         <div class="lg:col-span-6 bg-[#FFF9D5] border-[3px] border-[#111118] shadow-[6px_6px_0px_#111118] rounded-xl p-6 flex flex-col gap-5">
           <div class="flex items-center justify-between border-b-2 border-[#111118]/20 pb-3">
             <span class="font-mono text-[11.5px] sm:text-[12px] font-bold uppercase text-[#111118]">
-              <span class="lang-en">SELECT OUTLET LOCATION (BALI):</span>
-              <span class="lang-id">PILIH LOKASI OUTLET (AREA BALI):</span>
+              <span class="lang-en">SELECT OUTLET LOCATION (BADUNG &amp; DENPASAR):</span>
+              <span class="lang-id">PILIH LOKASI OUTLET (BADUNG &amp; DENPASAR):</span>
             </span>
             <div class="flex items-center gap-2 font-mono text-[10px] font-bold">
               <span class="text-[#059669]">
                 <span class="lang-en">● READY ON-SITE</span><span class="lang-id">● SIAP ON-SITE</span>
               </span>
-              <span>•</span>
-              <span class="text-[#D97706]">
-                <span class="lang-en">⏳ COMING SOON</span><span class="lang-id">⏳ SEGERA HADIR</span>
-              </span>
             </div>
           </div>
 
           <!-- Area Buttons -->
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2" id="bali-area-buttons">
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-2" id="bali-area-buttons">
             <!-- Active Ready Service Areas -->
-            <button type="button" class="area-btn active px-3 py-2.5 bg-[#D4FF00] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg font-mono text-[11px] font-bold text-center cursor-pointer transition-all active:translate-x-0.5" data-area="Denpasar">Denpasar</button>
-            <button type="button" class="area-btn px-3 py-2.5 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg font-mono text-[11px] font-bold text-center cursor-pointer hover:bg-[#D4FF00] transition-all active:translate-x-0.5" data-area="Badung (Canggu / Kuta / Seminyak)">Badung</button>
-            <button type="button" class="area-btn px-3 py-2.5 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg font-mono text-[11px] font-bold text-center cursor-pointer hover:bg-[#D4FF00] transition-all active:translate-x-0.5" data-area="Tabanan">Tabanan</button>
-            <button type="button" class="area-btn px-3 py-2.5 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg font-mono text-[11px] font-bold text-center cursor-pointer hover:bg-[#D4FF00] transition-all active:translate-x-0.5" data-area="Gianyar (Ubud)">Gianyar</button>
-
-            <!-- Disabled Coming Soon Areas -->
-            <button type="button" disabled class="area-btn relative px-2.5 py-2 bg-[#E2E8F0] text-[#111118]/40 border-2 border-[#111118]/30 rounded-lg font-mono text-[11px] font-bold text-center cursor-not-allowed select-none opacity-60 flex flex-col items-center justify-center gap-0.5" data-area="Jembrana" data-soon="true" aria-disabled="true">
-              <span>Jembrana</span>
-              <span class="text-[9px] bg-[#94A3B8] text-white px-1.5 py-0.2 border border-[#111118]/30 rounded font-bold uppercase leading-none">
-                <span class="lang-en">SOON</span><span class="lang-id">SEGERA</span>
+            <button type="button" class="area-btn px-3 py-2.5 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg font-mono text-[11px] font-bold text-center cursor-pointer hover:bg-[#D4FF00] transition-all active:translate-x-0.5" data-area="Abiansemal">Abiansemal</button>
+            <button type="button" class="area-btn px-3 py-2.5 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg font-mono text-[11px] font-bold text-center cursor-pointer hover:bg-[#D4FF00] transition-all active:translate-x-0.5" data-area="Batu Belig">Batu Belig</button>
+            <button type="button" class="area-btn px-3 py-2.5 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg font-mono text-[11px] font-bold text-center cursor-pointer hover:bg-[#D4FF00] transition-all active:translate-x-0.5" data-area="Batu Bolong">Batu Bolong</button>
+            <div class="area-soon relative flex cursor-not-allowed" tabindex="0" aria-describedby="soon-benoa">
+              <button type="button" disabled aria-disabled="true" data-soon="true" data-area="Benoa" class="area-btn pointer-events-none w-full px-3 py-2 bg-[#E2E8F0] text-[#111118]/60 border-2 border-[#111118]/30 rounded-lg font-mono text-[11px] font-bold flex flex-col items-center justify-center gap-1">
+                <span>Benoa</span>
+                <span class="text-[9px] bg-[#CBD5E1] px-1.5 py-0.5 rounded">
+                  <span class="lang-id">SEGERA</span><span class="lang-en">SOON</span>
+                </span>
+              </button>
+              <span id="soon-benoa" role="tooltip" class="area-soon-tooltip absolute bottom-full left-1/2 -translate-x-1/2 mb-2 z-50 whitespace-nowrap rounded-md bg-[#111118] text-white px-3 py-2 font-body text-[12px]">
+                <span class="lang-id">Akan segera hadir</span><span class="lang-en">Coming soon</span>
               </span>
-            </button>
-            <button type="button" disabled class="area-btn relative px-2.5 py-2 bg-[#E2E8F0] text-[#111118]/40 border-2 border-[#111118]/30 rounded-lg font-mono text-[11px] font-bold text-center cursor-not-allowed select-none opacity-60 flex flex-col items-center justify-center gap-0.5" data-area="Karangasem" data-soon="true" aria-disabled="true">
-              <span>Karangasem</span>
-              <span class="text-[9px] bg-[#94A3B8] text-white px-1.5 py-0.2 border border-[#111118]/30 rounded font-bold uppercase leading-none">
-                <span class="lang-en">SOON</span><span class="lang-id">SEGERA</span>
+            </div>
+            <button type="button" class="area-btn px-3 py-2.5 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg font-mono text-[11px] font-bold text-center cursor-pointer hover:bg-[#D4FF00] transition-all active:translate-x-0.5" data-area="Berawa">Berawa</button>
+            <button type="button" class="area-btn active px-3 py-2.5 bg-[#D4FF00] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg font-mono text-[11px] font-bold text-center cursor-pointer transition-all active:translate-x-0.5" data-area="Canggu">Canggu</button>
+            <button type="button" class="area-btn px-3 py-2.5 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg font-mono text-[11px] font-bold text-center cursor-pointer hover:bg-[#D4FF00] transition-all active:translate-x-0.5" data-area="Cemagi">Cemagi</button>
+            <button type="button" class="area-btn px-3 py-2.5 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg font-mono text-[11px] font-bold text-center cursor-pointer hover:bg-[#D4FF00] transition-all active:translate-x-0.5" data-area="Denpasar Barat">Denpasar Barat</button>
+            <button type="button" class="area-btn px-3 py-2.5 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg font-mono text-[11px] font-bold text-center cursor-pointer hover:bg-[#D4FF00] transition-all active:translate-x-0.5" data-area="Denpasar Selatan">Denpasar Selatan</button>
+            <button type="button" class="area-btn px-3 py-2.5 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg font-mono text-[11px] font-bold text-center cursor-pointer hover:bg-[#D4FF00] transition-all active:translate-x-0.5" data-area="Denpasar Timur">Denpasar Timur</button>
+            <button type="button" class="area-btn px-3 py-2.5 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg font-mono text-[11px] font-bold text-center cursor-pointer hover:bg-[#D4FF00] transition-all active:translate-x-0.5" data-area="Denpasar Utara">Denpasar Utara</button>
+            <div class="area-soon relative flex cursor-not-allowed" tabindex="0" aria-describedby="soon-jimbaran">
+              <button type="button" disabled aria-disabled="true" data-soon="true" data-area="Jimbaran" class="area-btn pointer-events-none w-full px-3 py-2 bg-[#E2E8F0] text-[#111118]/60 border-2 border-[#111118]/30 rounded-lg font-mono text-[11px] font-bold flex flex-col items-center justify-center gap-1">
+                <span>Jimbaran</span>
+                <span class="text-[9px] bg-[#CBD5E1] px-1.5 py-0.5 rounded">
+                  <span class="lang-id">SEGERA</span><span class="lang-en">SOON</span>
+                </span>
+              </button>
+              <span id="soon-jimbaran" role="tooltip" class="area-soon-tooltip absolute bottom-full left-1/2 -translate-x-1/2 mb-2 z-50 whitespace-nowrap rounded-md bg-[#111118] text-white px-3 py-2 font-body text-[12px]">
+                <span class="lang-id">Akan segera hadir</span><span class="lang-en">Coming soon</span>
               </span>
-            </button>
-            <button type="button" disabled class="area-btn relative px-2.5 py-2 bg-[#E2E8F0] text-[#111118]/40 border-2 border-[#111118]/30 rounded-lg font-mono text-[11px] font-bold text-center cursor-not-allowed select-none opacity-60 flex flex-col items-center justify-center gap-0.5" data-area="Singaraja / Buleleng" data-soon="true" aria-disabled="true">
-              <span>Singaraja</span>
-              <span class="text-[9px] bg-[#94A3B8] text-white px-1.5 py-0.2 border border-[#111118]/30 rounded font-bold uppercase leading-none">
-                <span class="lang-en">SOON</span><span class="lang-id">SEGERA</span>
+            </div>
+            <button type="button" class="area-btn px-3 py-2.5 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg font-mono text-[11px] font-bold text-center cursor-pointer hover:bg-[#D4FF00] transition-all active:translate-x-0.5" data-area="Kerobokan">Kerobokan</button>
+            <button type="button" class="area-btn px-3 py-2.5 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg font-mono text-[11px] font-bold text-center cursor-pointer hover:bg-[#D4FF00] transition-all active:translate-x-0.5" data-area="Kuta">Kuta</button>
+            <div class="area-soon relative flex cursor-not-allowed" tabindex="0" aria-describedby="soon-kuta-selatan">
+              <button type="button" disabled aria-disabled="true" data-soon="true" data-area="Kuta Selatan" class="area-btn pointer-events-none w-full px-3 py-2 bg-[#E2E8F0] text-[#111118]/60 border-2 border-[#111118]/30 rounded-lg font-mono text-[11px] font-bold flex flex-col items-center justify-center gap-1">
+                <span>Kuta Selatan</span>
+                <span class="text-[9px] bg-[#CBD5E1] px-1.5 py-0.5 rounded">
+                  <span class="lang-id">SEGERA</span><span class="lang-en">SOON</span>
+                </span>
+              </button>
+              <span id="soon-kuta-selatan" role="tooltip" class="area-soon-tooltip absolute bottom-full left-1/2 -translate-x-1/2 mb-2 z-50 whitespace-nowrap rounded-md bg-[#111118] text-white px-3 py-2 font-body text-[12px]">
+                <span class="lang-id">Akan segera hadir</span><span class="lang-en">Coming soon</span>
               </span>
-            </button>
-            <button type="button" disabled class="area-btn relative px-2.5 py-2 bg-[#E2E8F0] text-[#111118]/40 border-2 border-[#111118]/30 rounded-lg font-mono text-[11px] font-bold text-center cursor-not-allowed select-none opacity-60 flex flex-col items-center justify-center gap-0.5" data-area="Klungkung" data-soon="true" aria-disabled="true">
-              <span>Klungkung</span>
-              <span class="text-[9px] bg-[#94A3B8] text-white px-1.5 py-0.2 border border-[#111118]/30 rounded font-bold uppercase leading-none">
-                <span class="lang-en">SOON</span><span class="lang-id">SEGERA</span>
+            </div>
+            <button type="button" class="area-btn px-3 py-2.5 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg font-mono text-[11px] font-bold text-center cursor-pointer hover:bg-[#D4FF00] transition-all active:translate-x-0.5" data-area="Kuta Utara">Kuta Utara</button>
+            <button type="button" class="area-btn px-3 py-2.5 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg font-mono text-[11px] font-bold text-center cursor-pointer hover:bg-[#D4FF00] transition-all active:translate-x-0.5" data-area="Kutuh">Kutuh</button>
+            <button type="button" class="area-btn px-3 py-2.5 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg font-mono text-[11px] font-bold text-center cursor-pointer hover:bg-[#D4FF00] transition-all active:translate-x-0.5" data-area="Legian">Legian</button>
+            <button type="button" class="area-btn px-3 py-2.5 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg font-mono text-[11px] font-bold text-center cursor-pointer hover:bg-[#D4FF00] transition-all active:translate-x-0.5" data-area="Mengwi">Mengwi</button>
+            <div class="area-soon relative flex cursor-not-allowed" tabindex="0" aria-describedby="soon-nusa-dua">
+              <button type="button" disabled aria-disabled="true" data-soon="true" data-area="Nusa Dua" class="area-btn pointer-events-none w-full px-3 py-2 bg-[#E2E8F0] text-[#111118]/60 border-2 border-[#111118]/30 rounded-lg font-mono text-[11px] font-bold flex flex-col items-center justify-center gap-1">
+                <span>Nusa Dua</span>
+                <span class="text-[9px] bg-[#CBD5E1] px-1.5 py-0.5 rounded">
+                  <span class="lang-id">SEGERA</span><span class="lang-en">SOON</span>
+                </span>
+              </button>
+              <span id="soon-nusa-dua" role="tooltip" class="area-soon-tooltip absolute bottom-full left-1/2 -translate-x-1/2 mb-2 z-50 whitespace-nowrap rounded-md bg-[#111118] text-white px-3 py-2 font-body text-[12px]">
+                <span class="lang-id">Akan segera hadir</span><span class="lang-en">Coming soon</span>
               </span>
-            </button>
+            </div>
+            <div class="area-soon relative flex cursor-not-allowed" tabindex="0" aria-describedby="soon-pecatu-uluwatu">
+              <button type="button" disabled aria-disabled="true" data-soon="true" data-area="Pecatu / Uluwatu" class="area-btn pointer-events-none w-full px-3 py-2 bg-[#E2E8F0] text-[#111118]/60 border-2 border-[#111118]/30 rounded-lg font-mono text-[11px] font-bold flex flex-col items-center justify-center gap-1">
+                <span>Pecatu / Uluwatu</span>
+                <span class="text-[9px] bg-[#CBD5E1] px-1.5 py-0.5 rounded">
+                  <span class="lang-id">SEGERA</span><span class="lang-en">SOON</span>
+                </span>
+              </button>
+              <span id="soon-pecatu-uluwatu" role="tooltip" class="area-soon-tooltip absolute bottom-full left-1/2 -translate-x-1/2 mb-2 z-50 whitespace-nowrap rounded-md bg-[#111118] text-white px-3 py-2 font-body text-[12px]">
+                <span class="lang-id">Akan segera hadir</span><span class="lang-en">Coming soon</span>
+              </span>
+            </div>
+            <button type="button" class="area-btn px-3 py-2.5 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg font-mono text-[11px] font-bold text-center cursor-pointer hover:bg-[#D4FF00] transition-all active:translate-x-0.5" data-area="Pererenan">Pererenan</button>
+            <button type="button" class="area-btn px-3 py-2.5 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg font-mono text-[11px] font-bold text-center cursor-pointer hover:bg-[#D4FF00] transition-all active:translate-x-0.5" data-area="Petang">Petang</button>
+            <button type="button" class="area-btn px-3 py-2.5 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg font-mono text-[11px] font-bold text-center cursor-pointer hover:bg-[#D4FF00] transition-all active:translate-x-0.5" data-area="Seminyak">Seminyak</button>
+            <button type="button" class="area-btn px-3 py-2.5 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg font-mono text-[11px] font-bold text-center cursor-pointer hover:bg-[#D4FF00] transition-all active:translate-x-0.5" data-area="Seseh">Seseh</button>
+            <div class="area-soon relative flex cursor-not-allowed" tabindex="0" aria-describedby="soon-tanjung-benoa">
+              <button type="button" disabled aria-disabled="true" data-soon="true" data-area="Tanjung Benoa" class="area-btn pointer-events-none w-full px-3 py-2 bg-[#E2E8F0] text-[#111118]/60 border-2 border-[#111118]/30 rounded-lg font-mono text-[11px] font-bold flex flex-col items-center justify-center gap-1">
+                <span>Tanjung Benoa</span>
+                <span class="text-[9px] bg-[#CBD5E1] px-1.5 py-0.5 rounded">
+                  <span class="lang-id">SEGERA</span><span class="lang-en">SOON</span>
+                </span>
+              </button>
+              <span id="soon-tanjung-benoa" role="tooltip" class="area-soon-tooltip absolute bottom-full left-1/2 -translate-x-1/2 mb-2 z-50 whitespace-nowrap rounded-md bg-[#111118] text-white px-3 py-2 font-body text-[12px]">
+                <span class="lang-id">Akan segera hadir</span><span class="lang-en">Coming soon</span>
+              </span>
+            </div>
+            <button type="button" class="area-btn px-3 py-2.5 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-lg font-mono text-[11px] font-bold text-center cursor-pointer hover:bg-[#D4FF00] transition-all active:translate-x-0.5" data-area="Tuban">Tuban</button>
+            <div class="area-soon relative flex cursor-not-allowed" tabindex="0" aria-describedby="soon-umalas">
+              <button type="button" disabled aria-disabled="true" data-soon="true" data-area="Umalas" class="area-btn pointer-events-none w-full px-3 py-2 bg-[#E2E8F0] text-[#111118]/60 border-2 border-[#111118]/30 rounded-lg font-mono text-[11px] font-bold flex flex-col items-center justify-center gap-1">
+                <span>Umalas</span>
+                <span class="text-[9px] bg-[#CBD5E1] px-1.5 py-0.5 rounded">
+                  <span class="lang-id">SEGERA</span><span class="lang-en">SOON</span>
+                </span>
+              </button>
+              <span id="soon-umalas" role="tooltip" class="area-soon-tooltip absolute bottom-full left-1/2 -translate-x-1/2 mb-2 z-50 whitespace-nowrap rounded-md bg-[#111118] text-white px-3 py-2 font-body text-[12px]">
+                <span class="lang-id">Akan segera hadir</span><span class="lang-en">Coming soon</span>
+              </span>
+            </div>
+            <div class="area-soon relative flex cursor-not-allowed" tabindex="0" aria-describedby="soon-ungasan">
+              <button type="button" disabled aria-disabled="true" data-soon="true" data-area="Ungasan" class="area-btn pointer-events-none w-full px-3 py-2 bg-[#E2E8F0] text-[#111118]/60 border-2 border-[#111118]/30 rounded-lg font-mono text-[11px] font-bold flex flex-col items-center justify-center gap-1">
+                <span>Ungasan</span>
+                <span class="text-[9px] bg-[#CBD5E1] px-1.5 py-0.5 rounded">
+                  <span class="lang-id">SEGERA</span><span class="lang-en">SOON</span>
+                </span>
+              </button>
+              <span id="soon-ungasan" role="tooltip" class="area-soon-tooltip absolute bottom-full left-1/2 -translate-x-1/2 mb-2 z-50 whitespace-nowrap rounded-md bg-[#111118] text-white px-3 py-2 font-body text-[12px]">
+                <span class="lang-id">Akan segera hadir</span><span class="lang-en">Coming soon</span>
+              </span>
+            </div>
           </div>
 
+          <p class="font-body text-[12px] text-[#111118]/75 leading-relaxed">
+            <span class="lang-en">Select an available area in Badung or Denpasar. Areas marked SOON are not available for on-site bookings yet. Enter your full outlet address below.</span>
+            <span class="lang-id">Pilih area yang tersedia di Badung atau Denpasar. Area berlabel SEGERA belum dapat dipesan untuk kunjungan on-site. Tulis alamat lengkap outlet di bawah.</span>
+          </p>
           <!-- Store Note Input (REQUIRED WITH VALIDATION) -->
           <div class="flex flex-col gap-1.5">
             <label for="store-note" class="font-mono text-[11px] font-bold text-[#111118] uppercase flex items-center justify-between">
@@ -1204,7 +1293,7 @@
           <!-- Dynamic WhatsApp Link Button -->
           <a
             id="wa-demo-btn"
-            href="https://wa.me/6281234567890?text=Halo%20Tim%20ZIVO%20POS,%20saya%20mau%20jadwalkan%20demo%20on-site%20di%20area%20Denpasar"
+            href="https://wa.me/6285338000872?text=Halo%20Tim%20ZIVO%20POS,%20saya%20mau%20jadwalkan%20demo%20on-site%20di%20area%20Canggu"
             target="_blank"
             rel="noopener"
             class="w-full py-3.5 bg-[#10B981] hover:bg-[#059669] text-white border-[2.5px] border-[#111118] shadow-[4px_4px_0px_#111118] rounded-xl font-heading font-extrabold text-[14px] uppercase text-center transition-all active:translate-x-[3px] active:translate-y-[3px] active:shadow-none flex items-center justify-center gap-2 cursor-pointer"
@@ -1225,7 +1314,7 @@
     <!-- ========================================================================
          SECTION 7: FREQUENTLY ASKED QUESTIONS (ACCORDION)
          ======================================================================== -->
-    <section id="faq" class="p-6 sm:p-10 lg:p-14 bg-[#FFF9D5] border-b-[3px] border-[#111118] flex flex-col gap-6">
+    <section id="faq" class="p-6 sm:p-10 lg:p-14 bg-[#FFF9D5] border-[3px] border-[#111118] shadow-[4px_4px_0px_#111118] sm:shadow-[6px_6px_0px_#111118] rounded-xl flex flex-col gap-6">
 
       <div class="flex flex-col gap-2 max-w-[700px]">
         <div class="inline-flex items-center self-start gap-1.5 px-3 py-1 bg-[#FFFDF0] text-[#111118] border-2 border-[#111118] shadow-[2px_2px_0px_#111118] rounded-md font-mono text-[10.5px] sm:text-[11.5px] font-bold">
@@ -1348,8 +1437,8 @@
           <div class="faq-collapse">
             <div class="overflow-hidden">
               <p class="font-body text-[13px] text-[#111118]/80 leading-relaxed pt-3 border-t border-[#111118]/20 mt-3">
-                <span class="lang-en">Yes! Because our headquarters are in Bali (Canggu &amp; Denpasar), our technical team can visit your outlet directly in Denpasar, Badung, Gianyar, and Tabanan (Jembrana, Karangasem, Singaraja, and Klungkung are coming soon) to set up hardware and train your staff.</span>
-                <span class="lang-id">Ya! Karena kami berbasis langsung di Bali (Canggu &amp; Denpasar), tim teknis Extensia siap datang langsung ke outlet Anda di Denpasar, Badung, Gianyar, dan Tabanan (untuk area Jembrana, Karangasem, Singaraja, dan Klungkung segera hadir) untuk setup hardware, input menu, dan melatih kasir sampai mahir.</span>
+                <span class="lang-en">Yes! Because our headquarters are in Bali (Canggu &amp; Denpasar), our technical team can visit your outlet in the available areas of Badung and Denpasar to set up hardware and train your staff. Check the location selector for availability; areas marked SOON are not available for on-site visits yet.</span>
+                <span class="lang-id">Ya! Karena kami berbasis langsung di Bali (Canggu &amp; Denpasar), tim teknis Extensia siap datang ke outlet Anda di area Badung dan Denpasar yang tersedia untuk setup hardware, input menu, dan melatih kasir sampai mahir. Cek ketersediaan pada pilihan lokasi; area berlabel SEGERA belum tersedia untuk kunjungan on-site.</span>
               </p>
             </div>
           </div>
@@ -1362,7 +1451,7 @@
     <!-- ========================================================================
          SECTION 8: BOTTOM CTA BANNER & BRAND FOOTER
          ======================================================================== -->
-    <section class="p-6 sm:p-10 lg:p-14 bg-[#FFF9D5] border-t-[3px] border-[#111118] flex flex-col gap-8">
+    <section class="p-6 sm:p-10 lg:p-14 bg-[#FFF9D5] border-[3px] border-[#111118] shadow-[4px_4px_0px_#111118] sm:shadow-[6px_6px_0px_#111118] rounded-xl flex flex-col gap-8">
 
       <!-- Action Banner -->
       <div class="bg-[#FFFDF0] border-[3px] border-[#111118] shadow-[6px_6px_0px_#111118] rounded-xl p-6 sm:p-10 flex flex-col lg:flex-row items-center justify-between gap-6 text-[#111118]">
@@ -1381,7 +1470,7 @@
           </p>
         </div>
 
-        <a href="https://wa.me/6281234567890?text=Halo%20Extensia%20Bali,%20saya%20mau%20jadwalkan%20demo%20zivoPOS%20di%20outlet%20saya" target="_blank" rel="noopener" class="px-8 py-4 bg-[#D4FF00] hover:bg-[#bcf000] text-[#111118] border-[3px] border-[#111118] shadow-[5px_5px_0px_#111118] rounded-xl font-heading font-extrabold text-[14px] sm:text-[15px] uppercase tracking-wide hover:shadow-[7px_7px_0px_#111118] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-[3px] active:translate-y-[3px] active:shadow-none transition-all whitespace-nowrap flex items-center gap-2 cursor-pointer">
+        <a href="https://wa.me/6285338000872?text=Halo%20Extensia%20Bali,%20saya%20mau%20jadwalkan%20demo%20zivoPOS%20di%20outlet%20saya" target="_blank" rel="noopener" class="px-8 py-4 bg-[#D4FF00] hover:bg-[#bcf000] text-[#111118] border-[3px] border-[#111118] shadow-[5px_5px_0px_#111118] rounded-xl font-heading font-extrabold text-[14px] sm:text-[15px] uppercase tracking-wide hover:shadow-[7px_7px_0px_#111118] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-[3px] active:translate-y-[3px] active:shadow-none transition-all whitespace-nowrap flex items-center gap-2 cursor-pointer">
           <span class="lang-en">SCHEDULE FREE DEMO NOW</span>
           <span class="lang-id">JADWALKAN DEMO GRATIS SEKARANG</span>
           <span class="font-mono text-[16px]">➔</span>
@@ -1392,22 +1481,27 @@
       <footer class="flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-[11px] sm:text-[12px] text-[#111118]/80 pt-2">
         <div class="flex items-center gap-2.5">
           <img
-            src="assets/images/extensia-creative-bali-logo-no-bg.png"
+            src="assets/images/extensia-logo-512.png"
             alt="Extensia Bali Logo"
+            width="56"
+            height="56"
+            loading="lazy"
+            decoding="async"
             class="h-7 w-auto object-contain"
           />
           <span>&copy; 2026 <strong>ZIVO POS</strong>. Engineered with architectural precision by Oggie Sutrisna • Extensia Creative Bali.</span>
         </div>
         <div class="flex items-center gap-4">
-          <a href="mailto:info@extensiacreativebali.com" class="hover:underline text-[#111118]">info@extensiacreativebali.com</a>
+          <a href="mailto:oggiesutrisnapro@gmail.com" class="hover:underline text-[#111118]">Email</a>
           <span>•</span>
-          <a href="https://wa.me/6281234567890" target="_blank" rel="noopener" class="hover:underline font-bold text-[#111118]">+62 812-3456-7890</a>
+          <a href="https://wa.me/6285338000872" target="_blank" rel="noopener" class="hover:underline font-bold text-[#111118]">Whatsapp</a>
           <span>•</span>
-          <span class="font-bold text-[#111118]">CANGGU &amp; DENPASAR, BALI</span>
+          <span class="font-bold text-[#111118]">Badung, Bali, Indonesia</span>
         </div>
       </footer>
 
     </section>
+    </main>
   </div>
 
   <!-- Interactive Script for Language Toggle, Bali Area Selector, Form Validation & WhatsApp Generator -->
@@ -1479,7 +1573,7 @@
       var areaButtons = document.querySelectorAll(".area-btn:not([disabled])");
       var waBtn = document.getElementById("wa-demo-btn");
       var noteError = document.getElementById("store-note-error");
-      var selectedArea = "Denpasar";
+      var selectedArea = "Canggu";
 
       function updateWaLink() {
         var currentLang = document.documentElement.lang || "id";
@@ -1491,7 +1585,7 @@
           : "Halo Tim ZIVO POS, saya mau jadwalkan demo on-site di area " + selectedArea + note;
 
         if (waBtn) {
-          waBtn.href = "https://wa.me/6281234567890?text=" + encodeURIComponent(message);
+          waBtn.href = "https://wa.me/6285338000872?text=" + encodeURIComponent(message);
         }
       }
 
@@ -1504,7 +1598,7 @@
           });
           btn.classList.remove("bg-[#FFFDF0]");
           btn.classList.add("bg-[#D4FF00]");
-          selectedArea = btn.getAttribute("data-area") || "Denpasar";
+          selectedArea = btn.getAttribute("data-area") || "Canggu";
           updateWaLink();
         });
       });
