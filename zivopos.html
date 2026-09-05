@@ -23,10 +23,66 @@
   <!-- Tailwind Configuration & Scripts -->
   <script src="assets/js/script.js"></script>
 
-  <!-- Custom Styles for Neubrutalism Details -->
+  <!-- Custom Styles for Neubrutalism Details & Translation System -->
   <style>
+    /* Details Accordion Arrow */
     details.zivo-faq[open] summary .faq-icon {
       transform: rotate(180deg);
+    }
+
+    /* Complete Language Translation Rules */
+    html[lang="id"] .lang-en {
+      display: none !important;
+    }
+    html[lang="id"] .lang-id {
+      display: inline;
+    }
+    html[lang="id"] p.lang-id,
+    html[lang="id"] div.lang-id,
+    html[lang="id"] span.lang-id.block,
+    html[lang="id"] h1.lang-id,
+    html[lang="id"] h2.lang-id,
+    html[lang="id"] h3.lang-id,
+    html[lang="id"] h4.lang-id {
+      display: block;
+    }
+    html[lang="id"] span.lang-id.flex {
+      display: flex;
+    }
+    html[lang="id"] span.lang-id.grid {
+      display: grid;
+    }
+
+    html[lang="en"] .lang-id {
+      display: none !important;
+    }
+    html[lang="en"] .lang-en {
+      display: inline;
+    }
+    html[lang="en"] p.lang-en,
+    html[lang="en"] div.lang-en,
+    html[lang="en"] span.lang-en.block,
+    html[lang="en"] h1.lang-en,
+    html[lang="en"] h2.lang-en,
+    html[lang="en"] h3.lang-en,
+    html[lang="en"] h4.lang-en {
+      display: block;
+    }
+    html[lang="en"] span.lang-en.flex {
+      display: flex;
+    }
+    html[lang="en"] span.lang-en.grid {
+      display: grid;
+    }
+
+    /* Shake Animation for Invalid Required Field */
+    @keyframes inputShake {
+      0%, 100% { transform: translateX(0); }
+      20%, 60% { transform: translateX(-6px); }
+      40%, 80% { transform: translateX(6px); }
+    }
+    .shake-error {
+      animation: inputShake 0.4s ease-in-out;
     }
   </style>
 </head>
@@ -34,7 +90,7 @@
 <body class="bg-[#38BDF8] font-body text-[#1E1C2E] min-h-screen p-2 sm:p-4 lg:p-6 selection:bg-[#D4FF00] selection:text-[#1E1C2E]">
 
   <!-- ============================== MASTER CONTAINER ============================== -->
-  <div class="max-w-[1560px] mx-auto bg-[#FFF9D5] border-[3px] border-[#1E1C2E] shadow-[8px_8px_0px_#1E1C2E] rounded-lg overflow-hidden flex flex-col">
+  <div class="max-w-[1560px] mx-auto bg-[#FFF9D5] border-[3px] border-[#1E1C2E] shadow-[8px_8px_0px_#1E1C2E] rounded-xl overflow-hidden flex flex-col">
 
     <!-- ========================================================================
          STICKY HEADER & NAVIGATION
@@ -45,7 +101,8 @@
       <div class="flex items-center gap-3 sm:gap-5">
         <a href="index.html" class="inline-flex items-center gap-1.5 font-mono text-[12px] sm:text-[13px] font-bold px-3 py-2 bg-[#FFFDF0] text-[#1E1C2E] border-2 border-[#1E1C2E] shadow-[2px_2px_0px_#1E1C2E] rounded-lg hover:bg-[#D4FF00] transition-all active:translate-x-[3px] active:translate-y-[3px] active:shadow-none whitespace-nowrap">
           <span class="material-symbols-outlined text-[16px]">arrow_back</span>
-          <span>EXTENSIA BALI</span>
+          <span class="lang-en">BACK TO EXTENSIA</span>
+          <span class="lang-id">KEMBALI KE EXTENSIA</span>
         </a>
 
         <!-- Logo Brand -->
@@ -62,19 +119,37 @@
 
       <!-- Navigation Links (Desktop) -->
       <nav class="hidden xl:flex items-center gap-2">
-        <a href="#features" class="font-mono text-[12px] font-bold px-3 py-1.5 bg-[#FFFDF0] hover:bg-[#D4FF00] border-2 border-[#1E1C2E] shadow-[2px_2px_0px_#1E1C2E] rounded-md transition-all">FITUR</a>
-        <a href="#benefits" class="font-mono text-[12px] font-bold px-3 py-1.5 bg-[#FFFDF0] hover:bg-[#D4FF00] border-2 border-[#1E1C2E] shadow-[2px_2px_0px_#1E1C2E] rounded-md transition-all">KEUNGGULAN</a>
+        <a href="#features" class="font-mono text-[12px] font-bold px-3 py-1.5 bg-[#FFFDF0] hover:bg-[#D4FF00] border-2 border-[#1E1C2E] shadow-[2px_2px_0px_#1E1C2E] rounded-md transition-all">
+          <span class="lang-en">FEATURES</span><span class="lang-id">FITUR</span>
+        </a>
+        <a href="#benefits" class="font-mono text-[12px] font-bold px-3 py-1.5 bg-[#FFFDF0] hover:bg-[#D4FF00] border-2 border-[#1E1C2E] shadow-[2px_2px_0px_#1E1C2E] rounded-md transition-all">
+          <span class="lang-en">BENEFITS</span><span class="lang-id">KEUNGGULAN</span>
+        </a>
         <a href="#architecture" class="font-mono text-[12px] font-bold px-3 py-1.5 bg-[#FFFDF0] hover:bg-[#D4FF00] border-2 border-[#1E1C2E] shadow-[2px_2px_0px_#1E1C2E] rounded-md transition-all">TECH STACK</a>
-        <a href="#pricing" class="font-mono text-[12px] font-bold px-3 py-1.5 bg-[#FFFDF0] hover:bg-[#D4FF00] border-2 border-[#1E1C2E] shadow-[2px_2px_0px_#1E1C2E] rounded-md transition-all">HARGA</a>
-        <a href="#security" class="font-mono text-[12px] font-bold px-3 py-1.5 bg-[#FFFDF0] hover:bg-[#D4FF00] border-2 border-[#1E1C2E] shadow-[2px_2px_0px_#1E1C2E] rounded-md transition-all">KEAMANAN</a>
-        <a href="#demo" class="font-mono text-[12px] font-bold px-3 py-1.5 bg-[#FFFDF0] hover:bg-[#D4FF00] border-2 border-[#1E1C2E] shadow-[2px_2px_0px_#1E1C2E] rounded-md transition-all">DEMO BALI</a>
+        <a href="#pricing" class="font-mono text-[12px] font-bold px-3 py-1.5 bg-[#FFFDF0] hover:bg-[#D4FF00] border-2 border-[#1E1C2E] shadow-[2px_2px_0px_#1E1C2E] rounded-md transition-all">
+          <span class="lang-en">PRICING</span><span class="lang-id">HARGA</span>
+        </a>
+        <a href="#security" class="font-mono text-[12px] font-bold px-3 py-1.5 bg-[#FFFDF0] hover:bg-[#D4FF00] border-2 border-[#1E1C2E] shadow-[2px_2px_0px_#1E1C2E] rounded-md transition-all">
+          <span class="lang-en">SECURITY</span><span class="lang-id">KEAMANAN</span>
+        </a>
+        <a href="#demo" class="font-mono text-[12px] font-bold px-3 py-1.5 bg-[#FFFDF0] hover:bg-[#D4FF00] border-2 border-[#1E1C2E] shadow-[2px_2px_0px_#1E1C2E] rounded-md transition-all">
+          <span class="lang-en">BALI DEMO</span><span class="lang-id">DEMO BALI</span>
+        </a>
         <a href="#faq" class="font-mono text-[12px] font-bold px-3 py-1.5 bg-[#FFFDF0] hover:bg-[#D4FF00] border-2 border-[#1E1C2E] shadow-[2px_2px_0px_#1E1C2E] rounded-md transition-all">FAQ</a>
       </nav>
 
-      <!-- Right Action CTA -->
-      <div class="flex items-center gap-2.5">
+      <!-- Right Actions: Language Switcher + Book Demo CTA -->
+      <div class="flex items-center gap-2.5 sm:gap-3">
+        
+        <!-- Interactive Neubrutalist Language Switcher (ID / EN) -->
+        <div class="inline-flex items-center p-1 bg-[#FFFDF0] border-2 border-[#1E1C2E] shadow-[2px_2px_0px_#1E1C2E] rounded-lg font-mono text-[11px] font-bold" role="group" aria-label="Pilih Bahasa / Language Selection">
+          <button type="button" id="btn-lang-id" class="lang-btn px-2.5 py-1 bg-[#D4FF00] text-[#1E1C2E] border border-[#1E1C2E] rounded transition-all cursor-pointer">ID</button>
+          <button type="button" id="btn-lang-en" class="lang-btn px-2.5 py-1 bg-transparent text-[#1E1C2E] rounded hover:bg-[#FFF9D5] transition-all cursor-pointer">EN</button>
+        </div>
+
         <a href="#demo" class="inline-flex items-center gap-1.5 font-heading font-extrabold text-[13px] sm:text-[14px] uppercase px-4 sm:px-5 py-2.5 bg-[#D4FF00] text-[#1E1C2E] border-2 border-[#1E1C2E] shadow-[3px_3px_0px_#1E1C2E] rounded-lg hover:bg-[#bcf000] hover:shadow-[5px_5px_0px_#1E1C2E] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-[3px] active:translate-y-[3px] active:shadow-none transition-all whitespace-nowrap">
-          <span>BOOK DEMO</span>
+          <span class="lang-en">BOOK DEMO</span>
+          <span class="lang-id">JADWALKAN DEMO</span>
           <span class="text-[16px]">⚡</span>
         </a>
       </div>
@@ -96,49 +171,76 @@
           <div class="flex flex-wrap items-center gap-2">
             <div class="inline-flex items-center gap-1.5 px-3 py-1 bg-[#FF9D50] text-[#1E1C2E] border-2 border-[#1E1C2E] shadow-[2px_2px_0px_#1E1C2E] rounded-md font-mono text-[11px] sm:text-[12px] font-bold">
               <span>🚀</span>
-              <span>OFFICIAL PRODUCT BY EXTENSIA BALI</span>
+              <span class="lang-en">OFFICIAL PRODUCT BY EXTENSIA BALI</span>
+              <span class="lang-id">PRODUK RESMI EXTENSIA BALI</span>
             </div>
             <div class="inline-flex items-center gap-1.5 px-3 py-1 bg-[#D4FF00] text-[#1E1C2E] border-2 border-[#1E1C2E] shadow-[2px_2px_0px_#1E1C2E] rounded-md font-mono text-[11px] sm:text-[12px] font-bold">
               <span>🌴</span>
-              <span>RUN • UNDERSTAND • GROW</span>
+              <span class="lang-en">DESIGNED FOR BALI BUSINESS ECOSYSTEM</span>
+              <span class="lang-id">DIRANCANG KHUSUS UNTUK EKOSISTEM BALI</span>
             </div>
           </div>
 
           <!-- Heavy Clash Display Headline -->
           <h1 class="font-heading font-extrabold text-[36px] sm:text-[48px] md:text-[54px] xl:text-[60px] leading-[1.05] tracking-tight uppercase text-[#1E1C2E]">
-            MORE THAN A POS.<br />
-            YOUR BUSINESS, <span class="bg-[#38BDF8] px-2 py-0.5 inline-block border-2 border-[#1E1C2E] shadow-[4px_4px_0px_#1E1C2E] -rotate-1">MADE EASIER</span>
+            <span class="lang-en">
+              MORE THAN A POS.<br />
+              YOUR BUSINESS, <span class="bg-[#38BDF8] px-2 py-0.5 inline-block border-2 border-[#1E1C2E] shadow-[4px_4px_0px_#1E1C2E] -rotate-1">MADE EASIER</span>
+            </span>
+            <span class="lang-id">
+              LEBIH DARI KASIR.<br />
+              BISNIS LEBIH MUDAH, <span class="bg-[#38BDF8] px-2 py-0.5 inline-block border-2 border-[#1E1C2E] shadow-[4px_4px_0px_#1E1C2E] -rotate-1">TUMBUH CEPAT</span>
+            </span>
           </h1>
 
           <!-- Subparagraph -->
           <p class="font-body text-[15px] sm:text-[17px] text-[#1E1C2E]/90 font-medium leading-relaxed">
-            Aplikasi POS dan manajemen bisnis modern. Catat penjualan kilat, kontrol inventaris multi-outlet, <strong>100% offline-ready</strong> saat internet Bali drop, dan pahami angka harian untuk mengambil keputusan ekspansi bisnis secara percaya diri.
+            <span class="lang-en">
+              A modern POS and business management app. Keep checkout fast and offline-ready, understand your daily numbers, and make confident decisions to scale your business in Bali.
+            </span>
+            <span class="lang-id">
+              Aplikasi POS dan manajemen bisnis modern. Catat penjualan kilat, kontrol inventaris multi-outlet, <strong>100% offline-ready</strong> saat internet Bali drop, dan pahami angka harian untuk mengambil keputusan ekspansi bisnis secara percaya diri.
+            </span>
           </p>
 
           <!-- CTA Buttons -->
           <div class="flex flex-wrap items-center gap-3.5 pt-1">
-            <a href="#demo" class="inline-flex items-center justify-center gap-2 font-heading font-extrabold text-[14px] sm:text-[15px] uppercase px-7 py-3.5 bg-[#D4FF00] text-[#1E1C2E] border-[2.5px] border-[#1E1C2E] shadow-[4px_4px_0px_#1E1C2E] rounded-lg hover:bg-[#bcf000] hover:shadow-[6px_6px_0px_#1E1C2E] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-[3px] active:translate-y-[3px] active:shadow-none transition-all cursor-pointer">
-              <span>BOOK A FREE DEMO</span>
+            <a href="#demo" class="inline-flex items-center justify-center gap-2 font-heading font-extrabold text-[14px] sm:text-[15px] uppercase px-7 py-3.5 bg-[#D4FF00] text-[#1E1C2E] border-[2.5px] border-[#1E1C2E] shadow-[4px_4px_0px_#1E1C2E] rounded-xl hover:bg-[#bcf000] hover:shadow-[6px_6px_0px_#1E1C2E] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-[3px] active:translate-y-[3px] active:shadow-none transition-all cursor-pointer">
+              <span class="lang-en">BOOK A FREE DEMO</span>
+              <span class="lang-id">JADWALKAN DEMO GRATIS</span>
               <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
             </a>
 
-            <a href="#features" class="inline-flex items-center justify-center gap-2 font-heading font-extrabold text-[14px] sm:text-[15px] uppercase px-6 py-3.5 bg-[#FFFDF0] text-[#1E1C2E] border-2 border-[#1E1C2E] shadow-[3px_3px_0px_#1E1C2E] rounded-lg hover:bg-[#FFF9D5] hover:shadow-[5px_5px_0px_#1E1C2E] transition-all cursor-pointer">
-              <span>SEE HOW IT WORKS ↓</span>
+            <a href="#features" class="inline-flex items-center justify-center gap-2 font-heading font-extrabold text-[14px] sm:text-[15px] uppercase px-6 py-3.5 bg-[#FFFDF0] text-[#1E1C2E] border-2 border-[#1E1C2E] shadow-[3px_3px_0px_#1E1C2E] rounded-xl hover:bg-[#FFF9D5] hover:shadow-[5px_5px_0px_#1E1C2E] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-[3px] active:translate-y-[3px] active:shadow-none transition-all cursor-pointer">
+              <span class="lang-en">SEE HOW IT WORKS ↓</span>
+              <span class="lang-id">LIHAT CARA KERJA ↓</span>
             </a>
           </div>
 
           <!-- Trust Checkmarks -->
           <div class="flex flex-wrap items-center gap-4 pt-1 font-mono text-[12px] font-bold text-[#1E1C2E]">
-            <span class="flex items-center gap-1.5"><span class="text-[#006d31]">✔</span> Free 20-min walkthrough</span>
-            <span class="flex items-center gap-1.5"><span class="text-[#006d31]">✔</span> Free installation &amp; setup</span>
-            <span class="flex items-center gap-1.5"><span class="text-[#006d31]">✔</span> Works without internet</span>
+            <span class="flex items-center gap-1.5">
+              <span class="text-[#006d31]">✔</span>
+              <span class="lang-en">Free 20-min walkthrough</span>
+              <span class="lang-id">Demo gratis 20 menit on-site</span>
+            </span>
+            <span class="flex items-center gap-1.5">
+              <span class="text-[#006d31]">✔</span>
+              <span class="lang-en">Free installation &amp; setup</span>
+              <span class="lang-id">Gratis instalasi &amp; setup</span>
+            </span>
+            <span class="flex items-center gap-1.5">
+              <span class="text-[#006d31]">✔</span>
+              <span class="lang-en">Works without internet</span>
+              <span class="lang-id">Tetap jalan tanpa internet</span>
+            </span>
           </div>
 
         </div>
 
         <!-- Hero Mockup Display (Right Column) -->
         <div class="lg:col-span-5 flex flex-col gap-3 z-10">
-          <div class="bg-[#FFFDF0] border-[3px] border-[#1E1C2E] shadow-[6px_6px_0px_#1E1C2E] rounded-lg overflow-hidden">
+          <div class="bg-[#FFFDF0] border-[3px] border-[#1E1C2E] shadow-[6px_6px_0px_#1E1C2E] rounded-xl overflow-hidden">
             <!-- Window Browser Bar -->
             <div class="h-10 bg-[#38BDF8] border-b-2 border-[#1E1C2E] flex items-center justify-between px-3.5">
               <div class="flex items-center gap-1.5">
@@ -147,7 +249,10 @@
                 <span class="w-3 h-3 rounded-full bg-[#6BCB77] border border-[#1E1C2E]"></span>
               </div>
               <span class="font-mono text-[11px] font-bold text-[#1E1C2E]">zivo-cashier.system.app</span>
-              <span class="font-mono text-[10px] bg-[#D4FF00] px-2 py-0.5 border border-[#1E1C2E] rounded font-bold">OFFLINE READY</span>
+              <span class="font-mono text-[10px] bg-[#D4FF00] px-2 py-0.5 border border-[#1E1C2E] rounded font-bold">
+                <span class="lang-en">OFFLINE READY</span>
+                <span class="lang-id">SIAP OFFLINE</span>
+              </span>
             </div>
 
             <!-- SVG Mockup Graphic -->
@@ -163,9 +268,13 @@
             <div class="p-2.5 bg-[#FFF9D5] border-t-2 border-[#1E1C2E] flex items-center justify-between font-mono text-[11px] font-bold text-[#1E1C2E]">
               <span class="flex items-center gap-1.5 text-[#006d31]">
                 <span class="w-2 h-2 rounded-full bg-[#10B981] animate-pulse"></span>
-                AUTO SYNC: ACTIVE
+                <span class="lang-en">AUTO SYNC: ACTIVE</span>
+                <span class="lang-id">SINKRONISASI: AKTIF</span>
               </span>
-              <span>TX SPEED: &lt; 0.8s</span>
+              <span>
+                <span class="lang-en">TX SPEED: &lt; 0.8s</span>
+                <span class="lang-id">KECEPATAN: &lt; 0.8s</span>
+              </span>
             </div>
           </div>
         </div>
@@ -183,13 +292,16 @@
       <div class="flex flex-col gap-2 max-w-[760px]">
         <div class="inline-flex items-center self-start gap-1.5 px-3 py-1 bg-[#38BDF8] text-[#1E1C2E] border-2 border-[#1E1C2E] shadow-[2px_2px_0px_#1E1C2E] rounded-md font-mono text-[11px] sm:text-[12px] font-bold">
           <span>⚙️</span>
-          <span>CORE CAPABILITIES</span>
+          <span class="lang-en">CORE CAPABILITIES</span>
+          <span class="lang-id">FITUR UTAMA</span>
         </div>
         <h2 class="font-heading font-extrabold text-[28px] sm:text-[38px] uppercase tracking-tight text-[#1E1C2E]">
-          ONE SIMPLE POS, FROM CHECKOUT TO BUSINESS REPORTS
+          <span class="lang-en">ONE SIMPLE POS, FROM CHECKOUT TO BUSINESS REPORTS</span>
+          <span class="lang-id">SATU APLIKASI, DARI TRANSAKSI HINGGA LAPORAN BISNIS</span>
         </h2>
         <p class="font-body text-[15px] sm:text-[16px] text-[#1E1C2E]/80 font-medium">
-          Help cashiers serve customers quickly while owners keep sales, stock, and expenses clearly organized.
+          <span class="lang-en">Help cashiers serve customers quickly while owners keep sales, stock, and expenses clearly organized.</span>
+          <span class="lang-id">Bantu kasir melayani pelanggan lebih cepat, sekaligus memudahkan pemilik memantau penjualan, stok, dan pengeluaran.</span>
         </p>
       </div>
 
@@ -201,9 +313,13 @@
           <div class="w-12 h-12 rounded-lg bg-[#FF9D50] border-2 border-[#1E1C2E] shadow-[2px_2px_0px_#1E1C2E] flex items-center justify-center text-[#1E1C2E]">
             <span class="material-symbols-outlined text-[26px]">wifi_off</span>
           </div>
-          <h3 class="font-heading font-bold text-[18px] uppercase text-[#1E1C2E]">Keep Selling Offline</h3>
+          <h3 class="font-heading font-bold text-[18px] uppercase text-[#1E1C2E]">
+            <span class="lang-en">Keep Selling Offline</span>
+            <span class="lang-id">Jual Tetap Lancar Saat Offline</span>
+          </h3>
           <p class="font-body text-[13px] text-[#1E1C2E]/80 leading-relaxed">
-            Keep ringing up sales when Wi-Fi goes down. Transactions are saved on the device and added to your reports automatically after reconnecting.
+            <span class="lang-en">Keep ringing up sales when Wi-Fi goes down. Transactions are saved on the device and added to your reports automatically after reconnecting.</span>
+            <span class="lang-id">Saat Wi-Fi terputus di pantai atau tebing, kasir tetap jalan. Transaksi tersimpan di perangkat dan otomatis masuk ke laporan setelah online kembali.</span>
           </p>
         </article>
 
@@ -212,9 +328,13 @@
           <div class="w-12 h-12 rounded-lg bg-[#38BDF8] border-2 border-[#1E1C2E] shadow-[2px_2px_0px_#1E1C2E] flex items-center justify-center text-[#1E1C2E]">
             <span class="material-symbols-outlined text-[26px]">inventory_2</span>
           </div>
-          <h3 class="font-heading font-bold text-[18px] uppercase text-[#1E1C2E]">Simpler Stock &amp; Product Control</h3>
+          <h3 class="font-heading font-bold text-[18px] uppercase text-[#1E1C2E]">
+            <span class="lang-en">Simpler Stock &amp; Product Control</span>
+            <span class="lang-id">Kontrol Stok &amp; Bahan Baku</span>
+          </h3>
           <p class="font-body text-[13px] text-[#1E1C2E]/80 leading-relaxed">
-            Monitor stock levels and get low-stock alerts. Add products and photos, scan barcodes, and create bundles with automatic discounts.
+            <span class="lang-en">Monitor stock levels and get low-stock alerts. Add products and photos, scan barcodes, and create bundles with automatic discounts.</span>
+            <span class="lang-id">Pantau jumlah stok dan dapatkan peringatan stok menipis. Tambahkan foto produk, pindai barcode, dan hitung HPP resep otomatis.</span>
           </p>
         </article>
 
@@ -223,9 +343,13 @@
           <div class="w-12 h-12 rounded-lg bg-[#D4FF00] border-2 border-[#1E1C2E] shadow-[2px_2px_0px_#1E1C2E] flex items-center justify-center text-[#1E1C2E]">
             <span class="material-symbols-outlined text-[26px]">analytics</span>
           </div>
-          <h3 class="font-heading font-bold text-[18px] uppercase text-[#1E1C2E]">Ready-to-Review Business Reports</h3>
+          <h3 class="font-heading font-bold text-[18px] uppercase text-[#1E1C2E]">
+            <span class="lang-en">Ready-to-Review Business Reports</span>
+            <span class="lang-id">Laporan Usaha Siap Dipantau</span>
+          </h3>
           <p class="font-body text-[13px] text-[#1E1C2E]/80 leading-relaxed">
-            Review daily revenue, profit, and expenses in one place. Export reports to <strong>PDF</strong> or <strong>Excel</strong> whenever you need them.
+            <span class="lang-en">Review daily revenue, profit, and expenses in one place. Export reports to <strong>PDF</strong> or <strong>Excel</strong> whenever you need them.</span>
+            <span class="lang-id">Lihat omset harian, laba kotor, laba bersih, dan pengeluaran dalam satu layar. Ekspor ke <strong>PDF</strong> atau <strong>Excel</strong> kapan pun dibutuhkan.</span>
           </p>
         </article>
 
@@ -234,9 +358,13 @@
           <div class="w-12 h-12 rounded-lg bg-[#FF9D50] border-2 border-[#1E1C2E] shadow-[2px_2px_0px_#1E1C2E] flex items-center justify-center text-[#1E1C2E]">
             <span class="material-symbols-outlined text-[26px]">badge</span>
           </div>
-          <h3 class="font-heading font-bold text-[18px] uppercase text-[#1E1C2E]">Clearer Shifts &amp; Staff Access</h3>
+          <h3 class="font-heading font-bold text-[18px] uppercase text-[#1E1C2E]">
+            <span class="lang-en">Clearer Shifts &amp; Staff Access</span>
+            <span class="lang-id">Shift Rapi, Akses Terkendali</span>
+          </h3>
           <p class="font-body text-[13px] text-[#1E1C2E]/80 leading-relaxed">
-            Track cash in drawer at shift start and end. Hold pending orders when customers step away, and keep financial access private with separate staff logins.
+            <span class="lang-en">Track cash in drawer at shift start and end. Hold pending orders when customers step away, and keep financial access private with separate staff logins.</span>
+            <span class="lang-id">Hitung uang kas awal &amp; akhir shift kasir. Simpan sementara pesanan pending, dan cegah selisih uang dengan pemisahan akses akun owner vs kasir.</span>
           </p>
         </article>
 
@@ -255,13 +383,16 @@
         <div class="flex flex-col gap-2 max-w-[700px]">
           <div class="inline-flex items-center self-start gap-1.5 px-3 py-1 bg-[#D4FF00] text-[#1E1C2E] border-2 border-[#1E1C2E] shadow-[2px_2px_0px_#1E1C2E] rounded-md font-mono text-[11px] sm:text-[12px] font-bold">
             <span>⚡</span>
-            <span>SPEED &amp; TRANSPARENCY</span>
+            <span class="lang-en">SPEED &amp; TRANSPARENCY</span>
+            <span class="lang-id">KECEPATAN &amp; TRANSPARANSI</span>
           </div>
           <h2 class="font-heading font-extrabold text-[28px] sm:text-[38px] uppercase tracking-tight text-[#1E1C2E]">
-            FASTER SERVICE FOR CASHIERS, CLEARER CONTROL FOR OWNERS
+            <span class="lang-en">FASTER SERVICE FOR CASHIERS, CLEARER CONTROL FOR OWNERS</span>
+            <span class="lang-id">KASIR LEBIH CEPAT, PEMILIK LEBIH MUDAH MENGONTROL USAHA</span>
           </h2>
           <p class="font-body text-[15px] sm:text-[16px] text-[#1E1C2E]/80 font-medium">
-            ZIVO is designed for checkout in under 3 seconds and connects everyday operations with business insights.
+            <span class="lang-en">ZIVO is designed for checkout in under 3 seconds and connects everyday operations with business insights.</span>
+            <span class="lang-id">ZIVO dirancang untuk memproses transaksi dalam kurang dari 3 detik dan menghubungkan operasional harian dengan wawasan bisnis yang jelas.</span>
           </p>
         </div>
 
@@ -269,15 +400,21 @@
         <div class="flex items-center gap-3">
           <div class="p-3.5 bg-[#FFFDF0] border-2 border-[#1E1C2E] shadow-[3px_3px_0px_#1E1C2E] rounded-lg flex flex-col items-center min-w-[110px]">
             <span class="font-heading font-extrabold text-[24px] text-[#006d31]">&lt; 3 dtk</span>
-            <span class="font-mono text-[10px] font-bold text-[#1E1C2E]/70 uppercase">Per Transaksi</span>
+            <span class="font-mono text-[10px] font-bold text-[#1E1C2E]/70 uppercase">
+              <span class="lang-en">Per Transaction</span><span class="lang-id">Per Transaksi</span>
+            </span>
           </div>
           <div class="p-3.5 bg-[#FFFDF0] border-2 border-[#1E1C2E] shadow-[3px_3px_0px_#1E1C2E] rounded-lg flex flex-col items-center min-w-[110px]">
             <span class="font-heading font-extrabold text-[24px] text-[#38BDF8]">Offline</span>
-            <span class="font-mono text-[10px] font-bold text-[#1E1C2E]/70 uppercase">Ready Checkout</span>
+            <span class="font-mono text-[10px] font-bold text-[#1E1C2E]/70 uppercase">
+              <span class="lang-en">Ready Checkout</span><span class="lang-id">Siap Offline</span>
+            </span>
           </div>
           <div class="p-3.5 bg-[#FFFDF0] border-2 border-[#1E1C2E] shadow-[3px_3px_0px_#1E1C2E] rounded-lg flex flex-col items-center min-w-[110px]">
             <span class="font-heading font-extrabold text-[24px] text-[#FF9D50]">0%</span>
-            <span class="font-mono text-[10px] font-bold text-[#1E1C2E]/70 uppercase">Hidden Fees</span>
+            <span class="font-mono text-[10px] font-bold text-[#1E1C2E]/70 uppercase">
+              <span class="lang-en">Hidden Fees</span><span class="lang-id">Biaya Tersembunyi</span>
+            </span>
           </div>
         </div>
       </div>
@@ -289,14 +426,26 @@
         <div class="bg-[#FFFDF0] border-[2.5px] border-[#1E1C2E] shadow-[4px_4px_0px_#1E1C2E] rounded-lg p-6 flex flex-col gap-4">
           <div class="flex items-center gap-2">
             <span class="text-[22px]">⚡</span>
-            <h3 class="font-heading font-bold text-[20px] uppercase text-[#1E1C2E]">Faster Checkout, Shorter Queues</h3>
+            <h3 class="font-heading font-bold text-[20px] uppercase text-[#1E1C2E]">
+              <span class="lang-en">Faster Checkout, Shorter Queues</span>
+              <span class="lang-id">Transaksi Lebih Cepat, Antrean Lebih Singkat</span>
+            </h3>
           </div>
           <p class="font-body text-[14px] text-[#1E1C2E]/80 leading-relaxed">
-            Tap products on screen, search by name, or scan barcodes in seconds. Accepts cash, debit cards, and QRIS payments. Discounts and taxes are calculated automatically and accurately.
+            <span class="lang-en">Tap products on screen, search by name, or scan barcodes in seconds. Accepts cash, debit cards, and QRIS payments. Discounts and taxes are calculated automatically and accurately.</span>
+            <span class="lang-id">Temukan produk melalui layar sentuh, pencarian nama, atau scan barcode dalam sekejap. Terima pembayaran tunai, debit, transfer, dan QRIS dinamis. Diskon dan pajak terhitung otomatis.</span>
           </p>
           <ul class="flex flex-col gap-2 font-mono text-[12px] font-bold text-[#1E1C2E] pt-2 border-t border-[#1E1C2E]/20">
-            <li class="flex items-center gap-2"><span class="text-[#006d31]">✔</span> Print clean receipts directly to thermal printers</li>
-            <li class="flex items-center gap-2"><span class="text-[#006d31]">✔</span> Hold orders when customers need to pick extra items</li>
+            <li class="flex items-center gap-2">
+              <span class="text-[#006d31]">✔</span>
+              <span class="lang-en">Print clean receipts directly to thermal printers</span>
+              <span class="lang-id">Cetak struk belanja rapi ke printer thermal kasir</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-[#006d31]">✔</span>
+              <span class="lang-en">Hold orders when customers need to pick extra items</span>
+              <span class="lang-id">Simpan sementara pesanan (hold bill) saat tamu tambah menu</span>
+            </li>
           </ul>
         </div>
 
@@ -304,14 +453,26 @@
         <div class="bg-[#FFFDF0] border-[2.5px] border-[#1E1C2E] shadow-[4px_4px_0px_#1E1C2E] rounded-lg p-6 flex flex-col gap-4">
           <div class="flex items-center gap-2">
             <span class="text-[22px]">🔓</span>
-            <h3 class="font-heading font-bold text-[20px] uppercase text-[#1E1C2E]">Your Data, With Transparent Costs</h3>
+            <h3 class="font-heading font-bold text-[20px] uppercase text-[#1E1C2E]">
+              <span class="lang-en">Your Data, With Transparent Costs</span>
+              <span class="lang-id">Data Milik Anda, Biaya Tetap Transparan</span>
+            </h3>
           </div>
           <p class="font-body text-[14px] text-[#1E1C2E]/80 leading-relaxed">
-            You have complete control over your customer and sales records. Transparent plans with free installation, no transaction percentage deductions, and no hidden fees.
+            <span class="lang-en">You have complete control over your customer and sales records. Transparent plans with free installation, no transaction percentage deductions, and no hidden fees.</span>
+            <span class="lang-id">Semua data toko dan riwayat transaksi sepenuhnya milik Anda. Paket transparan dengan gratis instalasi, tanpa potongan komisi per transaksi, dan bebas ekspor data kapan saja.</span>
           </p>
           <ul class="flex flex-col gap-2 font-mono text-[12px] font-bold text-[#1E1C2E] pt-2 border-t border-[#1E1C2E]/20">
-            <li class="flex items-center gap-2"><span class="text-[#006d31]">✔</span> Export all sales and stock records to Excel &amp; PDF anytime</li>
-            <li class="flex items-center gap-2"><span class="text-[#006d31]">✔</span> Works seamlessly on PC, laptop, tablet, or smartphone</li>
+            <li class="flex items-center gap-2">
+              <span class="text-[#006d31]">✔</span>
+              <span class="lang-en">Export all sales and stock records to Excel &amp; PDF anytime</span>
+              <span class="lang-id">Ekspor semua riwayat penjualan &amp; stok ke Excel &amp; PDF kapan saja</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-[#006d31]">✔</span>
+              <span class="lang-en">Works seamlessly on PC, laptop, tablet, or smartphone</span>
+              <span class="lang-id">Bisa digunakan di komputer PC, laptop, tablet, maupun smartphone</span>
+            </li>
           </ul>
         </div>
 
@@ -326,13 +487,16 @@
     <section id="architecture" class="p-6 sm:p-10 lg:p-14 bg-[#38BDF8] border-b-[3px] border-[#1E1C2E] flex flex-col gap-6">
       <div class="flex flex-col gap-2 max-w-[800px]">
         <span class="font-mono text-[11px] sm:text-[12px] font-bold uppercase tracking-wider bg-[#FFFDF0] px-3 py-1 self-start border-2 border-[#1E1C2E] shadow-[2px_2px_0px_#1E1C2E] rounded-md">
-          ROBUST &amp; SCALABLE ARCHITECTURE
+          <span class="lang-en">ROBUST &amp; SCALABLE ARCHITECTURE</span>
+          <span class="lang-id">ARSITEKTUR SKALABEL &amp; TANGGUH</span>
         </span>
         <h2 class="font-heading font-extrabold text-[26px] sm:text-[36px] uppercase tracking-tight text-[#1E1C2E]">
-          ARSITEKTUR TEKNOLOGI KELAS DUNIA DI BALIK ZIVOPOS
+          <span class="lang-en">WORLD-CLASS TECHNOLOGY ARCHITECTURE BEHIND ZIVOPOS</span>
+          <span class="lang-id">ARSITEKTUR TEKNOLOGI KELAS DUNIA DI BALIK ZIVOPOS</span>
         </h2>
         <p class="font-body text-[14px] sm:text-[15px] text-[#1E1C2E]/90 font-medium">
-          Kombinasi keandalan backend enterprise (Laravel), reaktivitas frontend tanpa lag (TanStack), dan kecerdasan analitik data (Python).
+          <span class="lang-en">A powerful combination of enterprise backend (Laravel), zero-lag reactive frontend (TanStack), and intelligent data analytics (Python).</span>
+          <span class="lang-id">Kombinasi keandalan backend enterprise (Laravel), reaktivitas frontend tanpa lag (TanStack), dan kecerdasan analitik data (Python).</span>
         </p>
       </div>
 
@@ -347,7 +511,8 @@
             </div>
             <h3 class="font-heading font-bold text-[20px] uppercase text-[#1E1C2E]">Laravel Enterprise API</h3>
             <p class="font-body text-[13px] text-[#1E1C2E]/80 leading-relaxed">
-              Menangani arsitektur multi-tenant, job queue berkecepatan tinggi, enkripsi data transaksi perbankan, dan integrasi webhook payment gateway tanpa jeda.
+              <span class="lang-en">Handles multi-tenant architecture, high-speed job queues, banking transaction encryption, and zero-delay payment gateway webhooks.</span>
+              <span class="lang-id">Menangani arsitektur multi-tenant, job queue berkecepatan tinggi, enkripsi data transaksi perbankan, dan integrasi webhook payment gateway tanpa jeda.</span>
             </p>
           </div>
           <div class="flex flex-wrap gap-1.5 pt-1 border-t border-[#1E1C2E]/20">
@@ -365,7 +530,8 @@
           </div>
           <h3 class="font-heading font-bold text-[20px] uppercase text-[#1E1C2E]">TanStack Query &amp; Table</h3>
           <p class="font-body text-[13px] text-[#1E1C2E]/80 leading-relaxed">
-            TanStack Query &amp; Table memungkinkan sinkronisasi offline seketika, caching cerdas, dan render 10.000+ baris data transaksi kasir tanpa frame drop sedikit pun.
+            <span class="lang-en">TanStack Query &amp; Table enable instant offline sync, smart caching, and rendering 10,000+ transaction rows without frame drops.</span>
+            <span class="lang-id">TanStack Query &amp; Table memungkinkan sinkronisasi offline seketika, caching cerdas, dan render 10.000+ baris data transaksi kasir tanpa frame drop sedikit pun.</span>
           </p>
           <div class="flex flex-wrap gap-1.5 pt-1 border-t border-[#1E1C2E]/20">
             <span class="font-mono text-[10px] font-bold bg-[#FFFDF0] px-2 py-0.5 border border-[#1E1C2E] rounded">TanStack Query</span>
@@ -382,7 +548,8 @@
           </div>
           <h3 class="font-heading font-bold text-[20px] uppercase text-[#1E1C2E]">Python Data Pipeline</h3>
           <p class="font-body text-[13px] text-[#1E1C2E]/80 leading-relaxed">
-            Menganalisis tren penjualan menu terlaris, memprediksi kebutuhan stok bahan baku menjelang akhir pekan, serta mendeteksi anomali void kasir secara otomatis.
+            <span class="lang-en">Analyzes top-selling menu trends, predicts raw ingredient stock requirements for weekends, and automatically detects cashier void anomalies.</span>
+            <span class="lang-id">Menganalisis tren penjualan menu terlaris, memprediksi kebutuhan stok bahan baku menjelang akhir pekan, serta mendeteksi anomali void kasir secara otomatis.</span>
           </p>
           <div class="flex flex-wrap gap-1.5 pt-1 border-t border-[#1E1C2E]/20">
             <span class="font-mono text-[10px] font-bold bg-[#FFFDF0] px-2 py-0.5 border border-[#1E1C2E] rounded">FastAPI Engine</span>
@@ -402,13 +569,16 @@
       <div class="flex flex-col gap-2 text-center max-w-[760px] mx-auto">
         <div class="inline-flex items-center self-center gap-1.5 px-3 py-1 bg-[#FF9D50] text-[#1E1C2E] border-2 border-[#1E1C2E] shadow-[2px_2px_0px_#1E1C2E] rounded-md font-mono text-[11px] sm:text-[12px] font-bold">
           <span>💰</span>
-          <span>TRANSPARENT &amp; STRUCTURED • NO HIDDEN FEES</span>
+          <span class="lang-en">TRANSPARENT &amp; STRUCTURED • NO HIDDEN FEES</span>
+          <span class="lang-id">TRANSPARAN &amp; TERSTRUKTUR • TANPA BIAYA TERSEMBUNYI</span>
         </div>
         <h2 class="font-heading font-extrabold text-[28px] sm:text-[40px] uppercase tracking-tight text-[#1E1C2E]">
-          SIMPLE, TRANSPARENT PRICING — CHOOSE THE RIGHT PLAN
+          <span class="lang-en">SIMPLE, TRANSPARENT PRICING — CHOOSE THE RIGHT PLAN</span>
+          <span class="lang-id">HARGA PAS &amp; TRANSPARAN — PILIH PAKET YANG SESUAI</span>
         </h2>
         <p class="font-body text-[15px] sm:text-[16px] text-[#1E1C2E]/80 font-medium">
-          No hidden fees or per-transaction commission. Choose the package duration and features tailored for your business.
+          <span class="lang-en">No hidden fees or per-transaction commission. Choose the package duration and features tailored for your business.</span>
+          <span class="lang-id">Tanpa biaya tersembunyi atau potongan komisi per transaksi. Pilih durasi paket dan fitur yang sesuai dengan kebutuhan bisnis Anda.</span>
         </p>
       </div>
 
@@ -419,28 +589,71 @@
         <div class="bg-[#FFF9D5] border-[3px] border-[#1E1C2E] shadow-[4px_4px_0px_#1E1C2E] rounded-lg p-6 sm:p-7 flex flex-col justify-between gap-6 hover:-translate-y-1 hover:shadow-[6px_6px_0px_#1E1C2E] transition-all">
           <div class="flex flex-col gap-4">
             <div class="flex items-center justify-between">
-              <h3 class="font-heading font-bold text-[22px] uppercase text-[#1E1C2E]">Bronze Plan</h3>
-              <span class="font-mono text-[11px] font-bold bg-[#FFFDF0] px-2.5 py-1 border border-[#1E1C2E] rounded">90 DAYS</span>
+              <h3 class="font-heading font-bold text-[22px] uppercase text-[#1E1C2E]">
+                <span class="lang-en">Bronze Plan</span><span class="lang-id">Paket Bronze</span>
+              </h3>
+              <span class="font-mono text-[11px] font-bold bg-[#FFFDF0] px-2.5 py-1 border border-[#1E1C2E] rounded">
+                <span class="lang-en">90 DAYS</span><span class="lang-id">90 HARI</span>
+              </span>
             </div>
-            <p class="font-body text-[13px] text-[#1E1C2E]/75">Start simple. Essential POS cashier system, transaction records, and basic reports.</p>
+            <p class="font-body text-[13px] text-[#1E1C2E]/75">
+              <span class="lang-en">Start simple. Essential POS cashier system, transaction records, and basic reports.</span>
+              <span class="lang-id">Mulai dengan praktis. Sistem kasir esensial, pencatatan transaksi, dan laporan harian.</span>
+            </p>
             <div class="flex items-baseline gap-1.5">
               <span class="font-heading font-extrabold text-[36px] text-[#1E1C2E]">Rp 750k</span>
-              <span class="font-mono text-[12px] text-[#1E1C2E]/60 font-bold">/ 90 days</span>
+              <span class="font-mono text-[12px] text-[#1E1C2E]/60 font-bold">
+                <span class="lang-en">/ 90 days</span><span class="lang-id">/ 90 hari</span>
+              </span>
             </div>
             <span class="font-mono text-[11px] font-bold text-[#FF9D50] bg-[#FFFDF0] px-2 py-0.5 border border-[#1E1C2E] rounded self-start">~Rp 250.000 / bulan</span>
             
             <ul class="flex flex-col gap-2.5 font-body text-[13px] text-[#1E1C2E] pt-3 border-t-2 border-[#1E1C2E]/20">
-              <li class="flex items-start gap-2"><span class="text-[#006d31]">✔</span> <span><strong>Core POS &amp; Cashier System</strong> — quick checkout &amp; receipts</span></li>
-              <li class="flex items-start gap-2"><span class="text-[#006d31]">✔</span> <span><strong>Product Management</strong> — up to 100 products</span></li>
-              <li class="flex items-start gap-2"><span class="text-[#006d31]">✔</span> <span>Sales &amp; Transaction recording</span></li>
-              <li class="flex items-start gap-2"><span class="text-[#006d31]">✔</span> <span>Payment recording (Cash &amp; Non-cash)</span></li>
-              <li class="flex items-start gap-2"><span class="text-[#006d31]">✔</span> <span>Basic sales history &amp; transaction report (PDF)</span></li>
-              <li class="flex items-start gap-2"><span class="text-[#006d31]">✔</span> <span><strong>1 Active Cashier Device</strong> — phone, tablet, or PC</span></li>
+              <li class="flex items-start gap-2">
+                <span class="text-[#006d31]">✔</span>
+                <span>
+                  <strong class="lang-en">Core POS &amp; Cashier System</strong><strong class="lang-id">Sistem Kasir &amp; POS Dasar</strong>
+                  <span class="lang-en"> — quick checkout &amp; receipts</span><span class="lang-id"> — kasir cepat &amp; cetak struk</span>
+                </span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-[#006d31]">✔</span>
+                <span>
+                  <strong class="lang-en">Product Management</strong><strong class="lang-id">Manajemen Produk &amp; Katalog</strong>
+                  <span class="lang-en"> — up to 100 products</span><span class="lang-id"> — hingga 100 produk</span>
+                </span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-[#006d31]">✔</span>
+                <span>
+                  <span class="lang-en">Sales &amp; Transaction recording</span><span class="lang-id">Pencatatan penjualan &amp; transaksi</span>
+                </span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-[#006d31]">✔</span>
+                <span>
+                  <span class="lang-en">Payment recording (Cash &amp; Non-cash)</span><span class="lang-id">Pencatatan pembayaran (Tunai &amp; Non-tunai)</span>
+                </span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-[#006d31]">✔</span>
+                <span>
+                  <span class="lang-en">Basic sales history &amp; transaction report (PDF)</span><span class="lang-id">Riwayat penjualan &amp; laporan transaksi dasar (PDF)</span>
+                </span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-[#006d31]">✔</span>
+                <span>
+                  <strong class="lang-en">1 Active Cashier Device</strong><strong class="lang-id">1 Perangkat Kasir Aktif</strong>
+                  <span class="lang-en"> — phone, tablet, or PC</span><span class="lang-id"> — HP, laptop, atau komputer</span>
+                </span>
+              </li>
             </ul>
           </div>
 
           <a href="#demo" class="w-full py-3 bg-[#FFFDF0] hover:bg-[#D4FF00] border-2 border-[#1E1C2E] shadow-[3px_3px_0px_#1E1C2E] rounded-lg font-heading font-extrabold text-[13px] uppercase text-[#1E1C2E] text-center transition-all active:translate-x-[3px] active:translate-y-[3px] active:shadow-none">
-            CHOOSE BRONZE ➔
+            <span class="lang-en">CHOOSE BRONZE ➔</span>
+            <span class="lang-id">PILIH PAKET BRONZE ➔</span>
           </a>
         </div>
 
@@ -448,34 +661,85 @@
         <div class="bg-[#FFFDF0] border-[3px] border-[#1E1C2E] shadow-[7px_7px_0px_#1E1C2E] rounded-lg p-6 sm:p-7 flex flex-col justify-between gap-6 relative -translate-y-2 hover:-translate-y-3 transition-all">
           <!-- Popular Floating Tag -->
           <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#D4FF00] text-[#1E1C2E] border-2 border-[#1E1C2E] shadow-[2px_2px_0px_#1E1C2E] font-mono text-[11px] font-bold px-3 py-0.5 rounded-full uppercase whitespace-nowrap">
-            ⭐ MOST POPULAR • +30D BONUS
+            <span class="lang-en">⭐ MOST POPULAR • +30D BONUS</span>
+            <span class="lang-id">⭐ PALING POPULER • +30HR BONUS</span>
           </div>
 
           <div class="flex flex-col gap-4 pt-1">
             <div class="flex items-center justify-between">
-              <h3 class="font-heading font-bold text-[24px] uppercase text-[#1E1C2E]">Gold Plan</h3>
-              <span class="font-mono text-[11px] font-bold bg-[#38BDF8] px-2.5 py-1 border border-[#1E1C2E] rounded">120 DAYS</span>
+              <h3 class="font-heading font-bold text-[24px] uppercase text-[#1E1C2E]">
+                <span class="lang-en">Gold Plan</span><span class="lang-id">Paket Gold</span>
+              </h3>
+              <span class="font-mono text-[11px] font-bold bg-[#38BDF8] px-2.5 py-1 border border-[#1E1C2E] rounded">
+                <span class="lang-en">120 DAYS</span><span class="lang-id">120 HARI</span>
+              </span>
             </div>
-            <p class="font-body text-[13px] text-[#1E1C2E]/75">90 + 30 bonus days. See more. Understand more. Full inventory and advanced reporting.</p>
+            <p class="font-body text-[13px] text-[#1E1C2E]/75">
+              <span class="lang-en">90 + 30 bonus days. See more. Understand more. Full inventory and advanced reporting.</span>
+              <span class="lang-id">120 hari (90 + 30 bonus). Pantau lebih banyak, pahami bisnis. Manajemen stok lengkap dan laporan mendalam.</span>
+            </p>
             <div class="flex items-baseline gap-1.5">
               <span class="font-heading font-extrabold text-[38px] text-[#006d31]">Rp 1.700k</span>
-              <span class="font-mono text-[12px] text-[#1E1C2E]/60 font-bold">/ 120 days</span>
+              <span class="font-mono text-[12px] text-[#1E1C2E]/60 font-bold">
+                <span class="lang-en">/ 120 days</span><span class="lang-id">/ 120 hari</span>
+              </span>
             </div>
             <span class="font-mono text-[11px] font-bold text-[#006d31] bg-[#FFF9D5] px-2 py-0.5 border border-[#1E1C2E] rounded self-start">~Rp 425.000 / bulan (Hemat 30hr)</span>
 
             <ul class="flex flex-col gap-2.5 font-body text-[13px] text-[#1E1C2E] pt-3 border-t-2 border-[#1E1C2E]/20">
-              <li class="flex items-start gap-2 font-bold"><span class="text-[#006d31]">✔</span> <span>All Bronze features included</span></li>
-              <li class="flex items-start gap-2 font-bold"><span class="text-[#006d31]">✔</span> <span><strong>Inventory Management &amp; Stock Control</strong> — real-time alerts</span></li>
-              <li class="flex items-start gap-2"><span class="text-[#006d31]">✔</span> <span><strong>Advanced Reports</strong> — profit/loss, revenue, export Excel &amp; PDF</span></li>
-              <li class="flex items-start gap-2"><span class="text-[#006d31]">✔</span> <span><strong>Full Offline Mode + Auto-Sync</strong> — checkout without signal</span></li>
-              <li class="flex items-start gap-2"><span class="text-[#006d31]">✔</span> <span>Up to 3 Users &amp; Roles (Owner, Supervisor, Cashier)</span></li>
-              <li class="flex items-start gap-2"><span class="text-[#006d31]">✔</span> <span>Shift Handover &amp; Cash Denomination tracking</span></li>
-              <li class="flex items-start gap-2"><span class="text-[#006d31]">✔</span> <span>Daily Cloud Backup &amp; Priority WhatsApp Support</span></li>
+              <li class="flex items-start gap-2 font-bold">
+                <span class="text-[#006d31]">✔</span>
+                <span class="lang-en">All Bronze features included</span>
+                <span class="lang-id">Seluruh fitur Bronze</span>
+              </li>
+              <li class="flex items-start gap-2 font-bold">
+                <span class="text-[#006d31]">✔</span>
+                <span>
+                  <strong class="lang-en">Inventory Management &amp; Stock Control</strong><strong class="lang-id">Manajemen Inventaris &amp; Kontrol Stok</strong>
+                  <span class="lang-en"> — real-time alerts</span><span class="lang-id"> — notifikasi stok habis</span>
+                </span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-[#006d31]">✔</span>
+                <span>
+                  <strong class="lang-en">Advanced Reports</strong><strong class="lang-id">Laporan Lengkap &amp; Mendalam</strong>
+                  <span class="lang-en"> — profit/loss, revenue, export Excel &amp; PDF</span><span class="lang-id"> — omset, laba-rugi &amp; pengeluaran kas</span>
+                </span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-[#006d31]">✔</span>
+                <span>
+                  <strong class="lang-en">Full Offline Mode + Auto-Sync</strong><strong class="lang-id">Full Offline Mode + Auto-Sync</strong>
+                  <span class="lang-en"> — checkout without signal</span><span class="lang-id"> — kasir lancar tanpa sinyal</span>
+                </span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-[#006d31]">✔</span>
+                <span>
+                  <span class="lang-en">Up to 3 Users &amp; Roles (Owner, Supervisor, Cashier)</span>
+                  <span class="lang-id">Hingga 3 User &amp; Hak Akses (Owner, Supervisor, Kasir)</span>
+                </span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-[#006d31]">✔</span>
+                <span>
+                  <span class="lang-en">Shift Handover &amp; Cash Denomination tracking</span>
+                  <span class="lang-id">Rekap Shift &amp; Hitung Uang Kas (Cegah selisih laci)</span>
+                </span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-[#006d31]">✔</span>
+                <span>
+                  <strong class="lang-en">Daily Cloud Backup &amp; Priority WhatsApp Support</strong>
+                  <strong class="lang-id">Backup Cloud Harian &amp; Prioritas CS WhatsApp</strong>
+                </span>
+              </li>
             </ul>
           </div>
 
           <a href="#demo" class="w-full py-3.5 bg-[#D4FF00] hover:bg-[#bcf000] border-2 border-[#1E1C2E] shadow-[4px_4px_0px_#1E1C2E] rounded-lg font-heading font-extrabold text-[14px] uppercase text-[#1E1C2E] text-center transition-all active:translate-x-[3px] active:translate-y-[3px] active:shadow-none">
-            CHOOSE GOLD PLAN ⚡
+            <span class="lang-en">CHOOSE GOLD PLAN ⚡</span>
+            <span class="lang-id">PILIH PAKET GOLD ⚡</span>
           </a>
         </div>
 
@@ -483,28 +747,72 @@
         <div class="bg-[#FFF9D5] border-[3px] border-[#1E1C2E] shadow-[4px_4px_0px_#1E1C2E] rounded-lg p-6 sm:p-7 flex flex-col justify-between gap-6 hover:-translate-y-1 hover:shadow-[6px_6px_0px_#1E1C2E] transition-all">
           <div class="flex flex-col gap-4">
             <div class="flex items-center justify-between">
-              <h3 class="font-heading font-bold text-[22px] uppercase text-[#1E1C2E]">Platinum Plan</h3>
-              <span class="font-mono text-[11px] font-bold bg-[#FF9D50] px-2.5 py-1 border border-[#1E1C2E] rounded">150 DAYS</span>
+              <h3 class="font-heading font-bold text-[22px] uppercase text-[#1E1C2E]">
+                <span class="lang-en">Platinum Plan</span><span class="lang-id">Paket Platinum</span>
+              </h3>
+              <span class="font-mono text-[11px] font-bold bg-[#FF9D50] px-2.5 py-1 border border-[#1E1C2E] rounded">
+                <span class="lang-en">150 DAYS</span><span class="lang-id">150 HARI</span>
+              </span>
             </div>
-            <p class="font-body text-[13px] text-[#1E1C2E]/75">90 + 60 bonus days. Grow your business. Customer management / CRM and business analytics.</p>
+            <p class="font-body text-[13px] text-[#1E1C2E]/75">
+              <span class="lang-en">150 days (90 + 60 bonus). Grow your business. Customer management / CRM and business analytics.</span>
+              <span class="lang-id">150 hari (90 + 60 bonus). Pahami bisnis, pacu pertumbuhan. Manajemen pelanggan (CRM) dan analitik bisnis.</span>
+            </p>
             <div class="flex items-baseline gap-1.5">
               <span class="font-heading font-extrabold text-[36px] text-[#1E1C2E]">Rp 2.600k</span>
-              <span class="font-mono text-[12px] text-[#1E1C2E]/60 font-bold">/ 150 days</span>
+              <span class="font-mono text-[12px] text-[#1E1C2E]/60 font-bold">
+                <span class="lang-en">/ 150 days</span><span class="lang-id">/ 150 hari</span>
+              </span>
             </div>
             <span class="font-mono text-[11px] font-bold text-[#FF9D50] bg-[#FFFDF0] px-2 py-0.5 border border-[#1E1C2E] rounded self-start">~Rp 520.000 / bulan</span>
 
             <ul class="flex flex-col gap-2.5 font-body text-[13px] text-[#1E1C2E] pt-3 border-t-2 border-[#1E1C2E]/20">
-              <li class="flex items-start gap-2 font-bold"><span class="text-[#006d31]">✔</span> <span>All Gold features included</span></li>
-              <li class="flex items-start gap-2"><span class="text-[#006d31]">✔</span> <span><strong>Customer Management / CRM</strong> — customer profiles &amp; history</span></li>
-              <li class="flex items-start gap-2"><span class="text-[#006d31]">✔</span> <span><strong>Business Analytics &amp; Dashboard</strong> — growth metrics &amp; insights</span></li>
-              <li class="flex items-start gap-2"><span class="text-[#006d31]">✔</span> <span>Multi-Outlet &amp; Multi-Warehouse Transfers</span></li>
-              <li class="flex items-start gap-2"><span class="text-[#006d31]">✔</span> <span>Unlimited Cashiers &amp; Active Devices</span></li>
-              <li class="flex items-start gap-2"><span class="text-[#006d31]">✔</span> <span>Dedicated Account Manager &amp; VIP Bali On-site Support</span></li>
+              <li class="flex items-start gap-2 font-bold">
+                <span class="text-[#006d31]">✔</span>
+                <span class="lang-en">All Gold features included</span>
+                <span class="lang-id">Seluruh fitur Gold</span>
+              </li>
+              <li class="flex items-start gap-2 font-bold">
+                <span class="text-[#006d31]">✔</span>
+                <span>
+                  <strong class="lang-en">Customer Management / CRM</strong><strong class="lang-id">Manajemen Pelanggan / CRM</strong>
+                  <span class="lang-en"> — customer profiles &amp; history</span><span class="lang-id"> — profil pelanggan &amp; histori belanja</span>
+                </span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-[#006d31]">✔</span>
+                <span>
+                  <strong class="lang-en">Business Analytics &amp; Dashboard</strong><strong class="lang-id">Analisis Bisnis &amp; Dashboard</strong>
+                  <span class="lang-en"> — growth metrics &amp; insights</span><span class="lang-id"> — metrik pertumbuhan &amp; wawasan bisnis</span>
+                </span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-[#006d31]">✔</span>
+                <span>
+                  <span class="lang-en">Multi-Outlet &amp; Multi-Warehouse Transfers</span>
+                  <span class="lang-id">Multi-Cabang &amp; Transfer Stok Antar Gudang</span>
+                </span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-[#006d31]">✔</span>
+                <span>
+                  <span class="lang-en">Unlimited Cashiers &amp; Active Devices</span>
+                  <span class="lang-id">Unlimited Kasir &amp; Perangkat per toko</span>
+                </span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-[#006d31]">✔</span>
+                <span>
+                  <strong class="lang-en">Dedicated Account Manager &amp; VIP Bali On-site Support</strong>
+                  <strong class="lang-id">Dedicated Account Manager &amp; Pelatihan Langsung di Bali</strong>
+                </span>
+              </li>
             </ul>
           </div>
 
           <a href="#demo" class="w-full py-3 bg-[#FFFDF0] hover:bg-[#38BDF8] border-2 border-[#1E1C2E] shadow-[3px_3px_0px_#1E1C2E] rounded-lg font-heading font-extrabold text-[13px] uppercase text-[#1E1C2E] text-center transition-all active:translate-x-[3px] active:translate-y-[3px] active:shadow-none">
-            CHOOSE PLATINUM ➔
+            <span class="lang-en">CHOOSE PLATINUM ➔</span>
+            <span class="lang-id">PILIH PAKET PLATINUM ➔</span>
           </a>
         </div>
 
@@ -517,13 +825,23 @@
             <span class="material-symbols-outlined text-[22px]">devices</span>
           </div>
           <div class="flex flex-col">
-            <span class="font-mono text-[11px] font-bold text-[#FF9D50] uppercase">BRING YOUR OWN DEVICE</span>
-            <h4 class="font-heading font-bold text-[16px] text-[#1E1C2E]">Already have a phone, tablet, or printer?</h4>
-            <p class="font-body text-[13px] text-[#1E1C2E]/75">Use the equipment you already own. Our team can help with app setup, compatible-printer connection, and staff training.</p>
+            <span class="font-mono text-[11px] font-bold text-[#FF9D50] uppercase">
+              <span class="lang-en">BRING YOUR OWN DEVICE</span>
+              <span class="lang-id">GUNAKAN PERANGKAT SENDIRI</span>
+            </span>
+            <h4 class="font-heading font-bold text-[16px] text-[#1E1C2E]">
+              <span class="lang-en">Already have a phone, tablet, or printer?</span>
+              <span class="lang-id">Sudah punya HP, tablet, atau printer?</span>
+            </h4>
+            <p class="font-body text-[13px] text-[#1E1C2E]/75">
+              <span class="lang-en">Use the equipment you already own. Our team can help with app setup, compatible-printer connection, and staff training.</span>
+              <span class="lang-id">Gunakan perangkat yang sudah Anda miliki. Tim kami dapat membantu setup aplikasi, menghubungkan printer yang kompatibel, dan pelatihan staf.</span>
+            </p>
           </div>
         </div>
-        <a href="#demo" class="px-4 py-2 bg-[#FFFDF0] hover:bg-[#D4FF00] border-2 border-[#1E1C2E] shadow-[2px_2px_0px_#1E1C2E] rounded-lg font-mono text-[12px] font-bold whitespace-nowrap transition-all">
-          Ask about setup ➔
+        <a href="#demo" class="px-4 py-2 bg-[#FFFDF0] hover:bg-[#D4FF00] border-2 border-[#1E1C2E] shadow-[2px_2px_0px_#1E1C2E] rounded-lg font-mono text-[12px] font-bold whitespace-nowrap transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none">
+          <span class="lang-en">Ask about setup ➔</span>
+          <span class="lang-id">Tanya soal setup ➔</span>
         </a>
       </div>
 
@@ -538,13 +856,16 @@
       <div class="flex flex-col gap-2 max-w-[760px]">
         <div class="inline-flex items-center self-start gap-1.5 px-3 py-1 bg-[#D4FF00] text-[#1E1C2E] border-2 border-[#1E1C2E] shadow-[2px_2px_0px_#1E1C2E] rounded-md font-mono text-[11px] sm:text-[12px] font-bold">
           <span>🛡️</span>
-          <span>PRIVACY &amp; DATA SECURITY</span>
+          <span class="lang-en">PRIVACY &amp; DATA SECURITY</span>
+          <span class="lang-id">PRIVASI &amp; KEAMANAN DATA</span>
         </div>
         <h2 class="font-heading font-extrabold text-[28px] sm:text-[38px] uppercase tracking-tight text-[#1E1C2E]">
-          BUSINESS DATA PROTECTED, ACCESS KEPT UNDER CONTROL
+          <span class="lang-en">BUSINESS DATA PROTECTED, ACCESS KEPT UNDER CONTROL</span>
+          <span class="lang-id">DATA USAHA TERLINDUNGI, AKSES TETAP TERKENDALI</span>
         </h2>
         <p class="font-body text-[15px] sm:text-[16px] text-[#1E1C2E]/80 font-medium">
-          Transaction, customer, and sales records are protected with encryption, role-based access, and no third-party advertising trackers.
+          <span class="lang-en">Transaction, customer, and sales records are protected with encryption, role-based access, and no third-party advertising trackers.</span>
+          <span class="lang-id">Data transaksi, pelanggan, dan penjualan dilindungi dengan enkripsi, pembagian hak akses, serta tanpa pelacak iklan pihak ketiga.</span>
         </p>
       </div>
 
@@ -555,9 +876,13 @@
           <div class="w-10 h-10 rounded-lg bg-[#FF9D50] border-2 border-[#1E1C2E] flex items-center justify-center text-[#1E1C2E]">
             <span class="material-symbols-outlined text-[22px]">lock</span>
           </div>
-          <h3 class="font-heading font-bold text-[17px] uppercase text-[#1E1C2E]">High-Level Data Encryption</h3>
+          <h3 class="font-heading font-bold text-[17px] uppercase text-[#1E1C2E]">
+            <span class="lang-en">High-Level Data Encryption</span>
+            <span class="lang-id">Enkripsi Data Berlapis</span>
+          </h3>
           <p class="font-body text-[13px] text-[#1E1C2E]/80 leading-relaxed">
-            All transactions, passwords, and cashier records are encrypted automatically, protecting your store against data theft and unauthorized access.
+            <span class="lang-en">All transactions, passwords, and cashier records are encrypted automatically, protecting your store against data theft and unauthorized access.</span>
+            <span class="lang-id">Semua data transaksi, kata sandi, dan pembukuan kasir dienkripsi secara otomatis, melindungi toko Anda dari risiko penyadapan data.</span>
           </p>
         </article>
 
@@ -565,9 +890,13 @@
           <div class="w-10 h-10 rounded-lg bg-[#38BDF8] border-2 border-[#1E1C2E] flex items-center justify-center text-[#1E1C2E]">
             <span class="material-symbols-outlined text-[22px]">privacy_tip</span>
           </div>
-          <h3 class="font-heading font-bold text-[17px] uppercase text-[#1E1C2E]">Customer Data Stays Private</h3>
+          <h3 class="font-heading font-bold text-[17px] uppercase text-[#1E1C2E]">
+            <span class="lang-en">Customer Data Stays Private</span>
+            <span class="lang-id">Privasi Data Pelanggan</span>
+          </h3>
           <p class="font-body text-[13px] text-[#1E1C2E]/80 leading-relaxed">
-            Customer names, phone numbers, and buying history are strictly confidential. We never sell, share, or monetize customer data for third-party ads.
+            <span class="lang-en">Customer names, phone numbers, and buying history are strictly confidential. We never sell, share, or monetize customer data for third-party ads.</span>
+            <span class="lang-id">Nama pelanggan, nomor telepon, dan riwayat belanja adalah rahasia toko Anda. Kami TIDAK PERNAH menjual atau membagikan data pelanggan untuk iklan.</span>
           </p>
         </article>
 
@@ -575,9 +904,13 @@
           <div class="w-10 h-10 rounded-lg bg-[#D4FF00] border-2 border-[#1E1C2E] flex items-center justify-center text-[#1E1C2E]">
             <span class="material-symbols-outlined text-[22px]">admin_panel_settings</span>
           </div>
-          <h3 class="font-heading font-bold text-[17px] uppercase text-[#1E1C2E]">Controls That Reduce Risk</h3>
+          <h3 class="font-heading font-bold text-[17px] uppercase text-[#1E1C2E]">
+            <span class="lang-en">Controls That Reduce Risk</span>
+            <span class="lang-id">Kontrol Kurangi Risiko</span>
+          </h3>
           <p class="font-body text-[13px] text-[#1E1C2E]/80 leading-relaxed">
-            Owner and cashier access can be separated, while activity logs help you review changes and spot unauthorized actions.
+            <span class="lang-en">Owner and cashier access can be separated, while activity logs help you review changes and spot unauthorized actions.</span>
+            <span class="lang-id">Akses pemilik dan kasir dapat dipisahkan, sementara riwayat aktivitas membantu Anda meninjau perubahan dan mendeteksi tindakan tanpa izin.</span>
           </p>
         </article>
 
@@ -585,9 +918,13 @@
           <div class="w-10 h-10 rounded-lg bg-[#FF9D50] border-2 border-[#1E1C2E] flex items-center justify-center text-[#1E1C2E]">
             <span class="material-symbols-outlined text-[22px]">cloud_sync</span>
           </div>
-          <h3 class="font-heading font-bold text-[17px] uppercase text-[#1E1C2E]">Secure Backup &amp; Full Control</h3>
+          <h3 class="font-heading font-bold text-[17px] uppercase text-[#1E1C2E]">
+            <span class="lang-en">Secure Backup &amp; Full Control</span>
+            <span class="lang-id">Backup Aman &amp; Kendali Penuh</span>
+          </h3>
           <p class="font-body text-[13px] text-[#1E1C2E]/80 leading-relaxed">
-            Your database is completely yours. Export all data to Excel &amp; PDF anytime. No outside party can lock, hold, or restrict your business records.
+            <span class="lang-en">Your database is completely yours. Export all data to Excel &amp; PDF anytime. No outside party can lock, hold, or restrict your business records.</span>
+            <span class="lang-id">Seluruh data bisnis sepenuhnya milik Anda. Ekspor ke Excel &amp; PDF kapan saja. Tidak ada pihak luar yang bisa mengunci data toko Anda.</span>
           </p>
         </article>
 
@@ -607,40 +944,63 @@
         <div class="lg:col-span-6 flex flex-col gap-5">
           <div class="inline-flex items-center self-start gap-1.5 px-3 py-1 bg-[#38BDF8] text-[#1E1C2E] border-2 border-[#1E1C2E] shadow-[2px_2px_0px_#1E1C2E] rounded-md font-mono text-[11px] sm:text-[12px] font-bold">
             <span>📍</span>
-            <span>BALI ON-SITE SERVICE</span>
+            <span class="lang-en">BALI ON-SITE SERVICE</span>
+            <span class="lang-id">LAYANAN ON-SITE DI BALI</span>
           </div>
           <h2 class="font-heading font-extrabold text-[28px] sm:text-[40px] uppercase tracking-tight text-[#1E1C2E]">
-            SEE ZIVO IN ACTION IN JUST <span class="bg-[#D4FF00] px-2 py-0.5 inline-block border-2 border-[#1E1C2E] shadow-[3px_3px_0px_#1E1C2E] -rotate-1">20 MINUTES</span>
+            <span class="lang-en">
+              SEE ZIVO IN ACTION IN JUST <span class="bg-[#D4FF00] px-2 py-0.5 inline-block border-2 border-[#1E1C2E] shadow-[3px_3px_0px_#1E1C2E] -rotate-1">20 MINUTES</span>
+            </span>
+            <span class="lang-id">
+              LIHAT CARA KERJA ZIVO DALAM <span class="bg-[#D4FF00] px-2 py-0.5 inline-block border-2 border-[#1E1C2E] shadow-[3px_3px_0px_#1E1C2E] -rotate-1">20 MENIT</span>
+            </span>
           </h2>
           <p class="font-body text-[15px] sm:text-[16px] text-[#1E1C2E]/85 font-medium leading-relaxed">
-            Tentukan area lokasi toko atau bisnis Anda di Bali, dan tim kami akan mengatur kunjungan demo on-site gratis. Konfirmasi jadwal dilanjutkan melalui WhatsApp secara praktis.
+            <span class="lang-en">Select your store location in Bali, and our team will arrange a free on-site walkthrough. Schedule confirmation continues conveniently via WhatsApp.</span>
+            <span class="lang-id">Tentukan area lokasi toko atau bisnis Anda di Bali, dan tim kami akan mengatur kunjungan demo on-site gratis. Konfirmasi jadwal dilanjutkan melalui WhatsApp secara praktis.</span>
           </p>
 
           <!-- 3 Step Guide -->
           <div class="flex flex-col gap-3 pt-2">
             <div class="p-3 bg-[#FFF9D5] border-2 border-[#1E1C2E] shadow-[2px_2px_0px_#1E1C2E] rounded-lg flex items-center gap-3">
               <span class="w-7 h-7 rounded bg-[#FF9D50] border border-[#1E1C2E] font-mono font-bold text-[12px] flex items-center justify-center">1</span>
-              <span class="font-body text-[13px] font-bold">Pilih area lokasi outlet Anda di Bali</span>
+              <span class="font-body text-[13px] font-bold">
+                <span class="lang-en">Select your outlet location in Bali</span>
+                <span class="lang-id">Pilih area lokasi outlet Anda di Bali</span>
+              </span>
             </div>
             <div class="p-3 bg-[#FFF9D5] border-2 border-[#1E1C2E] shadow-[2px_2px_0px_#1E1C2E] rounded-lg flex items-center gap-3">
               <span class="w-7 h-7 rounded bg-[#38BDF8] border border-[#1E1C2E] font-mono font-bold text-[12px] flex items-center justify-center">2</span>
-              <span class="font-body text-[13px] font-bold">Klik tombol WhatsApp untuk konfirmasi jadwal kunjungan</span>
+              <span class="font-body text-[13px] font-bold">
+                <span class="lang-en">Fill out store name &amp; address, then click WhatsApp button</span>
+                <span class="lang-id">Isi nama toko &amp; alamat singkat, lalu klik tombol WhatsApp</span>
+              </span>
             </div>
             <div class="p-3 bg-[#FFF9D5] border-2 border-[#1E1C2E] shadow-[2px_2px_0px_#1E1C2E] rounded-lg flex items-center gap-3">
               <span class="w-7 h-7 rounded bg-[#D4FF00] border border-[#1E1C2E] font-mono font-bold text-[12px] flex items-center justify-center">3</span>
-              <span class="font-body text-[13px] font-bold">Tim kami datang membawa hardware demo &amp; uji coba langsung</span>
+              <span class="font-body text-[13px] font-bold">
+                <span class="lang-en">Our team arrives with demo hardware for hands-on trial</span>
+                <span class="lang-id">Tim kami datang membawa hardware demo &amp; uji coba langsung</span>
+              </span>
             </div>
           </div>
         </div>
 
         <!-- Interactive Booking Card -->
-        <div class="lg:col-span-6 bg-[#FFF9D5] border-[3px] border-[#1E1C2E] shadow-[6px_6px_0px_#1E1C2E] rounded-lg p-6 flex flex-col gap-5">
+        <div class="lg:col-span-6 bg-[#FFF9D5] border-[3px] border-[#1E1C2E] shadow-[6px_6px_0px_#1E1C2E] rounded-xl p-6 flex flex-col gap-5">
           <div class="flex items-center justify-between border-b-2 border-[#1E1C2E]/20 pb-3">
-            <span class="font-mono text-[12px] font-bold uppercase text-[#1E1C2E]">📍 PILIH LOKASI OUTLET (AREA BALI):</span>
+            <span class="font-mono text-[12px] font-bold uppercase text-[#1E1C2E]">
+              <span class="lang-en">📍 SELECT OUTLET LOCATION (BALI):</span>
+              <span class="lang-id">📍 PILIH LOKASI OUTLET (AREA BALI):</span>
+            </span>
             <div class="flex items-center gap-2 font-mono text-[10px] font-bold">
-              <span class="text-[#006d31]">● READY ON-SITE</span>
+              <span class="text-[#006d31]">
+                <span class="lang-en">● READY ON-SITE</span><span class="lang-id">● SIAP ON-SITE</span>
+              </span>
               <span>•</span>
-              <span class="text-[#FF9D50]">⏳ COMING SOON</span>
+              <span class="text-[#FF9D50]">
+                <span class="lang-en">⏳ COMING SOON</span><span class="lang-id">⏳ SEGERA HADIR</span>
+              </span>
             </div>
           </div>
 
@@ -655,30 +1015,57 @@
             <!-- Disabled Coming Soon Areas -->
             <button type="button" disabled class="area-btn relative px-2.5 py-2 bg-[#E2E8F0] text-[#1E1C2E]/40 border-2 border-[#1E1C2E]/30 rounded-lg font-mono text-[11px] font-bold text-center cursor-not-allowed select-none opacity-60 flex flex-col items-center justify-center gap-0.5" data-area="Jembrana" data-soon="true" aria-disabled="true">
               <span>Jembrana</span>
-              <span class="text-[9px] bg-[#94A3B8] text-white px-1.5 py-0.2 border border-[#1E1C2E]/30 rounded font-bold uppercase leading-none">COMING SOON</span>
+              <span class="text-[9px] bg-[#94A3B8] text-white px-1.5 py-0.2 border border-[#1E1C2E]/30 rounded font-bold uppercase leading-none">
+                <span class="lang-en">SOON</span><span class="lang-id">SEGERA</span>
+              </span>
             </button>
             <button type="button" disabled class="area-btn relative px-2.5 py-2 bg-[#E2E8F0] text-[#1E1C2E]/40 border-2 border-[#1E1C2E]/30 rounded-lg font-mono text-[11px] font-bold text-center cursor-not-allowed select-none opacity-60 flex flex-col items-center justify-center gap-0.5" data-area="Karangasem" data-soon="true" aria-disabled="true">
               <span>Karangasem</span>
-              <span class="text-[9px] bg-[#94A3B8] text-white px-1.5 py-0.2 border border-[#1E1C2E]/30 rounded font-bold uppercase leading-none">COMING SOON</span>
+              <span class="text-[9px] bg-[#94A3B8] text-white px-1.5 py-0.2 border border-[#1E1C2E]/30 rounded font-bold uppercase leading-none">
+                <span class="lang-en">SOON</span><span class="lang-id">SEGERA</span>
+              </span>
             </button>
             <button type="button" disabled class="area-btn relative px-2.5 py-2 bg-[#E2E8F0] text-[#1E1C2E]/40 border-2 border-[#1E1C2E]/30 rounded-lg font-mono text-[11px] font-bold text-center cursor-not-allowed select-none opacity-60 flex flex-col items-center justify-center gap-0.5" data-area="Singaraja / Buleleng" data-soon="true" aria-disabled="true">
               <span>Singaraja</span>
-              <span class="text-[9px] bg-[#94A3B8] text-white px-1.5 py-0.2 border border-[#1E1C2E]/30 rounded font-bold uppercase leading-none">COMING SOON</span>
+              <span class="text-[9px] bg-[#94A3B8] text-white px-1.5 py-0.2 border border-[#1E1C2E]/30 rounded font-bold uppercase leading-none">
+                <span class="lang-en">SOON</span><span class="lang-id">SEGERA</span>
+              </span>
             </button>
             <button type="button" disabled class="area-btn relative px-2.5 py-2 bg-[#E2E8F0] text-[#1E1C2E]/40 border-2 border-[#1E1C2E]/30 rounded-lg font-mono text-[11px] font-bold text-center cursor-not-allowed select-none opacity-60 flex flex-col items-center justify-center gap-0.5" data-area="Klungkung" data-soon="true" aria-disabled="true">
               <span>Klungkung</span>
-              <span class="text-[9px] bg-[#94A3B8] text-white px-1.5 py-0.2 border border-[#1E1C2E]/30 rounded font-bold uppercase leading-none">COMING SOON</span>
+              <span class="text-[9px] bg-[#94A3B8] text-white px-1.5 py-0.2 border border-[#1E1C2E]/30 rounded font-bold uppercase leading-none">
+                <span class="lang-en">SOON</span><span class="lang-id">SEGERA</span>
+              </span>
             </button>
           </div>
-          <!-- Store Note Input -->
+
+          <!-- Store Note Input (REQUIRED WITH VALIDATION) -->
           <div class="flex flex-col gap-1.5">
-            <label for="store-note" class="font-mono text-[11px] font-bold text-[#1E1C2E] uppercase">Nama Toko &amp; Alamat Singkat (Opsional):</label>
+            <label for="store-note" class="font-mono text-[11px] font-bold text-[#1E1C2E] uppercase flex items-center justify-between">
+              <span>
+                <span class="lang-en">Store Name &amp; Brief Address:</span>
+                <span class="lang-id">Nama Toko &amp; Alamat Singkat:</span>
+                <span class="text-[#BA1A1A] font-extrabold ml-0.5">*</span>
+              </span>
+              <span class="text-[10px] text-[#BA1A1A] font-bold bg-[#FFDAD6] px-1.5 py-0.2 border border-[#BA1A1A]/40 rounded uppercase">
+                <span class="lang-en">Required</span>
+                <span class="lang-id">Wajib Diisi</span>
+              </span>
+            </label>
             <input
               type="text"
               id="store-note"
+              required
+              aria-required="true"
               placeholder="Contoh: Kafe Kopi Senja, Jl. Batu Bolong Canggu"
               class="w-full px-3.5 py-2.5 bg-[#FFFDF0] border-[2.5px] border-[#1E1C2E] shadow-[3px_3px_0px_#1E1C2E] rounded-md font-body text-[13px] text-[#1E1C2E] focus:outline-none focus:shadow-[5px_5px_0px_#1E1C2E] focus:-translate-x-0.5 focus:-translate-y-0.5 transition-all"
             />
+            <!-- Validation Error Alert Message -->
+            <p id="store-note-error" class="hidden font-mono text-[11px] font-bold text-[#BA1A1A] bg-[#FFDAD6] border border-[#BA1A1A] px-2.5 py-1 rounded flex items-center gap-1.5">
+              <span>⚠️</span>
+              <span class="lang-en">Please enter your store name &amp; brief address to continue to WhatsApp!</span>
+              <span class="lang-id">Mohon isi nama toko &amp; alamat singkat outlet Anda untuk melanjutkan ke WhatsApp!</span>
+            </p>
           </div>
 
           <!-- Dynamic WhatsApp Link Button -->
@@ -687,9 +1074,12 @@
             href="https://wa.me/6281234567890?text=Halo%20Tim%20ZIVO%20POS,%20saya%20mau%20jadwalkan%20demo%20on-site%20di%20area%20Denpasar"
             target="_blank"
             rel="noopener"
-            class="w-full py-3.5 bg-[#10B981] hover:bg-[#059669] text-white border-[2.5px] border-[#1E1C2E] shadow-[4px_4px_0px_#1E1C2E] rounded-lg font-heading font-extrabold text-[14px] uppercase text-center transition-all active:translate-x-[3px] active:translate-y-[3px] active:shadow-none flex items-center justify-center gap-2"
+            class="w-full py-3.5 bg-[#10B981] hover:bg-[#059669] text-white border-[2.5px] border-[#1E1C2E] shadow-[4px_4px_0px_#1E1C2E] rounded-xl font-heading font-extrabold text-[14px] uppercase text-center transition-all active:translate-x-[3px] active:translate-y-[3px] active:shadow-none flex items-center justify-center gap-2"
           >
-            <span id="wa-btn-text">REQUEST ON-SITE DEMO ON WHATSAPP</span>
+            <span id="wa-btn-text">
+              <span class="lang-en">REQUEST ON-SITE DEMO ON WHATSAPP</span>
+              <span class="lang-id">JADWALKAN DEMO ON-SITE VIA WHATSAPP</span>
+            </span>
             <span class="text-[18px]">💬</span>
           </a>
         </div>
@@ -707,10 +1097,12 @@
       <div class="flex flex-col gap-2 max-w-[700px]">
         <div class="inline-flex items-center self-start gap-1.5 px-3 py-1 bg-[#FFFDF0] text-[#1E1C2E] border-2 border-[#1E1C2E] shadow-[2px_2px_0px_#1E1C2E] rounded-md font-mono text-[11px] sm:text-[12px] font-bold">
           <span>❓</span>
-          <span>FREQUENTLY ASKED QUESTIONS</span>
+          <span class="lang-en">FREQUENTLY ASKED QUESTIONS</span>
+          <span class="lang-id">PERTANYAAN UMUM</span>
         </div>
         <h2 class="font-heading font-extrabold text-[28px] sm:text-[38px] uppercase tracking-tight text-[#1E1C2E]">
-          PERTANYAAN UMUM SEPUTAR ZIVO POS
+          <span class="lang-en">FREQUENTLY ASKED QUESTIONS ABOUT ZIVO POS</span>
+          <span class="lang-id">PERTANYAAN UMUM SEPUTAR ZIVO POS</span>
         </h2>
       </div>
 
@@ -720,66 +1112,79 @@
         <!-- FAQ Item 1 -->
         <details class="zivo-faq bg-[#FFFDF0] border-2 border-[#1E1C2E] shadow-[3px_3px_0px_#1E1C2E] rounded-lg p-4 cursor-pointer">
           <summary class="font-heading font-bold text-[16px] text-[#1E1C2E] flex items-center justify-between list-none">
-            <span>Can I keep making sales when the internet goes down?</span>
+            <span class="lang-en">Can I keep making sales when the internet goes down?</span>
+            <span class="lang-id">Apakah transaksi kasir tetap bisa jalan saat internet mati?</span>
             <span class="faq-icon transition-transform font-mono text-[18px]">▼</span>
           </summary>
           <p class="font-body text-[13px] text-[#1E1C2E]/80 leading-relaxed pt-3 border-t border-[#1E1C2E]/20 mt-3">
-            Yes. ZIVO can keep processing transactions while your internet connection is unavailable, so cashiers can continue serving customers without pause. Transactions are saved on the device and synced to your central reports automatically after the connection returns.
+            <span class="lang-en">Yes. ZIVO can keep processing transactions while your internet connection is unavailable, so cashiers can continue serving customers without pause. Transactions are saved on the device and synced to your central reports automatically after the connection returns.</span>
+            <span class="lang-id">Ya. ZIVO 100% offline-ready. Kasir tetap bisa input pesanan, buka laci kasir, dan cetak struk belanja walau tanpa internet. Saat koneksi online kembali, seluruh data transaksi otomatis terunggah ke laporan pusat tanpa perlu input ulang.</span>
           </p>
         </details>
 
         <!-- FAQ Item 2 -->
         <details class="zivo-faq bg-[#FFFDF0] border-2 border-[#1E1C2E] shadow-[3px_3px_0px_#1E1C2E] rounded-lg p-4 cursor-pointer">
           <summary class="font-heading font-bold text-[16px] text-[#1E1C2E] flex items-center justify-between list-none">
-            <span>Which devices and printers can I use with ZIVO?</span>
+            <span class="lang-en">Which devices and printers can I use with ZIVO?</span>
+            <span class="lang-id">Perangkat dan printer apa saja yang kompatibel dengan ZIVO?</span>
             <span class="faq-icon transition-transform font-mono text-[18px]">▼</span>
           </summary>
           <p class="font-body text-[13px] text-[#1E1C2E]/80 leading-relaxed pt-3 border-t border-[#1E1C2E]/20 mt-3">
-            ZIVO works across PC computers, laptops, Android tablets, iPads, or smartphones via standard web browsers (Google Chrome or Safari). It connects with standard thermal receipt printers (Bluetooth, USB, or LAN) and barcode scanners.
+            <span class="lang-en">ZIVO works across PC computers, laptops, Android tablets, iPads, or smartphones via standard web browsers (Google Chrome or Safari). It connects with standard thermal receipt printers (Bluetooth, USB, or LAN) and barcode scanners.</span>
+            <span class="lang-id">ZIVO fleksibel dan dapat digunakan di komputer PC, laptop, tablet Android, iPad, maupun smartphone lewat web browser standar. Kompatibel dengan printer struk thermal (Bluetooth, USB, LAN) dan scanner barcode standar.</span>
           </p>
         </details>
 
         <!-- FAQ Item 3 -->
         <details class="zivo-faq bg-[#FFFDF0] border-2 border-[#1E1C2E] shadow-[3px_3px_0px_#1E1C2E] rounded-lg p-4 cursor-pointer">
           <summary class="font-heading font-bold text-[16px] text-[#1E1C2E] flex items-center justify-between list-none">
-            <span>Can I have separate accounts for cashiers and managers?</span>
+            <span class="lang-en">Can I have separate accounts for cashiers and managers?</span>
+            <span class="lang-id">Bisakah memisahkan akun untuk kasir dan manajer/owner?</span>
             <span class="faq-icon transition-transform font-mono text-[18px]">▼</span>
           </summary>
           <p class="font-body text-[13px] text-[#1E1C2E]/80 leading-relaxed pt-3 border-t border-[#1E1C2E]/20 mt-3">
-            Yes. You can separate Owner access (full access to financial reports, settings, and margins) and Cashier access (limited strictly to transaction checkout and receipt printing). Shift handover tracking records cash in drawer at shift start and end.
+            <span class="lang-en">Yes. You can separate Owner access (full access to financial reports, settings, and margins) and Cashier access (limited strictly to transaction checkout and receipt printing). Shift handover tracking records cash in drawer at shift start and end.</span>
+            <span class="lang-id">Ya. Anda dapat memisahkan hak akses Pemilik (akses penuh ke laporan laba-rugi &amp; pengaturan) dan akses Kasir (hanya untuk proses transaksi penjualan dan cetak struk). Dilengkapi rekap uang kas awal &amp; akhir shift untuk mencegah selisih laci.</span>
           </p>
         </details>
 
         <!-- FAQ Item 4 -->
         <details class="zivo-faq bg-[#FFFDF0] border-2 border-[#1E1C2E] shadow-[3px_3px_0px_#1E1C2E] rounded-lg p-4 cursor-pointer">
           <summary class="font-heading font-bold text-[16px] text-[#1E1C2E] flex items-center justify-between list-none">
-            <span>Can I export sales and expense reports to Excel or PDF?</span>
+            <span class="lang-en">Can I export sales and expense reports to Excel or PDF?</span>
+            <span class="lang-id">Bisakah ekspor laporan penjualan &amp; pengeluaran ke Excel atau PDF?</span>
             <span class="faq-icon transition-transform font-mono text-[18px]">▼</span>
           </summary>
           <p class="font-body text-[13px] text-[#1E1C2E]/80 leading-relaxed pt-3 border-t border-[#1E1C2E]/20 mt-3">
-            Yes. From the Reports menu, you can filter sales and expense records by date, outlet, or category, and download them in Excel (XLSX) or print-ready PDF formats with one click.
+            <span class="lang-en">Yes. From the Reports menu, you can filter sales and expense records by date, outlet, or category, and download them in Excel (XLSX) or print-ready PDF formats with one click.</span>
+            <span class="lang-id">Ya. Dari menu Laporan, Anda bisa menyaring data transaksi penjualan dan pengeluaran kas berdasarkan tanggal, cabang, atau kategori, lalu mengunduhnya dalam format Excel (XLSX) atau PDF siap cetak dengan satu klik.</span>
           </p>
         </details>
 
         <!-- FAQ Item 5 -->
         <details class="zivo-faq bg-[#FFFDF0] border-2 border-[#1E1C2E] shadow-[3px_3px_0px_#1E1C2E] rounded-lg p-4 cursor-pointer">
           <summary class="font-heading font-bold text-[16px] text-[#1E1C2E] flex items-center justify-between list-none">
-            <span>How much is the subscription fee and installation?</span>
+            <span class="lang-en">How much is the subscription fee and installation?</span>
+            <span class="lang-id">Berapa biaya berlangganan dan biaya instalasinya?</span>
             <span class="faq-icon transition-transform font-mono text-[18px]">▼</span>
           </summary>
           <p class="font-body text-[13px] text-[#1E1C2E]/80 leading-relaxed pt-3 border-t border-[#1E1C2E]/20 mt-3">
-            ZIVO provides transparent plans: Bronze (Rp 750.000 / 90 days), Gold (Rp 1.700.000 / 120 days with 30-day bonus), and Platinum (Rp 2.600.000 / 150 days with 60-day bonus). Zero transaction percentage deductions and free initial setup support.
+            <span class="lang-en">ZIVO provides transparent plans: Bronze (Rp 750,000 / 90 days), Gold (Rp 1,700,000 / 120 days with 30-day bonus), and Platinum (Rp 2,600,000 / 150 days with 60-day bonus). Zero transaction percentage deductions and free initial setup support.</span>
+            <span class="lang-id">ZIVO menyediakan paket transparan: Bronze (Rp 750.000 / 90 hari), Gold (Rp 1.700.000 / 120 hari termasuk bonus 30 hari), dan Platinum (Rp 2.600.000 / 150 hari termasuk bonus 60 hari). Tanpa potongan komisi per transaksi dan gratis panduan setup awal.</span>
           </p>
         </details>
 
         <!-- FAQ Item 6 -->
         <details class="zivo-faq bg-[#FFFDF0] border-2 border-[#1E1C2E] shadow-[3px_3px_0px_#1E1C2E] rounded-lg p-4 cursor-pointer">
           <summary class="font-heading font-bold text-[16px] text-[#1E1C2E] flex items-center justify-between list-none">
-            <span>Apakah ada tim di Bali yang datang untuk instalasi &amp; training?</span>
+            <span class="lang-en">Is there a team in Bali available for on-site setup and training?</span>
+            <span class="lang-id">Apakah ada tim di Bali yang datang untuk instalasi &amp; training?</span>
             <span class="faq-icon transition-transform font-mono text-[18px]">▼</span>
           </summary>
           <p class="font-body text-[13px] text-[#1E1C2E]/80 leading-relaxed pt-3 border-t border-[#1E1C2E]/20 mt-3">
-            Ya! Karena kami berbasis langsung di Bali (Canggu &amp; Denpasar), tim teknis Extensia siap datang langsung ke outlet Anda di Denpasar, Badung, Gianyar, dan Tabanan (untuk area Jembrana, Karangasem, Singaraja, dan Klungkung segera hadir). Kami siap bantu setup hardware, memasukkan menu, dan melatih kasir sampai mahir.
+            <span class="lang-en">Yes! Because our headquarters are in Bali (Canggu &amp; Denpasar), our technical team can visit your outlet directly in Denpasar, Badung, Gianyar, and Tabanan (Jembrana, Karangasem, Singaraja, and Klungkung are coming soon) to set up hardware and train your staff.</span>
+            <span class="lang-id">Ya! Karena kami berbasis langsung di Bali (Canggu &amp; Denpasar), tim teknis Extensia siap datang langsung ke outlet Anda di Denpasar, Badung, Gianyar, dan Tabanan (untuk area Jembrana, Karangasem, Singaraja, dan Klungkung segera hadir) untuk setup hardware, input menu, dan melatih kasir sampai mahir.</span>
+          </p>
         </details>
 
       </div>
@@ -793,21 +1198,25 @@
     <section class="p-6 sm:p-10 lg:p-14 bg-[#38BDF8] flex flex-col gap-8">
 
       <!-- Action Banner -->
-      <div class="bg-[#FFF9D5] border-[3px] border-[#1E1C2E] shadow-[6px_6px_0px_#1E1C2E] rounded-lg p-6 sm:p-10 flex flex-col lg:flex-row items-center justify-between gap-6">
+      <div class="bg-[#FFF9D5] border-[3px] border-[#1E1C2E] shadow-[6px_6px_0px_#1E1C2E] rounded-xl p-6 sm:p-10 flex flex-col lg:flex-row items-center justify-between gap-6">
         <div class="flex flex-col gap-2.5 text-center lg:text-left max-w-[650px]">
           <span class="font-mono text-[12px] font-bold uppercase tracking-wider bg-[#D4FF00] px-3 py-1 self-center lg:self-start border-2 border-[#1E1C2E] shadow-[2px_2px_0px_#1E1C2E] rounded-md">
-            AMANKAN OPERASIONAL BISNIS ANDA
+            <span class="lang-en">SECURE YOUR BUSINESS OPERATIONS</span>
+            <span class="lang-id">AMANKAN OPERASIONAL BISNIS ANDA</span>
           </span>
           <h3 class="font-heading font-extrabold text-[24px] sm:text-[34px] leading-tight uppercase tracking-tight text-[#1E1C2E]">
-            SIAP MENG-UPGRADE KASIR BISNIS ANDA BERSAMA ZIVOPOS?
+            <span class="lang-en">READY TO UPGRADE YOUR POS SYSTEM WITH ZIVOPOS?</span>
+            <span class="lang-id">SIAP MENG-UPGRADE KASIR BISNIS ANDA BERSAMA ZIVOPOS?</span>
           </h3>
           <p class="font-body text-[14px] sm:text-[16px] text-[#1E1C2E]/90 font-medium leading-relaxed">
-            Jadwalkan sesi demo langsung 20 menit di outlet Anda. Tim kami akan mendemokan kemudahan kasir &amp; kontrol inventaris zivoPOS.
+            <span class="lang-en">Schedule a 20-minute on-site walkthrough at your store. Our team will demonstrate cashier speed and inventory control.</span>
+            <span class="lang-id">Jadwalkan sesi demo langsung 20 menit di outlet Anda. Tim kami akan mendemokan kemudahan kasir &amp; kontrol inventaris zivoPOS.</span>
           </p>
         </div>
 
-        <a href="https://wa.me/6281234567890?text=Halo%20Extensia%20Bali,%20saya%20mau%20jadwalkan%20demo%20zivoPOS%20di%20outlet%20saya" target="_blank" rel="noopener" class="px-8 py-4 bg-[#D4FF00] text-[#1E1C2E] border-[3px] border-[#1E1C2E] shadow-[5px_5px_0px_#1E1C2E] rounded-lg font-heading font-extrabold text-[15px] sm:text-[16px] uppercase tracking-wide hover:bg-[#bcf000] hover:shadow-[7px_7px_0px_#1E1C2E] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-[3px] active:translate-y-[3px] active:shadow-none transition-all whitespace-nowrap flex items-center gap-2">
-          <span>JADWALKAN DEMO GRATIS SEKARANG ➔</span>
+        <a href="https://wa.me/6281234567890?text=Halo%20Extensia%20Bali,%20saya%20mau%20jadwalkan%20demo%20zivoPOS%20di%20outlet%20saya" target="_blank" rel="noopener" class="px-8 py-4 bg-[#D4FF00] text-[#1E1C2E] border-[3px] border-[#1E1C2E] shadow-[5px_5px_0px_#1E1C2E] rounded-xl font-heading font-extrabold text-[15px] sm:text-[16px] uppercase tracking-wide hover:bg-[#bcf000] hover:shadow-[7px_7px_0px_#1E1C2E] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-[3px] active:translate-y-[3px] active:shadow-none transition-all whitespace-nowrap flex items-center gap-2">
+          <span class="lang-en">SCHEDULE FREE DEMO NOW ➔</span>
+          <span class="lang-id">JADWALKAN DEMO GRATIS SEKARANG ➔</span>
           <span class="text-[20px]">⚡</span>
         </a>
       </div>
@@ -835,45 +1244,138 @@
 
   </div>
 
-  <!-- Interactive Script for Bali Area Selector & WhatsApp Generator -->
+  <!-- Interactive Script for Language Toggle, Bali Area Selector, Form Validation & WhatsApp Generator -->
   <script>
     document.addEventListener("DOMContentLoaded", function() {
+      // ======================================================================
+      // 1. Language Switcher (ID / EN)
+      // ======================================================================
+      var btnLangId = document.getElementById("btn-lang-id");
+      var btnLangEn = document.getElementById("btn-lang-en");
+      var noteInput = document.getElementById("store-note");
+
+      function setLanguage(lang) {
+        document.documentElement.lang = lang;
+        try {
+          localStorage.setItem("zivopos_preferred_lang", lang);
+        } catch (e) {}
+
+        if (lang === "en") {
+          if (btnLangEn) {
+            btnLangEn.classList.add("bg-[#D4FF00]", "border", "border-[#1E1C2E]");
+            btnLangEn.classList.remove("bg-transparent");
+          }
+          if (btnLangId) {
+            btnLangId.classList.remove("bg-[#D4FF00]", "border", "border-[#1E1C2E]");
+            btnLangId.classList.add("bg-transparent");
+          }
+          if (noteInput) {
+            noteInput.placeholder = "Example: Sunset Coffee Bar, Jl. Batu Bolong Canggu";
+          }
+        } else {
+          if (btnLangId) {
+            btnLangId.classList.add("bg-[#D4FF00]", "border", "border-[#1E1C2E]");
+            btnLangId.classList.remove("bg-transparent");
+          }
+          if (btnLangEn) {
+            btnLangEn.classList.remove("bg-[#D4FF00]", "border", "border-[#1E1C2E]");
+            btnLangEn.classList.add("bg-transparent");
+          }
+          if (noteInput) {
+            noteInput.placeholder = "Contoh: Kafe Kopi Senja, Jl. Batu Bolong Canggu";
+          }
+        }
+        updateWaLink();
+      }
+
+      if (btnLangId) {
+        btnLangId.addEventListener("click", function() {
+          setLanguage("id");
+        });
+      }
+      if (btnLangEn) {
+        btnLangEn.addEventListener("click", function() {
+          setLanguage("en");
+        });
+      }
+
+      // Check saved preference
+      try {
+        var savedLang = localStorage.getItem("zivopos_preferred_lang");
+        if (savedLang === "en" || savedLang === "id") {
+          setLanguage(savedLang);
+        }
+      } catch (e) {}
+
+      // ======================================================================
+      // 2. Interactive Area Selection & WhatsApp Link Generator with Validation
+      // ======================================================================
       var areaButtons = document.querySelectorAll(".area-btn:not([disabled])");
       var waBtn = document.getElementById("wa-demo-btn");
-      var waBtnText = document.getElementById("wa-btn-text");
+      var noteError = document.getElementById("store-note-error");
       var selectedArea = "Denpasar";
-      var isSoon = false;
 
       function updateWaLink() {
-        var note = noteInput && noteInput.value.trim() ? " (%20" + encodeURIComponent(noteInput.value.trim()) + ")" : "";
-        var message = isSoon
-          ? "Halo Tim ZIVO POS, saya tertarik zivoPOS dan ingin masuk WAITING LIST demo on-site untuk area " + encodeURIComponent(selectedArea) + note
-          : "Halo Tim ZIVO POS, saya mau jadwalkan demo on-site di area " + encodeURIComponent(selectedArea) + note;
+        var currentLang = document.documentElement.lang || "id";
+        var rawNote = noteInput ? noteInput.value.trim() : "";
+        var note = rawNote ? " (" + rawNote + ")" : "";
+        
+        var message = currentLang === "en"
+          ? "Hello ZIVO POS Team, I would like to schedule a free on-site demo in " + selectedArea + note
+          : "Halo Tim ZIVO POS, saya mau jadwalkan demo on-site di area " + selectedArea + note;
 
         if (waBtn) {
-          waBtn.href = "https://wa.me/6281234567890?text=" + message;
-        }
-        if (waBtnText) {
-          waBtnText.textContent = isSoon ? "GABUNG WAITING LIST DEMO VIA WHATSAPP" : "REQUEST ON-SITE DEMO ON WHATSAPP";
+          waBtn.href = "https://wa.me/6281234567890?text=" + encodeURIComponent(message);
         }
       }
 
+      // Area button clicks
       areaButtons.forEach(function(btn) {
         btn.addEventListener("click", function() {
           areaButtons.forEach(function(b) {
-            b.classList.remove("bg-[#D4FF00]", "bg-[#FF9D50]");
+            b.classList.remove("bg-[#D4FF00]");
             b.classList.add("bg-[#FFFDF0]");
           });
-          isSoon = btn.getAttribute("data-soon") === "true";
           btn.classList.remove("bg-[#FFFDF0]");
-          btn.classList.add(isSoon ? "bg-[#FF9D50]" : "bg-[#D4FF00]");
+          btn.classList.add("bg-[#D4FF00]");
           selectedArea = btn.getAttribute("data-area") || "Denpasar";
           updateWaLink();
         });
       });
 
+      // Required Field Validation on Click
+      if (waBtn) {
+        waBtn.addEventListener("click", function(e) {
+          var noteVal = noteInput ? noteInput.value.trim() : "";
+          if (!noteVal) {
+            e.preventDefault(); // Stop navigation to WhatsApp
+            
+            if (noteInput) {
+              noteInput.classList.add("border-[#BA1A1A]", "bg-[#FFDAD6]", "shake-error");
+              noteInput.focus();
+              setTimeout(function() {
+                noteInput.classList.remove("shake-error");
+              }, 450);
+            }
+            if (noteError) {
+              noteError.classList.remove("hidden");
+            }
+            return false;
+          }
+        });
+      }
+
+      // Live Input Event to Clear Error State
       if (noteInput) {
-        noteInput.addEventListener("input", updateWaLink);
+        noteInput.addEventListener("input", function() {
+          if (noteInput.value.trim()) {
+            noteInput.classList.remove("border-[#BA1A1A]", "bg-[#FFDAD6]");
+            if (noteError) {
+              noteError.classList.add("hidden");
+            }
+          }
+          updateWaLink();
+        });
       }
     });
   </script>
