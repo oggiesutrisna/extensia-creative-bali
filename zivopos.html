@@ -25,34 +25,17 @@
 
   <!-- Custom Styles for Neubrutalism Details & Translation System -->
   <style>
-    /* FAQ Neubrutalist Animations & State */
-    details.zivo-faq {
-      transition: background-color 0.2s ease, box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    /* FAQ Smooth CSS Grid Accordion (Zero Stutter, No Color Shift) */
+    .faq-collapse {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.28s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    details.zivo-faq:hover {
-      transform: translate(-1px, -1px);
-      box-shadow: 5px 5px 0 0 #1E1C2E;
+    .faq-item.active .faq-collapse {
+      grid-template-rows: 1fr;
     }
-    details.zivo-faq[open] {
-      background-color: #FFF9D5;
-      box-shadow: 4px 4px 0 0 #1E1C2E;
-    }
-    details.zivo-faq summary {
-      user-select: none;
-      cursor: pointer;
-    }
-    details.zivo-faq summary::-webkit-details-marker {
-      display: none;
-    }
-    details.zivo-faq summary .faq-icon {
-      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-      display: inline-block;
-    }
-    details.zivo-faq[open] summary .faq-icon {
+    .faq-item.active .faq-icon {
       transform: rotate(180deg);
-    }
-    .faq-body {
-      overflow: hidden;
     }
 
     /* Complete Language Translation Rules */
@@ -1135,95 +1118,118 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 
         <!-- FAQ Item 1 -->
-        <details class="zivo-faq bg-[#FFFDF0] border-2 border-[#1E1C2E] shadow-[3px_3px_0px_#1E1C2E] rounded-lg p-4 cursor-pointer">
-          <summary class="font-heading font-bold text-[16px] text-[#1E1C2E] flex items-center justify-between list-none">
-            <span class="lang-en">Can I keep making sales when the internet goes down?</span>
-            <span class="lang-id">Apakah transaksi kasir tetap bisa jalan saat internet mati?</span>
-            <span class="faq-icon transition-transform font-mono text-[18px]">▼</span>
-          </summary>
-          <div class="faq-body">
-            <p class="font-body text-[13px] text-[#1E1C2E]/80 leading-relaxed pt-3 border-t border-[#1E1C2E]/20 mt-3">
-              <span class="lang-en">Yes. ZIVO can keep processing transactions while your internet connection is unavailable, so cashiers can continue serving customers without pause. Transactions are saved on the device and synced to your central reports automatically after the connection returns.</span>
-              <span class="lang-id">Ya. ZIVO 100% offline-ready. Kasir tetap bisa input pesanan, buka laci kasir, dan cetak struk belanja walau tanpa internet. Saat koneksi online kembali, seluruh data transaksi otomatis terunggah ke laporan pusat tanpa perlu input ulang.</span>
-            </p>
+        <div class="faq-item bg-[#FFFDF0] border-2 border-[#1E1C2E] shadow-[3px_3px_0px_#1E1C2E] rounded-lg p-4 transition-all hover:shadow-[5px_5px_0px_#1E1C2E] hover:-translate-x-0.5 hover:-translate-y-0.5">
+          <button type="button" class="faq-trigger w-full font-heading font-bold text-[16px] text-[#1E1C2E] flex items-center justify-between text-left cursor-pointer select-none" aria-expanded="false">
+            <span>
+              <span class="lang-en">Can I keep making sales when the internet goes down?</span>
+              <span class="lang-id">Apakah transaksi kasir tetap bisa jalan saat internet mati?</span>
+            </span>
+            <span class="faq-icon font-mono text-[16px] text-[#1E1C2E] ml-3 transition-transform duration-300">▼</span>
+          </button>
+          <div class="faq-collapse">
+            <div class="overflow-hidden">
+              <p class="font-body text-[13px] text-[#1E1C2E]/80 leading-relaxed pt-3 border-t border-[#1E1C2E]/20 mt-3">
+                <span class="lang-en">Yes. ZIVO can keep processing transactions while your internet connection is unavailable, so cashiers can continue serving customers without pause. Transactions are saved on the device and synced to your central reports automatically after the connection returns.</span>
+                <span class="lang-id">Ya. ZIVO 100% offline-ready. Kasir tetap bisa input pesanan, buka laci kasir, dan cetak struk belanja walau tanpa internet. Saat koneksi online kembali, seluruh data transaksi otomatis terunggah ke laporan pusat tanpa perlu input ulang.</span>
+              </p>
+            </div>
           </div>
-        </details>
+        </div>
 
         <!-- FAQ Item 2 -->
-        <details class="zivo-faq bg-[#FFFDF0] border-2 border-[#1E1C2E] shadow-[3px_3px_0px_#1E1C2E] rounded-lg p-4 cursor-pointer">
-          <summary class="font-heading font-bold text-[16px] text-[#1E1C2E] flex items-center justify-between list-none">
-            <span class="lang-en">Which devices and printers can I use with ZIVO?</span>
-            <span class="lang-id">Perangkat dan printer apa saja yang kompatibel dengan ZIVO?</span>
-            <span class="faq-icon transition-transform font-mono text-[18px]">▼</span>
-          </summary>
-          <div class="faq-body">
-            <p class="font-body text-[13px] text-[#1E1C2E]/80 leading-relaxed pt-3 border-t border-[#1E1C2E]/20 mt-3">
-              <span class="lang-en">ZIVO works across PC computers, laptops, Android tablets, iPads, or smartphones via standard web browsers (Google Chrome or Safari). It connects with standard thermal receipt printers (Bluetooth, USB, or LAN) and barcode scanners.</span>
-              <span class="lang-id">ZIVO fleksibel dan dapat digunakan di komputer PC, laptop, tablet Android, iPad, maupun smartphone lewat web browser standar. Kompatibel dengan printer struk thermal (Bluetooth, USB, LAN) dan scanner barcode standar.</span>
-            </p>
+        <div class="faq-item bg-[#FFFDF0] border-2 border-[#1E1C2E] shadow-[3px_3px_0px_#1E1C2E] rounded-lg p-4 transition-all hover:shadow-[5px_5px_0px_#1E1C2E] hover:-translate-x-0.5 hover:-translate-y-0.5">
+          <button type="button" class="faq-trigger w-full font-heading font-bold text-[16px] text-[#1E1C2E] flex items-center justify-between text-left cursor-pointer select-none" aria-expanded="false">
+            <span>
+              <span class="lang-en">Which devices and printers can I use with ZIVO?</span>
+              <span class="lang-id">Perangkat dan printer apa saja yang kompatibel dengan ZIVO?</span>
+            </span>
+            <span class="faq-icon font-mono text-[16px] text-[#1E1C2E] ml-3 transition-transform duration-300">▼</span>
+          </button>
+          <div class="faq-collapse">
+            <div class="overflow-hidden">
+              <p class="font-body text-[13px] text-[#1E1C2E]/80 leading-relaxed pt-3 border-t border-[#1E1C2E]/20 mt-3">
+                <span class="lang-en">ZIVO works across PC computers, laptops, Android tablets, iPads, or smartphones via standard web browsers (Google Chrome or Safari). It connects with standard thermal receipt printers (Bluetooth, USB, or LAN) and barcode scanners.</span>
+                <span class="lang-id">ZIVO fleksibel dan dapat digunakan di komputer PC, laptop, tablet Android, iPad, maupun smartphone lewat web browser standar. Kompatibel dengan printer struk thermal (Bluetooth, USB, LAN) dan scanner barcode standar.</span>
+              </p>
+            </div>
           </div>
-        </details>
+        </div>
 
         <!-- FAQ Item 3 -->
-        <details class="zivo-faq bg-[#FFFDF0] border-2 border-[#1E1C2E] shadow-[3px_3px_0px_#1E1C2E] rounded-lg p-4 cursor-pointer">
-          <summary class="font-heading font-bold text-[16px] text-[#1E1C2E] flex items-center justify-between list-none">
-            <span class="lang-en">Can I have separate accounts for cashiers and managers?</span>
-            <span class="lang-id">Bisakah memisahkan akun untuk kasir dan manajer/owner?</span>
-            <span class="faq-icon transition-transform font-mono text-[18px]">▼</span>
-          </summary>
-          <div class="faq-body">
-            <p class="font-body text-[13px] text-[#1E1C2E]/80 leading-relaxed pt-3 border-t border-[#1E1C2E]/20 mt-3">
-              <span class="lang-en">Yes. You can separate Owner access (full access to financial reports, settings, and margins) and Cashier access (limited strictly to transaction checkout and receipt printing). Shift handover tracking records cash in drawer at shift start and end.</span>
-              <span class="lang-id">Ya. Anda dapat memisahkan hak akses Pemilik (akses penuh ke laporan laba-rugi &amp; pengaturan) dan akses Kasir (hanya untuk proses transaksi penjualan dan cetak struk). Dilengkapi rekap uang kas awal &amp; akhir shift untuk mencegah selisih laci.</span>
-            </p>
+        <div class="faq-item bg-[#FFFDF0] border-2 border-[#1E1C2E] shadow-[3px_3px_0px_#1E1C2E] rounded-lg p-4 transition-all hover:shadow-[5px_5px_0px_#1E1C2E] hover:-translate-x-0.5 hover:-translate-y-0.5">
+          <button type="button" class="faq-trigger w-full font-heading font-bold text-[16px] text-[#1E1C2E] flex items-center justify-between text-left cursor-pointer select-none" aria-expanded="false">
+            <span>
+              <span class="lang-en">Can I have separate accounts for cashiers and managers?</span>
+              <span class="lang-id">Bisakah memisahkan akun untuk kasir dan manajer/owner?</span>
+            </span>
+            <span class="faq-icon font-mono text-[16px] text-[#1E1C2E] ml-3 transition-transform duration-300">▼</span>
+          </button>
+          <div class="faq-collapse">
+            <div class="overflow-hidden">
+              <p class="font-body text-[13px] text-[#1E1C2E]/80 leading-relaxed pt-3 border-t border-[#1E1C2E]/20 mt-3">
+                <span class="lang-en">Yes. You can separate Owner access (full access to financial reports, settings, and margins) and Cashier access (limited strictly to transaction checkout and receipt printing). Shift handover tracking records cash in drawer at shift start and end.</span>
+                <span class="lang-id">Ya. Anda dapat memisahkan hak akses Pemilik (akses penuh ke laporan laba-rugi &amp; pengaturan) dan akses Kasir (hanya untuk proses transaksi penjualan dan cetak struk). Dilengkapi rekap uang kas awal &amp; akhir shift untuk mencegah selisih laci.</span>
+              </p>
+            </div>
           </div>
-        </details>
+        </div>
 
         <!-- FAQ Item 4 -->
-        <details class="zivo-faq bg-[#FFFDF0] border-2 border-[#1E1C2E] shadow-[3px_3px_0px_#1E1C2E] rounded-lg p-4 cursor-pointer">
-          <summary class="font-heading font-bold text-[16px] text-[#1E1C2E] flex items-center justify-between list-none">
-            <span class="lang-en">Can I export sales and expense reports to Excel or PDF?</span>
-            <span class="lang-id">Bisakah ekspor laporan penjualan &amp; pengeluaran ke Excel atau PDF?</span>
-            <span class="faq-icon transition-transform font-mono text-[18px]">▼</span>
-          </summary>
-          <div class="faq-body">
-            <p class="font-body text-[13px] text-[#1E1C2E]/80 leading-relaxed pt-3 border-t border-[#1E1C2E]/20 mt-3">
-              <span class="lang-en">Yes. From the Reports menu, you can filter sales and expense records by date, outlet, or category, and download them in Excel (XLSX) or print-ready PDF formats with one click.</span>
-              <span class="lang-id">Ya. Dari menu Laporan, Anda bisa menyaring data transaksi penjualan dan pengeluaran kas berdasarkan tanggal, cabang, atau kategori, lalu mengunduhnya dalam format Excel (XLSX) atau PDF siap cetak dengan satu klik.</span>
-            </p>
+        <div class="faq-item bg-[#FFFDF0] border-2 border-[#1E1C2E] shadow-[3px_3px_0px_#1E1C2E] rounded-lg p-4 transition-all hover:shadow-[5px_5px_0px_#1E1C2E] hover:-translate-x-0.5 hover:-translate-y-0.5">
+          <button type="button" class="faq-trigger w-full font-heading font-bold text-[16px] text-[#1E1C2E] flex items-center justify-between text-left cursor-pointer select-none" aria-expanded="false">
+            <span>
+              <span class="lang-en">Can I export sales and expense reports to Excel or PDF?</span>
+              <span class="lang-id">Bisakah ekspor laporan penjualan &amp; pengeluaran ke Excel atau PDF?</span>
+            </span>
+            <span class="faq-icon font-mono text-[16px] text-[#1E1C2E] ml-3 transition-transform duration-300">▼</span>
+          </button>
+          <div class="faq-collapse">
+            <div class="overflow-hidden">
+              <p class="font-body text-[13px] text-[#1E1C2E]/80 leading-relaxed pt-3 border-t border-[#1E1C2E]/20 mt-3">
+                <span class="lang-en">Yes. From the Reports menu, you can filter sales and expense records by date, outlet, or category, and download them in Excel (XLSX) or print-ready PDF formats with one click.</span>
+                <span class="lang-id">Ya. Dari menu Laporan, Anda bisa menyaring data transaksi penjualan dan pengeluaran kas berdasarkan tanggal, cabang, atau kategori, lalu mengunduhnya dalam format Excel (XLSX) atau PDF siap cetak dengan satu klik.</span>
+              </p>
+            </div>
           </div>
-        </details>
+        </div>
 
         <!-- FAQ Item 5 -->
-        <details class="zivo-faq bg-[#FFFDF0] border-2 border-[#1E1C2E] shadow-[3px_3px_0px_#1E1C2E] rounded-lg p-4 cursor-pointer">
-          <summary class="font-heading font-bold text-[16px] text-[#1E1C2E] flex items-center justify-between list-none">
-            <span class="lang-en">How much is the subscription fee and installation?</span>
-            <span class="lang-id">Berapa biaya berlangganan dan biaya instalasinya?</span>
-            <span class="faq-icon transition-transform font-mono text-[18px]">▼</span>
-          </summary>
-          <div class="faq-body">
-            <p class="font-body text-[13px] text-[#1E1C2E]/80 leading-relaxed pt-3 border-t border-[#1E1C2E]/20 mt-3">
-              <span class="lang-en">ZIVO provides transparent plans: Bronze (Rp 750,000 / 90 days), Gold (Rp 1,700,000 / 120 days with 30-day bonus), and Platinum (Rp 2,600,000 / 150 days with 60-day bonus). Zero transaction percentage deductions and free initial setup support.</span>
-              <span class="lang-id">ZIVO menyediakan paket transparan: Bronze (Rp 750.000 / 90 hari), Gold (Rp 1.700.000 / 120 hari termasuk bonus 30 hari), dan Platinum (Rp 2.600.000 / 150 hari termasuk bonus 60 hari). Tanpa potongan komisi per transaksi dan gratis panduan setup awal.</span>
-            </p>
+        <div class="faq-item bg-[#FFFDF0] border-2 border-[#1E1C2E] shadow-[3px_3px_0px_#1E1C2E] rounded-lg p-4 transition-all hover:shadow-[5px_5px_0px_#1E1C2E] hover:-translate-x-0.5 hover:-translate-y-0.5">
+          <button type="button" class="faq-trigger w-full font-heading font-bold text-[16px] text-[#1E1C2E] flex items-center justify-between text-left cursor-pointer select-none" aria-expanded="false">
+            <span>
+              <span class="lang-en">How much is the subscription fee and installation?</span>
+              <span class="lang-id">Berapa biaya berlangganan dan biaya instalasinya?</span>
+            </span>
+            <span class="faq-icon font-mono text-[16px] text-[#1E1C2E] ml-3 transition-transform duration-300">▼</span>
+          </button>
+          <div class="faq-collapse">
+            <div class="overflow-hidden">
+              <p class="font-body text-[13px] text-[#1E1C2E]/80 leading-relaxed pt-3 border-t border-[#1E1C2E]/20 mt-3">
+                <span class="lang-en">ZIVO provides transparent plans: Bronze (Rp 750,000 / 90 days), Gold (Rp 1,700,000 / 120 days with 30-day bonus), and Platinum (Rp 2,600,000 / 150 days with 60-day bonus). Zero transaction percentage deductions and free initial setup support.</span>
+                <span class="lang-id">ZIVO menyediakan paket transparan: Bronze (Rp 750.000 / 90 hari), Gold (Rp 1.700.000 / 120 hari termasuk bonus 30 hari), dan Platinum (Rp 2.600.000 / 150 hari termasuk bonus 60 hari). Tanpa potongan komisi per transaksi dan gratis panduan setup awal.</span>
+              </p>
+            </div>
           </div>
-        </details>
+        </div>
 
         <!-- FAQ Item 6 -->
-        <details class="zivo-faq bg-[#FFFDF0] border-2 border-[#1E1C2E] shadow-[3px_3px_0px_#1E1C2E] rounded-lg p-4 cursor-pointer">
-          <summary class="font-heading font-bold text-[16px] text-[#1E1C2E] flex items-center justify-between list-none">
-            <span class="lang-en">Is there a team in Bali available for on-site setup and training?</span>
-            <span class="lang-id">Apakah ada tim di Bali yang datang untuk instalasi &amp; training?</span>
-            <span class="faq-icon transition-transform font-mono text-[18px]">▼</span>
-          </summary>
-          <div class="faq-body">
-            <p class="font-body text-[13px] text-[#1E1C2E]/80 leading-relaxed pt-3 border-t border-[#1E1C2E]/20 mt-3">
-              <span class="lang-en">Yes! Because our headquarters are in Bali (Canggu &amp; Denpasar), our technical team can visit your outlet directly in Denpasar, Badung, Gianyar, and Tabanan (Jembrana, Karangasem, Singaraja, and Klungkung are coming soon) to set up hardware and train your staff.</span>
-              <span class="lang-id">Ya! Karena kami berbasis langsung di Bali (Canggu &amp; Denpasar), tim teknis Extensia siap datang langsung ke outlet Anda di Denpasar, Badung, Gianyar, dan Tabanan (untuk area Jembrana, Karangasem, Singaraja, dan Klungkung segera hadir) untuk setup hardware, input menu, dan melatih kasir sampai mahir.</span>
-            </p>
+        <div class="faq-item bg-[#FFFDF0] border-2 border-[#1E1C2E] shadow-[3px_3px_0px_#1E1C2E] rounded-lg p-4 transition-all hover:shadow-[5px_5px_0px_#1E1C2E] hover:-translate-x-0.5 hover:-translate-y-0.5">
+          <button type="button" class="faq-trigger w-full font-heading font-bold text-[16px] text-[#1E1C2E] flex items-center justify-between text-left cursor-pointer select-none" aria-expanded="false">
+            <span>
+              <span class="lang-en">Is there a team in Bali available for on-site setup and training?</span>
+              <span class="lang-id">Apakah ada tim di Bali yang datang untuk instalasi &amp; training?</span>
+            </span>
+            <span class="faq-icon font-mono text-[16px] text-[#1E1C2E] ml-3 transition-transform duration-300">▼</span>
+          </button>
+          <div class="faq-collapse">
+            <div class="overflow-hidden">
+              <p class="font-body text-[13px] text-[#1E1C2E]/80 leading-relaxed pt-3 border-t border-[#1E1C2E]/20 mt-3">
+                <span class="lang-en">Yes! Because our headquarters are in Bali (Canggu &amp; Denpasar), our technical team can visit your outlet directly in Denpasar, Badung, Gianyar, and Tabanan (Jembrana, Karangasem, Singaraja, and Klungkung are coming soon) to set up hardware and train your staff.</span>
+                <span class="lang-id">Ya! Karena kami berbasis langsung di Bali (Canggu &amp; Denpasar), tim teknis Extensia siap datang langsung ke outlet Anda di Denpasar, Badung, Gianyar, dan Tabanan (untuk area Jembrana, Karangasem, Singaraja, dan Klungkung segera hadir) untuk setup hardware, input menu, dan melatih kasir sampai mahir.</span>
+              </p>
+            </div>
           </div>
-        </details>
-
+        </div>
       </div>
 
     </section>
@@ -1415,76 +1421,14 @@
         });
       }
 
+      // 3. Smooth FAQ Accordion Handler (Zero Stutter, No Color Shift)
       // ======================================================================
-      // 3. Smooth FAQ Accordion Animation (Web Animations API)
-      // ======================================================================
-      document.querySelectorAll("details.zivo-faq").forEach(function(details) {
-        var summary = details.querySelector("summary");
-        var content = details.querySelector(".faq-body");
-        if (!summary || !content) return;
-
-        var animation = null;
-        var isClosing = false;
-        var isExpanding = false;
-
-        summary.addEventListener("click", function(e) {
-          e.preventDefault();
-          details.style.overflow = "hidden";
-
-          if (isClosing || !details.open) {
-            // Smoothly expand
-            details.style.height = details.offsetHeight + "px";
-            details.open = true;
-
-            window.requestAnimationFrame(function() {
-              isExpanding = true;
-              var startHeight = details.offsetHeight + "px";
-              var endHeight = (summary.offsetHeight + content.offsetHeight + 18) + "px";
-
-              if (animation) animation.cancel();
-              animation = details.animate({
-                height: [startHeight, endHeight]
-              }, {
-                duration: 250,
-                easing: "cubic-bezier(0.16, 1, 0.3, 1)"
-              });
-
-              animation.onfinish = function() {
-                details.open = true;
-                animation = null;
-                isExpanding = false;
-                details.style.height = "";
-                details.style.overflow = "";
-              };
-              animation.oncancel = function() {
-                isExpanding = false;
-              };
-            });
-          } else if (isExpanding || details.open) {
-            // Smoothly shrink
-            isClosing = true;
-            var startHeight = details.offsetHeight + "px";
-            var endHeight = summary.offsetHeight + "px";
-
-            if (animation) animation.cancel();
-            animation = details.animate({
-              height: [startHeight, endHeight]
-            }, {
-              duration: 200,
-              easing: "cubic-bezier(0.16, 1, 0.3, 1)"
-            });
-
-            animation.onfinish = function() {
-              details.open = false;
-              animation = null;
-              isClosing = false;
-              details.style.height = "";
-              details.style.overflow = "";
-            };
-            animation.oncancel = function() {
-              isClosing = false;
-            };
-          }
+      document.querySelectorAll(".faq-trigger").forEach(function(trigger) {
+        trigger.addEventListener("click", function() {
+          var item = trigger.closest(".faq-item");
+          var isOpen = item.classList.contains("active");
+          item.classList.toggle("active");
+          trigger.setAttribute("aria-expanded", !isOpen);
         });
       });
     });
