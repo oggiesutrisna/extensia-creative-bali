@@ -21,14 +21,22 @@ Landing page resmi **Extensia Creative Bali** dengan gaya desain **Neubrutalism 
 ## 📁 Struktur File
 
 ```
-├── index.html                           # Landing page utama Extensia Creative Bali
-├── zivopos.html                         # Halaman produk & showcase klien zivoPOS
-├── style.css                            # Reset layer base, scrollbar, & styling global
-├── script.js                            # Konfigurasi Tailwind CDN & interaktivitas (jam WITA, filter, nav)
-├── extensia-creative-bali-logo-no-bg.png# Logo resmi Extensia Bali (transparent PNG)
-├── hero-bg-clean.webp                   # Ilustrasi seni Balinese tech resolusi tinggi
-├── mandala-corner.webp                  # Ornamen dekorasi sudut mandala Bali
-├── frangipani.webp                      # Ornamen bunga jepun / kamboja Bali
+extensia-creative-bali/
+│
+├── assets/
+│   ├── css/
+│   │   └── style.css                            # Reset layer base, scrollbar, & styling global
+│   ├── js/
+│   │   └── script.js                            # Konfigurasi Tailwind CDN & interaktivitas (jam WITA, filter, nav)
+│   └── images/
+│       ├── extensia-creative-bali-logo-no-bg.png# Logo resmi Extensia Bali (transparent PNG)
+│       ├── hero-bg-clean.webp                   # Ilustrasi seni Balinese tech resolusi tinggi
+│       ├── mandala-corner.webp                  # Ornamen dekorasi sudut mandala Bali
+│       ├── frangipani.webp                      # Ornamen bunga jepun / kamboja Bali
+│       └── Gemini_Generated_Image_2swt3h2swt3h2swt.jpg # Gambar referensi desain
+│
+├── index.html                                   # Landing page utama Extensia Creative Bali
+├── zivopos.html                                 # Halaman produk & showcase klien zivoPOS
 └── README.md
 ```
 
