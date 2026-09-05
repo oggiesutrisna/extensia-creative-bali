@@ -57,7 +57,10 @@ Proyek ini adalah static site modern yang siap di-deploy langsung ke Vercel:
 1. Push repository ini ke GitHub.
 2. Buka [Vercel Dashboard](https://vercel.com/new).
 3. Import repository `extensia-creative-bali`.
-4. Pada konfigurasi framework, pilih **Other** (Root directory `./`).
+4. Framework **Other**, Root `./` — sudah di-pin via `vercel.json`
+   (`framework: null`, `buildCommand: npm run build`, `outputDirectory: .`),
+   jadi override dashboard tidak diperlukan. Setiap deploy otomatis
+   me-regenerate `assets/css/compiled.css` dari HTML/JS terbaru.
 5. Klik **Deploy**.
 
 ---
