@@ -637,21 +637,39 @@
         <div class="lg:col-span-6 bg-[#FFF9D5] border-[3px] border-[#1E1C2E] shadow-[6px_6px_0px_#1E1C2E] rounded-2xl p-6 flex flex-col gap-5">
           <div class="flex items-center justify-between border-b-2 border-[#1E1C2E]/20 pb-3">
             <span class="font-mono text-[12px] font-bold uppercase text-[#1E1C2E]">📍 PILIH LOKASI OUTLET (AREA BALI):</span>
-            <span class="font-mono text-[11px] font-bold text-[#006d31]">● READY ON-SITE</span>
+            <div class="flex items-center gap-2 font-mono text-[10px] font-bold">
+              <span class="text-[#006d31]">● READY ON-SITE</span>
+              <span>•</span>
+              <span class="text-[#FF9D50]">⏳ COMING SOON</span>
+            </div>
           </div>
 
           <!-- Area Buttons -->
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-2" id="bali-area-buttons">
-            <button type="button" class="area-btn active px-3 py-2 bg-[#D4FF00] text-[#1E1C2E] border-2 border-[#1E1C2E] shadow-[2px_2px_0px_#1E1C2E] rounded-lg font-mono text-[11px] font-bold text-center cursor-pointer transition-all active:translate-x-0.5" data-area="Denpasar">Denpasar</button>
-            <button type="button" class="area-btn px-3 py-2 bg-[#FFFDF0] text-[#1E1C2E] border-2 border-[#1E1C2E] shadow-[2px_2px_0px_#1E1C2E] rounded-lg font-mono text-[11px] font-bold text-center cursor-pointer hover:bg-[#D4FF00] transition-all active:translate-x-0.5" data-area="Badung (Canggu / Kuta / Seminyak)">Badung</button>
-            <button type="button" class="area-btn px-3 py-2 bg-[#FFFDF0] text-[#1E1C2E] border-2 border-[#1E1C2E] shadow-[2px_2px_0px_#1E1C2E] rounded-lg font-mono text-[11px] font-bold text-center cursor-pointer hover:bg-[#D4FF00] transition-all active:translate-x-0.5" data-area="Tabanan">Tabanan</button>
-            <button type="button" class="area-btn px-3 py-2 bg-[#FFFDF0] text-[#1E1C2E] border-2 border-[#1E1C2E] shadow-[2px_2px_0px_#1E1C2E] rounded-lg font-mono text-[11px] font-bold text-center cursor-pointer hover:bg-[#D4FF00] transition-all active:translate-x-0.5" data-area="Gianyar (Ubud)">Gianyar</button>
-            <button type="button" class="area-btn px-3 py-2 bg-[#FFFDF0] text-[#1E1C2E] border-2 border-[#1E1C2E] shadow-[2px_2px_0px_#1E1C2E] rounded-lg font-mono text-[11px] font-bold text-center cursor-pointer hover:bg-[#D4FF00] transition-all active:translate-x-0.5" data-area="Jembrana">Jembrana</button>
-            <button type="button" class="area-btn px-3 py-2 bg-[#FFFDF0] text-[#1E1C2E] border-2 border-[#1E1C2E] shadow-[2px_2px_0px_#1E1C2E] rounded-lg font-mono text-[11px] font-bold text-center cursor-pointer hover:bg-[#D4FF00] transition-all active:translate-x-0.5" data-area="Karangasem">Karangasem</button>
-            <button type="button" class="area-btn px-3 py-2 bg-[#FFFDF0] text-[#1E1C2E] border-2 border-[#1E1C2E] shadow-[2px_2px_0px_#1E1C2E] rounded-lg font-mono text-[11px] font-bold text-center cursor-pointer hover:bg-[#D4FF00] transition-all active:translate-x-0.5" data-area="Singaraja / Buleleng">Singaraja</button>
-            <button type="button" class="area-btn px-3 py-2 bg-[#FFFDF0] text-[#1E1C2E] border-2 border-[#1E1C2E] shadow-[2px_2px_0px_#1E1C2E] rounded-lg font-mono text-[11px] font-bold text-center cursor-pointer hover:bg-[#D4FF00] transition-all active:translate-x-0.5" data-area="Klungkung">Klungkung</button>
-          </div>
+            <!-- Active Ready Service Areas -->
+            <button type="button" class="area-btn active px-3 py-2.5 bg-[#D4FF00] text-[#1E1C2E] border-2 border-[#1E1C2E] shadow-[2px_2px_0px_#1E1C2E] rounded-lg font-mono text-[11px] font-bold text-center cursor-pointer transition-all active:translate-x-0.5" data-area="Denpasar">Denpasar</button>
+            <button type="button" class="area-btn px-3 py-2.5 bg-[#FFFDF0] text-[#1E1C2E] border-2 border-[#1E1C2E] shadow-[2px_2px_0px_#1E1C2E] rounded-lg font-mono text-[11px] font-bold text-center cursor-pointer hover:bg-[#D4FF00] transition-all active:translate-x-0.5" data-area="Badung (Canggu / Kuta / Seminyak)">Badung</button>
+            <button type="button" class="area-btn px-3 py-2.5 bg-[#FFFDF0] text-[#1E1C2E] border-2 border-[#1E1C2E] shadow-[2px_2px_0px_#1E1C2E] rounded-lg font-mono text-[11px] font-bold text-center cursor-pointer hover:bg-[#D4FF00] transition-all active:translate-x-0.5" data-area="Tabanan">Tabanan</button>
+            <button type="button" class="area-btn px-3 py-2.5 bg-[#FFFDF0] text-[#1E1C2E] border-2 border-[#1E1C2E] shadow-[2px_2px_0px_#1E1C2E] rounded-lg font-mono text-[11px] font-bold text-center cursor-pointer hover:bg-[#D4FF00] transition-all active:translate-x-0.5" data-area="Gianyar (Ubud)">Gianyar</button>
 
+            <!-- Coming Soon Areas -->
+            <button type="button" class="area-btn relative px-2.5 py-2 bg-[#FFFDF0] text-[#1E1C2E] border-2 border-[#1E1C2E] shadow-[2px_2px_0px_#1E1C2E] rounded-lg font-mono text-[11px] font-bold text-center cursor-pointer hover:bg-[#FF9D50]/30 transition-all active:translate-x-0.5 flex flex-col items-center justify-center gap-0.5" data-area="Jembrana" data-soon="true">
+              <span>Jembrana</span>
+              <span class="text-[9px] bg-[#FF9D50] text-[#1E1C2E] px-1.5 py-0.2 border border-[#1E1C2E] rounded font-bold uppercase leading-none">COMING SOON</span>
+            </button>
+            <button type="button" class="area-btn relative px-2.5 py-2 bg-[#FFFDF0] text-[#1E1C2E] border-2 border-[#1E1C2E] shadow-[2px_2px_0px_#1E1C2E] rounded-lg font-mono text-[11px] font-bold text-center cursor-pointer hover:bg-[#FF9D50]/30 transition-all active:translate-x-0.5 flex flex-col items-center justify-center gap-0.5" data-area="Karangasem" data-soon="true">
+              <span>Karangasem</span>
+              <span class="text-[9px] bg-[#FF9D50] text-[#1E1C2E] px-1.5 py-0.2 border border-[#1E1C2E] rounded font-bold uppercase leading-none">COMING SOON</span>
+            </button>
+            <button type="button" class="area-btn relative px-2.5 py-2 bg-[#FFFDF0] text-[#1E1C2E] border-2 border-[#1E1C2E] shadow-[2px_2px_0px_#1E1C2E] rounded-lg font-mono text-[11px] font-bold text-center cursor-pointer hover:bg-[#FF9D50]/30 transition-all active:translate-x-0.5 flex flex-col items-center justify-center gap-0.5" data-area="Singaraja / Buleleng" data-soon="true">
+              <span>Singaraja</span>
+              <span class="text-[9px] bg-[#FF9D50] text-[#1E1C2E] px-1.5 py-0.2 border border-[#1E1C2E] rounded font-bold uppercase leading-none">COMING SOON</span>
+            </button>
+            <button type="button" class="area-btn relative px-2.5 py-2 bg-[#FFFDF0] text-[#1E1C2E] border-2 border-[#1E1C2E] shadow-[2px_2px_0px_#1E1C2E] rounded-lg font-mono text-[11px] font-bold text-center cursor-pointer hover:bg-[#FF9D50]/30 transition-all active:translate-x-0.5 flex flex-col items-center justify-center gap-0.5" data-area="Klungkung" data-soon="true">
+              <span>Klungkung</span>
+              <span class="text-[9px] bg-[#FF9D50] text-[#1E1C2E] px-1.5 py-0.2 border border-[#1E1C2E] rounded font-bold uppercase leading-none">COMING SOON</span>
+            </button>
+          </div>
           <!-- Store Note Input -->
           <div class="flex flex-col gap-1.5">
             <label for="store-note" class="font-mono text-[11px] font-bold text-[#1E1C2E] uppercase">Nama Toko &amp; Alamat Singkat (Opsional):</label>
@@ -671,7 +689,7 @@
             rel="noopener"
             class="w-full py-3.5 bg-[#10B981] hover:bg-[#059669] text-white border-[2.5px] border-[#1E1C2E] shadow-[4px_4px_0px_#1E1C2E] rounded-xl font-heading font-extrabold text-[14px] uppercase text-center transition-all active:translate-x-0.5 active:translate-y-0.5 flex items-center justify-center gap-2"
           >
-            <span>REQUEST ON-SITE DEMO ON WHATSAPP</span>
+            <span id="wa-btn-text">REQUEST ON-SITE DEMO ON WHATSAPP</span>
             <span class="text-[18px]">💬</span>
           </a>
         </div>
@@ -761,8 +779,7 @@
             <span class="faq-icon transition-transform font-mono text-[18px]">▼</span>
           </summary>
           <p class="font-body text-[13px] text-[#1E1C2E]/80 leading-relaxed pt-3 border-t border-[#1E1C2E]/20 mt-3">
-            Ya! Karena kami berbasis langsung di Bali (Canggu &amp; Denpasar), tim teknis Extensia siap datang langsung ke outlet Anda di Denpasar, Badung, Gianyar, dan Tabanan untuk setup hardware, memasukkan menu, dan melatih kasir sampai mahir.
-          </p>
+            Ya! Karena kami berbasis langsung di Bali (Canggu &amp; Denpasar), tim teknis Extensia siap datang langsung ke outlet Anda di Denpasar, Badung, Gianyar, dan Tabanan (untuk area Jembrana, Karangasem, Singaraja, dan Klungkung segera hadir). Kami siap bantu setup hardware, memasukkan menu, dan melatih kasir sampai mahir.
         </details>
 
       </div>
@@ -824,24 +841,33 @@
       var areaButtons = document.querySelectorAll(".area-btn");
       var noteInput = document.getElementById("store-note");
       var waBtn = document.getElementById("wa-demo-btn");
+      var waBtnText = document.getElementById("wa-btn-text");
       var selectedArea = "Denpasar";
+      var isSoon = false;
 
       function updateWaLink() {
         var note = noteInput && noteInput.value.trim() ? " (%20" + encodeURIComponent(noteInput.value.trim()) + ")" : "";
-        var message = "Halo Tim ZIVO POS, saya mau jadwalkan demo on-site di area " + encodeURIComponent(selectedArea) + note;
+        var message = isSoon
+          ? "Halo Tim ZIVO POS, saya tertarik zivoPOS dan ingin masuk WAITING LIST demo on-site untuk area " + encodeURIComponent(selectedArea) + note
+          : "Halo Tim ZIVO POS, saya mau jadwalkan demo on-site di area " + encodeURIComponent(selectedArea) + note;
+
         if (waBtn) {
           waBtn.href = "https://wa.me/6281234567890?text=" + message;
+        }
+        if (waBtnText) {
+          waBtnText.textContent = isSoon ? "GABUNG WAITING LIST DEMO VIA WHATSAPP" : "REQUEST ON-SITE DEMO ON WHATSAPP";
         }
       }
 
       areaButtons.forEach(function(btn) {
         btn.addEventListener("click", function() {
           areaButtons.forEach(function(b) {
-            b.classList.remove("bg-[#D4FF00]");
+            b.classList.remove("bg-[#D4FF00]", "bg-[#FF9D50]");
             b.classList.add("bg-[#FFFDF0]");
           });
+          isSoon = btn.getAttribute("data-soon") === "true";
           btn.classList.remove("bg-[#FFFDF0]");
-          btn.classList.add("bg-[#D4FF00]");
+          btn.classList.add(isSoon ? "bg-[#FF9D50]" : "bg-[#D4FF00]");
           selectedArea = btn.getAttribute("data-area") || "Denpasar";
           updateWaLink();
         });
