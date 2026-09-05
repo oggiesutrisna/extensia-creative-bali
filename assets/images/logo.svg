@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" role="img" aria-label="ZIVO logo">
+  <rect width="36" height="36" rx="10" fill="#2E4C8C"/>
+  <path d="M10 10.5h16l-10.5 12H26v3H10l10.5-12H10v-3z" fill="#ffffff"/>
+  <circle cx="26" cy="10.5" r="2.2" fill="#ffffff"/>
+</svg>

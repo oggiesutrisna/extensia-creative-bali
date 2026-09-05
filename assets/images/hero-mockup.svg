@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="ZIVO POS cashier interface mockup">
+  <rect width="800" height="600" rx="20" fill="#17233F"/>
+  <!-- window chrome -->
+  <rect x="0" y="0" width="800" height="48" rx="20" fill="#24365F"/>
+  <rect x="0" y="24" width="800" height="24" fill="#24365F"/>
+  <circle cx="28" cy="24" r="7" fill="#ef4444"/><circle cx="48" cy="24" r="7" fill="#f59e0b"/><circle cx="68" cy="24" r="7" fill="#22c55e"/>
+  <text x="400" y="29" text-anchor="middle" fill="#94a3b8" font-family="ui-monospace,monospace" font-size="12" font-weight="600">ZIVO POS - Run. Understand. Grow.</text>
+  <!-- sidebar -->
+  <rect x="16" y="64" width="148" height="520" rx="14" fill="#5B403D"/>
+  <rect x="32" y="84" width="116" height="14" rx="7" fill="#80635D"/>
+  <rect x="32" y="112" width="90" height="10" rx="5" fill="#B79B90"/>
+  <rect x="32" y="132" width="116" height="36" rx="10" fill="#FA2D1A"/>
+  <rect x="32" y="176" width="116" height="28" rx="8" fill="#80635D"/>
+  <rect x="32" y="212" width="116" height="28" rx="8" fill="#80635D"/>
+  <rect x="32" y="248" width="116" height="28" rx="8" fill="#80635D"/>
+  <!-- product grid -->
+  <g fill="#5B403D">
+    <rect x="180" y="64" width="260" height="104" rx="14"/>
+    <rect x="452" y="64" width="260" height="104" rx="14"/>
+    <rect x="180" y="180" width="260" height="104" rx="14"/>
+    <rect x="452" y="180" width="260" height="104" rx="14"/>
+    <rect x="180" y="296" width="260" height="104" rx="14"/>
+    <rect x="452" y="296" width="260" height="104" rx="14"/>
+  </g>
+  <g font-family="'Poppins',system-ui,sans-serif">
+    <text x="200" y="98" fill="#f1f5f9" font-size="13" font-weight="700">Ayam Geprek + Es Teh</text><text x="200" y="116" fill="#94a3b8" font-size="11">SKU-001 • Stock 42</text><text x="200" y="142" fill="#FEEFB6" font-size="13" font-weight="800">Rp 28.000</text>
+    <text x="472" y="98" fill="#f1f5f9" font-size="13" font-weight="700">Paket Nasi Goreng</text><text x="472" y="116" fill="#94a3b8" font-size="11">SKU-042 • Bundle -15%</text><text x="472" y="142" fill="#C3DAE8" font-size="13" font-weight="800">Rp 45.000</text>
+  </g>
+  <!-- cart -->
+  <rect x="180" y="416" width="532" height="168" rx="16" fill="#FFF4E2" stroke="#D7E0F3"/>
+  <text x="200" y="444" fill="#432F2E" font-family="'Poppins',system-ui,sans-serif" font-size="13" font-weight="800">Cart (3 items)</text>
+  <text x="664" y="444" fill="#806C6A" font-family="'Poppins',system-ui,sans-serif" font-size="11" text-anchor="end">Cashier: Siti • Shift #042</text>
+  <line x1="200" y1="456" x2="692" y2="456" stroke="#C3DAE8"/>
+  <g font-family="'Poppins',system-ui,sans-serif" font-size="12">
+    <text x="200" y="478" fill="#655251">Ayam Geprek x2</text><text x="692" y="478" fill="#432F2E" font-weight="700" text-anchor="end">Rp 56.000</text>
+    <text x="200" y="498" fill="#655251">Es Jeruk x1</text><text x="692" y="498" fill="#432F2E" font-weight="700" text-anchor="end">Rp 8.000</text>
+    <text x="200" y="518" fill="#655251">Discount (5%)</text><text x="692" y="518" fill="#16a34a" font-weight="600" text-anchor="end">-Rp 3.200</text>
+  </g>
+  <line x1="200" y1="530" x2="692" y2="530" stroke="#C3DAE8" stroke-dasharray="6 6"/>
+  <text x="200" y="550" fill="#432F2E" font-family="'Poppins',system-ui,sans-serif" font-size="15" font-weight="800">Grand Total</text><text x="692" y="550" fill="#432F2E" font-family="'Poppins',system-ui,sans-serif" font-size="15" font-weight="800" text-anchor="end">Rp 60.800</text>
+  <rect x="200" y="560" width="170" height="14" rx="7" fill="#C3DAE8"/>
+  <!-- offline badge -->
+  <g>
+    <rect x="580" y="560" width="112" height="22" rx="11" fill="#dcfce7" stroke="#bbf7d0"/>
+    <circle cx="592" cy="571" r="5" fill="#16a34a"/><circle cx="592" cy="571" r="2.2" fill="#fff"/>
+    <text x="602" y="575.5" fill="#15803d" font-family="'Poppins',system-ui,sans-serif" font-size="10" font-weight="700">Offline Ready</text>
+  </g>
+</svg>
