@@ -7,22 +7,29 @@
    1. Neubrutalism Design Tokens
    ========================================================================== */
 :root {
-  --border: 3px solid #1e1c2e;
-  --border-thin: 2px solid #1e1c2e;
-  --border-thick: 4px solid #1e1c2e;
-  --shadow-sm: 3px 3px 0 0 #1e1c2e;
-  --shadow: 5px 5px 0 0 #1e1c2e;
-  --shadow-lg: 7px 7px 0 0 #1e1c2e;
-  --shadow-xl: 10px 10px 0 0 #1e1c2e;
+  --border: 3px solid #111118;
+  --border-thin: 2px solid #111118;
+  --border-thick: 4px solid #111118;
+  --shadow-sm: 3px 3px 0 0 #111118;
+  --shadow: 5px 5px 0 0 #111118;
+  --shadow-lg: 7px 7px 0 0 #111118;
+  --shadow-xl: 10px 10px 0 0 #111118;
   --radius-sm: 4px;
   --radius-md: 8px;
   --radius-lg: 12px;
+  --bg-obsidian: #0f1117;
+  --bg-midnight: #171923;
   --bg-cream: #fff9d5;
+  --bg-ivory: #fffdf5;
   --bg-white: #fffdf0;
-  --blue: #38bdf8;
   --lime: #d4ff00;
+  --blue: #2563eb;
+  --blue-tech: #3b82f6;
+  --emerald: #10b981;
+  --emerald-deep: #059669;
+  --amber: #d97706;
   --orange: #ff9d50;
-  --dark: #1e1c2e;
+  --dark: #111118;
 }
 
 /* ==========================================================================
@@ -38,8 +45,8 @@
   body {
     margin: 0;
     padding: 0;
-    background-color: #38bdf8;
-    color: #1e1c2e;
+    background-color: #0f1117;
+    color: #111118;
     font-family: 'Plus Jakarta Sans', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -118,7 +125,7 @@ a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 summary:focus-visible {
-  outline: 3px solid #38bdf8 !important;
+  outline: 3px solid #d4ff00 !important;
   outline-offset: 3px !important;
 }
 
@@ -141,5 +148,5 @@ body {
 /* Flat High-Contrast Selection Highlight */
 ::selection {
   background-color: #d4ff00;
-  color: #1e1c2e;
+  color: #111118;
 }
