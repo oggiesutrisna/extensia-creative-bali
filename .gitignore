@@ -4,4 +4,4 @@ node_modules/
 .DS_Store
 Thumbs.db
 # Keep optimized build output committed for zero-config Vercel static deploy
-!assets/css/compiled.css
+!assets/css/compiled.v2.css

@@ -4,7 +4,7 @@
   "description": "> Studio Pengembangan Aplikasi & Software Kustom Berbasis di Bali (Canggu & Denpasar).",
   "main": "index.js",
   "scripts": {
-    "build:css": "tailwindcss -i ./assets/css/input.css -o ./assets/css/compiled.css --minify",
+    "build:css": "tailwindcss -i ./assets/css/input.css -o ./assets/css/compiled.v2.css --minify",
     "build": "npm run build:css",
     "vercel-build": "npm run build"
   },
