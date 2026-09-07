@@ -197,4 +197,152 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   initLanguageSwitcher();
+
+  // --- zivoPOS: FAQ Accordion (single-open, scoped, additive only) ---
+  const initZivoFaq = () => {
+    const list = document.getElementById("zivo-faq-list");
+    if (!list) return;
+    const items = list.querySelectorAll(".faq-item");
+    if (!items || items.length === 0) return;
+
+    items.forEach((item) => {
+      const trigger = item.querySelector(".faq-trigger");
+      const panel = item.querySelector(".faq-collapse");
+      if (!trigger || !panel) return;
+
+      trigger.addEventListener("click", () => {
+        const isOpen = item.classList.contains("active");
+        items.forEach((other) => {
+          if (other !== item && other.classList.contains("active")) {
+            other.classList.remove("active");
+            const otherTrigger = other.querySelector(".faq-trigger");
+            if (otherTrigger) otherTrigger.setAttribute("aria-expanded", "false");
+          }
+        });
+        item.classList.toggle("active", !isOpen);
+        trigger.setAttribute("aria-expanded", String(!isOpen));
+      });
+    });
+  };
+
+  // --- zivoPOS: Hero Bill Self-Verification (math check + auto-correct) ---
+  const initZivoBillCalc = () => {
+    const bill = document.querySelector("[data-bill]");
+    if (!bill) return;
+
+    const subtotalEl = bill.querySelector("[data-bill-subtotal]");
+    const serviceEl = bill.querySelector("[data-bill-service]");
+    const pb1El = bill.querySelector("[data-bill-pb1]");
+    const totalEl = bill.querySelector("[data-bill-total]");
+    const statusEl = bill.querySelector("[data-bill-status]");
+    if (!subtotalEl || !serviceEl || !pb1El || !totalEl) return;
+
+    const rawSubtotal = Number(bill.getAttribute("data-subtotal"));
+    const serviceRate = Number(bill.getAttribute("data-service-rate"));
+    const pb1Rate = Number(bill.getAttribute("data-pb1-rate"));
+    if (!Number.isFinite(rawSubtotal) || rawSubtotal <= 0) return;
+    if (!Number.isFinite(serviceRate) || !Number.isFinite(pb1Rate)) return;
+
+    const fmt = (n) => "Rp" + Math.round(n).toLocaleString("id-ID");
+
+    const service = Math.round(rawSubtotal * serviceRate);
+    const pb1 = Math.round((rawSubtotal + service) * pb1Rate);
+    const total = rawSubtotal + service + pb1;
+
+    const expected = new Map([
+      [subtotalEl, fmt(rawSubtotal)],
+      [serviceEl, fmt(service)],
+      [pb1El, fmt(pb1)],
+      [totalEl, fmt(total)],
+    ]);
+
+    let corrected = false;
+    expected.forEach((value, el) => {
+      if (el.textContent.trim() !== value) {
+        el.textContent = value;
+        corrected = true;
+      }
+    });
+
+    // Cross-check: sum of line-item data-price must equal subtotal.
+    const lines = bill.querySelectorAll("[data-price]");
+    let lineSum = 0;
+    let linesOk = true;
+    if (lines.length > 0) {
+      lines.forEach((li) => {
+        const p = Number(li.getAttribute("data-price"));
+        if (!Number.isFinite(p) || p < 0) {
+          linesOk = false;
+          return;
+        }
+        lineSum += p;
+      });
+      if (linesOk && lineSum !== rawSubtotal) linesOk = false;
+    }
+
+    if (statusEl) {
+      const lang = document.documentElement.lang === "en" ? "en" : "id";
+      if (!linesOk) {
+        statusEl.textContent =
+          lang === "en"
+            ? "Line items do not match the subtotal — check data-price values."
+            : "Item baris tidak cocok dengan subtotal — periksa nilai data-price.";
+      } else if (corrected) {
+        statusEl.textContent =
+          lang === "en"
+            ? "Calculation auto-corrected to match bill math."
+            : "Kalkulasi dikoreksi otomatis agar sesuai matematika struk.";
+      } else {
+        statusEl.textContent =
+          lang === "en"
+            ? "Calculation auto-verified: 200,000 + 20,000 + 22,000 = 242,000."
+            : "Kalkulasi terverifikasi otomatis: 200.000 + 20.000 + 22.000 = 242.000.";
+      }
+    }
+  };
+
+  // --- zivoPOS: Mobile Nav Toggle (additive only) ---
+  const initZivoMobileNav = () => {
+    const toggle = document.getElementById("nav-toggle");
+    const menu = document.getElementById("mobile-menu");
+    if (!toggle || !menu) return;
+    const iconOpen = document.getElementById("nav-toggle-icon-open");
+    const iconClose = document.getElementById("nav-toggle-icon-close");
+
+    const setOpen = (open) => {
+      menu.classList.toggle("hidden", !open);
+      menu.classList.toggle("flex", open);
+      toggle.setAttribute("aria-expanded", String(open));
+      toggle.setAttribute(
+        "aria-label",
+        open ? "Tutup menu navigasi" : "Buka menu navigasi"
+      );
+      if (iconOpen) iconOpen.classList.toggle("hidden", open);
+      if (iconClose) iconClose.classList.toggle("hidden", !open);
+    };
+
+    toggle.addEventListener("click", () => {
+      setOpen(menu.classList.contains("hidden"));
+    });
+
+    menu.querySelectorAll('a[href^="#"]').forEach((link) => {
+      link.addEventListener("click", () => setOpen(false));
+    });
+
+    // Mobile language shortcuts reuse the primary switcher buttons.
+    menu.querySelectorAll("[data-lang-mobile]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const lang = btn.getAttribute("data-lang-mobile");
+        const target =
+          lang === "en"
+            ? document.getElementById("btn-lang-en")
+            : document.getElementById("btn-lang-id");
+        if (target) target.click();
+      });
+    });
+  };
+
+  initZivoFaq();
+  initZivoBillCalc();
+  initZivoMobileNav();
 });

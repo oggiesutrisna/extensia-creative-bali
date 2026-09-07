@@ -1,3 +1,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  /* Micro-dot grid pattern for hero canvas (Neubrutalism Bali Tech).
+     Token-aligned: dots use brand-dark at 8% over brand-ivory. */
+  .dot-grid {
+    background-color: #fffdf5;
+    background-image: radial-gradient(rgba(17, 17, 24, 0.1) 1.2px, transparent 1.2px);
+    background-size: 22px 22px;
+  }
+
+  /* FAQ smooth CSS-grid accordion (zero stutter, no color shift).
+     JS toggles .active on .faq-item; inner wrapper must use overflow-hidden. */
+  .faq-collapse {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .faq-item.active .faq-collapse {
+    grid-template-rows: 1fr;
+  }
+  .faq-item.active .faq-icon {
+    transform: rotate(180deg);
+  }
+  .faq-icon {
+    transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .faq-collapse,
+    .faq-icon {
+      transition: none;
+    }
+  }
+}
