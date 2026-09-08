@@ -229,7 +229,7 @@
           </div>
           <div class="footer">
             <div>Extensia Creative Bali — Studio Aplikasi Kustom &amp; Software House Bali</div>
-            <div><a href="https://www.extensiacreativebali.my.id/">Kembali ke Beranda &rarr;</a></div>
+            <div><a href="https://www.extensiacreativebali.my.id/">Kembali ke Beranda &#8594;</a></div>
           </div>
         </div>
       </body>
