@@ -271,6 +271,7 @@
     </nav>
     <!-- Mobile menu panel -->
     <div id="mobile-menu" class="hidden lg:hidden border-2 border-brand-dark bg-brand-ivory shadow-brutal rounded-xl p-4 flex-col gap-2 -mt-3 sm:-mt-5">
+      <a href="#clients" class="font-mono text-[13px] font-bold px-3 py-2.5 bg-brand-cream-light border-2 border-brand-dark rounded-lg"><span class="lang-id">KLIEN KAMI</span><span class="lang-en">OUR CLIENTS</span></a>
       <a href="#masalah" class="font-mono text-[13px] font-bold px-3 py-2.5 bg-brand-cream-light border-2 border-brand-dark rounded-lg"><span class="lang-id">MASALAH</span><span class="lang-en">PROBLEMS</span></a>
       <a href="#fitur" class="font-mono text-[13px] font-bold px-3 py-2.5 bg-brand-cream-light border-2 border-brand-dark rounded-lg"><span class="lang-id">FITUR</span><span class="lang-en">FEATURES</span></a>
       <a href="#hardware" class="font-mono text-[13px] font-bold px-3 py-2.5 bg-brand-cream-light border-2 border-brand-dark rounded-lg">HARDWARE</a>
@@ -406,6 +407,45 @@
     <!-- ================= SECTION C END ================= -->
 
     <main class="flex flex-col gap-5 sm:gap-7 lg:gap-9">
+
+      <!-- ================= OUR CLIENTS START ================= -->
+      <section id="clients" aria-labelledby="clients-title" class="bg-brand-ivory border-2 border-brand-dark shadow-brutal rounded-xl p-6 sm:p-10 lg:p-12 flex flex-col gap-6 scroll-mt-24">
+        <div class="flex flex-col gap-3 max-w-[760px]">
+          <span class="inline-flex self-start px-3 py-1 bg-brand-lime text-brand-dark border-2 border-brand-dark shadow-brutal-sm rounded-md font-mono text-[10.5px] sm:text-[11.5px] font-bold uppercase tracking-wide">Our Clients</span>
+          <h2 id="clients-title" class="font-heading font-bold text-[28px] sm:text-[38px] uppercase tracking-tight text-brand-dark leading-tight">
+            <span class="lang-id">Klien Kami</span>
+            <span class="lang-en">Meet Our Clients</span>
+          </h2>
+          <p class="font-body text-[14px] sm:text-[16px] text-brand-dark/75 leading-relaxed">
+            <span class="lang-id">Daftar klien vexaPOS akan segera hadir di sini.</span>
+            <span class="lang-en">Our vexaPOS client showcase is coming soon.</span>
+          </p>
+        </div>
+        <!-- TODO: Replace these explicitly labelled placeholders with verified client names and approved logos. -->
+        <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 list-none m-0 p-0">
+          <li class="bg-brand-cream-light border-2 border-dashed border-brand-dark/25 rounded-xl p-6 flex flex-col items-center justify-center gap-3 text-center min-h-[160px]">
+            <span class="w-12 h-12 bg-brand-cream border-2 border-brand-dark/25 rounded-lg inline-flex items-center justify-center font-mono font-bold text-brand-dark/60" aria-hidden="true">01</span>
+            <span class="font-heading font-bold text-[18px] uppercase text-brand-dark/60"><span class="lang-id">Nama Klien</span><span class="lang-en">Client Name</span></span>
+            <span class="font-mono text-[10px] uppercase tracking-wider text-brand-dark/60">Placeholder</span>
+          </li>
+          <li class="bg-brand-cream-light border-2 border-dashed border-brand-dark/25 rounded-xl p-6 flex flex-col items-center justify-center gap-3 text-center min-h-[160px]">
+            <span class="w-12 h-12 bg-brand-cream border-2 border-brand-dark/25 rounded-lg inline-flex items-center justify-center font-mono font-bold text-brand-dark/60" aria-hidden="true">02</span>
+            <span class="font-heading font-bold text-[18px] uppercase text-brand-dark/60"><span class="lang-id">Nama Klien</span><span class="lang-en">Client Name</span></span>
+            <span class="font-mono text-[10px] uppercase tracking-wider text-brand-dark/60">Placeholder</span>
+          </li>
+          <li class="bg-brand-cream-light border-2 border-dashed border-brand-dark/25 rounded-xl p-6 flex flex-col items-center justify-center gap-3 text-center min-h-[160px]">
+            <span class="w-12 h-12 bg-brand-cream border-2 border-brand-dark/25 rounded-lg inline-flex items-center justify-center font-mono font-bold text-brand-dark/60" aria-hidden="true">03</span>
+            <span class="font-heading font-bold text-[18px] uppercase text-brand-dark/60"><span class="lang-id">Nama Klien</span><span class="lang-en">Client Name</span></span>
+            <span class="font-mono text-[10px] uppercase tracking-wider text-brand-dark/60">Placeholder</span>
+          </li>
+          <li class="bg-brand-cream-light border-2 border-dashed border-brand-dark/25 rounded-xl p-6 flex flex-col items-center justify-center gap-3 text-center min-h-[160px]">
+            <span class="w-12 h-12 bg-brand-cream border-2 border-brand-dark/25 rounded-lg inline-flex items-center justify-center font-mono font-bold text-brand-dark/60" aria-hidden="true">04</span>
+            <span class="font-heading font-bold text-[18px] uppercase text-brand-dark/60"><span class="lang-id">Nama Klien</span><span class="lang-en">Client Name</span></span>
+            <span class="font-mono text-[10px] uppercase tracking-wider text-brand-dark/60">Placeholder</span>
+          </li>
+        </ul>
+      </section>
+      <!-- ================= OUR CLIENTS END ================= -->
 
       <!-- ================= SECTION D START: PROBLEM VS SOLUTION ================= -->
       <section id="masalah" aria-labelledby="masalah-title" class="bg-brand-cream border-2 border-brand-dark shadow-brutal rounded-xl p-6 sm:p-10 lg:p-12 flex flex-col gap-7 scroll-mt-24">
@@ -593,7 +633,26 @@
             <span class="lang-en">Transparent Investment Plans</span>
           </h2>
         </div>
+        <fieldset class="w-full max-w-[420px] mx-auto" data-pricing-switch hidden>
+          <legend class="font-body text-[14px] text-brand-dark/75 text-center w-full mb-3"><span class="lang-id">Sudah punya alat kasir, atau perlu sekalian perangkatnya?</span><span class="lang-en">Already have your own devices, or need hardware too?</span></legend>
+          <div class="grid grid-cols-2 gap-1 p-1 bg-brand-cream-light border-2 border-brand-dark shadow-brutal-sm rounded-lg">
+            <label class="cursor-pointer">
+              <input type="radio" name="pricing-mode" value="software" class="peer sr-only" aria-controls="pricing-software" checked />
+              <span class="flex items-center justify-center min-h-[44px] h-full rounded-md border-2 border-transparent px-2 py-2 text-center peer-checked:bg-brand-lime peer-checked:border-brand-dark peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2">
+                <strong class="font-heading text-[12px] sm:text-[14px]"><span class="lang-id">Aplikasi Saja</span><span class="lang-en">Software Only</span></strong>
+              </span>
+            </label>
+            <label class="cursor-pointer">
+              <input type="radio" name="pricing-mode" value="hardware" class="peer sr-only" aria-controls="pricing-hardware" />
+              <span class="flex items-center justify-center min-h-[44px] h-full rounded-md border-2 border-transparent px-2 py-2 text-center peer-checked:bg-brand-lime peer-checked:border-brand-dark peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2">
+                <strong class="font-heading text-[12px] sm:text-[14px]"><span class="lang-id">Aplikasi + Perangkat</span><span class="lang-en">Software + Hardware</span></strong>
+              </span>
+            </label>
+          </div>
+        </fieldset>
         <!-- TODO: ganti placeholder — konfirmasi nominal & durasi paket ke tim sales sebelum rilis. -->
+        <div id="pricing-software" data-pricing-panel="software">
+        <p class="font-body text-[14px] text-brand-dark/75 text-center mb-8"><span class="lang-id">Langganan aplikasi vexaPOS dengan perangkat milik sendiri. Harga tidak termasuk pembelian alat; kompatibilitas perangkat dicek saat konsultasi.</span><span class="lang-en">Subscribe to vexaPOS using your own devices. Hardware purchases are not included; device compatibility is checked during consultation.</span></p>
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-[1200px] mx-auto w-full items-stretch">
           <!-- Tier 1: UMKM Starter + Trial 14 Hari -->
           <article class="relative bg-brand-cream-light border-2 border-brand-dark shadow-brutal rounded-xl p-6 flex flex-col gap-4">
@@ -610,8 +669,8 @@
               <li class="flex gap-2"><svg class="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8.5 3.2 3.2L13 5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="lang-id">Laporan harian (PDF)</span><span class="lang-en">Daily reports (PDF)</span></li>
             </ul>
             <div class="mt-auto flex flex-col gap-2">
-              <a href="https://wa.me/6285338000872?text=Halo%20Tim%20vexaPOS%2C%20saya%20mau%20aktivasikan%20TRIAL%20GRATIS%2014%20hari%20paket%20UMKM%20Starter%20untuk%20outlet%20saya.%20Nama%20outlet%3A%20___" target="_blank" rel="noopener" class="text-center font-heading font-bold text-[13px] uppercase px-5 py-3 bg-brand-green text-white border-2 border-brand-dark shadow-brutal-sm rounded-lg hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all"><span class="lang-id">Mulai Trial 14 Hari Gratis</span><span class="lang-en">Start Free 14-Day Trial</span></a>
-              <a href="https://wa.me/6285338000872?text=Halo%20Tim%20vexaPOS%2C%20saya%20tertarik%20paket%20Single%20Outlet%20Starter%20(Rp750rb%2F90%20hari).%20Mohon%20info%20demo." target="_blank" rel="noopener" class="text-center font-heading font-bold text-[13px] uppercase px-5 py-3 bg-brand-ivory border-2 border-brand-dark shadow-brutal-sm rounded-lg hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all"><span class="lang-id">Pilih Starter</span><span class="lang-en">Choose Starter</span></a>
+              <a href="https://wa.me/6285338000872?text=Halo%20Tim%20vexaPOS%2C%20saya%20mau%20aktivasikan%20TRIAL%20GRATIS%2014%20hari%20paket%20UMKM%20Starter%20untuk%20outlet%20saya.%20Nama%20outlet%3A%20___%20Saya%20memilih%20aplikasi%20saja%20dan%20sudah%20memiliki%20perangkat%20kasir." target="_blank" rel="noopener" class="text-center font-heading font-bold text-[13px] uppercase px-5 py-3 bg-brand-green text-white border-2 border-brand-dark shadow-brutal-sm rounded-lg hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all"><span class="lang-id">Mulai Trial 14 Hari Gratis</span><span class="lang-en">Start Free 14-Day Trial</span></a>
+              <a href="https://wa.me/6285338000872?text=Halo%20Tim%20vexaPOS%2C%20saya%20tertarik%20paket%20Single%20Outlet%20Starter%20(Rp750rb%2F90%20hari).%20Mohon%20info%20demo.%20Saya%20memilih%20aplikasi%20saja%20dan%20sudah%20memiliki%20perangkat%20kasir." target="_blank" rel="noopener" class="text-center font-heading font-bold text-[13px] uppercase px-5 py-3 bg-brand-ivory border-2 border-brand-dark shadow-brutal-sm rounded-lg hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all"><span class="lang-id">Pilih Starter</span><span class="lang-en">Choose Starter</span></a>
             </div>
           </article>
           <!-- Tier 2 (popular) -->
@@ -627,7 +686,7 @@
               <li class="flex gap-2"><svg class="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8.5 3.2 3.2L13 5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="lang-id">Service charge &amp; PB1 otomatis</span><span class="lang-en">Automatic service charge &amp; PB1</span></li>
               <li class="flex gap-2"><svg class="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8.5 3.2 3.2L13 5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="lang-id">Onboarding on-site di Bali</span><span class="lang-en">On-site onboarding in Bali</span></li>
             </ul>
-            <a href="https://wa.me/6285338000872?text=Halo%20Tim%20vexaPOS%2C%20saya%20tertarik%20paket%20Multi-Outlet%20Pro%20(Rp1%2C7jt%2F120%20hari).%20Mohon%20jadwal%20demo%20on-site." target="_blank" rel="noopener" class="mt-auto text-center font-heading font-bold text-[13px] uppercase px-5 py-3 bg-brand-lime border-2 border-brand-dark shadow-brutal rounded-lg hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all"><span class="lang-id">Pilih Pro</span><span class="lang-en">Choose Pro</span></a>
+            <a href="https://wa.me/6285338000872?text=Halo%20Tim%20vexaPOS%2C%20saya%20tertarik%20paket%20Multi-Outlet%20Pro%20(Rp1%2C7jt%2F120%20hari).%20Mohon%20jadwal%20demo%20on-site.%20Saya%20memilih%20aplikasi%20saja%20dan%20sudah%20memiliki%20perangkat%20kasir." target="_blank" rel="noopener" class="mt-auto text-center font-heading font-bold text-[13px] uppercase px-5 py-3 bg-brand-lime border-2 border-brand-dark shadow-brutal rounded-lg hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all"><span class="lang-id">Pilih Pro</span><span class="lang-en">Choose Pro</span></a>
           </article>
           <!-- Tier 3 -->
           <article class="bg-brand-cream-light border-2 border-brand-dark shadow-brutal rounded-xl p-6 flex flex-col gap-4">
@@ -640,8 +699,38 @@
               <li class="flex gap-2"><svg class="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8.5 3.2 3.2L13 5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="lang-id">Dedicated manager + SLA prioritas</span><span class="lang-en">Dedicated manager + priority SLA</span></li>
               <li class="flex gap-2"><svg class="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8.5 3.2 3.2L13 5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="lang-id">Pelatihan multi-outlet di Bali</span><span class="lang-en">Multi-outlet training in Bali</span></li>
             </ul>
-            <a href="https://wa.me/6285338000872?text=Halo%20Tim%20vexaPOS%2C%20saya%20butuh%20penawaran%20Enterprise%2FGroup%20untuk%20bisnis%20saya.%20Mohon%20jadwal%20konsultasi." target="_blank" rel="noopener" class="mt-auto text-center font-heading font-bold text-[13px] uppercase px-5 py-3 bg-brand-ivory border-2 border-brand-dark shadow-brutal-sm rounded-lg hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all"><span class="lang-id">Minta Penawaran</span><span class="lang-en">Request a Quote</span></a>
+            <a href="https://wa.me/6285338000872?text=Halo%20Tim%20vexaPOS%2C%20saya%20butuh%20penawaran%20Enterprise%2FGroup%20untuk%20bisnis%20saya.%20Mohon%20jadwal%20konsultasi.%20Saya%20memilih%20aplikasi%20saja%20dan%20sudah%20memiliki%20perangkat%20kasir." target="_blank" rel="noopener" class="mt-auto text-center font-heading font-bold text-[13px] uppercase px-5 py-3 bg-brand-ivory border-2 border-brand-dark shadow-brutal-sm rounded-lg hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all"><span class="lang-id">Minta Penawaran</span><span class="lang-en">Request a Quote</span></a>
           </article>
+        </div>
+        </div>
+        <div id="pricing-hardware" data-pricing-panel="hardware" hidden>
+          <p class="font-body text-[14px] text-brand-dark/75 text-center mb-8"><span class="lang-id">Butuh alat juga? Konsultasikan paket aplikasi beserta perangkat kasir. Rincian biaya langganan dan pembelian alat akan dipisahkan dalam penawaran.</span><span class="lang-en">Need devices too? Discuss a software and POS hardware package. Subscription and hardware purchase costs will be itemized separately in your quote.</span></p>
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-[1200px] mx-auto w-full items-stretch">
+            <article class="bg-brand-cream-light border-2 border-brand-dark shadow-brutal rounded-xl p-6 flex flex-col gap-4">
+              <h3 class="font-heading font-bold text-[21px] uppercase text-brand-dark"><span class="lang-id">Starter + Perangkat</span><span class="lang-en">Starter + Hardware</span></h3>
+              <p class="font-body text-[13px] text-brand-dark/75"><span class="lang-id">Untuk warung, kedai kopi, atau toko pertama Anda.</span><span class="lang-en">For your first food stall, coffee shop, or store.</span></p>
+              <p class="font-mono font-bold text-[24px] text-brand-dark"><span class="lang-id">Minta Penawaran</span><span class="lang-en">Request a Quote</span></p>
+              <p class="font-body text-[12px] text-brand-dark/65"><span class="lang-id">Total mengikuti pilihan alat dan paket aplikasi.</span><span class="lang-en">Total depends on your hardware and software plan.</span></p>
+              <ul class="flex flex-col gap-2 font-body text-[13px] text-brand-dark border-t-2 border-brand-dark/15 pt-4"><li><span class="lang-id">Aplikasi Single Outlet Starter</span><span class="lang-en">Single Outlet Starter software</span></li><li><span class="lang-id">Pilihan tablet atau terminal kasir sesuai kebutuhan</span><span class="lang-en">Tablet or POS terminal options to suit your needs</span></li><li><span class="lang-id">Pilihan printer struk thermal yang kompatibel</span><span class="lang-en">Compatible thermal receipt printer options</span></li></ul>
+              <a href="https://wa.me/6285338000872?text=Halo%20Tim%20vexaPOS%2C%20saya%20tertarik%20Starter%20%2B%20Perangkat%20(aplikasi%20%2B%20perangkat).%20Mohon%20penawaran%20aplikasi%20dan%20alat.%20Nama%20usaha%3A%20___%20%7C%20Jumlah%20outlet%3A%20___%20%7C%20Perangkat%20yang%20dibutuhkan%3A%20___" target="_blank" rel="noopener" class="mt-auto text-center font-heading font-bold text-[13px] uppercase px-5 py-3 bg-brand-lime border-2 border-brand-dark shadow-brutal-sm rounded-lg hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all"><span class="lang-id">Konsultasi Paket Lengkap</span><span class="lang-en">Discuss Complete Setup</span></a>
+            </article>
+            <article class="bg-brand-cream-light border-2 border-brand-dark shadow-brutal rounded-xl p-6 flex flex-col gap-4">
+              <h3 class="font-heading font-bold text-[21px] uppercase text-brand-dark"><span class="lang-id">Pro + Perangkat</span><span class="lang-en">Pro + Hardware</span></h3>
+              <p class="font-body text-[13px] text-brand-dark/75"><span class="lang-id">Untuk usaha yang mulai membuka cabang.</span><span class="lang-en">For businesses expanding to more locations.</span></p>
+              <p class="font-mono font-bold text-[24px] text-brand-dark"><span class="lang-id">Minta Penawaran</span><span class="lang-en">Request a Quote</span></p>
+              <p class="font-body text-[12px] text-brand-dark/65"><span class="lang-id">Total mengikuti pilihan alat dan paket aplikasi.</span><span class="lang-en">Total depends on your hardware and software plan.</span></p>
+              <ul class="flex flex-col gap-2 font-body text-[13px] text-brand-dark border-t-2 border-brand-dark/15 pt-4"><li><span class="lang-id">Aplikasi Multi-Outlet Pro</span><span class="lang-en">Multi-Outlet Pro software</span></li><li><span class="lang-id">Rencana perangkat kasir untuk setiap outlet</span><span class="lang-en">Cashier hardware plan for each outlet</span></li><li><span class="lang-id">Pilihan printer dapur dan cash drawer</span><span class="lang-en">Kitchen printer and cash drawer options</span></li></ul>
+              <a href="https://wa.me/6285338000872?text=Halo%20Tim%20vexaPOS%2C%20saya%20tertarik%20Pro%20%2B%20Perangkat%20(aplikasi%20%2B%20perangkat).%20Mohon%20penawaran%20aplikasi%20dan%20alat.%20Nama%20usaha%3A%20___%20%7C%20Jumlah%20outlet%3A%20___%20%7C%20Perangkat%20yang%20dibutuhkan%3A%20___" target="_blank" rel="noopener" class="mt-auto text-center font-heading font-bold text-[13px] uppercase px-5 py-3 bg-brand-lime border-2 border-brand-dark shadow-brutal-sm rounded-lg hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all"><span class="lang-id">Konsultasi Paket Lengkap</span><span class="lang-en">Discuss Complete Setup</span></a>
+            </article>
+            <article class="bg-brand-cream-light border-2 border-brand-dark shadow-brutal rounded-xl p-6 flex flex-col gap-4">
+              <h3 class="font-heading font-bold text-[21px] uppercase text-brand-dark"><span class="lang-id">Paket Kustom</span><span class="lang-en">Custom Setup</span></h3>
+              <p class="font-body text-[13px] text-brand-dark/75"><span class="lang-id">Sesuaikan aplikasi dan perangkat dengan skala usaha.</span><span class="lang-en">Tailor software and hardware to your business.</span></p>
+              <p class="font-mono font-bold text-[24px] text-brand-dark"><span class="lang-id">Minta Penawaran</span><span class="lang-en">Request a Quote</span></p>
+              <p class="font-body text-[12px] text-brand-dark/65"><span class="lang-id">Total mengikuti pilihan alat dan paket aplikasi.</span><span class="lang-en">Total depends on your hardware and software plan.</span></p>
+              <ul class="flex flex-col gap-2 font-body text-[13px] text-brand-dark border-t-2 border-brand-dark/15 pt-4"><li><span class="lang-id">Kebutuhan aplikasi Enterprise / Group</span><span class="lang-en">Enterprise / Group software requirements</span></li><li><span class="lang-id">Jumlah dan spesifikasi perangkat sesuai konsultasi</span><span class="lang-en">Device quantities and specifications agreed in consultation</span></li><li><span class="lang-id">Rencana instalasi dan pelatihan tim</span><span class="lang-en">Installation and team training plan</span></li></ul>
+              <a href="https://wa.me/6285338000872?text=Halo%20Tim%20vexaPOS%2C%20saya%20tertarik%20Paket%20Kustom%20(aplikasi%20%2B%20perangkat).%20Mohon%20penawaran%20aplikasi%20dan%20alat.%20Nama%20usaha%3A%20___%20%7C%20Jumlah%20outlet%3A%20___%20%7C%20Perangkat%20yang%20dibutuhkan%3A%20___" target="_blank" rel="noopener" class="mt-auto text-center font-heading font-bold text-[13px] uppercase px-5 py-3 bg-brand-lime border-2 border-brand-dark shadow-brutal-sm rounded-lg hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all"><span class="lang-id">Konsultasi Paket Lengkap</span><span class="lang-en">Discuss Complete Setup</span></a>
+            </article>
+          </div>
         </div>
       </section>
       <!-- ================= SECTION G END ================= -->
@@ -649,28 +738,27 @@
       <!-- ================= SECTION H START: LOCAL TRUST & TESTIMONIALS ================= -->
       <section aria-labelledby="testimoni-title" class="bg-brand-cream border-2 border-brand-dark shadow-brutal rounded-xl p-6 sm:p-10 lg:p-12 flex flex-col gap-7">
         <div class="flex flex-col gap-2 max-w-[760px]">
-          <span class="inline-flex self-start px-3 py-1 bg-brand-ivory text-brand-dark border-2 border-brand-dark shadow-brutal-sm rounded-md font-mono text-[10.5px] sm:text-[11.5px] font-bold uppercase tracking-wide"><span class="lang-id">Dipercaya Bisnis F&amp;B Bali</span><span class="lang-en">Trusted by Bali F&amp;B</span></span>
+          <span class="inline-flex self-start px-3 py-1 bg-brand-ivory text-brand-dark border-2 border-brand-dark shadow-brutal-sm rounded-md font-mono text-[10.5px] sm:text-[11.5px] font-bold uppercase tracking-wide"><span class="lang-id">Cerita UMKM Bali</span><span class="lang-en">Bali Small Business Stories</span></span>
           <h2 id="testimoni-title" class="font-heading font-bold text-[28px] sm:text-[38px] uppercase tracking-tight text-brand-dark leading-tight">
             <span class="lang-id">Cerita dari Garis Depan Operasional</span>
             <span class="lang-en">Stories from the Operational Front Line</span>
           </h2>
+          <p class="font-body text-[13px] text-brand-dark/75 leading-relaxed"><span class="lang-id">Nama, usaha, dan cerita berikut bersifat fiktif.</span><span class="lang-en">The names, businesses, and stories below are fictional.</span></p>
         </div>
-        <!-- TODO: ganti placeholder — ganti seluruh kutipan, nama, jabatan & metrik dengan testimoni klien nyata yang sudah terverifikasi. -->
+        <!-- TODO: Replace fictional testimonials with verified client stories before publishing them as real testimonials. -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
           <figure class="bg-brand-ivory border-2 border-brand-dark shadow-brutal rounded-xl p-5 flex flex-col gap-3">
-            <div class="font-mono text-[13px] font-bold text-brand-orange tracking-widest" aria-label="Rating 5 dari 5">★★★★★</div>
-            <blockquote class="font-body text-[14.5px] text-brand-dark leading-relaxed">"[PLACEHOLDER — ganti dengan testimoni klien nyata] Antrean kasir saat sunset rush terpangkas hingga 40% sejak pakai vexaPOS."</blockquote>
+            <blockquote class="font-body text-[14.5px] text-brand-dark leading-relaxed"><span class="lang-id">"Pas jam makan siang, saya bisa catat pesanan dan hitung total belanja tanpa bolak-balik pakai kalkulator. Tutup warung juga lebih enak karena tinggal cek rekap penjualan hari itu."</span><span class="lang-en">"During the lunch rush, I can record orders and total up bills without reaching for a calculator. Closing up is easier too, since I can just check the day's sales summary."</span></blockquote>
             <figcaption class="border-t-2 border-brand-dark/15 pt-3 flex items-center gap-3">
-              <span class="w-10 h-10 rounded-lg bg-brand-blue-tech text-white border-2 border-brand-dark flex items-center justify-center font-heading font-bold" aria-hidden="true">GM</span>
-              <span><strong class="font-heading text-[14px] uppercase block">[PLACEHOLDER — Nama GM]</strong><span class="font-mono text-[11px] text-brand-dark/65">General Manager • Beach Club, Canggu</span></span>
+              <span class="w-10 h-10 rounded-lg bg-brand-blue-tech text-white border-2 border-brand-dark flex items-center justify-center font-heading font-bold shrink-0" aria-hidden="true">IS</span>
+              <span><strong class="font-heading text-[14px] uppercase block">Ibu Sari</strong><span class="font-mono text-[11px] text-brand-dark/65"><span class="lang-id">Pemilik • Warung Dapur Sari, Denpasar</span><span class="lang-en">Owner • Warung Dapur Sari, Denpasar</span></span></span>
             </figcaption>
           </figure>
           <figure class="bg-brand-ivory border-2 border-brand-dark shadow-brutal rounded-xl p-5 flex flex-col gap-3">
-            <div class="font-mono text-[13px] font-bold text-brand-orange tracking-widest" aria-label="Rating 5 dari 5">★★★★★</div>
-            <blockquote class="font-body text-[14.5px] text-brand-dark leading-relaxed">"[PLACEHOLDER — ganti dengan testimoni klien nyata] Nol komplain transaksi gagal akibat koneksi internet, bahkan saat hujan badai."</blockquote>
+            <blockquote class="font-body text-[14.5px] text-brand-dark leading-relaxed"><span class="lang-id">"Kedai kami kecil, jadi butuh kasir yang gampang dipakai. Staf bisa langsung belajar input menu, dan saat Wi-Fi putus pesanan tetap bisa dicatat. Saya juga lebih gampang lihat kopi mana yang paling laku."</span><span class="lang-en">"We run a small coffee shop, so we need a till that's easy to use. Staff can quickly learn to enter orders, and keep recording them when Wi-Fi drops. It's also easier for me to see which coffees sell best."</span></blockquote>
             <figcaption class="border-t-2 border-brand-dark/15 pt-3 flex items-center gap-3">
-              <span class="w-10 h-10 rounded-lg bg-brand-green text-white border-2 border-brand-dark flex items-center justify-center font-heading font-bold" aria-hidden="true">OH</span>
-              <span><strong class="font-heading text-[14px] uppercase block">[PLACEHOLDER — Nama OH]</strong><span class="font-mono text-[11px] text-brand-dark/65">Operational Head • Restoran, Seminyak</span></span>
+              <span class="w-10 h-10 rounded-lg bg-brand-green text-white border-2 border-brand-dark flex items-center justify-center font-heading font-bold shrink-0" aria-hidden="true">PA</span>
+              <span><strong class="font-heading text-[14px] uppercase block">Pak Adi</strong><span class="font-mono text-[11px] text-brand-dark/65"><span class="lang-id">Pemilik • Kedai Kopi Sudut Pagi, Badung</span><span class="lang-en">Owner • Kedai Kopi Sudut Pagi, Badung</span></span></span>
             </figcaption>
           </figure>
         </div>
@@ -766,6 +854,7 @@
         <nav aria-label="Tautan produk" class="md:col-span-2 flex flex-col gap-2">
           <span class="font-mono text-[11px] font-bold uppercase text-brand-dark/60"><span class="lang-id">Produk</span><span class="lang-en">Product</span></span>
           <a href="#fitur" class="font-body font-bold text-[13.5px] text-brand-dark hover:underline"><span class="lang-id">Fitur</span><span class="lang-en">Features</span></a>
+          <a href="#clients" class="font-body font-bold text-[13.5px] text-brand-dark hover:underline"><span class="lang-id">Klien Kami</span><span class="lang-en">Our Clients</span></a>
           <a href="#hardware" class="font-body font-bold text-[13.5px] text-brand-dark hover:underline">Hardware</a>
           <a href="#pricing" class="font-body font-bold text-[13.5px] text-brand-dark hover:underline"><span class="lang-id">Harga</span><span class="lang-en">Pricing</span></a>
           <a href="#faq" class="font-body font-bold text-[13.5px] text-brand-dark hover:underline">FAQ</a>

@@ -234,6 +234,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
   initLanguageSwitcher();
 
+  // Native radios support Tab and arrow keys, with software as the no-JS default.
+  const pricingSwitch = document.querySelector("[data-pricing-switch]");
+  if (pricingSwitch) {
+    const pricing = pricingSwitch.closest("section");
+    const options = pricingSwitch.querySelectorAll('input[name="pricing-mode"]');
+    const panels = pricing.querySelectorAll("[data-pricing-panel]");
+    const updatePricing = () => {
+      const selected = pricingSwitch.querySelector('input[name="pricing-mode"]:checked');
+      panels.forEach((panel) => {
+        panel.hidden = panel.dataset.pricingPanel !== selected.value;
+      });
+    };
+    options.forEach((option) => option.addEventListener("change", updatePricing));
+    updatePricing();
+    pricingSwitch.hidden = false;
+  }
+
   // --- vexaPOS: FAQ Accordion (single-open, scoped, additive only) ---
   const initVexaFaq = () => {
     const list = document.getElementById("vexa-faq-list") || document.getElementById("zivo-faq-list");
