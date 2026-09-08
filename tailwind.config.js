@@ -37,6 +37,10 @@ module.exports = {
         "secondary-container": "#FFFDF0",
         surface: "#FFF9D5",
         "primary-container": "#D4FF00",
+        "neubrutal-yellow": "#FFDE00",
+        "neubrutal-green": "#00F59B",
+        "neubrutal-purple": "#7053FF",
+        "neubrutal-dark": "#000000",
       },
       fontFamily: {
         heading: ["'Clash Display'", "sans-serif"],
@@ -56,6 +60,12 @@ module.exports = {
         "brutal-slate": "5px 5px 0 0 #2C3A47",
         "brutal-slate-lg": "7px 7px 0 0 #2C3A47",
         "brutal-slate-xl": "10px 10px 0 0 #2C3A47",
+        "brutal-solid-sm": "2px 2px 0 0 #000000",
+        "brutal-solid": "4px 4px 0 0 #000000",
+        "brutal-solid-md": "5px 5px 0 0 #000000",
+        "brutal-solid-lg": "6px 6px 0 0 #000000",
+        "brutal-solid-xl": "8px 8px 0 0 #000000",
+        "brutal-solid-2xl": "10px 10px 0 0 #000000",
       },
       borderRadius: {
         sm: "4px",

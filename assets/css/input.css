@@ -34,4 +34,31 @@
       transition: none;
     }
   }
+
+  /* Neubrutalism Hero Banner Mockup Tilt & Grid */
+  .banner-tilt-cascade {
+    transform: rotate(-14deg) skewX(-2deg);
+    transform-origin: top center;
+  }
+  @media (max-width: 1024px) {
+    .banner-tilt-cascade {
+      transform: rotate(-8deg) skewX(-1deg) scale(0.9);
+      transform-origin: top center;
+    }
+  }
+  @media (max-width: 640px) {
+    .banner-tilt-cascade {
+      transform: rotate(-6deg) scale(0.82);
+      transform-origin: top center;
+    }
+  }
+
+  /* Hide scrollbar for neat mockup previews */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }
