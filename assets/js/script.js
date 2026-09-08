@@ -96,37 +96,73 @@ document.addEventListener("DOMContentLoaded", () => {
   updateBaliTime();
   setInterval(updateBaliTime, 10000); // update every 10s
 
-  // --- Active Navigation Link Switcher & Smooth Scroll ---
+  // --- Shared anchor navigation (desktop, mobile, CTAs, and back to top) ---
   const navContainer = document.querySelector("nav[data-active-classes]");
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const updateScrollOffset = () => {
+    if (!navContainer) return;
+    const inset = parseFloat(getComputedStyle(navContainer).top) || 0;
+    document.documentElement.style.setProperty(
+      "--nav-scroll-offset",
+      `${Math.ceil(navContainer.getBoundingClientRect().height + inset + 16)}px`
+    );
+  };
+
+  updateScrollOffset();
   if (navContainer) {
+    if (typeof ResizeObserver !== "undefined") {
+      new ResizeObserver(updateScrollOffset).observe(navContainer);
+    }
+    window.addEventListener("resize", updateScrollOffset, { passive: true });
+
     const links = navContainer.querySelectorAll("a[data-path]");
+    const activeClasses = navContainer.dataset.activeClasses.split(/\s+/);
+    const inactiveClasses = Array.from(links).map((link) =>
+      Array.from(link.classList).filter((name) =>
+        name.startsWith("bg-") && !activeClasses.includes(name)
+      )
+    );
+    const defaultInactive = inactiveClasses.find((classes) => classes.length) || [];
     links.forEach((link) => {
-      link.addEventListener("click", (e) => {
-        const href = link.getAttribute("href");
-        if (href && href.startsWith("#") && href.length > 1) {
-          const targetEl = document.querySelector(href);
-          if (targetEl) {
-            e.preventDefault();
-            targetEl.scrollIntoView({ behavior: "smooth" });
-          }
-        } else if (href === "#") {
-          e.preventDefault();
-        }
-
-        // Reset all links
-        links.forEach((l) => {
+      link.addEventListener("click", (event) => {
+        if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+        links.forEach((l, index) => {
           l.removeAttribute("aria-current");
-          l.classList.remove("bg-[#D4FF00]");
-          l.classList.add("bg-[#FFFDF0]");
+          l.classList.remove(...activeClasses);
+          l.classList.add(...(inactiveClasses[index].length ? inactiveClasses[index] : defaultInactive));
         });
-
-        // Activate clicked link
-        link.setAttribute("aria-current", "page");
-        link.classList.remove("bg-[#FFFDF0]");
-        link.classList.add("bg-[#D4FF00]");
+        link.setAttribute("aria-current", "location");
+        link.classList.remove(...defaultInactive);
+        link.classList.add(...activeClasses);
       });
     });
   }
+
+  // Delegation runs after the mobile menu's close handler, so layout is final.
+  document.addEventListener("click", (event) => {
+    if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    const link = event.target.closest('a[href^="#"]');
+    if (!link || link.hasAttribute("download") || (link.target && link.target !== "_self")) return;
+    const hash = link.getAttribute("href");
+    let target;
+    try {
+      target = hash === "#" ? document.documentElement : document.getElementById(decodeURIComponent(hash.slice(1)));
+    } catch {
+      return;
+    }
+    if (!target) return;
+
+    event.preventDefault();
+    updateScrollOffset();
+    const behavior = reducedMotion.matches ? "instant" : "smooth";
+    if (hash === "#") {
+      window.scrollTo({ top: 0, behavior });
+    } else {
+      target.scrollIntoView({ behavior, block: "start" });
+    }
+    // pushState preserves anchor history without starting a second scroll.
+    if (window.location.hash !== hash) window.history.pushState(null, "", hash);
+  });
 
   // --- Interactive Project Filtering ---
   const filterContainer = document.getElementById("project-filters");
