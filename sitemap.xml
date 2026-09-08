@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.extensiacreativebali.my.id/</loc>
-    <xhtml:link rel="alternate" hreflang="id" href="https://www.extensiacreativebali.my.id/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.extensiacreativebali.my.id/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.extensiacreativebali.my.id/" />
     <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.extensiacreativebali.my.id/vexapos</loc>
-    <xhtml:link rel="alternate" hreflang="id" href="https://www.extensiacreativebali.my.id/vexapos" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.extensiacreativebali.my.id/vexapos" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.extensiacreativebali.my.id/vexapos" />
     <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>

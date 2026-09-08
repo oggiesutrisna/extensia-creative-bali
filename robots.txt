@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://www.extensiacreativebali.my.id
+Host: www.extensiacreativebali.my.id
 
 # Sitemaps
 Sitemap: https://www.extensiacreativebali.my.id/sitemap.xml
