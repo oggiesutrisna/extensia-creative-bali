@@ -204,7 +204,7 @@ document.addEventListener("DOMContentLoaded", () => {
       document.documentElement.lang = lang;
       try {
         localStorage.setItem("extensia_lang", lang);
-        localStorage.setItem("zivopos_preferred_lang", lang);
+        localStorage.setItem("vexapos_preferred_lang", lang);
       } catch (e) {}
 
       if (lang === "en") {
@@ -225,7 +225,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Check saved preference
     try {
-      const savedLang = localStorage.getItem("extensia_lang") || localStorage.getItem("zivopos_preferred_lang");
+      const savedLang = localStorage.getItem("extensia_lang") || localStorage.getItem("vexapos_preferred_lang") || localStorage.getItem("zivopos_preferred_lang");
       if (savedLang === "en" || savedLang === "id") {
         setLanguage(savedLang);
       }
@@ -234,10 +234,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   initLanguageSwitcher();
 
-  // --- zivoPOS: FAQ Accordion (single-open, scoped, additive only) ---
-  const initZivoFaq = () => {
-    const list = document.getElementById("zivo-faq-list");
-    if (!list) return;
+  // --- vexaPOS: FAQ Accordion (single-open, scoped, additive only) ---
+  const initVexaFaq = () => {
+    const list = document.getElementById("vexa-faq-list") || document.getElementById("zivo-faq-list");
     const items = list.querySelectorAll(".faq-item");
     if (!items || items.length === 0) return;
 
@@ -261,8 +260,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  // --- zivoPOS: Hero Bill Self-Verification (math check + auto-correct) ---
-  const initZivoBillCalc = () => {
+  // --- vexaPOS: Hero Bill Self-Verification (math check + auto-correct) ---
+  const initVexaBillCalc = () => {
     const bill = document.querySelector("[data-bill]");
     if (!bill) return;
 
@@ -337,8 +336,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  // --- zivoPOS: Mobile Nav Toggle (additive only) ---
-  const initZivoMobileNav = () => {
+  // --- vexaPOS: Mobile Nav Toggle (additive only) ---
+  const initVexaMobileNav = () => {
     const toggle = document.getElementById("nav-toggle");
     const menu = document.getElementById("mobile-menu");
     if (!toggle || !menu) return;
@@ -378,7 +377,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  initZivoFaq();
-  initZivoBillCalc();
-  initZivoMobileNav();
+  initVexaFaq();
+  initVexaBillCalc();
+  initVexaMobileNav();
 });

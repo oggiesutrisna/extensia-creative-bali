@@ -2,7 +2,7 @@
 
 > Studio Pengembangan Aplikasi & Software Kustom Berbasis di Bali (Canggu & Denpasar).
 
-Landing page resmi **Extensia Creative Bali** dengan gaya desain **Neubrutalism Bali Tech** dan halaman produk khusus untuk **zivoPOS** (Sistem Point of Sale & Inventaris Cloud Multi-Outlet).
+Landing page resmi **Extensia Creative Bali** dengan gaya desain **Neubrutalism Bali Tech** dan halaman produk khusus untuk **vexaPOS** (Sistem Point of Sale & Inventaris Cloud Multi-Outlet).
 
 ---
 
@@ -12,7 +12,7 @@ Landing page resmi **Extensia Creative Bali** dengan gaya desain **Neubrutalism 
 - **Tipografi Kelas Dunia**: Menggunakan **Clash Display** (Fontshare) untuk headline tegas dan **Plus Jakarta Sans** untuk readability tinggi.
 - **Jam WITA Real-Time**: Ticker jam Bali (UTC+8) otomatis berjalan secara live.
 - **Showcase Proyek Interaktif**: Dilengkapi filter kategori dinamis (*F&B & POS, Villa & Hospitality, GPS & Armada Tracker*).
-- **Halaman Khusus zivoPOS (`zivopos.html`)**: Ulasan lengkap fitur 100% offline-ready, KDS dapur, live owner dashboard, social proof dari 25+ klien di Bali, serta rincian paket berlangganan.
+- **Halaman Khusus vexaPOS (`vexapos.html`)**: Ulasan lengkap fitur 100% offline-ready, KDS dapur, live owner dashboard, social proof dari 25+ klien di Bali, serta rincian paket berlangganan.
 - **Tech Stack**: Laravel 11, TanStack Suite, dan Python Data/AI Engine.
 - **Mobile Responsive**: Tampilan adaptif untuk desktop, tablet, dan smartphone.
 
@@ -41,7 +41,7 @@ extensia-creative-bali/
 │       └── logo.svg / hero-mockup.svg / og-preview.svg
 │
 ├── index.html                                   # Landing page utama Extensia Creative Bali
-├── zivopos.html                                 # Halaman produk & showcase klien zivoPOS
+├── vexapos.html                                 # Halaman produk & showcase klien vexaPOS
 ├── vercel.json                                  # Clean URLs, cache & security headers
 ├── robots.txt / sitemap.xml / site.webmanifest
 ├── tailwind.config.js / postcss.config.js / package.json  # Build: npm run build:css
