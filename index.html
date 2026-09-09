@@ -185,14 +185,10 @@
   <!-- Google Search Console verification placeholder -->
   <!-- <meta name="google-site-verification" content="PASTE_TOKEN_HERE" /> -->
 
-  <!-- Typography Fonts (Clash Display + Plus Jakarta Sans + Space Mono) -->
+  <!-- Typography Fonts (Plus Jakarta Sans + Space Mono) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Space+Mono:wght@400;700&amp;display=swap" />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet" /></noscript>
-  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&amp;display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
-  <noscript><link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&amp;display=swap" rel="stylesheet" /></noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" />
 
   <!-- Custom Styles -->
   <link rel="stylesheet" href="assets/css/style.css" />
@@ -208,794 +204,1106 @@
   <!-- ================= SECTION A END ================= -->
 </head>
 
-<body class="bg-white font-body text-brand-slate min-h-screen p-2 sm:p-4 lg:p-6 selection:bg-brand-coral selection:text-brand-slate">
+<body class="bg-[#FBFBFC] font-sans text-slate-900 min-h-screen p-2 sm:p-4 lg:p-6 selection:bg-[#2563EB] selection:text-white antialiased">
 
   <!-- ============================== MASTER CONTAINER ============================== -->
   <div class="max-w-[1560px] mx-auto flex flex-col gap-5 sm:gap-7 lg:gap-9">
 
-    <!-- ================= SECTION B START: STICKY STUDIO NAVIGATION BAR ================= -->
-    <nav aria-label="Navigasi utama Extensia" data-active-classes="bg-brand-coral text-brand-slate" class="sticky top-2 sm:top-4 z-50 border-2 border-brand-slate bg-brand-mist shadow-brutal-slate-sm rounded-xl px-3 sm:px-5 py-2.5 flex items-center justify-between gap-3">
-      <!-- Left: Logo lockup -->
-      <a href="#" class="flex items-center gap-2.5 group" aria-label="Extensia Creative Bali — beranda">
-        <img
-          src="assets/images/extensia-logo-512.png"
-          alt="Extensia Creative Bali Official Logo"
-          width="96"
-          height="96"
-          fetchpriority="high"
-          decoding="async"
-          class="h-9 sm:h-10 w-auto object-contain transition-transform group-hover:scale-105"
-        />
-        <span class="flex flex-col leading-none">
-          <span class="font-heading font-bold text-[16px] sm:text-[18px] tracking-tight text-brand-slate">Extensia Creative Bali</span>
-          <span class="font-mono font-bold text-[9px] sm:text-[10px] tracking-[0.08em] uppercase text-brand-slate/70">Software Studio • Bali</span>
-        </span>
+    <!-- ================= SECTION B START: MODERN ULTRA-CLEAN NAVIGATION BAR ================= -->
+    <nav aria-label="Navigasi utama Extensia" data-active-classes="bg-slate-900 text-white" class="sticky top-2 sm:top-4 z-50 bg-white/90 backdrop-blur-md border border-slate-200/80 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.05)] rounded-2xl px-3 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between gap-3">
+      <!-- Left: Logo lockup (Minimalist modern tech icon + wordmark) -->
+      <a href="#" class="flex items-center gap-3 group" aria-label="Extensia Creative Bali — Beranda">
+        <div class="relative w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-[#2563EB] to-indigo-700 flex items-center justify-center shadow-[0_6px_16px_-3px_rgba(37,99,235,0.4)] transition-transform group-hover:scale-105 flex-shrink-0">
+          <!-- Minimalist Modern Tech Icon -->
+          <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M16.5 9.4 7.55 4.24a1.78 1.78 0 0 0-2.5 1.55v12.42a1.78 1.78 0 0 0 2.5 1.55L16.5 14.6a1.78 1.78 0 0 0 0-3.2z"/>
+            <path d="m21 16-5-3 5-3v6z" fill="currentColor"/>
+          </svg>
+          <span class="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-emerald-500 border-2 border-white rounded-full" aria-hidden="true"></span>
+        </div>
+        <div class="flex flex-col leading-tight">
+          <span class="font-bold text-[16px] sm:text-[18px] tracking-tight text-[#0F172A] group-hover:text-[#2563EB] transition-colors">Extensia Creative Bali</span>
+          <span class="text-[10px] sm:text-[11px] font-medium text-slate-500 tracking-normal">Bespoke Software House • Bali</span>
+        </div>
       </a>
 
-      <!-- Center: anchor links (desktop) -->
-      <div class="hidden lg:flex items-center gap-1.5">
-        <a aria-current="page" data-path="services" href="#capabilities" class="font-mono text-[12px] font-bold px-3 py-1.5 bg-brand-coral text-brand-slate border-2 border-brand-slate shadow-brutal-slate-sm rounded-md hover:bg-brand-coral transition-colors">
-          <span class="lang-en">SERVICES</span><span class="lang-id">LAYANAN</span>
+      <!-- Center: Links ("Services", "Portfolio", "VexaPOS", "About", "Pricing") -->
+      <div class="hidden lg:flex items-center gap-1 bg-slate-100/75 p-1 rounded-full border border-slate-200/60">
+        <a aria-current="page" data-path="services" href="#capabilities" class="text-[13px] font-semibold text-slate-700 hover:text-slate-950 px-3.5 py-1.5 rounded-full hover:bg-white hover:shadow-sm transition-all">
+          <span class="lang-en">Services</span><span class="lang-id">Layanan</span>
         </a>
-        <a data-path="projects" href="#projects" class="font-mono text-[12px] font-bold px-3 py-1.5 bg-brand-mist text-brand-slate border-2 border-brand-slate shadow-brutal-slate-sm rounded-md hover:bg-brand-coral hover:text-brand-slate transition-colors">
-          <span class="lang-en">SELECTED WORK</span><span class="lang-id">PORTOFOLIO</span>
+        <a data-path="projects" href="#projects" class="text-[13px] font-semibold text-slate-700 hover:text-slate-950 px-3.5 py-1.5 rounded-full hover:bg-white hover:shadow-sm transition-all">
+          <span class="lang-en">Portfolio</span><span class="lang-id">Portofolio</span>
         </a>
-        <a data-path="capabilities" href="#capabilities" class="font-mono text-[12px] font-bold px-3 py-1.5 bg-brand-mist text-brand-slate border-2 border-brand-slate shadow-brutal-slate-sm rounded-md hover:bg-brand-coral hover:text-brand-slate transition-colors">
-          <span class="lang-en">CAPABILITIES</span><span class="lang-id">KAPABILITAS</span>
+        <a data-path="vexapos" href="vexapos.html" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-slate-700 hover:text-slate-950 px-3.5 py-1.5 rounded-full hover:bg-white hover:shadow-sm transition-all">
+          <span>VexaPOS</span>
+          <span class="text-[9px] uppercase tracking-wider font-extrabold bg-blue-100 text-[#2563EB] px-1.5 py-0.5 rounded-full">Product</span>
         </a>
-        <a data-path="methodology" href="#methodology" class="font-mono text-[12px] font-bold px-3 py-1.5 bg-brand-mist text-brand-slate border-2 border-brand-slate shadow-brutal-slate-sm rounded-md hover:bg-brand-coral hover:text-brand-slate transition-colors">
-          <span class="lang-en">METHODOLOGY</span><span class="lang-id">METODOLOGI</span>
+        <a data-path="about" href="#capabilities" class="text-[13px] font-semibold text-slate-700 hover:text-slate-950 px-3.5 py-1.5 rounded-full hover:bg-white hover:shadow-sm transition-all">
+          <span class="lang-en">About</span><span class="lang-id">Tentang</span>
         </a>
-        <a data-path="contact" href="#contact" class="font-mono text-[12px] font-bold px-3 py-1.5 bg-brand-mist text-brand-slate border-2 border-brand-slate shadow-brutal-slate-sm rounded-md hover:bg-brand-coral hover:text-brand-slate transition-colors">
-          <span class="lang-en">CONTACT</span><span class="lang-id">KONTAK</span>
+        <a data-path="pricing" href="#contact" class="text-[13px] font-semibold text-slate-700 hover:text-slate-950 px-3.5 py-1.5 rounded-full hover:bg-white hover:shadow-sm transition-all">
+          <span class="lang-en">Pricing</span><span class="lang-id">Pricing</span>
         </a>
       </div>
 
-      <!-- Right: clock + lang + CTA + burger -->
-      <div class="flex items-center gap-2">
-        <span id="bali-time" class="hidden xl:inline-flex font-mono text-[11px] font-bold px-2.5 py-1.5 bg-brand-mist text-brand-slate border-2 border-brand-slate rounded-md whitespace-nowrap">BALI TIME (WITA): --:--</span>
-        <div class="hidden sm:inline-flex items-center p-1 bg-brand-mist border-2 border-brand-slate shadow-brutal-slate-sm rounded-lg font-mono text-[11px] font-bold flex-shrink-0" role="group" aria-label="Pilih Bahasa / Language Selection">
-          <button type="button" id="btn-lang-id" class="lang-btn px-2 sm:px-2.5 py-1 bg-brand-coral text-brand-slate border border-brand-slate rounded transition-all cursor-pointer">ID</button>
-          <button type="button" id="btn-lang-en" class="lang-btn px-2 sm:px-2.5 py-1 bg-transparent text-brand-slate rounded hover:bg-brand-steel transition-all cursor-pointer">EN</button>
+      <!-- Right: Clock + Lang + Subtle "Konsultasi" + Primary "Get in Touch" Button -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <!-- Bali WITA Clock chip -->
+        <span id="bali-time" class="hidden xl:inline-flex items-center gap-1.5 text-[11px] font-medium px-2.5 py-1 text-slate-500 bg-slate-100/80 border border-slate-200/60 rounded-full whitespace-nowrap">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true"></span>
+          BALI TIME: --:--
+        </span>
+
+        <!-- Language toggle pill -->
+        <div class="hidden sm:inline-flex items-center p-0.5 bg-slate-100/90 border border-slate-200/80 rounded-full text-[11px] font-semibold flex-shrink-0" role="group" aria-label="Pilih Bahasa / Language Selection">
+          <button type="button" id="btn-lang-id" class="lang-btn px-2.5 py-1 bg-white text-slate-900 shadow-sm rounded-full transition-all cursor-pointer">ID</button>
+          <button type="button" id="btn-lang-en" class="lang-btn px-2.5 py-1 bg-transparent text-slate-600 hover:text-slate-900 rounded-full transition-all cursor-pointer">EN</button>
         </div>
-        <a href="https://wa.me/6285338000872?text=Halo%20Extensia%20Bali,%20saya%20tertarik%20konsultasi%20arsitektur%20aplikasi" target="_blank" rel="noopener" class="hidden sm:inline-flex items-center gap-1.5 font-heading font-bold text-[13px] uppercase px-4 py-2 bg-brand-coral text-brand-slate border-2 border-brand-slate shadow-brutal-slate-sm rounded-lg hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none active:translate-x-[4px] active:translate-y-[4px] transition-all whitespace-nowrap">
-          <span class="lang-en">CONSULT</span><span class="lang-id">KONSULTASI</span>
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h9M8 3.5 11.5 7 8 10.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+
+        <!-- Subtle secondary action "Konsultasi" -->
+        <a href="https://wa.me/6285338000872?text=Halo%20Extensia%20Bali,%20saya%20tertarik%20konsultasi%20pengembangan%20software" target="_blank" rel="noopener" class="hidden md:inline-flex items-center text-[13px] font-semibold text-slate-700 hover:text-[#2563EB] px-3 py-1.5 rounded-full hover:bg-slate-100/70 transition-all whitespace-nowrap">
+          <span class="lang-en">Consultation</span><span class="lang-id">Konsultasi</span>
         </a>
-        <button type="button" id="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Buka menu navigasi" class="lg:hidden w-10 h-10 inline-flex items-center justify-center bg-brand-mist text-brand-slate border-2 border-brand-slate shadow-brutal-slate-sm rounded-lg cursor-pointer">
-          <svg id="nav-toggle-icon-open" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2 4.5h14M2 9h14M2 13.5h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          <svg id="nav-toggle-icon-close" class="hidden" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="m4 4 10 10M14 4 4 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+
+        <!-- Clean rounded primary button "Get in Touch" -->
+        <a href="https://wa.me/6285338000872?text=Halo%20Extensia%20Bali,%20saya%20ingin%20mendiskusikan%20proyek%20baru" target="_blank" rel="noopener" class="hidden sm:inline-flex items-center gap-2 text-[13px] font-semibold px-4 sm:px-5 py-2 sm:py-2.5 bg-[#2563EB] hover:bg-[#1D4ED8] text-white shadow-[0_8px_20px_-4px_rgba(37,99,235,0.35)] hover:shadow-[0_12px_24px_-4px_rgba(37,99,235,0.45)] hover:-translate-y-0.5 active:translate-y-0 rounded-full transition-all whitespace-nowrap">
+          <span>Get in Touch</span>
+          <svg class="w-3.5 h-3.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 8h10M9.5 4 13.5 8 9.5 12"/></svg>
+        </a>
+
+        <!-- Mobile menu toggle -->
+        <button type="button" id="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Buka menu navigasi" class="lg:hidden w-10 h-10 inline-flex items-center justify-center bg-white text-slate-700 border border-slate-200/80 rounded-xl hover:bg-slate-50 transition-colors cursor-pointer shadow-sm">
+          <svg id="nav-toggle-icon-open" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14"/></svg>
+          <svg id="nav-toggle-icon-close" class="hidden" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg>
         </button>
       </div>
     </nav>
+
     <!-- Mobile menu panel -->
-    <div id="mobile-menu" class="hidden lg:hidden border-2 border-brand-slate bg-brand-mist shadow-brutal-slate rounded-xl p-4 flex-col gap-2 -mt-3 sm:-mt-5">
-      <a href="#capabilities" class="font-mono text-[13px] font-bold px-3 py-2.5 bg-brand-mist border-2 border-brand-slate rounded-lg"><span class="lang-en">SERVICES</span><span class="lang-id">LAYANAN</span></a>
-      <a href="#projects" class="font-mono text-[13px] font-bold px-3 py-2.5 bg-brand-mist border-2 border-brand-slate rounded-lg"><span class="lang-en">SELECTED WORK</span><span class="lang-id">PORTOFOLIO</span></a>
-      <a href="#methodology" class="font-mono text-[13px] font-bold px-3 py-2.5 bg-brand-mist border-2 border-brand-slate rounded-lg"><span class="lang-en">METHODOLOGY</span><span class="lang-id">METODOLOGI</span></a>
-      <a href="#contact" class="font-mono text-[13px] font-bold px-3 py-2.5 bg-brand-mist border-2 border-brand-slate rounded-lg"><span class="lang-en">CONTACT</span><span class="lang-id">KONTAK</span></a>
-      <div class="flex items-center gap-2 pt-1">
-        <div class="inline-flex items-center p-1 bg-brand-mist border-2 border-brand-slate rounded-lg font-mono text-[11px] font-bold" role="group" aria-label="Pilih Bahasa">
-          <button type="button" data-lang-mobile="id" class="px-2.5 py-1 bg-brand-coral text-brand-slate border border-brand-slate rounded cursor-pointer">ID</button>
-          <button type="button" data-lang-mobile="en" class="px-2.5 py-1 bg-transparent rounded cursor-pointer">EN</button>
+    <div id="mobile-menu" class="hidden lg:hidden border border-slate-200/80 bg-white/95 backdrop-blur-md shadow-soft-ambient rounded-2xl p-4 flex-col gap-2 -mt-3 sm:-mt-5">
+      <a href="#capabilities" class="text-[13px] font-semibold text-slate-800 px-3.5 py-2.5 rounded-xl hover:bg-slate-100 transition-colors"><span class="lang-en">Services</span><span class="lang-id">Layanan</span></a>
+      <a href="#projects" class="text-[13px] font-semibold text-slate-800 px-3.5 py-2.5 rounded-xl hover:bg-slate-100 transition-colors"><span class="lang-en">Portfolio</span><span class="lang-id">Portofolio</span></a>
+      <a href="vexapos.html" class="flex items-center justify-between text-[13px] font-semibold text-slate-800 px-3.5 py-2.5 rounded-xl hover:bg-slate-100 transition-colors">
+        <span>VexaPOS</span>
+        <span class="text-[9px] uppercase tracking-wider font-extrabold bg-blue-100 text-[#2563EB] px-2 py-0.5 rounded-full">Product</span>
+      </a>
+      <a href="#capabilities" class="text-[13px] font-semibold text-slate-800 px-3.5 py-2.5 rounded-xl hover:bg-slate-100 transition-colors"><span class="lang-en">About</span><span class="lang-id">Tentang</span></a>
+      <a href="#contact" class="text-[13px] font-semibold text-slate-800 px-3.5 py-2.5 rounded-xl hover:bg-slate-100 transition-colors"><span class="lang-en">Pricing</span><span class="lang-id">Pricing</span></a>
+      <div class="flex items-center gap-2 pt-2 border-t border-slate-100">
+        <div class="inline-flex items-center p-0.5 bg-slate-100 border border-slate-200 rounded-full font-semibold text-[11px]" role="group" aria-label="Pilih Bahasa">
+          <button type="button" data-lang-mobile="id" class="px-2.5 py-1 bg-white text-slate-900 shadow-sm rounded-full cursor-pointer">ID</button>
+          <button type="button" data-lang-mobile="en" class="px-2.5 py-1 bg-transparent text-slate-600 rounded-full cursor-pointer">EN</button>
         </div>
-        <a href="https://wa.me/6285338000872?text=Halo%20Extensia%20Bali,%20saya%20tertarik%20konsultasi%20arsitektur%20aplikasi" target="_blank" rel="noopener" class="flex-1 text-center font-heading font-bold text-[13px] uppercase px-4 py-2 bg-brand-coral text-brand-slate border-2 border-brand-slate shadow-brutal-slate-sm rounded-lg"><span class="lang-en">CONSULT</span><span class="lang-id">KONSULTASI</span></a>
+        <a href="https://wa.me/6285338000872?text=Halo%20Extensia%20Bali,%20saya%20tertarik%20konsultasi%20arsitektur%20aplikasi" target="_blank" rel="noopener" class="flex-1 text-center text-[13px] font-semibold px-4 py-2.5 bg-[#2563EB] hover:bg-[#1D4ED8] text-white rounded-full shadow-[0_8px_20px_-4px_rgba(37,99,235,0.35)] transition-all">Get in Touch</a>
       </div>
     </div>
     <!-- ================= SECTION B END ================= -->
 
     <!-- ========================================================================
-         HERO SECTION: FULL-WIDTH EXECUTIVE ARCHITECTURE & TECH SHOWCASE
+         HERO SECTION: MODERN ULTRA-CLEAN STUDIO WITH CLAYMORPHIC FLOATING WIDGETS
          ======================================================================== -->
-    <section class="dot-grid border-2 border-brand-slate shadow-brutal-slate rounded-xl p-6 sm:p-10 lg:p-12 flex flex-col justify-between relative overflow-hidden min-h-[660px] lg:min-h-[720px]">
+    <section class="clean-dot-grid border border-slate-200/80 shadow-soft-ambient rounded-3xl p-5 sm:p-8 lg:p-14 relative overflow-hidden min-h-[700px] lg:min-h-[760px] flex flex-col justify-center">
 
-      <!-- Hero Body: Full-Width Centered Executive Narrative Flow -->
-      <div class="max-w-[960px] mx-auto flex flex-col items-center text-center gap-6 my-auto py-8 sm:py-14 w-full">
-        <!-- Engineered System Status Bar -->
-        <div class="flex flex-wrap items-center justify-center gap-2">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 bg-brand-mist text-brand-slate border-2 border-brand-slate shadow-brutal-slate-sm rounded-md font-mono text-[10px] sm:text-[11px] font-bold">
-            <span class="w-2.5 h-2.5 bg-brand-slate rounded-full animate-pulse border border-brand-slate flex-shrink-0" aria-hidden="true"></span>
-            <span>
-              <span class="lang-en"><span class="whitespace-nowrap">SYSTEM STATUS: PRODUCTION OPERATIONAL</span> <span class="whitespace-nowrap">(DPS-01)</span></span>
-              <span class="lang-id"><span class="whitespace-nowrap">STATUS SISTEM: OPERASIONAL PRODUKSI</span> <span class="whitespace-nowrap">(DPS-01)</span></span>
-            </span>
+      <!-- ======================================================================
+           DESKTOP FLOATING CLAYMORPHIC & SKEUOMORPHIC WIDGET CARDS (XL & 2XL)
+           ====================================================================== -->
+
+      <!-- 1. Top-Left: Bright Pastel Yellow Sticky-Note Card (Pinned) -->
+      <div class="hidden xl:block absolute top-10 left-8 2xl:top-14 2xl:left-12 max-w-[300px] 2xl:max-w-[320px] w-full z-20 animate-float-slow transform-gpu-identity">
+        <div class="relative bg-gradient-to-b from-[#FEFCE8] to-[#FEF08A] border border-amber-300/70 p-5 rounded-2xl shadow-clay-sticky -rotate-2 hover:rotate-0 hover:scale-[1.02] transition-all duration-300 cursor-default">
+          <!-- Skeuomorphic Pushpin Highlight -->
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 w-7 h-7 rounded-full bg-gradient-to-br from-red-500 via-rose-600 to-amber-700 shadow-[0_4px_8px_rgba(0,0,0,0.25)] flex items-center justify-center border-2 border-white/80" aria-hidden="true">
+            <span class="w-2 h-2 rounded-full bg-white/80"></span>
           </div>
-          <div class="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-brand-coral text-brand-slate border-2 border-brand-slate shadow-brutal-slate-sm rounded-md font-mono text-[10px] sm:text-[11px] font-bold">
-            <span class="lang-en">SPRINT CAPACITY: ACTIVE</span>
-            <span class="lang-id">KAPASITAS SPRINT: AKTIF</span>
+
+          <div class="pt-1 flex flex-col gap-2.5">
+            <!-- Header with 3D checkmark pill icon -->
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-extrabold uppercase tracking-wider text-amber-900/80 bg-amber-200/80 px-2 py-0.5 rounded-md">
+                Sprint #28 • Priority
+              </span>
+              <div class="w-6 h-6 rounded-full bg-gradient-to-tr from-emerald-600 to-teal-400 text-white flex items-center justify-center shadow-[0_3px_8px_rgba(16,185,129,0.4)]" aria-label="Target completed">
+                <svg class="w-3.5 h-3.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 8.5l3 3 6-6"/></svg>
+              </div>
+            </div>
+
+            <!-- Content -->
+            <p class="font-semibold text-[15px] text-amber-950 leading-snug tracking-normal">
+              Sprint Goal: Deploy custom API architecture on time
+            </p>
+
+            <!-- Metadata & Checkmark status -->
+            <div class="flex items-center justify-between pt-1 border-t border-amber-200/60 text-[11px] font-medium text-amber-900/75">
+              <span>Canggu HQ Core Team</span>
+              <span class="inline-flex items-center gap-1 font-bold text-emerald-800">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+                On Schedule
+              </span>
+            </div>
           </div>
         </div>
+      </div>
 
-        <!-- Heavy Clash Display Executive Headline (Centered) -->
-        <h1 class="font-heading font-bold text-[32px] sm:text-[44px] md:text-[52px] lg:text-[58px] leading-[1.08] tracking-tight uppercase text-brand-slate max-w-[920px]">
+      <!-- 2. Top-Right: Minimalist Reminders Widget (Client Milestones) -->
+      <div class="hidden xl:block absolute top-10 right-8 2xl:top-14 2xl:right-12 max-w-[310px] 2xl:max-w-[330px] w-full z-20 animate-float-delayed transform-gpu-identity">
+        <div class="bg-white/95 backdrop-blur-md border border-slate-200/70 p-5 rounded-2xl shadow-soft-ambient rotate-1 hover:rotate-0 hover:scale-[1.02] transition-all duration-300 cursor-default">
+          <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+            <div class="flex items-center gap-2">
+              <div class="w-7 h-7 rounded-lg bg-blue-50 text-[#2563EB] flex items-center justify-center" aria-hidden="true">
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              </div>
+              <span class="font-semibold text-[14px] text-slate-900 tracking-normal">Client Milestones</span>
+            </div>
+            <span class="text-[10px] font-bold text-[#2563EB] bg-blue-50 px-2 py-0.5 rounded-full">Active Sprint</span>
+          </div>
+
+          <!-- Milestones List -->
+          <div class="flex flex-col gap-2.5 pt-3">
+            <div class="flex items-center justify-between text-xs">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                <span class="font-semibold text-slate-800">Client Strategy Session</span>
+              </div>
+              <span class="font-mono text-[10.5px] text-slate-400">09:30 AM</span>
+            </div>
+            <div class="flex items-center justify-between text-xs">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-[#2563EB] animate-pulse"></span>
+                <span class="font-semibold text-slate-800">VexaPOS Custom Rollout</span>
+              </div>
+              <span class="font-mono text-[10.5px] text-[#2563EB] font-bold">02:00 PM</span>
+            </div>
+            <div class="flex items-center justify-between text-xs">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-slate-300"></span>
+                <span class="font-medium text-slate-500">App Prototype Review</span>
+              </div>
+              <span class="font-mono text-[10.5px] text-slate-400">04:30 PM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Bottom-Left: "Today's Deliverables" Card -->
+      <div class="hidden xl:block absolute bottom-10 left-8 2xl:bottom-14 2xl:left-12 max-w-[320px] 2xl:max-w-[340px] w-full z-20 animate-float-reverse transform-gpu-identity">
+        <div class="bg-white/95 backdrop-blur-md border border-slate-200/70 p-5 rounded-2xl shadow-soft-ambient rotate-1 hover:rotate-0 hover:scale-[1.02] transition-all duration-300 cursor-default">
+          <div class="flex items-center justify-between pb-3">
+            <span class="font-semibold text-[14px] text-slate-900 tracking-normal">Today's Deliverables</span>
+            <span class="text-[11px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/50 px-2 py-0.5 rounded-full">
+              84% Completed
+            </span>
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <div class="flex items-center justify-between text-[11.5px] font-medium text-slate-600">
+              <span>Enterprise POS Engine &amp; Offline Sync</span>
+              <span class="font-bold text-[#111827]">21/25 Tasks</span>
+            </div>
+            <!-- Progress Bar -->
+            <div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+              <div class="h-full bg-gradient-to-r from-[#2563EB] to-indigo-500 rounded-full transition-all duration-1000" style="width: 84%"></div>
+            </div>
+          </div>
+
+          <!-- Team Avatars & Active presence -->
+          <div class="flex items-center justify-between pt-3.5 mt-2 border-t border-slate-100">
+            <div class="flex items-center -space-x-2">
+              <div class="w-7 h-7 rounded-full bg-gradient-to-tr from-blue-600 to-indigo-400 text-white font-bold text-[10px] flex items-center justify-center ring-2 ring-white" title="Alex — Tech Lead">AL</div>
+              <div class="w-7 h-7 rounded-full bg-gradient-to-tr from-emerald-600 to-teal-400 text-white font-bold text-[10px] flex items-center justify-center ring-2 ring-white" title="Wayan — Senior Backend">WY</div>
+              <div class="w-7 h-7 rounded-full bg-gradient-to-tr from-amber-600 to-orange-400 text-white font-bold text-[10px] flex items-center justify-center ring-2 ring-white" title="Siti — UI/UX">ST</div>
+              <div class="w-7 h-7 rounded-full bg-slate-800 text-white font-bold text-[9px] flex items-center justify-center ring-2 ring-white">+3</div>
+            </div>
+            <div class="flex items-center gap-1.5 text-[11px] font-semibold text-emerald-600">
+              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              All Systems Nominal
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Bottom-Right: "Tech Stack & Integrations" Floating Card -->
+      <div class="hidden xl:block absolute bottom-10 right-8 2xl:bottom-14 2xl:right-12 max-w-[320px] 2xl:max-w-[340px] w-full z-20 animate-float-slow transform-gpu-identity">
+        <div class="bg-white/95 backdrop-blur-md border border-slate-200/70 p-5 rounded-2xl shadow-soft-ambient -rotate-1 hover:rotate-0 hover:scale-[1.02] transition-all duration-300 cursor-default">
+          <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+            <span class="font-semibold text-[14px] text-slate-900 tracking-normal">Tech Stack &amp; Integrations</span>
+            <div class="flex items-center gap-1 text-[10px] font-bold text-slate-500 bg-slate-100 px-2 py-0.5 rounded-full">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+              Production
+            </div>
+          </div>
+
+          <!-- Dev Icons Grid (Laravel, React, PostgreSQL, Docker, Tailwind, AWS) -->
+          <div class="grid grid-cols-3 gap-2 pt-3">
+            <!-- Laravel -->
+            <div class="flex flex-col items-center gap-1 p-2 rounded-xl bg-slate-50/80 hover:bg-red-50/50 hover:border-red-200/60 border border-slate-100 transition-colors group">
+              <svg class="w-5 h-5 text-[#FF2D20] transition-transform group-hover:scale-110" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 2 7l10 5 10-5-10-5zm0 8.5L4 7v6.5l8 4.5 8-4.5V7l-8 3.5z"/></svg>
+              <span class="text-[10px] font-bold text-slate-700">Laravel</span>
+            </div>
+            <!-- React -->
+            <div class="flex flex-col items-center gap-1 p-2 rounded-xl bg-slate-50/80 hover:bg-cyan-50/50 hover:border-cyan-200/60 border border-slate-100 transition-colors group">
+              <svg class="w-5 h-5 text-[#06B6D4] transition-transform group-hover:scale-110" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="2.5" fill="currentColor"/><ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(30 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(90 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(150 12 12)"/></svg>
+              <span class="text-[10px] font-bold text-slate-700">React</span>
+            </div>
+            <!-- PostgreSQL -->
+            <div class="flex flex-col items-center gap-1 p-2 rounded-xl bg-slate-50/80 hover:bg-blue-50/50 hover:border-blue-200/60 border border-slate-100 transition-colors group">
+              <svg class="w-5 h-5 text-[#336791] transition-transform group-hover:scale-110" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+              <span class="text-[10px] font-bold text-slate-700">PostgreSQL</span>
+            </div>
+            <!-- Docker -->
+            <div class="flex flex-col items-center gap-1 p-2 rounded-xl bg-slate-50/80 hover:bg-sky-50/50 hover:border-sky-200/60 border border-slate-100 transition-colors group">
+              <svg class="w-5 h-5 text-[#2496ED] transition-transform group-hover:scale-110" viewBox="0 0 24 24" fill="currentColor"><path d="M22.5 11.5c-.3-.2-1.3-.2-1.9.2-.6-.9-1.6-1.5-2.8-1.5-.3 0-.6 0-.9.1C16.3 8.3 14.3 7 12 7c-.6 0-1.1.1-1.6.3-.4-.8-1.2-1.3-2.1-1.3-.3 0-.6 0-.9.1-.3-.7-1-1.1-1.8-1.1H4c-1.1 0-2 .9-2 2v7c0 3.3 2.7 6 6 6h8c3.3 0 6-2.7 6-6 0-.8-.2-1.6-.5-2.5.5-.3.8-.7 1-1.2.2-.6.1-1.1 0-1.3zM4 8h2v2H4V8zm3 0h2v2H7V8zm3 0h2v2h-2V8zm-6 3h2v2H4v-2zm3 0h2v2H7v-2zm3 0h2v2h-2v-2zm3 0h2v2h-2v-2z"/></svg>
+              <span class="text-[10px] font-bold text-slate-700">Docker</span>
+            </div>
+            <!-- Tailwind -->
+            <div class="flex flex-col items-center gap-1 p-2 rounded-xl bg-slate-50/80 hover:bg-teal-50/50 hover:border-teal-200/60 border border-slate-100 transition-colors group">
+              <svg class="w-5 h-5 text-[#06B6D4] transition-transform group-hover:scale-110" viewBox="0 0 24 24" fill="currentColor"><path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.335 6.182 14.974 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.335 13.382 8.974 12 6.001 12z"/></svg>
+              <span class="text-[10px] font-bold text-slate-700">Tailwind</span>
+            </div>
+            <!-- AWS -->
+            <div class="flex flex-col items-center gap-1 p-2 rounded-xl bg-slate-50/80 hover:bg-amber-50/50 hover:border-amber-200/60 border border-slate-100 transition-colors group">
+              <svg class="w-5 h-5 text-[#FF9900] transition-transform group-hover:scale-110" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+              <span class="text-[10px] font-bold text-slate-700">AWS Cloud</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ======================================================================
+           HERO CENTER: DISPLAY HEADING, 3D CUBE, SUBTITLE & CONVERSION CTA
+           ====================================================================== -->
+      <div class="relative z-10 max-w-[860px] mx-auto flex flex-col items-center text-center gap-6 sm:gap-7 my-auto py-6 sm:py-12 w-full">
+
+        <!-- Top Center: Floating 3D-styled Dice / Isometric Cube Icon -->
+        <div class="relative flex flex-col items-center group cursor-pointer animate-float-slow transform-gpu-identity" title="Extensia Creative Bali Digital Architecture Engine">
+          <div class="w-16 h-16 sm:w-20 sm:h-20 cube-ground-shadow transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-3">
+            <svg class="w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="3D Dice Cube Icon">
+              <defs>
+                <!-- Top Face Gradient -->
+                <linearGradient id="cubeTopGrad" x1="50" y1="12" x2="50" y2="48" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#93C5FD"/>
+                  <stop offset="100%" stop-color="#3B82F6"/>
+                </linearGradient>
+                <!-- Left Face Gradient -->
+                <linearGradient id="cubeLeftGrad" x1="16" y1="36" x2="50" y2="88" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#2563EB"/>
+                  <stop offset="100%" stop-color="#1D4ED8"/>
+                </linearGradient>
+                <!-- Right Face Gradient -->
+                <linearGradient id="cubeRightGrad" x1="50" y1="48" x2="84" y2="88" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#1E40AF"/>
+                  <stop offset="100%" stop-color="#172554"/>
+                </linearGradient>
+              </defs>
+
+              <!-- Top Face (Pip: 1 center) -->
+              <path d="M50 14 L84 31 L50 48 L16 31 Z" fill="url(#cubeTopGrad)" stroke="#DBEAFE" stroke-width="1.5" stroke-linejoin="round"/>
+              <circle cx="50" cy="31" r="3.6" fill="#FFFFFF" opacity="0.95"/>
+
+              <!-- Left Face (Pips: 3 diagonal) -->
+              <path d="M16 31 L50 48 L50 86 L16 69 Z" fill="url(#cubeLeftGrad)" stroke="#60A5FA" stroke-width="1.2" stroke-linejoin="round"/>
+              <circle cx="27" cy="44" r="3" fill="#FFFFFF" opacity="0.95"/>
+              <circle cx="33" cy="58" r="3" fill="#FFFFFF" opacity="0.95"/>
+              <circle cx="39" cy="72" r="3" fill="#FFFFFF" opacity="0.95"/>
+
+              <!-- Right Face (Pips: 2 diagonal) -->
+              <path d="M50 48 L84 31 L84 69 L50 86 Z" fill="url(#cubeRightGrad)" stroke="#3B82F6" stroke-width="1.2" stroke-linejoin="round"/>
+              <circle cx="62" cy="54" r="3" fill="#FFFFFF" opacity="0.95"/>
+              <circle cx="72" cy="66" r="3" fill="#FFFFFF" opacity="0.95"/>
+            </svg>
+          </div>
+          <!-- Subtle Floating Ground Shadow -->
+          <div class="w-12 sm:w-16 h-2 bg-blue-600/15 rounded-full blur-sm -mt-1 transition-transform group-hover:scale-90" aria-hidden="true"></div>
+        </div>
+
+        <!-- Headline (H1): Bold Centered Display Heading -->
+        <h1 class="font-bold sm:font-extrabold text-[32px] sm:text-[46px] md:text-[54px] lg:text-[60px] leading-[1.15] tracking-[-0.03em] text-[#0F172A] max-w-[840px]">
           <span class="lang-en">
-            HIGH-PERFORMANCE APPLICATION ARCHITECTURE &amp;<br class="hidden sm:inline" />
-            <span class="bg-brand-coral text-brand-slate px-3.5 py-1 inline-block border-2 border-brand-slate shadow-brutal-slate-sm -rotate-1 my-1">BUSINESS SYSTEMS</span> IN BALI
+            Transforming Bold Ideas into Scalable Software &amp; Digital Products
           </span>
           <span class="lang-id">
-            ARSITEKTUR APLIKASI BERKINERJA TINGGI &amp;<br class="hidden sm:inline" />
-            <span class="bg-brand-coral text-brand-slate px-3.5 py-1 inline-block border-2 border-brand-slate shadow-brutal-slate-sm -rotate-1 my-1">SISTEM BISNIS</span> DI BALI
+            Mentransformasi Ide Berani Menjadi Software Skalabel &amp; Produk Digital
           </span>
         </h1>
 
-        <!-- Executive B2B Subtitle (Centered) -->
-        <p class="font-body text-[14px] sm:text-[16px] md:text-[17.5px] text-brand-slate/85 font-medium leading-relaxed max-w-[760px] mx-auto">
+        <!-- Subheadline: Crisp Charcoal Typography -->
+        <p class="text-[15px] sm:text-[17px] md:text-[18.5px] text-slate-600 font-normal leading-relaxed max-w-[700px] mx-auto">
           <span class="lang-en">
-            We architect and engineer enterprise-grade custom software systems for Beach Clubs, Luxury Hospitality, and modern Retail in Bali. High-performance, offline-ready, and seamlessly integrated with your operational ecosystem.
+            Software house &amp; creative digital agency based in Bali. We design and engineer web platforms, mobile apps, and enterprise POS systems.
           </span>
           <span class="lang-id">
-            Kami merancang dan membangun arsitektur perangkat lunak kustom kelas enterprise untuk Beach Club, Luxury Hospitality, dan Ritel modern di Bali. Berkinerja tinggi, offline-ready, dan terintegrasi penuh dengan ekosistem operasional Anda.
+            Software house &amp; studio digital kreatif berbasis di Bali. Kami merancang dan merekayasa platform web, aplikasi mobile, dan sistem POS enterprise.
           </span>
         </p>
 
-        <!-- Executive Conversion CTA & Trust Badges (Centered) -->
+        <!-- Main CTA Button & Trust Badges -->
         <div class="flex flex-col items-center justify-center gap-4 pt-2 w-full">
-          <a href="https://wa.me/6285338000872?text=Halo%20Extensia%20Bali,%20saya%20tertarik%20konsultasi%20arsitektur%20aplikasi" target="_blank" rel="noopener" class="flex w-full max-w-[640px] items-center justify-center gap-3 font-heading font-bold text-[14px] sm:text-[17px] uppercase px-8 sm:px-10 py-4 sm:py-5 bg-brand-coral text-brand-slate border-2 border-brand-slate shadow-brutal-slate rounded-xl hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none active:translate-x-[4px] active:translate-y-[4px] transition-all cursor-pointer">
-            <span class="lang-en">SCHEDULE ARCHITECTURE CONSULTATION</span>
-            <span class="lang-id">JADWALKAN KONSULTASI ARSITEKTUR</span>
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2.5 8h10M9.5 4 13.5 8 9.5 12" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <!-- Vibrant Cobalt Blue Button with Soft Blue Elevation Shadow -->
+          <a href="https://wa.me/6285338000872?text=Halo%20Extensia%20Bali,%20saya%20tertarik%20mulai%20konsultasi%20gratis" target="_blank" rel="noopener" class="group inline-flex items-center justify-center gap-3 px-8 sm:px-10 py-4 sm:py-4.5 bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-semibold text-[15px] sm:text-[17px] rounded-full shadow-[0_14px_32px_-6px_rgba(37,99,235,0.42)] hover:shadow-[0_20px_42px_-6px_rgba(37,99,235,0.52)] hover:-translate-y-0.5 active:translate-y-0 transition-all cursor-pointer">
+            <span class="lang-en">Mulai Konsultasi Gratis</span>
+            <span class="lang-id">Mulai Konsultasi Gratis</span>
+            <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
           </a>
 
-          <!-- Enterprise Trust Metrics Badges -->
-          <div class="flex flex-wrap items-center justify-center gap-2 font-mono text-[11px] sm:text-[12px] font-bold text-brand-slate">
-            <span class="px-3.5 py-1.5 bg-brand-mist border-2 border-brand-slate shadow-brutal-slate-sm rounded-lg">
-              <span class="lang-en">50+ Deployed Systems</span>
-              <span class="lang-id">50+ Sistem Beroperasi</span>
+          <!-- Subtle Trust Badge & SLA Metrics -->
+          <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-[12px] sm:text-[13px] font-medium text-slate-500 pt-1">
+            <span class="inline-flex items-center gap-1.5 text-slate-800 font-semibold bg-white/80 border border-slate-200/60 px-3 py-1 rounded-full shadow-sm">
+              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true"></span>
+              Respon Cepat &lt; 15 Menit
             </span>
-            <span class="px-3.5 py-1.5 bg-brand-mist border-2 border-brand-slate shadow-brutal-slate-sm rounded-lg">
-              <span class="lang-en">99.9% Production SLA</span>
-              <span class="lang-id">SLA Produksi 99.9%</span>
+            <span class="text-slate-300 hidden sm:inline">•</span>
+            <span class="inline-flex items-center gap-1.5 text-slate-700 bg-white/80 border border-slate-200/60 px-3 py-1 rounded-full shadow-sm">
+              50+ Sistem Beroperasi
             </span>
-            <span class="px-3.5 py-1.5 bg-brand-mist border-2 border-brand-slate shadow-brutal-slate-sm rounded-lg">
-              <span class="lang-en">Zero Vendor Lock-in</span>
-              <span class="lang-id">Bebas Keterikatan Vendor</span>
+            <span class="text-slate-300 hidden sm:inline">•</span>
+            <span class="inline-flex items-center gap-1.5 text-slate-700 bg-white/80 border border-slate-200/60 px-3 py-1 rounded-full shadow-sm">
+              Garansi SLA 99.9%
             </span>
           </div>
         </div>
       </div>
+
+      <!-- ======================================================================
+           RESPONSIVE GRACEFUL DEGRADATION: WIDGET GRID ON MOBILE & TABLET (< XL)
+           ====================================================================== -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 xl:hidden w-full max-w-4xl mx-auto">
+        <!-- 1. Mobile/Tablet Yellow Sticky Note -->
+        <div class="bg-gradient-to-b from-[#FEFCE8] to-[#FEF08A] border border-amber-300/70 p-4 sm:p-5 rounded-2xl shadow-clay-sticky">
+          <div class="flex items-center justify-between pb-2">
+            <span class="text-[10px] font-extrabold uppercase tracking-wider text-amber-900/80 bg-amber-200/80 px-2 py-0.5 rounded-md">
+              Sprint #28 • Canggu HQ
+            </span>
+            <div class="w-6 h-6 rounded-full bg-emerald-600 text-white flex items-center justify-center shadow-sm">
+              <svg class="w-3.5 h-3.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 8.5l3 3 6-6"/></svg>
+            </div>
+          </div>
+          <p class="font-semibold text-[14px] sm:text-[15px] text-amber-950 tracking-normal">
+            Sprint Goal: Deploy custom API architecture on time
+          </p>
+        </div>
+
+        <!-- 2. Mobile/Tablet Milestone Reminders -->
+        <div class="bg-white/95 border border-slate-200/70 p-4 sm:p-5 rounded-2xl shadow-soft-ambient">
+          <div class="flex items-center justify-between pb-2 border-b border-slate-100">
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-[#2563EB]"></span>
+              <span class="font-semibold text-[13px] text-slate-900 tracking-normal">Client Milestones</span>
+            </div>
+            <span class="text-[10px] font-bold text-[#2563EB] bg-blue-50 px-2 py-0.5 rounded-full">3 Active</span>
+          </div>
+          <div class="flex flex-col gap-1.5 pt-2 text-xs">
+            <div class="flex items-center justify-between text-slate-700">
+              <span>Client Strategy Session</span>
+              <span class="text-emerald-600 font-bold">Done</span>
+            </div>
+            <div class="flex items-center justify-between text-slate-700">
+              <span>VexaPOS Custom Rollout</span>
+              <span class="text-[#2563EB] font-bold">02:00 PM</span>
+            </div>
+            <div class="flex items-center justify-between text-slate-500">
+              <span>App Prototype Review</span>
+              <span class="text-slate-400">04:30 PM</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Mobile/Tablet Deliverables Card -->
+        <div class="bg-white/95 border border-slate-200/70 p-4 sm:p-5 rounded-2xl shadow-soft-ambient">
+          <div class="flex items-center justify-between pb-2">
+            <span class="font-semibold text-[13px] text-slate-900 tracking-normal">Today's Deliverables</span>
+            <span class="text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full">84% Done</span>
+          </div>
+          <div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden mb-2">
+            <div class="h-full bg-[#2563EB] rounded-full" style="width: 84%"></div>
+          </div>
+          <div class="flex items-center justify-between text-xs text-slate-600">
+            <span>Enterprise POS Engine</span>
+            <span class="font-semibold text-emerald-600">All Systems Nominal</span>
+          </div>
+        </div>
+
+        <!-- 4. Mobile/Tablet Tech Stack Card -->
+        <div class="bg-white/95 border border-slate-200/70 p-4 sm:p-5 rounded-2xl shadow-soft-ambient">
+          <div class="flex items-center justify-between pb-2 border-b border-slate-100">
+            <span class="font-semibold text-[13px] text-slate-900 tracking-normal">Tech Stack &amp; Integrations</span>
+            <span class="text-[10px] font-bold text-emerald-600">Active</span>
+          </div>
+          <div class="flex flex-wrap gap-1.5 pt-2">
+            <span class="text-[11px] font-bold text-slate-700 bg-slate-100 px-2.5 py-1 rounded-lg">Laravel</span>
+            <span class="text-[11px] font-bold text-slate-700 bg-slate-100 px-2.5 py-1 rounded-lg">React</span>
+            <span class="text-[11px] font-bold text-slate-700 bg-slate-100 px-2.5 py-1 rounded-lg">PostgreSQL</span>
+            <span class="text-[11px] font-bold text-slate-700 bg-slate-100 px-2.5 py-1 rounded-lg">Docker</span>
+            <span class="text-[11px] font-bold text-slate-700 bg-slate-100 px-2.5 py-1 rounded-lg">Tailwind</span>
+            <span class="text-[11px] font-bold text-slate-700 bg-slate-100 px-2.5 py-1 rounded-lg">AWS</span>
+          </div>
+        </div>
+      </div>
+
     </section>
 
     <!-- ========================================================================
-         STUDIO MATRIX SECTION: CAPABILITIES, STANDARDS, SPRINT & DIRECT CONTACT
+         STUDIO MATRIX SECTION: TECHNICAL ARCHITECTURE & SPRINT ROADMAP (BENTO GRID)
          ======================================================================== -->
-    <section id="capabilities" aria-labelledby="capabilities-title" class="p-6 sm:p-10 lg:p-12 bg-brand-mist border-2 border-brand-slate shadow-brutal-slate rounded-xl flex flex-col gap-8 scroll-mt-24">
+    <section id="capabilities" aria-labelledby="capabilities-title" class="p-6 sm:p-10 lg:p-14 bg-[#F8FAFC] border border-slate-200/70 shadow-sm rounded-3xl flex flex-col gap-10 scroll-mt-24">
       <!-- Section Header -->
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
-        <div class="flex flex-col gap-2 max-w-[900px]">
+        <div class="flex flex-col gap-3 max-w-[840px]">
           <div class="flex flex-wrap items-center gap-2">
-            <span class="font-mono text-[10px] sm:text-[11px] font-bold bg-brand-coral text-brand-slate px-2.5 py-1 border-2 border-brand-slate shadow-brutal-slate-sm rounded-md uppercase">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-blue-50 text-[#2563EB] border border-blue-100/80 rounded-full text-xs font-semibold tracking-wide">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#2563EB]"></span>
               <span class="lang-en">ENGINEERING MATRIX</span>
-              <span class="lang-id">MATRIKS REKAYASA SISTEM</span>
+              <span class="lang-id">MATRIKS REKAYASA</span>
             </span>
-            <span class="font-mono text-[10px] sm:text-[11px] font-bold bg-brand-steel text-brand-slate px-2.5 py-1 border-2 border-brand-slate shadow-brutal-slate-sm rounded-md uppercase">
-              <span class="lang-en">ENTERPRISE GOVERNANCE &amp; METHODOLOGY</span>
-              <span class="lang-id">TATA KELOLA ENTERPRISE &amp; METODOLOGI</span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-50 text-emerald-700 border border-emerald-100/80 rounded-full text-xs font-semibold tracking-wide">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+              <span class="lang-en">ENTERPRISE METHODOLOGY</span>
+              <span class="lang-id">METODOLOGI ENTERPRISE</span>
             </span>
           </div>
-          <h2 id="capabilities-title" class="font-heading font-bold text-[24px] sm:text-[30px] md:text-[34px] leading-tight uppercase text-brand-slate">
-            <span class="lang-en">TECHNICAL ARCHITECTURE, QUALITY STANDARDS &amp; SPRINT ROADMAP</span>
-            <span class="lang-id">ARSITEKTUR TEKNIS, STANDAR KUALITAS &amp; SPRINT ROADMAP</span>
+          <h2 id="capabilities-title" class="font-bold text-2xl sm:text-3xl md:text-4xl leading-tight text-[#0F172A] tracking-[-0.02em]">
+            <span class="lang-en">Technical Architecture, Quality Standards &amp; Sprint Roadmap</span>
+            <span class="lang-id">Arsitektur Teknis, Standar Kualitas &amp; Sprint Roadmap</span>
           </h2>
-          <p class="font-body text-[13px] sm:text-[15px] text-brand-slate/80 font-medium">
-            <span class="lang-en">Our modern software engineering foundation delivering high-performance, secure, and scalable systems for enterprises in Bali.</span>
+          <p class="text-sm sm:text-base text-slate-600 font-normal leading-relaxed">
+            <span class="lang-en">Our modern software engineering foundation delivering high-performance, secure, and scalable systems for enterprises and growing businesses in Bali.</span>
             <span class="lang-id">Fondasi rekayasa perangkat lunak modern kami untuk menghadirkan sistem berkinerja tinggi, aman, dan terukur bagi bisnis di Bali.</span>
           </p>
         </div>
       </div>
 
-      <!-- 3 Symmetrical Cards Grid -->
-      <div class="grid grid-cols-1 xl:grid-cols-3 gap-6 items-stretch">
+      <!-- Modern Airy Bento Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
 
-        <!-- Card 1: ARSITEKTUR & KAPABILITAS TEKNIS -->
-        <div class="bg-brand-steel border-2 border-brand-slate shadow-brutal-slate rounded-xl p-5 sm:p-6 flex flex-col gap-5 min-w-0">
+        <!-- Bento Card 1: Technical Architecture & Core Capabilities (Col span 7) -->
+        <div class="lg:col-span-7 bg-white border border-slate-200/75 rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between gap-6">
           <div class="flex flex-col gap-2">
-            <div class="flex flex-col items-start gap-3">
-              <h3 class="font-heading font-bold text-[15px] sm:text-[16px] uppercase tracking-wide text-brand-slate">
-                <span class="lang-en">TECHNICAL ARCHITECTURE &amp; CAPABILITIES</span>
-                <span class="lang-id">ARSITEKTUR &amp; KAPABILITAS TEKNIS</span>
-              </h3>
-              <span class="font-mono text-[9px] sm:text-[10px] font-bold bg-brand-coral text-brand-slate px-2 py-0.5 border border-brand-slate rounded">
-                <span class="lang-en">ENGINEERING</span>
-                <span class="lang-id">REKAYASA</span>
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-base sm:text-lg text-[#0F172A] tracking-[-0.01em]">
+                <span class="lang-en">Technical Architecture &amp; Capabilities</span>
+                <span class="lang-id">Arsitektur &amp; Kapabilitas Teknis</span>
               </span>
+              <span class="text-xs font-semibold tracking-wide bg-blue-50 text-[#2563EB] px-2.5 py-1 rounded-full">Engineering Core</span>
             </div>
-            <p class="font-body text-[13px] text-brand-slate/80 font-medium leading-relaxed">
-              <span class="lang-en">Modern software engineering standards for enterprise scalability and operational reliability in Bali.</span>
-              <span class="lang-id">Standar rekayasa perangkat lunak modern untuk skalabilitas dan keandalan operasional bisnis di Bali.</span>
+            <p class="text-xs sm:text-sm text-slate-500 leading-relaxed">
+              <span class="lang-en">Modern software engineering standards optimized for high throughput, data integrity, and operational reliability.</span>
+              <span class="lang-id">Standar rekayasa perangkat lunak modern yang dioptimalkan untuk skalabilitas dan keandalan operasional bisnis.</span>
             </p>
           </div>
 
-          <!-- 4 Discrete Engineering Modules (2x2 grid) -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-auto">
+          <!-- 4 Discrete Engineering Modules (2x2 Grid) -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mt-auto">
             <!-- Module 1 -->
-            <div class="bg-brand-mist border-2 border-brand-slate shadow-brutal-slate-sm rounded-lg p-4 flex flex-col gap-2">
-              <span class="w-7 h-7 rounded bg-brand-slate border border-brand-slate flex items-center justify-center text-white" aria-hidden="true">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M7 18a4.5 4.5 0 1 1 .8-8.9A5.5 5.5 0 0 1 18.6 10H19a3.5 3.5 0 0 1-.5 7H7Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg>
-              </span>
-              <h4 class="font-heading font-bold text-[13px] uppercase text-brand-slate leading-snug">Cloud REST &amp; GraphQL</h4>
-              <p class="font-body text-[12px] text-brand-slate/70 leading-relaxed">Microservices &amp; PostgreSQL.</p>
+            <div class="bg-slate-50/80 hover:bg-blue-50/40 border border-slate-200/60 rounded-xl p-4 flex flex-col gap-2 transition-colors">
+              <div class="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center shadow-sm">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18a4.5 4.5 0 1 1 .8-8.9A5.5 5.5 0 0 1 18.6 10H19a3.5 3.5 0 0 1-.5 7H7Z"/></svg>
+              </div>
+              <h4 class="font-semibold text-sm text-slate-900 tracking-normal">Cloud REST &amp; GraphQL</h4>
+              <p class="text-xs text-slate-500 leading-relaxed">High-concurrency microservices, PostgreSQL indexing &amp; redis caching.</p>
             </div>
 
             <!-- Module 2 -->
-            <div class="bg-brand-mist border-2 border-brand-slate shadow-brutal-slate-sm rounded-lg p-4 flex flex-col gap-2">
-              <span class="w-7 h-7 rounded bg-brand-coral border border-brand-slate flex items-center justify-center text-brand-slate" aria-hidden="true">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M2.5 9a15 15 0 0 1 19 0M5.5 12.5a10.5 10.5 0 0 1 13 0M8.6 16a6 6 0 0 1 6.8 0" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><circle cx="12" cy="19" r="1.6" fill="currentColor"/><path d="m3.5 3.5 17 17" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
-              </span>
-              <h4 class="font-heading font-bold text-[13px] uppercase text-brand-slate leading-snug">Offline-First Mobile</h4>
-              <p class="font-body text-[12px] text-brand-slate/70 leading-relaxed">
-                <span class="lang-en">PWA &amp; Native cache sync.</span>
-                <span class="lang-id">Sinkronisasi cache PWA &amp; Native.</span>
+            <div class="bg-slate-50/80 hover:bg-emerald-50/40 border border-slate-200/60 rounded-xl p-4 flex flex-col gap-2 transition-colors">
+              <div class="w-8 h-8 rounded-lg bg-emerald-600 text-white flex items-center justify-center shadow-sm">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 9a15 15 0 0 1 19 0M5.5 12.5a10.5 10.5 0 0 1 13 0M8.6 16a6 6 0 0 1 6.8 0"/><circle cx="12" cy="19" r="1.6" fill="currentColor"/></svg>
+              </div>
+              <h4 class="font-semibold text-sm text-slate-900 tracking-normal">Offline-First Sync</h4>
+              <p class="text-xs text-slate-500 leading-relaxed">
+                <span class="lang-en">PWA &amp; Native local cache engine for uninterrupted connectivity.</span>
+                <span class="lang-id">Sinkronisasi cache lokal PWA &amp; Native tanpa ketergantungan sinyal.</span>
               </p>
             </div>
 
             <!-- Module 3 -->
-            <div class="bg-brand-mist border-2 border-brand-slate shadow-brutal-slate-sm rounded-lg p-4 flex flex-col gap-2">
-              <span class="w-7 h-7 rounded bg-brand-steel border border-brand-slate flex items-center justify-center text-brand-slate" aria-hidden="true">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M4 9h16v2.5H4zM6 11.5V19h12v-7.5M9.5 15.5h5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </span>
-              <h4 class="font-heading font-bold text-[13px] uppercase text-brand-slate leading-snug">POS &amp; Payment Gateway</h4>
-              <p class="font-body text-[12px] text-brand-slate/70 leading-relaxed">
-                <span class="lang-en">QRIS &amp; multi-terminal sync.</span>
-                <span class="lang-id">Sinkronisasi QRIS &amp; multi-terminal.</span>
+            <div class="bg-slate-50/80 hover:bg-indigo-50/40 border border-slate-200/60 rounded-xl p-4 flex flex-col gap-2 transition-colors">
+              <div class="w-8 h-8 rounded-lg bg-indigo-600 text-white flex items-center justify-center shadow-sm">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h16v2.5H4zM6 11.5V19h12v-7.5M9.5 15.5h5"/></svg>
+              </div>
+              <h4 class="font-semibold text-sm text-slate-900 tracking-normal">POS &amp; Payments</h4>
+              <p class="text-xs text-slate-500 leading-relaxed">
+                <span class="lang-en">QRIS dynamic settlement, EDC integration &amp; multi-terminal sync.</span>
+                <span class="lang-id">Settlement dinamis QRIS, integrasi EDC &amp; multi-terminal instan.</span>
               </p>
             </div>
 
             <!-- Module 4 -->
-            <div class="bg-brand-mist border-2 border-brand-slate shadow-brutal-slate-sm rounded-lg p-4 flex flex-col gap-2">
-              <span class="w-7 h-7 rounded bg-brand-slate border border-brand-slate flex items-center justify-center text-white" aria-hidden="true">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M14.5 6.5a4 4 0 0 0-5.6 5L4 16.4V20h3.6l4.9-4.9a4 4 0 0 0 5-5.6l-2.7 2.7-2.1-.7-.7-2.1 2.5-2.9Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
-              </span>
-              <h4 class="font-heading font-bold text-[13px] uppercase text-brand-slate leading-snug">On-Site Deployment &amp; SLA</h4>
-              <p class="font-body text-[12px] text-brand-slate/70 leading-relaxed">
-                <span class="lang-en">Local Bali engineers on-site.</span>
-                <span class="lang-id">Teknisi lokal on-site di Bali.</span>
+            <div class="bg-slate-50/80 hover:bg-amber-50/40 border border-slate-200/60 rounded-xl p-4 flex flex-col gap-2 transition-colors">
+              <div class="w-8 h-8 rounded-lg bg-amber-600 text-white flex items-center justify-center shadow-sm">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 6.5a4 4 0 0 0-5.6 5L4 16.4V20h3.6l4.9-4.9a4 4 0 0 0 5-5.6l-2.7 2.7-2.1-.7-.7-2.1 2.5-2.9Z"/></svg>
+              </div>
+              <h4 class="font-semibold text-sm text-slate-900 tracking-normal">On-Site Bali SLA</h4>
+              <p class="text-xs text-slate-500 leading-relaxed">
+                <span class="lang-en">Local Bali senior tech leads for instant on-site venue deployment.</span>
+                <span class="lang-id">Teknisi senior lokal di Bali siap hadir on-site kapan pun dibutuhkan.</span>
               </p>
             </div>
           </div>
         </div>
 
-        <!-- Card 2: STANDAR KUALITAS ENTERPRISE -->
-        <div id="standards" class="bg-brand-steel border-2 border-brand-slate shadow-brutal-slate rounded-xl p-5 sm:p-6 flex flex-col gap-5 min-w-0">
+        <!-- Bento Card 2: Enterprise Quality & Security (Col span 5) -->
+        <div id="standards" class="lg:col-span-5 bg-white border border-slate-200/75 rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between gap-6 scroll-mt-24">
           <div class="flex flex-col gap-2">
-            <div class="flex flex-col items-start gap-3">
-              <h3 class="font-heading font-bold text-[15px] sm:text-[16px] uppercase tracking-wide text-brand-slate">
-                <span class="lang-en">ENTERPRISE QUALITY STANDARDS</span>
-                <span class="lang-id">STANDAR KUALITAS ENTERPRISE</span>
-              </h3>
-              <span class="font-mono text-[9px] sm:text-[10px] font-bold bg-brand-teal text-brand-slate px-2 py-0.5 border border-brand-slate rounded">
-                <span class="lang-en">SECURITY</span>
-                <span class="lang-id">KEAMANAN</span>
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-base sm:text-lg text-[#0F172A] tracking-[-0.01em]">
+                <span class="lang-en">Enterprise Standards</span>
+                <span class="lang-id">Standar Kualitas</span>
               </span>
+              <span class="text-xs font-semibold tracking-wide bg-emerald-50 text-emerald-700 px-2.5 py-1 rounded-full">Bank-Grade SLA</span>
             </div>
-            <p class="font-body text-[13px] text-brand-slate/80 font-medium leading-relaxed">
-              <span class="lang-en">Enterprise governance compliance, bank-grade data security, and uncompromised performance guarantee.</span>
-              <span class="lang-id">Jaminan kepatuhan tata kelola, keamanan data tingkat bank, dan performa tinggi tanpa kompromi.</span>
+            <p class="text-xs sm:text-sm text-slate-500 leading-relaxed">
+              <span class="lang-en">Security, governance compliance, and rock-solid uptime guarantees.</span>
+              <span class="lang-id">Kepatuhan tata kelola, keamanan data terenkripsi, dan garansi uptime.</span>
             </p>
           </div>
 
-          <!-- 4 Governance Pillars (2x2 grid) -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-auto">
+          <!-- 4 Pillars List -->
+          <div class="flex flex-col gap-3 mt-auto">
             <!-- Pillar 1 -->
-            <div class="bg-brand-mist border-2 border-brand-slate shadow-brutal-slate-sm rounded-lg p-4 flex flex-col gap-2">
-              <span class="w-7 h-7 rounded bg-brand-slate border border-brand-slate flex items-center justify-center text-white" aria-hidden="true">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 3 4 6.5v5c0 5 3.4 8.3 8 9.5 4.6-1.2 8-4.5 8-9.5v-5L12 3Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="m9 12 2 2 4-4.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </span>
-              <h4 class="font-heading font-bold text-[13px] uppercase text-brand-slate leading-snug">
-                <span class="lang-en">99.9% Uptime Guarantee</span>
-                <span class="lang-id">Garansi 99.9% Uptime</span>
-              </h4>
-              <p class="font-body text-[12px] text-brand-slate/70 leading-relaxed">
-                <span class="lang-en">Redundant cloud infrastructure.</span>
-                <span class="lang-id">Infrastruktur cloud redundan.</span>
-              </p>
+            <div class="flex items-center justify-between p-3.5 rounded-xl bg-slate-50 border border-slate-200/60">
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6.5v5c0 5 3.4 8.3 8 9.5 4.6-1.2 8-4.5 8-9.5v-5L12 3Z"/><path d="m9 12 2 2 4-4.5"/></svg>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-xs sm:text-sm text-slate-900 tracking-normal">99.9% Uptime Guarantee</h4>
+                  <p class="text-[11px] text-slate-500">Redundant cloud infrastructure (DPS-01)</p>
+                </div>
+              </div>
+              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
             </div>
 
             <!-- Pillar 2 -->
-            <div class="bg-brand-mist border-2 border-brand-slate shadow-brutal-slate-sm rounded-lg p-4 flex flex-col gap-2">
-              <span class="w-7 h-7 rounded bg-brand-coral border border-brand-slate flex items-center justify-center text-brand-slate" aria-hidden="true">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="m8 8-4.5 4L8 16M16 8l4.5 4L16 16M13.5 5l-3 14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </span>
-              <h4 class="font-heading font-bold text-[13px] uppercase text-brand-slate leading-snug">
-                <span class="lang-en">Full Code &amp; IP Ownership</span>
-                <span class="lang-id">Kepemilikan Penuh Kode &amp; IP</span>
-              </h4>
-              <p class="font-body text-[12px] text-brand-slate/70 leading-relaxed">
-                <span class="lang-en">100% client intellectual property.</span>
-                <span class="lang-id">100% hak cipta milik klien.</span>
-              </p>
+            <div class="flex items-center justify-between p-3.5 rounded-xl bg-slate-50 border border-slate-200/60">
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-blue-100 text-[#2563EB] flex items-center justify-center">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 8-4.5 4L8 16M16 8l4.5 4L16 16M13.5 5l-3 14"/></svg>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-xs sm:text-sm text-slate-900 tracking-normal">Full Code &amp; IP Ownership</h4>
+                  <p class="text-[11px] text-slate-500">100% intellectual property, zero lock-in</p>
+                </div>
+              </div>
+              <span class="text-xs font-bold text-blue-600">Clean</span>
             </div>
 
             <!-- Pillar 3 -->
-            <div class="bg-brand-mist border-2 border-brand-slate shadow-brutal-slate-sm rounded-lg p-4 flex flex-col gap-2">
-              <span class="w-7 h-7 rounded bg-brand-slate border border-brand-slate flex items-center justify-center text-brand-steel" aria-hidden="true">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><rect x="5" y="10" width="14" height="10" rx="2" stroke="currentColor" stroke-width="2.2"/><path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="2.2"/><circle cx="12" cy="15" r="1.5" fill="currentColor"/></svg>
-              </span>
-              <h4 class="font-heading font-bold text-[13px] uppercase text-brand-slate leading-snug">
-                <span class="lang-en">Bank-Grade Encryption</span>
-                <span class="lang-id">Enkripsi Tingkat Bank</span>
-              </h4>
-              <p class="font-body text-[12px] text-brand-slate/70 leading-relaxed">
-                <span class="lang-en">TLS 1.3 &amp; AES-256 protection.</span>
-                <span class="lang-id">TLS 1.3 &amp; proteksi AES-256.</span>
-              </p>
+            <div class="flex items-center justify-between p-3.5 rounded-xl bg-slate-50 border border-slate-200/60">
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-purple-100 text-purple-700 flex items-center justify-center">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-xs sm:text-sm text-slate-900 tracking-normal">Bank-Grade Encryption</h4>
+                  <p class="text-[11px] text-slate-500">TLS 1.3 &amp; AES-256 data protection</p>
+                </div>
+              </div>
+              <span class="text-xs font-bold text-purple-600">Vault</span>
             </div>
 
             <!-- Pillar 4 -->
-            <div class="bg-brand-mist border-2 border-brand-slate shadow-brutal-slate-sm rounded-lg p-4 flex flex-col gap-2">
-              <span class="w-7 h-7 rounded bg-brand-steel border border-brand-slate flex items-center justify-center text-brand-slate" aria-hidden="true">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M3 12h4l2.5-6 4 12L16 12h5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </span>
-              <h4 class="font-heading font-bold text-[13px] uppercase text-brand-slate leading-snug">
-                <span class="lang-en">24/7 Incident Response</span>
-                <span class="lang-id">Respon Insiden 24/7</span>
-              </h4>
-              <p class="font-body text-[12px] text-brand-slate/70 leading-relaxed">
-                <span class="lang-en">Proactive monitoring &amp; standby.</span>
-                <span class="lang-id">Monitoring proaktif &amp; siaga.</span>
-              </p>
+            <div class="flex items-center justify-between p-3.5 rounded-xl bg-slate-50 border border-slate-200/60">
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-xs sm:text-sm text-slate-900 tracking-normal">24/7 Incident Standby</h4>
+                  <p class="text-[11px] text-slate-500">Rapid triage &amp; automated patch alerts</p>
+                </div>
+              </div>
+              <span class="text-xs font-bold text-amber-600">24/7</span>
             </div>
           </div>
         </div>
 
-        <!-- Card 3: METHODOLOGY & SPRINT ROADMAP -->
-        <div id="methodology" class="bg-brand-steel border-2 border-brand-slate shadow-brutal-slate rounded-xl p-5 sm:p-6 flex flex-col gap-5 min-w-0 scroll-mt-24">
-          <div class="flex flex-col gap-2">
-            <div class="flex flex-col items-start gap-3">
-              <h3 class="font-heading font-bold text-[15px] sm:text-[16px] uppercase tracking-wide text-brand-slate">
-                <span class="lang-en">METHODOLOGY &amp; SPRINT ROADMAP</span>
-                <span class="lang-id">METODOLOGI &amp; SPRINT ROADMAP</span>
+        <!-- Bento Card 3: 4-Stage Agile Sprint Lifecycle (Col span 12) -->
+        <div id="methodology" class="lg:col-span-12 bg-white border border-slate-200/75 rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col gap-6 scroll-mt-24">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-slate-100">
+            <div>
+              <h3 class="font-bold text-lg text-[#0F172A] tracking-[-0.01em]">
+                <span class="lang-en">4-Stage Agile Sprint Roadmap</span>
+                <span class="lang-id">Roadmap Sprint Agile 4 Tahap</span>
               </h3>
-              <span class="font-mono text-[9px] sm:text-[10px] font-bold bg-brand-gold text-brand-slate px-2 py-0.5 border border-brand-slate rounded">
-                <span class="lang-en">4-STAGE SPRINT</span>
-                <span class="lang-id">SPRINT 4 TAHAP</span>
-              </span>
+              <p class="text-xs sm:text-sm text-slate-500">From technical discovery to continuous active deployment.</p>
             </div>
-            <p class="font-body text-[13px] text-brand-slate/80 font-medium leading-relaxed">
-              <span class="lang-en">Structured agile engineering lifecycle from technical blueprint to active production rollout.</span>
-              <span class="lang-id">Siklus rekayasa tangkas terstruktur dari konsepsi teknis hingga produksi aktif.</span>
-            </p>
+            <span class="self-start sm:self-auto text-xs font-semibold tracking-wide bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full border border-indigo-100/70">
+              Bi-Weekly Sprints
+            </span>
           </div>
 
-          <!-- 4 Structured Milestones (2x2 grid) -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-auto">
-            <!-- Milestone 01 -->
-            <div class="bg-brand-mist border-2 border-brand-slate shadow-brutal-slate-sm rounded-lg p-4 flex flex-col gap-2 relative">
-              <div class="flex items-center gap-2">
-                <span class="w-5 h-5 rounded bg-brand-slate border border-brand-slate font-mono font-bold text-[9px] flex items-center justify-center text-white">01</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 3h9l4 4v14H6V3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M14 3v5h5" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          <!-- 4 Step Cards -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <!-- Step 1 -->
+            <div class="bg-slate-50/80 border border-slate-200/60 rounded-xl p-5 flex flex-col gap-3 relative group hover:bg-white hover:shadow-md transition-all">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-mono font-extrabold px-2.5 py-1 rounded-md bg-slate-900 text-white">STAGE 01</span>
+                <span class="text-xs font-semibold text-slate-400">Week 1–2</span>
               </div>
-              <h4 class="font-heading font-bold text-[13px] uppercase text-brand-slate leading-snug">Discovery &amp; Blueprint</h4>
-              <p class="font-body text-[12px] text-brand-slate/70 leading-relaxed">
-                <span class="lang-en">Architecture, DB schema &amp; PRD.</span>
-                <span class="lang-id">Arsitektur, skema DB &amp; PRD.</span>
+              <h4 class="font-semibold text-sm text-slate-900 tracking-normal">Discovery &amp; Blueprint</h4>
+              <p class="text-xs text-slate-500 leading-relaxed">
+                System architecture design, PostgreSQL schema modeling, API contract &amp; PRD documentation.
               </p>
             </div>
 
-            <!-- Milestone 02 -->
-            <div class="bg-brand-mist border-2 border-brand-slate shadow-brutal-slate-sm rounded-lg p-4 flex flex-col gap-2 relative">
-              <div class="flex items-center gap-2">
-                <span class="w-5 h-5 rounded bg-brand-coral border border-brand-slate font-mono font-bold text-[9px] flex items-center justify-center text-brand-slate">02</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m12 19 7-7a2.1 2.1 0 0 0-3-3l-7 7-2 5 5-2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+            <!-- Step 2 -->
+            <div class="bg-slate-50/80 border border-slate-200/60 rounded-xl p-5 flex flex-col gap-3 relative group hover:bg-white hover:shadow-md transition-all">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-mono font-extrabold px-2.5 py-1 rounded-md bg-[#2563EB] text-white">STAGE 02</span>
+                <span class="text-xs font-semibold text-slate-400">Week 3–4</span>
               </div>
-              <h4 class="font-heading font-bold text-[13px] uppercase text-brand-slate leading-snug">Architecture &amp; Prototype</h4>
-              <p class="font-body text-[12px] text-brand-slate/70 leading-relaxed">
-                <span class="lang-en">Design system &amp; UI prototype.</span>
-                <span class="lang-id">Design system &amp; UI prototipe.</span>
+              <h4 class="font-semibold text-sm text-slate-900 tracking-normal">UI Prototype &amp; Design</h4>
+              <p class="text-xs text-slate-500 leading-relaxed">
+                Interactive Figma design system, clickable UX prototype, and client stakeholder alignment.
               </p>
             </div>
 
-            <!-- Milestone 03 -->
-            <div class="bg-brand-mist border-2 border-brand-slate shadow-brutal-slate-sm rounded-lg p-4 flex flex-col gap-2 relative">
-              <div class="flex items-center gap-2">
-                <span class="w-5 h-5 rounded bg-brand-steel border border-brand-slate font-mono font-bold text-[9px] flex items-center justify-center text-brand-slate">03</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2" stroke="currentColor" stroke-width="2"/><path d="m7 9 2.5 2.5L7 14M12 14h5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <!-- Step 3 -->
+            <div class="bg-slate-50/80 border border-slate-200/60 rounded-xl p-5 flex flex-col gap-3 relative group hover:bg-white hover:shadow-md transition-all">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-mono font-extrabold px-2.5 py-1 rounded-md bg-indigo-600 text-white">STAGE 03</span>
+                <span class="text-xs font-semibold text-slate-400">Week 5–8</span>
               </div>
-              <h4 class="font-heading font-bold text-[13px] uppercase text-brand-slate leading-snug">Engineering &amp; QA</h4>
-              <p class="font-body text-[12px] text-brand-slate/70 leading-relaxed">
-                <span class="lang-en">Laravel, TanStack, stress testing.</span>
-                <span class="lang-id">Laravel, TanStack, stress test.</span>
+              <h4 class="font-semibold text-sm text-slate-900 tracking-normal">Engineering &amp; Stress QA</h4>
+              <p class="text-xs text-slate-500 leading-relaxed">
+                Laravel 11 &amp; TanStack development, automated unit testing, and load concurrency benchmarking.
               </p>
             </div>
 
-            <!-- Milestone 04 -->
-            <div class="bg-brand-mist border-2 border-brand-slate shadow-brutal-slate-sm rounded-lg p-4 flex flex-col gap-2 relative">
-              <div class="flex items-center gap-2">
-                <span class="w-5 h-5 rounded bg-brand-gold border border-brand-slate font-mono font-bold text-[9px] flex items-center justify-center text-brand-slate">04</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 15c5-4 7-9 7-12-3 0-8 2-12 7l-4 1 1 4 8-4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="14.5" cy="9.5" r="1.4" fill="currentColor"/></svg>
+            <!-- Step 4 -->
+            <div class="bg-slate-50/80 border border-slate-200/60 rounded-xl p-5 flex flex-col gap-3 relative group hover:bg-white hover:shadow-md transition-all">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-mono font-extrabold px-2.5 py-1 rounded-md bg-emerald-600 text-white">STAGE 04</span>
+                <span class="text-xs font-semibold text-emerald-600 font-bold">Go-Live</span>
               </div>
-              <h4 class="font-heading font-bold text-[13px] uppercase text-brand-slate leading-snug">Production Rollout</h4>
-              <p class="font-body text-[12px] text-brand-slate/70 leading-relaxed">
-                <span class="lang-en">Multi-server deploy &amp; active SLA.</span>
-                <span class="lang-id">Deploy multi-server &amp; SLA aktif.</span>
+              <h4 class="font-semibold text-sm text-slate-900 tracking-normal">Production Rollout</h4>
+              <p class="text-xs text-slate-500 leading-relaxed">
+                Zero-downtime deployment, staff onboarding, real-time analytics &amp; continuous 24/7 SLA monitoring.
               </p>
             </div>
           </div>
         </div>
 
       </div>
-
     </section>
+
     <!-- ========================================================================
          SECTION: SELECTED PROJECTS & PORTFOLIO SHOWCASE
          ======================================================================== -->
-    <section id="projects" aria-labelledby="projects-title" class="p-6 sm:p-10 lg:p-12 bg-brand-steel border-2 border-brand-slate shadow-brutal-slate rounded-xl flex flex-col gap-8 relative overflow-hidden scroll-mt-24">
+    <section id="projects" aria-labelledby="projects-title" class="p-6 sm:p-10 lg:p-14 bg-white border border-slate-200/70 shadow-sm rounded-3xl flex flex-col gap-10 scroll-mt-24">
 
       <!-- Section Header -->
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
         <div class="flex flex-col gap-3 max-w-[740px]">
           <!-- Top Badges -->
           <div class="flex flex-wrap items-center gap-2">
-            <div class="inline-flex items-center gap-1.5 px-3 py-1 bg-brand-mist text-brand-slate border-2 border-brand-slate shadow-brutal-slate-sm rounded-md font-mono text-[10px] sm:text-[11px] font-bold">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-blue-50 text-[#2563EB] border border-blue-100/80 rounded-full text-xs font-semibold tracking-wide">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#2563EB]"></span>
               <span class="lang-en">PROJECT SHOWCASE</span>
               <span class="lang-id">PILIHAN PROYEK</span>
-            </div>
-            <div class="inline-flex items-center gap-1.5 px-3 py-1 bg-brand-coral text-brand-slate border-2 border-brand-slate shadow-brutal-slate-sm rounded-md font-mono text-[10px] sm:text-[11px] font-bold">
-              <span class="lang-en">PRODUCTS &amp; APP CONCEPTS</span>
-              <span class="lang-id">PRODUK &amp; KONSEP APLIKASI</span>
-            </div>
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-purple-50 text-purple-700 border border-purple-100/80 rounded-full text-xs font-semibold tracking-wide">
+              <span class="lang-en">PRODUCTS &amp; PROTOTYPES</span>
+              <span class="lang-id">PRODUK &amp; PROTOTIPE</span>
+            </span>
           </div>
 
           <!-- Section Title -->
-          <h2 id="projects-title" class="font-heading font-bold text-[26px] sm:text-[36px] md:text-[42px] leading-[1.1] uppercase tracking-tight text-brand-slate">
-            <span class="lang-en">CUSTOM APPLICATION ARCHITECTURE WITH <span class="bg-brand-coral text-brand-slate px-2.5 py-0.5 inline-block border-2 border-brand-slate shadow-brutal-slate-sm -rotate-1">MEASURABLE ROI</span></span>
-            <span class="lang-id">ARSITEKTUR APLIKASI KUSTOM DENGAN <span class="bg-brand-coral text-brand-slate px-2.5 py-0.5 inline-block border-2 border-brand-slate shadow-brutal-slate-sm -rotate-1">ROI TERUKUR</span></span>
+          <h2 id="projects-title" class="font-bold text-2xl sm:text-3xl md:text-4xl leading-tight text-[#0F172A] tracking-[-0.02em]">
+            <span class="lang-en">Proven Digital Products &amp; Bespoke Software Architecture</span>
+            <span class="lang-id">Produk Digital Teruji &amp; Rekayasa Software Kustom</span>
           </h2>
 
           <!-- Subtitle -->
-          <p class="font-body text-[13.5px] sm:text-[15.5px] text-brand-slate/85 font-medium leading-relaxed">
-            <span class="lang-en">Explore our application portfolio and concepts for commerce, hospitality, fleet tracking, and nutrition.</span>
-            <span class="lang-id">Jelajahi portofolio dan konsep aplikasi untuk perdagangan, hospitality, pelacakan armada, hingga nutrisi dan gizi.</span>
+          <p class="text-sm sm:text-base text-slate-600 font-normal leading-relaxed">
+            <span class="lang-en">Explore our engineered application portfolio powering multi-outlet F&amp;B commerce, luxury hospitality, fleet IoT, and modern nutrition.</span>
+            <span class="lang-id">Jelajahi portofolio rekayasa aplikasi kami untuk operasional F&amp;B multi-outlet, luxury hospitality, pelacakan IoT armada, hingga nutrisi modern.</span>
           </p>
         </div>
 
         <!-- Interactive Category Filters -->
         <div class="flex flex-wrap items-center gap-2 self-start md:self-end" id="project-filters">
-          <button class="project-filter-btn px-3.5 py-1.5 bg-brand-coral text-brand-slate border-2 border-brand-slate shadow-brutal-slate-sm rounded-lg font-mono text-[11px] sm:text-[12px] font-bold active:translate-x-0.5 active:translate-y-0.5 transition-all cursor-pointer" data-category="all">
-            <span class="lang-en">ALL PROJECTS (4)</span><span class="lang-id">SEMUA PROYEK (4)</span>
+          <button class="project-filter-btn px-4 py-2 bg-[#2563EB] text-white shadow-sm rounded-full text-xs font-semibold tracking-wide cursor-pointer transition-all" data-category="all">
+            <span class="lang-en">All Work (4)</span><span class="lang-id">Semua (4)</span>
           </button>
-          <button class="project-filter-btn px-3.5 py-1.5 bg-brand-mist text-brand-slate border-2 border-brand-slate shadow-brutal-slate-sm rounded-lg font-mono text-[11px] sm:text-[12px] font-bold hover:bg-brand-coral hover:text-brand-slate active:translate-x-0.5 active:translate-y-0.5 transition-all cursor-pointer" data-category="pos">
-            <span class="lang-en">F&amp;B &amp; COMMERCE</span><span class="lang-id">F&amp;B &amp; RITEL</span>
+          <button class="project-filter-btn px-4 py-2 bg-white text-slate-600 hover:text-slate-900 border border-slate-200/80 hover:bg-slate-50 rounded-full text-xs font-semibold tracking-wide cursor-pointer transition-all" data-category="pos">
+            <span class="lang-en">F&amp;B &amp; Commerce</span><span class="lang-id">F&amp;B &amp; Ritel</span>
           </button>
-          <button class="project-filter-btn px-3.5 py-1.5 bg-brand-mist text-brand-slate border-2 border-brand-slate shadow-brutal-slate-sm rounded-lg font-mono text-[11px] sm:text-[12px] font-bold hover:bg-brand-coral hover:text-brand-slate active:translate-x-0.5 active:translate-y-0.5 transition-all cursor-pointer" data-category="villa">
-            <span class="lang-en">HOSPITALITY</span><span class="lang-id">PERHOTELAN &amp; VILLA</span>
+          <button class="project-filter-btn px-4 py-2 bg-white text-slate-600 hover:text-slate-900 border border-slate-200/80 hover:bg-slate-50 rounded-full text-xs font-semibold tracking-wide cursor-pointer transition-all" data-category="villa">
+            <span class="lang-en">Hospitality &amp; Villas</span><span class="lang-id">Villa &amp; Resort</span>
           </button>
-          <button class="project-filter-btn px-3.5 py-1.5 bg-brand-mist text-brand-slate border-2 border-brand-slate shadow-brutal-slate-sm rounded-lg font-mono text-[11px] sm:text-[12px] font-bold hover:bg-brand-coral hover:text-brand-slate active:translate-x-0.5 active:translate-y-0.5 transition-all cursor-pointer" data-category="tracking">
-            <span class="lang-en">LOGISTICS &amp; IOT</span><span class="lang-id">LOGISTIK &amp; IOT</span>
+          <button class="project-filter-btn px-4 py-2 bg-white text-slate-600 hover:text-slate-900 border border-slate-200/80 hover:bg-slate-50 rounded-full text-xs font-semibold tracking-wide cursor-pointer transition-all" data-category="tracking">
+            <span class="lang-en">Logistics &amp; IoT</span><span class="lang-id">Logistik &amp; IoT</span>
           </button>
-          <button class="project-filter-btn px-3.5 py-1.5 bg-brand-mist text-brand-slate border-2 border-brand-slate shadow-brutal-slate-sm rounded-lg font-mono text-[11px] sm:text-[12px] font-bold hover:bg-brand-coral hover:text-brand-slate active:translate-x-0.5 active:translate-y-0.5 transition-all cursor-pointer" data-category="nutrition">
-            <span class="lang-en">NUTRITION</span><span class="lang-id">NUTRISI &amp; GIZI</span>
+          <button class="project-filter-btn px-4 py-2 bg-white text-slate-600 hover:text-slate-900 border border-slate-200/80 hover:bg-slate-50 rounded-full text-xs font-semibold tracking-wide cursor-pointer transition-all" data-category="nutrition">
+            <span class="lang-en">Health &amp; App</span><span class="lang-id">Nutrisi &amp; App</span>
           </button>
         </div>
       </div>
 
-      <!-- Projects Grid (4 Executive Case Studies) -->
+      <!-- Projects Grid (4 Sleek Mockup Cards) -->
       <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6" id="projects-grid">
 
         <!-- Case Study 1: vexaPOS Engine -->
-        <article class="project-card bg-brand-mist border-2 border-brand-slate shadow-brutal-slate rounded-lg overflow-hidden flex flex-col justify-between hover:-translate-y-1 transition-all" data-category="pos">
+        <article class="project-card bg-white border border-slate-200/80 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between overflow-hidden group" data-category="pos">
           <div>
             <!-- Card Browser Bar -->
-            <div class="h-9 bg-brand-mist text-brand-slate border-b-2 border-brand-slate flex items-center justify-between px-3">
+            <div class="h-10 bg-slate-50 border-b border-slate-100 flex items-center justify-between px-3.5">
               <div class="flex items-center gap-1.5" aria-hidden="true">
-                <span class="w-2.5 h-2.5 rounded-full bg-brand-coral border border-brand-slate"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-brand-steel border border-brand-slate"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-brand-slate border border-brand-slate"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-slate-200"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-slate-200"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-slate-200"></span>
               </div>
-              <span class="font-mono text-[10.5px] font-bold text-brand-slate">vexapos.app</span>
-              <span class="font-mono text-[9px] bg-brand-coral text-brand-slate px-1.5 py-0.5 border border-brand-slate rounded font-bold">25+ OUTLETS</span>
+              <span class="text-[11px] font-mono font-semibold text-slate-500">vexapos.app</span>
+              <span class="text-[10px] font-bold bg-blue-50 text-[#2563EB] px-2 py-0.5 rounded-full">25+ OUTLETS</span>
             </div>
 
-            <div class="p-4 bg-brand-steel border-b-2 border-brand-slate relative flex flex-col gap-2.5">
+            <!-- Graphic & Tech Badges Banner -->
+            <div class="p-5 bg-gradient-to-br from-blue-50/70 to-indigo-50/40 border-b border-slate-100 flex flex-col gap-3">
               <div class="flex items-center justify-between">
-                <span class="w-9 h-9 rounded-lg bg-brand-slate border-2 border-brand-slate shadow-brutal-slate-sm flex items-center justify-center text-white" aria-hidden="true">
-                  <svg width="19" height="19" viewBox="0 0 24 24" fill="none"><path d="M4 9h16v2.5H4zM6 11.5V19h12v-7.5M9.5 15.5h5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </span>
-                <span class="font-mono text-[10px] font-bold bg-brand-coral text-brand-slate px-2 py-0.5 border border-brand-slate rounded">ACTIVE SYNC</span>
+                <div class="w-10 h-10 rounded-xl bg-[#2563EB] text-white flex items-center justify-center shadow-md shadow-blue-500/20">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h16v2.5H4zM6 11.5V19h12v-7.5M9.5 15.5h5"/></svg>
+                </div>
+                <span class="text-[10px] font-bold text-emerald-700 bg-emerald-100/70 px-2 py-0.5 rounded-full">ACTIVE PRODUCTION</span>
               </div>
               <div class="flex flex-wrap gap-1.5">
-                <span class="font-mono text-[9.5px] font-bold bg-brand-mist px-2 py-0.5 border border-brand-slate rounded">Laravel 11 API</span>
-                <span class="font-mono text-[9.5px] font-bold bg-brand-mist px-2 py-0.5 border border-brand-slate rounded">TanStack Suite</span>
-                <span class="font-mono text-[9.5px] font-bold bg-brand-mist px-2 py-0.5 border border-brand-slate rounded">Python AI</span>
+                <span class="text-[10px] font-semibold bg-white/90 text-slate-700 px-2 py-0.5 rounded-md shadow-2xs">Laravel 11</span>
+                <span class="text-[10px] font-semibold bg-white/90 text-slate-700 px-2 py-0.5 rounded-md shadow-2xs">TanStack Suite</span>
+                <span class="text-[10px] font-semibold bg-white/90 text-slate-700 px-2 py-0.5 rounded-md shadow-2xs">PostgreSQL</span>
               </div>
             </div>
 
             <!-- Content Area -->
-            <div class="p-4 flex flex-col gap-2">
-              <div class="flex flex-col">
-                <span class="font-mono text-[10.5px] font-bold text-brand-slate uppercase tracking-wide">
-                  <span class="lang-en">F&amp;B &amp; Multi-Outlet Commerce</span>
-                  <span class="lang-id">F&amp;B &amp; Perdagangan Multi-Outlet</span>
-                </span>
-                <a href="vexapos.html" class="hover:underline">
-                  <h3 class="font-heading font-bold text-[17px] uppercase text-brand-slate leading-snug">vexaPOS — Cloud &amp; Multi-Outlet Engine</h3>
-                </a>
-              </div>
-              <p class="font-body text-[12.5px] text-brand-slate/80 leading-relaxed">
-                <span class="lang-en">Distributed POS &amp; inventory engine for Bali's premier beach clubs and multi-outlet F&amp;B with sub-second offline sync.</span>
+            <div class="p-5 flex flex-col gap-2.5">
+              <span class="text-[11px] font-semibold text-[#2563EB] uppercase tracking-wider">
+                <span class="lang-en">F&amp;B &amp; Multi-Outlet Commerce</span>
+                <span class="lang-id">F&amp;B &amp; Retail Multi-Outlet</span>
+              </span>
+              <a href="vexapos.html" class="group-hover:text-[#2563EB] transition-colors">
+                <h3 class="font-semibold text-base text-slate-900 leading-snug tracking-normal">vexaPOS — Cloud &amp; Multi-Outlet Engine</h3>
+              </a>
+              <p class="text-xs text-slate-500 leading-relaxed">
+                <span class="lang-en">Distributed POS &amp; inventory engine for Bali's premier beach clubs and venues with sub-second offline sync.</span>
                 <span class="lang-id">Sistem kasir &amp; inventaris terdistribusi untuk Beach Club dan F&amp;B skala besar di Bali dengan sinkronisasi offline seketika.</span>
               </p>
             </div>
           </div>
 
           <!-- Bottom Card Footer -->
-          <div class="p-4 pt-0 flex flex-col gap-3">
-            <div class="p-2 bg-brand-steel border border-brand-slate rounded-lg font-mono text-[10.5px] font-bold text-brand-slate flex items-center justify-between">
-              <span><span class="lang-en">120k+ Monthly Tx</span><span class="lang-id">120k+ Transaksi/Bln</span></span>
-              <span class="text-brand-slate">● &lt; 0.8s Latency</span>
+          <div class="p-5 pt-0 flex flex-col gap-3">
+            <div class="p-2.5 bg-slate-50 border border-slate-100 rounded-xl text-xs text-slate-600 flex items-center justify-between font-medium">
+              <span>120k+ Monthly Tx</span>
+              <span class="text-emerald-600 font-bold">● &lt; 0.8s Latency</span>
             </div>
-            <a href="vexapos.html" class="w-full py-2.5 bg-brand-coral text-brand-slate border-2 border-brand-slate shadow-brutal-slate-sm rounded-lg font-heading font-bold text-[12px] uppercase text-center transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none active:translate-x-[4px] active:translate-y-[4px] flex items-center justify-center gap-1.5">
-              <span class="lang-en">EXPLORE VEXAPOS CASE STUDY</span>
-              <span class="lang-id">PELAJARI CASE STUDY VEXAPOS</span>
-              <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h9M8 3.5 11.5 7 8 10.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <a href="vexapos.html" class="w-full py-2.5 bg-[#2563EB] hover:bg-[#1D4ED8] text-white rounded-xl font-semibold text-xs text-center transition-all shadow-sm flex items-center justify-center gap-1.5">
+              <span class="lang-en">Explore VexaPOS Case Study</span>
+              <span class="lang-id">Pelajari Case Study VexaPOS</span>
+              <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7h9M8 3.5 11.5 7 8 10.5"/></svg>
             </a>
           </div>
         </article>
 
-        <!-- Case Study 2: Ubud Retreats Concierge & Butler Platform -->
-        <article class="project-card bg-brand-mist border-2 border-brand-slate shadow-brutal-slate rounded-lg overflow-hidden flex flex-col justify-between hover:-translate-y-1 transition-all" data-category="villa">
+        <!-- Case Study 2: Ubud Retreats Concierge Platform -->
+        <article class="project-card bg-white border border-slate-200/80 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between overflow-hidden group" data-category="villa">
           <div>
             <!-- Card Browser Bar -->
-            <div class="h-9 bg-brand-mist text-brand-slate border-b-2 border-brand-slate flex items-center justify-between px-3">
+            <div class="h-10 bg-slate-50 border-b border-slate-100 flex items-center justify-between px-3.5">
               <div class="flex items-center gap-1.5" aria-hidden="true">
-                <span class="w-2.5 h-2.5 rounded-full bg-brand-coral border border-brand-slate"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-brand-steel border border-brand-slate"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-brand-slate border border-brand-slate"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-slate-200"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-slate-200"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-slate-200"></span>
               </div>
-              <span class="font-mono text-[10.5px] font-bold text-brand-slate">ubud-retreats.guest</span>
-              <span class="font-mono text-[9px] bg-brand-steel text-brand-slate px-1.5 py-0.5 border border-brand-slate rounded font-bold">28 VILLAS</span>
+              <span class="text-[11px] font-mono font-semibold text-slate-500">ubud-retreats.guest</span>
+              <span class="text-[10px] font-bold bg-purple-50 text-purple-700 px-2 py-0.5 rounded-full">28 VILLAS</span>
             </div>
 
-            <!-- Graphic & Tech Tags -->
-            <div class="p-4 bg-brand-steel border-b-2 border-brand-slate relative flex flex-col gap-2.5">
+            <!-- Graphic & Tech Badges Banner -->
+            <div class="p-5 bg-gradient-to-br from-purple-50/70 to-blue-50/40 border-b border-slate-100 flex flex-col gap-3">
               <div class="flex items-center justify-between">
-                <span class="w-9 h-9 rounded-lg bg-brand-slate border-2 border-brand-slate shadow-brutal-slate-sm flex items-center justify-center text-white" aria-hidden="true">
-                  <svg width="19" height="19" viewBox="0 0 24 24" fill="none"><path d="m3 11 9-7 9 7M5.5 9.5V20h13V9.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 20v-5h4v5" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg>
-                </span>
-                <span class="font-mono text-[10px] font-bold bg-brand-coral text-brand-slate px-2 py-0.5 border border-brand-slate rounded">IOT SMART LOCK</span>
+                <div class="w-10 h-10 rounded-xl bg-purple-600 text-white flex items-center justify-center shadow-md shadow-purple-500/20">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 11 9-7 9 7M5.5 9.5V20h13V9.5"/><path d="M10 20v-5h4v5"/></svg>
+                </div>
+                <span class="text-[10px] font-bold text-purple-700 bg-purple-100/70 px-2 py-0.5 rounded-full">SMART LOCK IOT</span>
               </div>
               <div class="flex flex-wrap gap-1.5">
-                <span class="font-mono text-[9.5px] font-bold bg-brand-mist px-2 py-0.5 border border-brand-slate rounded">Laravel Cloud</span>
-                <span class="font-mono text-[9.5px] font-bold bg-brand-mist px-2 py-0.5 border border-brand-slate rounded">TanStack Router</span>
-                <span class="font-mono text-[9.5px] font-bold bg-brand-mist px-2 py-0.5 border border-brand-slate rounded">Python IoT</span>
+                <span class="text-[10px] font-semibold bg-white/90 text-slate-700 px-2 py-0.5 rounded-md shadow-2xs">Laravel Cloud</span>
+                <span class="text-[10px] font-semibold bg-white/90 text-slate-700 px-2 py-0.5 rounded-md shadow-2xs">TanStack Router</span>
+                <span class="text-[10px] font-semibold bg-white/90 text-slate-700 px-2 py-0.5 rounded-md shadow-2xs">Python IoT</span>
               </div>
             </div>
 
             <!-- Content Area -->
-            <div class="p-4 flex flex-col gap-2">
-              <div class="flex flex-col">
-                <span class="font-mono text-[10.5px] font-bold text-brand-slate uppercase tracking-wide">
-                  <span class="lang-en">Luxury Hospitality &amp; Villas</span>
-                  <span class="lang-id">Perhotelan Mewah &amp; Villa</span>
-                </span>
-                <h3 class="font-heading font-bold text-[17px] uppercase text-brand-slate leading-snug">Ubud Retreats Concierge &amp; Butler Platform</h3>
-              </div>
-              <p class="font-body text-[12.5px] text-brand-slate/80 leading-relaxed">
-                <span class="lang-en">Operational automation for private luxury villas: in-villa spa booking, floating breakfast dispatch, digital butler, and smart-lock integration.</span>
+            <div class="p-5 flex flex-col gap-2.5">
+              <span class="text-[11px] font-semibold text-purple-600 uppercase tracking-wider">
+                <span class="lang-en">Luxury Hospitality &amp; Villas</span>
+                <span class="lang-id">Perhotelan Mewah &amp; Villa</span>
+              </span>
+              <h3 class="font-semibold text-base text-slate-900 leading-snug tracking-normal group-hover:text-[#2563EB] transition-colors">Ubud Retreats Concierge &amp; Butler Platform</h3>
+              <p class="text-xs text-slate-500 leading-relaxed">
+                <span class="lang-en">Operational automation for private luxury villas: spa booking, floating breakfast dispatch, digital butler, and keyless IoT entry.</span>
                 <span class="lang-id">Otomatisasi operasional private luxury villa: pemesanan spa in-villa, floating breakfast, digital butler, dan integrasi smart-lock.</span>
               </p>
             </div>
           </div>
 
           <!-- Bottom Card Footer -->
-          <div class="p-4 pt-0 flex flex-col gap-3">
-            <div class="p-2 bg-brand-steel border border-brand-slate rounded-lg font-mono text-[10.5px] font-bold text-brand-slate flex items-center justify-between">
+          <div class="p-5 pt-0 flex flex-col gap-3">
+            <div class="p-2.5 bg-slate-50 border border-slate-100 rounded-xl text-xs text-slate-600 flex items-center justify-between font-medium">
               <span>98% Guest CSAT</span>
-              <span class="text-brand-slate">● Check-in &lt; 1m</span>
+              <span class="text-emerald-600 font-bold">● Check-in &lt; 1m</span>
             </div>
-            <a href="https://wa.me/6285338000872?text=Halo%20Extensia%20Bali,%20saya%20tertarik%20konsultasi%20sistem%20aplikasi%20Luxury%20Villa" target="_blank" rel="noopener" class="w-full py-2.5 bg-brand-mist hover:bg-brand-coral hover:text-brand-slate border-2 border-brand-slate shadow-brutal-slate-sm rounded-lg font-heading font-bold text-[12px] uppercase text-brand-slate text-center transition-all active:translate-x-[4px] active:translate-y-[4px] active:shadow-none">
-              <span class="lang-en">CONSULT ARCHITECTURE</span>
-              <span class="lang-id">KONSULTASI ARSITEKTUR</span>
+            <a href="https://wa.me/6285338000872?text=Halo%20Extensia%20Bali,%20saya%20tertarik%20konsultasi%20sistem%20aplikasi%20Luxury%20Villa" target="_blank" rel="noopener" class="w-full py-2.5 bg-slate-900 hover:bg-[#2563EB] text-white rounded-xl font-semibold text-xs text-center transition-all shadow-sm flex items-center justify-center gap-1.5">
+              <span class="lang-en">Consult Architecture</span>
+              <span class="lang-id">Konsultasi Arsitektur</span>
+              <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7h9M8 3.5 11.5 7 8 10.5"/></svg>
             </a>
           </div>
         </article>
 
         <!-- Case Study 3: Bali Telematics & Fleet GPS Platform -->
-        <article class="project-card bg-brand-mist border-2 border-brand-slate shadow-brutal-slate rounded-lg overflow-hidden flex flex-col justify-between hover:-translate-y-1 transition-all" data-category="tracking">
+        <article class="project-card bg-white border border-slate-200/80 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between overflow-hidden group" data-category="tracking">
           <div>
             <!-- Card Browser Bar -->
-            <div class="h-9 bg-brand-mist text-brand-slate border-b-2 border-brand-slate flex items-center justify-between px-3">
+            <div class="h-10 bg-slate-50 border-b border-slate-100 flex items-center justify-between px-3.5">
               <div class="flex items-center gap-1.5" aria-hidden="true">
-                <span class="w-2.5 h-2.5 rounded-full bg-brand-coral border border-brand-slate"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-brand-steel border border-brand-slate"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-brand-slate border border-brand-slate"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-slate-200"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-slate-200"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-slate-200"></span>
               </div>
-              <span class="font-mono text-[10.5px] font-bold text-brand-slate">bali-telematics.track</span>
-              <span class="font-mono text-[9px] bg-brand-steel text-brand-slate px-1.5 py-0.5 border border-brand-slate rounded font-bold">450+ FLEET</span>
+              <span class="text-[11px] font-mono font-semibold text-slate-500">bali-telematics.track</span>
+              <span class="text-[10px] font-bold bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded-full">450+ FLEET</span>
             </div>
 
-            <!-- Graphic & Tech Tags -->
-            <div class="p-4 bg-brand-steel border-b-2 border-brand-slate relative flex flex-col gap-2.5">
+            <!-- Graphic & Tech Badges Banner -->
+            <div class="p-5 bg-gradient-to-br from-emerald-50/70 to-teal-50/40 border-b border-slate-100 flex flex-col gap-3">
               <div class="flex items-center justify-between">
-                <span class="w-9 h-9 rounded-lg bg-brand-teal border-2 border-brand-slate shadow-brutal-slate-sm flex items-center justify-center text-brand-slate" aria-hidden="true">
-                  <svg width="19" height="19" viewBox="0 0 24 24" fill="none"><circle cx="6" cy="17" r="2.5" stroke="currentColor" stroke-width="2.2"/><circle cx="18" cy="17" r="2.5" stroke="currentColor" stroke-width="2.2"/><path d="M6 17h6l3-7h4M8.5 8H12l1.5-3H17" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </span>
-                <span class="font-mono text-[10px] font-bold bg-brand-coral text-brand-slate px-2 py-0.5 border border-brand-slate rounded">GEOFENCE 24/7</span>
+                <div class="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center shadow-md shadow-emerald-500/20">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="17" r="2.5"/><circle cx="18" cy="17" r="2.5"/><path d="M6 17h6l3-7h4M8.5 8H12l1.5-3H17"/></svg>
+                </div>
+                <span class="text-[10px] font-bold text-emerald-700 bg-emerald-100/70 px-2 py-0.5 rounded-full">LIVE GEOFENCE</span>
               </div>
               <div class="flex flex-wrap gap-1.5">
-                <span class="font-mono text-[9.5px] font-bold bg-brand-mist px-2 py-0.5 border border-brand-slate rounded">Python GPS</span>
-                <span class="font-mono text-[9.5px] font-bold bg-brand-mist px-2 py-0.5 border border-brand-slate rounded">Laravel Backend</span>
-                <span class="font-mono text-[9.5px] font-bold bg-brand-mist px-2 py-0.5 border border-brand-slate rounded">TanStack Map</span>
+                <span class="text-[10px] font-semibold bg-white/90 text-slate-700 px-2 py-0.5 rounded-md shadow-2xs">Python GPS</span>
+                <span class="text-[10px] font-semibold bg-white/90 text-slate-700 px-2 py-0.5 rounded-md shadow-2xs">Laravel API</span>
+                <span class="text-[10px] font-semibold bg-white/90 text-slate-700 px-2 py-0.5 rounded-md shadow-2xs">TanStack Map</span>
               </div>
             </div>
 
             <!-- Content Area -->
-            <div class="p-4 flex flex-col gap-2">
-              <div class="flex flex-col">
-                <span class="font-mono text-[10.5px] font-bold text-brand-slate uppercase tracking-wide">
-                  <span class="lang-en">Logistics &amp; IoT Telematics</span>
-                  <span class="lang-id">Logistik &amp; Telemetri IoT</span>
-                </span>
-                <h3 class="font-heading font-bold text-[17px] uppercase text-brand-slate leading-snug">Bali Telematics &amp; Fleet GPS Platform</h3>
-              </div>
-              <p class="font-body text-[12.5px] text-brand-slate/80 leading-relaxed">
-                <span class="lang-en">Real-time fleet telemetry tracking and intelligent geofence perimeter monitoring for luxury vehicle rentals in Canggu, Kuta, and Uluwatu.</span>
-                <span class="lang-id">Pelacakan telemetri armada real-time dan perimeter keamanan geofencing cerdas untuk sewa armada di Canggu, Kuta, dan Uluwatu.</span>
+            <div class="p-5 flex flex-col gap-2.5">
+              <span class="text-[11px] font-semibold text-emerald-600 uppercase tracking-wider">
+                <span class="lang-en">Logistics &amp; IoT Telematics</span>
+                <span class="lang-id">Logistik &amp; Telemetri IoT</span>
+              </span>
+              <h3 class="font-semibold text-base text-slate-900 leading-snug tracking-normal group-hover:text-[#2563EB] transition-colors">Bali Telematics &amp; Fleet GPS Platform</h3>
+              <p class="text-xs text-slate-500 leading-relaxed">
+                <span class="lang-en">Real-time fleet telemetry tracking and automated geofence perimeter monitoring for vehicle rentals in Canggu, Kuta, and Uluwatu.</span>
+                <span class="lang-id">Pelacakan telemetri armada real-time dan perimeter keamanan geofencing cerdas untuk rental mobil/motor di Canggu, Kuta, dan Uluwatu.</span>
               </p>
             </div>
           </div>
 
           <!-- Bottom Card Footer -->
-          <div class="p-4 pt-0 flex flex-col gap-3">
-            <div class="p-2 bg-brand-steel border border-brand-slate rounded-lg font-mono text-[10.5px] font-bold text-brand-slate flex items-center justify-between">
+          <div class="p-5 pt-0 flex flex-col gap-3">
+            <div class="p-2.5 bg-slate-50 border border-slate-100 rounded-xl text-xs text-slate-600 flex items-center justify-between font-medium">
               <span>24/7 Geofence Alert</span>
-              <span class="text-brand-slate">● 0 Unit Lost</span>
+              <span class="text-emerald-600 font-bold">● 0 Unit Lost</span>
             </div>
-            <a href="https://wa.me/6285338000872?text=Halo%20Extensia%20Bali,%20saya%20tertarik%20dengan%20sistem%20GPS%20Tracking%20Armada" target="_blank" rel="noopener" class="w-full py-2.5 bg-brand-mist hover:bg-brand-coral hover:text-brand-slate border-2 border-brand-slate shadow-brutal-slate-sm rounded-lg font-heading font-bold text-[12px] uppercase text-brand-slate text-center transition-all active:translate-x-[4px] active:translate-y-[4px] active:shadow-none">
-              <span class="lang-en">CONSULT ARCHITECTURE</span>
-              <span class="lang-id">KONSULTASI ARSITEKTUR</span>
+            <a href="https://wa.me/6285338000872?text=Halo%20Extensia%20Bali,%20saya%20tertarik%20dengan%20sistem%20GPS%20Tracking%20Armada" target="_blank" rel="noopener" class="w-full py-2.5 bg-slate-900 hover:bg-[#2563EB] text-white rounded-xl font-semibold text-xs text-center transition-all shadow-sm flex items-center justify-center gap-1.5">
+              <span class="lang-en">Consult Architecture</span>
+              <span class="lang-id">Konsultasi Arsitektur</span>
+              <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7h9M8 3.5 11.5 7 8 10.5"/></svg>
             </a>
           </div>
         </article>
 
         <!-- Project Example 4: Nutrition Calculator -->
-        <article class="project-card bg-brand-mist border-2 border-brand-slate shadow-brutal-slate rounded-lg overflow-hidden flex flex-col justify-between hover:-translate-y-1 transition-all" data-category="nutrition">
+        <article class="project-card bg-white border border-slate-200/80 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between overflow-hidden group" data-category="nutrition">
           <div>
             <!-- Card Browser Bar -->
-            <div class="h-9 bg-brand-mist text-brand-slate border-b-2 border-brand-slate flex items-center justify-between px-3">
+            <div class="h-10 bg-slate-50 border-b border-slate-100 flex items-center justify-between px-3.5">
               <div class="flex items-center gap-1.5" aria-hidden="true">
-                <span class="w-2.5 h-2.5 rounded-full bg-brand-coral border border-brand-slate"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-brand-steel border border-brand-slate"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-brand-slate border border-brand-slate"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-slate-200"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-slate-200"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-slate-200"></span>
               </div>
-              <span class="font-mono text-[10.5px] font-bold text-brand-slate">nutrition-calculator</span>
-              <span class="font-mono text-[9px] bg-brand-steel text-brand-slate px-1.5 py-0.5 border border-brand-slate rounded font-bold"><span class="lang-en">CONCEPT</span><span class="lang-id">KONSEP</span></span>
+              <span class="text-[11px] font-mono font-semibold text-slate-500">nutrition-calc.app</span>
+              <span class="text-[10px] font-bold bg-amber-50 text-amber-700 px-2 py-0.5 rounded-full">CONCEPT</span>
             </div>
 
-            <!-- Graphic & Tech Tags -->
-            <div class="p-4 bg-brand-steel border-b-2 border-brand-slate relative flex flex-col gap-2.5">
+            <!-- Graphic & Tech Badges Banner -->
+            <div class="p-5 bg-gradient-to-br from-amber-50/70 to-orange-50/40 border-b border-slate-100 flex flex-col gap-3">
               <div class="flex items-center justify-between">
-                <span class="w-9 h-9 rounded-lg bg-brand-coral border-2 border-brand-slate shadow-brutal-slate-sm flex items-center justify-center text-brand-slate" aria-hidden="true">
-                  <svg width="19" height="19" viewBox="0 0 24 24" fill="none"><path d="M12 21c-5 0-8-3.5-8-8 0-5 4-9 10-10-.5 6-1 12-2 18ZM12 21c1-6 1.5-12 2-18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 12c-2 0-4-1-5-3M12 15c2.5 0 4.5-1 6-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                </span>
-                <span class="font-mono text-[10px] font-bold bg-brand-coral text-brand-slate px-2 py-0.5 border border-brand-slate rounded">KCAL &amp; MACROS</span>
+                <div class="w-10 h-10 rounded-xl bg-amber-600 text-white flex items-center justify-center shadow-md shadow-amber-500/20">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-5 0-8-3.5-8-8 0-5 4-9 10-10-.5 6-1 12-2 18ZM12 21c1-6 1.5-12 2-18"/><path d="M12 12c-2 0-4-1-5-3M12 15c2.5 0 4.5-1 6-3"/></svg>
+                </div>
+                <span class="text-[10px] font-bold text-amber-700 bg-amber-100/70 px-2 py-0.5 rounded-full">KCAL &amp; MACROS</span>
               </div>
               <div class="flex flex-wrap gap-1.5">
-                <span class="font-mono text-[9.5px] font-bold bg-brand-mist px-2 py-0.5 border border-brand-slate rounded"><span class="lang-en">Calorie Estimate</span><span class="lang-id">Estimasi Kalori</span></span>
-                <span class="font-mono text-[9.5px] font-bold bg-brand-mist px-2 py-0.5 border border-brand-slate rounded"><span class="lang-en">Macronutrients</span><span class="lang-id">Makronutrien</span></span>
-                <span class="font-mono text-[9.5px] font-bold bg-brand-mist px-2 py-0.5 border border-brand-slate rounded"><span class="lang-en">Food Diary</span><span class="lang-id">Catatan Makan</span></span>
+                <span class="text-[10px] font-semibold bg-white/90 text-slate-700 px-2 py-0.5 rounded-md shadow-2xs">Calorie Calc</span>
+                <span class="text-[10px] font-semibold bg-white/90 text-slate-700 px-2 py-0.5 rounded-md shadow-2xs">Macro Ratios</span>
+                <span class="text-[10px] font-semibold bg-white/90 text-slate-700 px-2 py-0.5 rounded-md shadow-2xs">Food Diary</span>
               </div>
             </div>
 
             <!-- Content Area -->
-            <div class="p-4 flex flex-col gap-2">
-              <div class="flex flex-col">
-                <span class="font-mono text-[10.5px] font-bold text-brand-coral uppercase tracking-wide">
-                  <span class="lang-en">Nutrition &amp; Wellness</span>
-                  <span class="lang-id">Nutrisi &amp; Kebugaran</span>
-                </span>
-                <h3 class="font-heading font-bold text-[17px] uppercase text-brand-slate leading-snug"><span class="lang-en">Nutrition &amp; Calorie Calculator</span><span class="lang-id">Kalkulator Nutrisi &amp; Gizi</span></h3>
-              </div>
-              <p class="font-body text-[12.5px] text-brand-slate/80 leading-relaxed">
-                <span class="lang-en">An application concept for estimating daily calorie needs, calculating protein, carbohydrate and fat intake, and keeping a food diary.</span>
-                <span class="lang-id">Contoh aplikasi untuk estimasi kebutuhan kalori harian, menghitung asupan protein, karbohidrat, dan lemak, serta mencatat konsumsi makanan.</span>
+            <div class="p-5 flex flex-col gap-2.5">
+              <span class="text-[11px] font-semibold text-amber-600 uppercase tracking-wider">
+                <span class="lang-en">Nutrition &amp; Wellness</span>
+                <span class="lang-id">Nutrisi &amp; Kebugaran</span>
+              </span>
+              <h3 class="font-semibold text-base text-slate-900 leading-snug tracking-normal group-hover:text-[#2563EB] transition-colors">Nutrition &amp; Calorie Calculator</h3>
+              <p class="text-xs text-slate-500 leading-relaxed">
+                <span class="lang-en">Application prototype for estimating daily caloric expenditure, personalized macro breakdown, and automated meal journaling.</span>
+                <span class="lang-id">Prototipe aplikasi untuk estimasi kebutuhan kalori harian, pembagian makronutrien personal, dan pencatatan makanan otomatis.</span>
               </p>
             </div>
           </div>
 
           <!-- Bottom Card Footer -->
-          <div class="p-4 pt-0 flex flex-col gap-3">
-            <div class="p-2 bg-brand-steel border border-brand-slate rounded-lg font-mono text-[10.5px] font-bold text-brand-slate flex items-center justify-between">
-              <span><span class="lang-en">Daily Intake</span><span class="lang-id">Asupan Harian</span></span>
-              <span class="text-brand-slate">● <span class="lang-en">Food Diary</span><span class="lang-id">Catatan Makan</span> Sync</span>
+          <div class="p-5 pt-0 flex flex-col gap-3">
+            <div class="p-2.5 bg-slate-50 border border-slate-100 rounded-xl text-xs text-slate-600 flex items-center justify-between font-medium">
+              <span>Daily Intake</span>
+              <span class="text-emerald-600 font-bold">● Diary Sync</span>
             </div>
-            <a href="https://wa.me/6285338000872?text=Halo%20Extensia%20Bali,%20saya%20tertarik%20dengan%20aplikasi%20Kalkulator%20Nutrisi%20dan%20Gizi" target="_blank" rel="noopener" class="w-full py-2.5 bg-brand-mist hover:bg-brand-coral hover:text-brand-slate border-2 border-brand-slate shadow-brutal-slate-sm rounded-lg font-heading font-bold text-[12px] uppercase text-brand-slate text-center transition-all active:translate-x-[4px] active:translate-y-[4px] active:shadow-none">
-              <span class="lang-en">DISCUSS NUTRITION APP</span>
-              <span class="lang-id">DISKUSIKAN APLIKASI GIZI</span>
+            <a href="https://wa.me/6285338000872?text=Halo%20Extensia%20Bali,%20saya%20tertarik%20dengan%20aplikasi%20Kalkulator%20Nutrisi%20dan%20Gizi" target="_blank" rel="noopener" class="w-full py-2.5 bg-slate-900 hover:bg-[#2563EB] text-white rounded-xl font-semibold text-xs text-center transition-all shadow-sm flex items-center justify-center gap-1.5">
+              <span class="lang-en">Discuss Nutrition App</span>
+              <span class="lang-id">Diskusikan Aplikasi Gizi</span>
+              <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7h9M8 3.5 11.5 7 8 10.5"/></svg>
             </a>
           </div>
         </article>
 
       </div>
 
-      <!-- Executive Technical Consultation Banner -->
-      <div class="bg-brand-steel text-brand-slate border-2 border-brand-slate shadow-brutal-slate-lg rounded-xl p-6 sm:p-8 flex flex-col lg:flex-row items-center justify-between gap-6 mt-4">
-        <div class="flex flex-col gap-2.5 text-center lg:text-left">
-          <span class="font-mono text-[11px] font-bold uppercase tracking-wider bg-brand-coral text-brand-slate px-3 py-1 self-center lg:self-start border-2 border-brand-slate shadow-brutal-slate-sm rounded-md">
+      <!-- ======================================================================
+           PRE-FOOTER CTA: ENERGETIC DEEP BLUE GRADIENT BANNER
+           ====================================================================== -->
+      <div class="relative overflow-hidden bg-gradient-to-br from-[#1E3A8A] via-[#2563EB] to-[#1D4ED8] text-white rounded-3xl p-8 sm:p-12 lg:p-14 shadow-xl shadow-blue-500/15 flex flex-col lg:flex-row items-center justify-between gap-8 mt-4">
+        <!-- Background Ambient Glow -->
+        <div class="absolute -top-24 -right-24 w-96 h-96 bg-white/10 rounded-full blur-3xl pointer-events-none" aria-hidden="true"></div>
+        <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-blue-400/20 rounded-full blur-3xl pointer-events-none" aria-hidden="true"></div>
+
+        <div class="relative z-10 flex flex-col gap-3 text-center lg:text-left max-w-2xl">
+          <span class="inline-flex items-center gap-2 px-3.5 py-1 bg-white/15 backdrop-blur-md text-blue-100 rounded-full text-xs font-semibold uppercase tracking-wide self-center lg:self-start">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" aria-hidden="true"></span>
             <span class="lang-en">TECHNICAL CONSULTATION &amp; DISCOVERY</span>
             <span class="lang-id">KONSULTASI TEKNIS &amp; DISCOVERY</span>
           </span>
-          <h3 class="font-heading font-bold text-[22px] sm:text-[28px] uppercase tracking-tight text-brand-slate">
-            <span class="lang-en">Ready to Accelerate Your Operational Efficiency &amp; Systems in Bali?</span>
-            <span class="lang-id">Siap Mengakselerasi Efisiensi &amp; Sistem Bisnis Anda di Bali?</span>
+          <h3 class="font-bold text-2xl sm:text-3xl lg:text-4xl text-white tracking-[-0.02em] leading-tight">
+            <span class="lang-en">Ready to Transform Your Operational Systems in Bali?</span>
+            <span class="lang-id">Siap Mentransformasi Sistem Operasional Bisnis Anda di Bali?</span>
           </h3>
-          <p class="font-body text-[13.5px] sm:text-[15px] text-brand-slate/85 font-medium max-w-[650px]">
-            <span class="lang-en">Consult your technical blueprint with our tech leads. We are available for on-site discovery sessions directly at your venue or office in Bali.</span>
-            <span class="lang-id">Konsultasikan blueprint teknis bersama tech lead kami. Kami siap hadir langsung untuk technical discovery session di outlet atau kantor Anda di Bali.</span>
+          <p class="text-sm sm:text-base text-blue-100/90 font-normal leading-relaxed">
+            <span class="lang-en">Consult your technical blueprint with our senior tech leads. We are available for complimentary on-site discovery sessions directly at your venue or office in Bali.</span>
+            <span class="lang-id">Konsultasikan blueprint teknis bersama tech lead kami. Kami siap hadir langsung untuk sesi technical discovery di outlet atau kantor Anda di Bali.</span>
           </p>
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-2 text-xs font-medium text-blue-100/80">
+            <span>⚡ Respon Cepat &lt; 15 Menit</span>
+            <span>•</span>
+            <span>Gratis On-Site Discovery</span>
+            <span>•</span>
+            <span>Senior Engineers Standby</span>
+          </div>
         </div>
 
-        <a href="https://wa.me/6285338000872?text=Halo%20Extensia%20Bali,%20saya%20ingin%20jadwalkan%20technical%20meeting%20arsitektur%20aplikasi" target="_blank" rel="noopener" class="w-full lg:w-auto lg:min-w-[420px] justify-center px-8 sm:px-10 py-4 sm:py-5 bg-brand-coral text-brand-slate border-2 border-brand-slate shadow-brutal-slate rounded-xl font-heading font-bold text-[14px] sm:text-[16px] uppercase tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none active:translate-x-[4px] active:translate-y-[4px] transition-all whitespace-nowrap flex items-center gap-2.5 cursor-pointer">
-          <span class="lang-en">SCHEDULE TECHNICAL MEETING</span>
-          <span class="lang-id">JADWALKAN TECHNICAL MEETING</span>
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2.5 8h10M9.5 4 13.5 8 9.5 12" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
+        <div class="relative z-10 flex-shrink-0">
+          <a href="https://wa.me/6285338000872?text=Halo%20Extensia%20Bali,%20saya%20tertarik%20dengan%20aplikasi%20Kalkulator%20Nutrisi%20dan%20Gizi" target="_blank" rel="noopener" class="px-8 sm:px-10 py-4 sm:py-4.5 bg-white text-[#2563EB] hover:bg-blue-50 font-bold text-sm sm:text-base rounded-full shadow-lg hover:shadow-2xl hover:scale-[1.03] active:scale-100 transition-all flex items-center gap-2.5 whitespace-nowrap cursor-pointer">
+            <span class="lang-en">Schedule Technical Meeting</span>
+            <span class="lang-id">Jadwalkan Technical Meeting</span>
+            <svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 8h10M9.5 4 13.5 8 9.5 12"/></svg>
+          </a>
+        </div>
       </div>
 
     </section>
+
     <!-- ========================================================================
-         FOOTER: STUDIO DIRECT CONTACT & BOTTOM SIGNATURE
+         FOOTER: MINIMALIST OPEN-SPACE STUDIO FOOTER
          ======================================================================== -->
-    <footer id="contact" class="border-2 border-brand-slate shadow-brutal-slate rounded-xl p-6 sm:p-10 lg:p-12 bg-brand-mist flex flex-col gap-6 relative overflow-hidden scroll-mt-24">
-      <div class="flex flex-col lg:flex-row items-center justify-between gap-6 pb-6 border-b-2 border-brand-slate/15">
-        <!-- Left: Logo Lockup -->
-        <div class="flex items-center gap-3.5">
-          <img
-            src="assets/images/extensia-logo-512.png"
-            alt="Extensia Creative Bali Logo"
-            width="96"
-            height="96"
-            loading="lazy"
-            decoding="async"
-            class="h-10 sm:h-12 w-auto object-contain"
-          />
-          <div class="flex flex-col">
-            <span class="font-heading font-bold text-[18px] sm:text-[20px] leading-tight text-brand-slate">Extensia Creative Bali</span>
-            <span class="font-mono text-[10px] sm:text-[11px] font-bold text-brand-slate/70 uppercase tracking-wider">
-              <span class="lang-en">Software Architecture &amp; Engineering Center</span>
-              <span class="lang-id">Pusat Arsitektur &amp; Rekayasa Perangkat Lunak</span>
+    <footer id="contact" class="pt-12 sm:pt-16 pb-12 border-t border-slate-200/80 flex flex-col gap-12 mt-4 scroll-mt-24">
+      <!-- Main Footer Columns -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-10 border-b border-slate-200/70">
+        <!-- Col 1: Brand & Studio Info (span 5) -->
+        <div class="lg:col-span-5 flex flex-col gap-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#2563EB] to-indigo-700 flex items-center justify-center text-white shadow-md shadow-blue-500/25">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16.5 9.4 7.55 4.24a1.78 1.78 0 0 0-2.5 1.55v12.42a1.78 1.78 0 0 0 2.5 1.55L16.5 14.6a1.78 1.78 0 0 0 0-3.2z"/><path d="m21 16-5-3 5-3v6z" fill="currentColor"/></svg>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-bold text-lg text-[#0F172A] leading-tight tracking-tight">Extensia Creative Bali</span>
+              <span class="text-xs font-medium text-slate-500">Bespoke Software Studio • Bali</span>
+            </div>
+          </div>
+
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-md">
+            Software house &amp; custom software engineering studio based in Bali (Canggu &amp; Denpasar). We architect, engineer, and deploy high-performance web applications, offline-first POS systems, luxury hospitality platforms, and fleet telematics.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-4 text-xs text-slate-500 pt-1">
+            <span class="inline-flex items-center gap-1.5 font-medium text-slate-700">
+              <svg class="w-4 h-4 text-[#2563EB]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              Canggu &amp; Denpasar, Bali, Indonesia
+            </span>
+            <span class="inline-flex items-center gap-1.5 font-semibold text-emerald-600">
+              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              DPS-01 Node Active
             </span>
           </div>
         </div>
 
-        <!-- Center: Contact & Location Info -->
-        <div class="flex flex-col sm:flex-row items-center gap-3 sm:gap-6 font-mono text-[11px] sm:text-[12.5px] text-brand-slate/80 text-center">
-          <a href="mailto:info@extensiacreativebali.com" class="hover:underline font-bold text-brand-slate flex items-center gap-1.5">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="2"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
-            <span>info@extensiacreativebali.com</span>
-          </a>
-          <span class="hidden sm:inline" aria-hidden="true">•</span>
-          <span class="font-bold text-brand-slate flex items-center gap-1.5">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="2"/></svg>
-            <span>CANGGU &amp; DENPASAR, BALI</span>
-          </span>
+        <!-- Col 2: Services & Capabilities (span 2) -->
+        <div class="lg:col-span-2 flex flex-col gap-3">
+          <span class="font-semibold text-xs text-[#0F172A] tracking-wider uppercase">Capabilities</span>
+          <ul class="flex flex-col gap-2.5 text-xs sm:text-sm text-slate-600">
+            <li><a href="#capabilities" class="hover:text-[#2563EB] transition-colors">Custom Web Apps</a></li>
+            <li><a href="vexapos.html" class="hover:text-[#2563EB] transition-colors">vexaPOS Systems</a></li>
+            <li><a href="#capabilities" class="hover:text-[#2563EB] transition-colors">Luxury Villa Tech</a></li>
+            <li><a href="#capabilities" class="hover:text-[#2563EB] transition-colors">IoT Fleet Telematics</a></li>
+            <li><a href="#standards" class="hover:text-[#2563EB] transition-colors">Cloud Architecture</a></li>
+          </ul>
         </div>
 
-        <!-- Right: WhatsApp Direct Action -->
-        <div>
-          <a href="https://wa.me/6285338000872?text=Halo%20Extensia%20Bali,%20saya%20tertarik%20konsultasi%20arsitektur%20aplikasi" target="_blank" rel="noopener" class="px-5 py-2.5 bg-brand-coral text-brand-slate border-2 border-brand-slate shadow-brutal-slate-sm rounded-xl font-heading font-bold text-[12px] sm:text-[13px] uppercase tracking-wide transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none active:translate-x-[4px] active:translate-y-[4px] flex items-center gap-2 cursor-pointer">
-            <span>WHATSAPP DIRECT</span>
-            <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2.5 8h10M9.5 4 13.5 8 9.5 12" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
+        <!-- Col 3: Company & Standards (span 2) -->
+        <div class="lg:col-span-2 flex flex-col gap-3">
+          <span class="font-semibold text-xs text-[#0F172A] tracking-wider uppercase">Company</span>
+          <ul class="flex flex-col gap-2.5 text-xs sm:text-sm text-slate-600">
+            <li><a href="#capabilities" class="hover:text-[#2563EB] transition-colors">About Extensia</a></li>
+            <li><a href="#methodology" class="hover:text-[#2563EB] transition-colors">Methodology</a></li>
+            <li><a href="#standards" class="hover:text-[#2563EB] transition-colors">SLA Standards</a></li>
+            <li><a href="#projects" class="hover:text-[#2563EB] transition-colors">Case Studies</a></li>
+            <li><a href="vexapos.html" class="hover:text-[#2563EB] transition-colors">vexaPOS App</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Direct Consultation (span 3) -->
+        <div class="lg:col-span-3 flex flex-col gap-3">
+          <span class="font-semibold text-xs text-[#0F172A] tracking-wider uppercase">Get in Touch</span>
+          <p class="text-xs text-slate-500 leading-relaxed">
+            Need consultation for your software project in Bali? Speak directly with our lead architect.
+          </p>
+          <div class="flex flex-col gap-2 pt-1">
+            <a href="mailto:info@extensiacreativebali.com" class="text-xs font-semibold text-slate-700 hover:text-[#2563EB] flex items-center gap-2 transition-colors">
+              <svg class="w-4 h-4 text-[#2563EB]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
+              <span>info@extensiacreativebali.com</span>
+            </a>
+            <a href="https://wa.me/6285338000872?text=Halo%20Extensia%20Bali,%20saya%20tertarik%20konsultasi%20arsitektur%20aplikasi" target="_blank" rel="noopener" class="mt-2 inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-[#2563EB] hover:bg-[#1D4ED8] text-white rounded-full text-xs font-semibold shadow-sm transition-all">
+              <span>Start WhatsApp Chat</span>
+              <svg class="w-3.5 h-3.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 8h10M9.5 4 13.5 8 9.5 12"/></svg>
+            </a>
+          </div>
         </div>
       </div>
 
-      <!-- Bottom Micro-Bar: Copyright, SLA & Legal -->
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-3 font-mono text-[10.5px] sm:text-[11.5px] text-brand-slate/70 text-center sm:text-left">
+      <!-- Bottom Micro-Bar -->
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 text-center sm:text-left">
         <div>
-          <span class="lang-en">&copy; 2026 <strong>Extensia Creative Bali</strong>. All Rights Reserved. Designed &amp; Engineered by <strong>Oggie Sutrisna</strong>.</span>
-          <span class="lang-id">&copy; 2026 <strong>Extensia Creative Bali</strong>. Hak Cipta Dilindungi. Didesain &amp; Direkayasa oleh <strong>Oggie Sutrisna</strong>.</span>
+          &copy; 2026 <strong class="text-slate-700">Extensia Creative Bali</strong>. All Rights Reserved. Engineered by <strong class="text-slate-700">Oggie Sutrisna</strong>.
         </div>
-        <div class="flex items-center gap-3">
-          <span class="inline-flex items-center gap-1.5">
-            <span class="w-2 h-2 rounded-full bg-brand-slate" aria-hidden="true"></span>
-            <span class="lang-en">DPS-01 Production Node Active</span>
-            <span class="lang-id">DPS-01 Node Produksi Aktif</span>
-          </span>
-          <span aria-hidden="true">•</span>
-          <span>
-            <span class="lang-en">Zero Vendor Lock-in</span>
-            <span class="lang-id">Bebas Keterikatan Vendor</span>
-          </span>
+        <div class="flex items-center gap-4 text-slate-400">
+          <span class="text-slate-600">Zero Vendor Lock-in</span>
+          <span>•</span>
+          <span class="text-slate-600">DPS-01 Production SLA</span>
+          <span>•</span>
+          <a href="#contact" class="hover:text-[#2563EB] transition-colors">Privacy &amp; Terms</a>
         </div>
       </div>
     </footer>

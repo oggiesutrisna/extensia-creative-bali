@@ -35,16 +35,17 @@ tailwind.config = {
         "primary-container": "#D4FF00",
       },
       fontFamily: {
-        heading: ["'Clash Display'", "sans-serif"],
+        sans: ["'Plus Jakarta Sans'", "-apple-system", "BlinkMacSystemFont", "'Segoe UI'", "Roboto", "sans-serif"],
+        heading: ["'Plus Jakarta Sans'", "sans-serif"],
         body: ["'Plus Jakarta Sans'", "sans-serif"],
         mono: ["'Space Mono'", "monospace"],
-        "headline-lg": ["'Clash Display'"],
+        "headline-lg": ["'Plus Jakarta Sans'"],
         "label-md": ["'Plus Jakarta Sans'"],
-        "headline-xs": ["'Clash Display'"],
+        "headline-xs": ["'Plus Jakarta Sans'"],
         "code-mono": ["'Space Mono'"],
         "body-sm": ["'Plus Jakarta Sans'"],
-        "headline-sm": ["'Clash Display'"],
-        "display-hero": ["'Clash Display'"],
+        "headline-sm": ["'Plus Jakarta Sans'"],
+        "display-hero": ["'Plus Jakarta Sans'"],
         "body-lg": ["'Plus Jakarta Sans'"],
         "body-md": ["'Plus Jakarta Sans'"],
       },
@@ -173,13 +174,13 @@ document.addEventListener("DOMContentLoaded", () => {
       btn.addEventListener("click", () => {
         const selectedCategory = btn.getAttribute("data-category");
 
-        // Update button states
+        // Update button states with modern cobalt blue active pill
         filterButtons.forEach((b) => {
-          b.classList.remove("bg-[#D4FF00]");
-          b.classList.add("bg-[#FFFDF0]");
+          b.classList.remove("bg-[#2563EB]", "text-white", "shadow-sm");
+          b.classList.add("bg-white", "text-slate-600", "border-slate-200/80");
         });
-        btn.classList.remove("bg-[#FFFDF0]");
-        btn.classList.add("bg-[#D4FF00]");
+        btn.classList.remove("bg-white", "text-slate-600", "border-slate-200/80");
+        btn.classList.add("bg-[#2563EB]", "text-white", "shadow-sm");
 
         // Filter cards with smooth opacity transition
         projectCards.forEach((card) => {
@@ -208,15 +209,15 @@ document.addEventListener("DOMContentLoaded", () => {
       } catch (e) {}
 
       if (lang === "en") {
-        btnEn.classList.add("bg-[#D4FF00]", "border", "border-[#111118]");
-        btnEn.classList.remove("bg-transparent");
-        btnId.classList.remove("bg-[#D4FF00]", "border", "border-[#111118]");
-        btnId.classList.add("bg-transparent");
+        btnEn.classList.add("bg-white", "text-slate-900", "shadow-sm");
+        btnEn.classList.remove("bg-transparent", "text-slate-600");
+        btnId.classList.remove("bg-white", "text-slate-900", "shadow-sm");
+        btnId.classList.add("bg-transparent", "text-slate-600");
       } else {
-        btnId.classList.add("bg-[#D4FF00]", "border", "border-[#111118]");
-        btnId.classList.remove("bg-transparent");
-        btnEn.classList.remove("bg-[#D4FF00]", "border", "border-[#111118]");
-        btnEn.classList.add("bg-transparent");
+        btnId.classList.add("bg-white", "text-slate-900", "shadow-sm");
+        btnId.classList.remove("bg-transparent", "text-slate-600");
+        btnEn.classList.remove("bg-white", "text-slate-900", "shadow-sm");
+        btnEn.classList.add("bg-transparent", "text-slate-600");
       }
     };
 

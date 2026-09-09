@@ -13,7 +13,7 @@
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="author" content="Extensia Creative Bali" />
-  <meta name="theme-color" content="#FFF9D5" />
+  <meta name="theme-color" content="#F7F9FC" />
   <meta name="geo.region" content="ID-BA" />
   <meta name="geo.placename" content="Canggu, Badung, Bali, Indonesia" />
   <meta name="geo.position" content="-8.6481;115.1385" />
@@ -161,38 +161,20 @@
     ]
   }
   </script>
-  <!-- TODO: ganti placeholder — verifikasi nominal harga paket ke tim sales sebelum rilis produksi. -->
 
-  <!-- GA4 placeholder: ganti G-XXXXXXX dengan ID asli lalu uncomment -->
-  <!--
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXX');
-  </script>
-  -->
-  <!-- <meta name="google-site-verification" content="PASTE_TOKEN_HERE" /> -->
-
-  <!-- Typography: Clash Display + Plus Jakarta Sans + Space Mono -->
+  <!-- Typography: Plus Jakarta Sans + Space Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet" /></noscript>
-  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&amp;display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
-  <noscript><link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&amp;display=swap" rel="stylesheet" /></noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" />
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/compiled.v2.css" />
-  <!-- Production Tailwind: compiled.css (CDN removed for performance).
-       Regenerate dengan `npm run build:css` setelah mengedit HTML/JS. -->
 
   <!-- Site Scripts -->
   <script defer src="assets/js/script.js"></script>
 
-  <!-- Language visibility rules (ID/EN) — pasangan dari switcher di script.js -->
+  <!-- Language visibility rules (ID/EN) -->
   <style>
     html[lang="id"] .lang-en { display: none !important; }
     html[lang="id"] .lang-id { display: inline; }
@@ -212,529 +194,717 @@
   <!-- ================= SECTION A END ================= -->
 </head>
 
-<body class="bg-white font-body text-brand-dark min-h-screen p-2 sm:p-4 lg:p-6 selection:bg-brand-lime selection:text-brand-dark">
+<body class="bg-[#F7F9FC] font-sans text-slate-900 min-h-screen relative selection:bg-lime-300 selection:text-slate-900 overflow-x-hidden">
 
-  <div class="max-w-[1560px] mx-auto flex flex-col gap-5 sm:gap-7 lg:gap-9">
+  <!-- ================= AMBIENT FLUID MESH BACKGROUND BLOBS (Zero-Filter Radial Shaders) ================= -->
+  <div class="fixed inset-0 overflow-hidden pointer-events-none -z-10" aria-hidden="true" style="will-change: transform; transform: translateZ(0);">
+    <!-- Top-left Cyan Fluid Blob -->
+    <div class="absolute -top-28 -left-20 w-[550px] sm:w-[720px] h-[550px] sm:h-[720px] rounded-full radial-blob-cyan animate-fluid-1"></div>
+    <!-- Mid-right Mint / Lime Fluid Blob -->
+    <div class="absolute top-[28%] -right-24 w-[500px] sm:w-[680px] h-[500px] sm:h-[680px] rounded-full radial-blob-lime animate-fluid-2"></div>
+    <!-- Center-left Soft Indigo / Lavender Fluid Blob -->
+    <div class="absolute top-[58%] -left-28 w-[550px] sm:w-[740px] h-[550px] sm:h-[740px] rounded-full radial-blob-indigo animate-fluid-3"></div>
+    <!-- Bottom-right Cyan & Mint Fluid Blob -->
+    <div class="absolute bottom-[-10%] right-[8%] w-[500px] sm:w-[700px] h-[500px] sm:h-[700px] rounded-full radial-blob-emerald animate-fluid-1"></div>
+  </div>
 
-    <!-- ================= SECTION B START: STICKY TACTICAL NAVIGATION BAR ================= -->
-    <nav aria-label="Navigasi utama vexaPOS" data-active-classes="bg-brand-lime text-brand-dark" class="sticky top-2 sm:top-4 z-50 border-2 border-brand-dark bg-brand-ivory shadow-brutal-sm rounded-xl px-3 sm:px-5 py-2.5 flex items-center justify-between gap-3">
-      <!-- Left: Logo + version badge -->
-      <div class="flex items-center gap-2.5">
-        <a href="/" class="flex items-center gap-2 group" aria-label="Kembali ke Extensia Creative Bali">
-          <span class="w-9 h-9 rounded-lg bg-brand-dark border-2 border-brand-dark flex items-center justify-center text-brand-lime font-heading font-bold text-lg leading-none group-hover:bg-brand-obsidian transition-colors">V</span>
+  <div class="max-w-[1500px] mx-auto px-3 sm:px-6 lg:px-8 py-3 sm:py-6 flex flex-col gap-6 sm:gap-8 lg:gap-10">
+
+    <!-- ================= SECTION B START: FLOATING LIQUID GLASS NAVBAR ================= -->
+    <nav aria-label="Navigasi utama vexaPOS" data-active-classes="bg-white/90 text-slate-900 shadow-sm" class="sticky top-3 sm:top-5 z-50 liquid-glass-nav rounded-full px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between gap-3 sm:gap-4 transition-all duration-300">
+      <!-- Left: Minimalist Logo + Alpha Pill -->
+      <div class="flex items-center gap-3">
+        <a href="/" class="flex items-center gap-2.5 group" aria-label="Kembali ke Extensia Creative Bali">
+          <span class="w-9 h-9 rounded-xl bg-slate-900 flex items-center justify-center text-[#84CC16] font-bold text-lg leading-none shadow-sm border border-slate-700/50 group-hover:scale-105 transition-transform">V</span>
           <span class="flex flex-col leading-none">
             <span class="flex items-center gap-1.5">
-              <span class="font-heading font-bold text-lg tracking-tight text-brand-dark">vexa<span class="text-brand-blue">POS</span></span>
-              <span class="font-mono text-[9px] font-bold uppercase px-1.5 py-0.5 bg-brand-orange text-brand-dark border border-brand-dark rounded">Alpha</span>
+              <span class="font-bold text-[17px] tracking-tight text-slate-900">vexa<span class="text-blue-600">POS</span></span>
+              <span class="font-mono text-[9px] font-bold uppercase px-1.5 py-0.5 bg-lime-100 text-lime-800 border border-lime-300/80 rounded-full">Alpha</span>
             </span>
-            <span class="font-mono text-[10px] font-bold text-brand-dark/70 uppercase tracking-wider">v0.0.1-alpha • by Extensia</span>
+            <span class="font-mono text-[10px] font-medium text-slate-500 uppercase tracking-wider">v0.0.1-alpha • by Extensia</span>
           </span>
         </a>
       </div>
 
-      <!-- Center: anchor links (desktop) -->
-      <div class="hidden lg:flex items-center gap-1.5">
-        <a href="#masalah" data-path="masalah" class="font-mono text-[12px] font-bold px-3 py-1.5 bg-brand-cream-light text-brand-dark border-2 border-brand-dark shadow-brutal-sm rounded-md hover:bg-brand-lime transition-colors">
-          <span class="lang-id">MASALAH</span><span class="lang-en">PROBLEMS</span>
+      <!-- Center: Anchor Links (Desktop Liquid Pills) -->
+      <div class="hidden lg:flex items-center gap-1 bg-slate-100/60 p-1 rounded-full border border-white/60">
+        <a href="#masalah" data-path="masalah" class="text-[12.5px] font-semibold px-4 py-1.5 text-slate-600 hover:text-slate-900 rounded-full hover:bg-white/80 transition-all">
+          <span class="lang-id">Masalah</span><span class="lang-en">Problems</span>
         </a>
-        <a href="#fitur" data-path="fitur" class="font-mono text-[12px] font-bold px-3 py-1.5 bg-brand-cream-light text-brand-dark border-2 border-brand-dark shadow-brutal-sm rounded-md hover:bg-brand-lime transition-colors">
-          <span class="lang-id">FITUR</span><span class="lang-en">FEATURES</span>
+        <a href="#fitur" data-path="fitur" class="text-[12.5px] font-semibold px-4 py-1.5 text-slate-600 hover:text-slate-900 rounded-full hover:bg-white/80 transition-all">
+          <span class="lang-id">Fitur</span><span class="lang-en">Features</span>
         </a>
-        <a href="#hardware" data-path="hardware" class="font-mono text-[12px] font-bold px-3 py-1.5 bg-brand-cream-light text-brand-dark border-2 border-brand-dark shadow-brutal-sm rounded-md hover:bg-brand-lime transition-colors">HARDWARE</a>
-        <a href="#pricing" data-path="pricing" class="font-mono text-[12px] font-bold px-3 py-1.5 bg-brand-cream-light text-brand-dark border-2 border-brand-dark shadow-brutal-sm rounded-md hover:bg-brand-lime transition-colors">
-          <span class="lang-id">HARGA</span><span class="lang-en">PRICING</span>
+        <a href="#hardware" data-path="hardware" class="text-[12.5px] font-semibold px-4 py-1.5 text-slate-600 hover:text-slate-900 rounded-full hover:bg-white/80 transition-all">
+          Hardware
         </a>
-        <a href="#faq" data-path="faq" class="font-mono text-[12px] font-bold px-3 py-1.5 bg-brand-cream-light text-brand-dark border-2 border-brand-dark shadow-brutal-sm rounded-md hover:bg-brand-lime transition-colors">FAQ</a>
+        <a href="#pricing" data-path="pricing" class="text-[12.5px] font-semibold px-4 py-1.5 text-slate-600 hover:text-slate-900 rounded-full hover:bg-white/80 transition-all">
+          <span class="lang-id">Harga</span><span class="lang-en">Pricing</span>
+        </a>
+        <a href="#faq" data-path="faq" class="text-[12.5px] font-semibold px-4 py-1.5 text-slate-600 hover:text-slate-900 rounded-full hover:bg-white/80 transition-all">
+          FAQ
+        </a>
       </div>
 
-      <!-- Right: clock + status + lang + CTA + burger -->
-      <div class="flex items-center gap-2">
-        <span id="bali-time" class="hidden xl:inline-flex font-mono text-[11px] font-bold px-2.5 py-1.5 bg-brand-cream-light text-brand-dark border-2 border-brand-dark rounded-md whitespace-nowrap">BALI TIME (WITA): --:--</span>
-        <span class="hidden md:inline-flex items-center gap-1.5 font-mono text-[11px] font-bold px-2.5 py-1.5 bg-brand-green text-white border-2 border-brand-dark rounded-md whitespace-nowrap">
-          <span class="w-2 h-2 rounded-full bg-white animate-pulse" aria-hidden="true"></span>
+      <!-- Right: Bali Time + Offline Status + Language + Primary CTA -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <span id="bali-time" class="hidden xl:inline-flex font-mono text-[11px] font-semibold px-3 py-1.5 bg-white/70 text-slate-700 border border-slate-200/70 rounded-full whitespace-nowrap shadow-sm">BALI TIME (WITA): --:--</span>
+        
+        <span class="hidden md:inline-flex items-center gap-1.5 font-mono text-[11px] font-bold px-3 py-1.5 bg-emerald-50/90 text-emerald-700 border border-emerald-200/80 rounded-full whitespace-nowrap shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true"></span>
           100% OFFLINE READY
         </span>
-        <div class="hidden sm:inline-flex items-center p-1 bg-brand-cream-light border-2 border-brand-dark shadow-brutal-sm rounded-lg font-mono text-[11px] font-bold" role="group" aria-label="Pilih Bahasa / Language Selection">
-          <button type="button" id="btn-lang-id" class="px-2.5 py-1 bg-brand-lime text-brand-dark border border-brand-dark rounded transition-colors cursor-pointer">ID</button>
-          <button type="button" id="btn-lang-en" class="px-2.5 py-1 bg-transparent text-brand-dark rounded hover:bg-brand-cream transition-colors cursor-pointer">EN</button>
+
+        <!-- Language Switcher -->
+        <div class="hidden sm:inline-flex items-center p-0.5 bg-slate-100/80 border border-slate-200/80 rounded-full font-mono text-[11px] font-bold" role="group" aria-label="Pilih Bahasa / Language Selection">
+          <button type="button" id="btn-lang-id" class="px-2.5 py-1 bg-white text-slate-900 shadow-sm rounded-full transition-all cursor-pointer">ID</button>
+          <button type="button" id="btn-lang-en" class="px-2.5 py-1 bg-transparent text-slate-500 rounded-full hover:text-slate-900 transition-colors cursor-pointer">EN</button>
         </div>
-        <a href="https://demo.vexapos.my.id/" target="_blank" rel="noopener" class="hidden sm:inline-flex items-center gap-1.5 font-heading font-bold text-[13px] uppercase px-4 py-2 bg-brand-lime text-brand-dark border-2 border-brand-dark shadow-brutal-sm rounded-lg hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none active:translate-x-[4px] active:translate-y-[4px] transition-all whitespace-nowrap">
+
+        <!-- Electric Lime CTA -->
+        <a href="https://demo.vexapos.my.id/" target="_blank" rel="noopener" class="hidden sm:inline-flex items-center gap-1.5 font-bold text-[13px] px-4 sm:px-5 py-2 sm:py-2.5 bg-[#84CC16] hover:bg-[#65A30D] text-slate-950 rounded-full shadow-sm hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 transition-all whitespace-nowrap">
           <span class="lang-id">Coba Demo POS</span><span class="lang-en">Try POS Demo</span>
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h9M8 3.5 11.5 7 8 10.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
-        <button type="button" id="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Buka menu navigasi" class="lg:hidden w-10 h-10 inline-flex items-center justify-center bg-brand-cream-light text-brand-dark border-2 border-brand-dark shadow-brutal-sm rounded-lg cursor-pointer">
+
+        <!-- Mobile burger toggle -->
+        <button type="button" id="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Buka menu navigasi" class="lg:hidden w-10 h-10 inline-flex items-center justify-center bg-white/80 text-slate-700 border border-slate-200/80 rounded-full shadow-sm cursor-pointer hover:bg-white transition-colors">
           <svg id="nav-toggle-icon-open" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2 4.5h14M2 9h14M2 13.5h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
           <svg id="nav-toggle-icon-close" class="hidden" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="m4 4 10 10M14 4 4 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         </button>
       </div>
     </nav>
-    <!-- Mobile menu panel -->
-    <div id="mobile-menu" class="hidden lg:hidden border-2 border-brand-dark bg-brand-ivory shadow-brutal rounded-xl p-4 flex-col gap-2 -mt-3 sm:-mt-5">
-      <a href="#clients" class="font-mono text-[13px] font-bold px-3 py-2.5 bg-brand-cream-light border-2 border-brand-dark rounded-lg"><span class="lang-id">KLIEN KAMI</span><span class="lang-en">OUR CLIENTS</span></a>
-      <a href="#masalah" class="font-mono text-[13px] font-bold px-3 py-2.5 bg-brand-cream-light border-2 border-brand-dark rounded-lg"><span class="lang-id">MASALAH</span><span class="lang-en">PROBLEMS</span></a>
-      <a href="#fitur" class="font-mono text-[13px] font-bold px-3 py-2.5 bg-brand-cream-light border-2 border-brand-dark rounded-lg"><span class="lang-id">FITUR</span><span class="lang-en">FEATURES</span></a>
-      <a href="#hardware" class="font-mono text-[13px] font-bold px-3 py-2.5 bg-brand-cream-light border-2 border-brand-dark rounded-lg">HARDWARE</a>
-      <a href="#pricing" class="font-mono text-[13px] font-bold px-3 py-2.5 bg-brand-cream-light border-2 border-brand-dark rounded-lg"><span class="lang-id">HARGA</span><span class="lang-en">PRICING</span></a>
-      <a href="#faq" class="font-mono text-[13px] font-bold px-3 py-2.5 bg-brand-cream-light border-2 border-brand-dark rounded-lg">FAQ</a>
-      <div class="flex items-center gap-2 pt-1">
-        <div class="inline-flex items-center p-1 bg-brand-cream-light border-2 border-brand-dark rounded-lg font-mono text-[11px] font-bold" role="group" aria-label="Pilih Bahasa">
-          <button type="button" data-lang-mobile="id" class="px-2.5 py-1 bg-brand-lime border border-brand-dark rounded cursor-pointer">ID</button>
-          <button type="button" data-lang-mobile="en" class="px-2.5 py-1 bg-transparent rounded cursor-pointer">EN</button>
+
+    <!-- Mobile Menu Panel (Liquid Glass) -->
+    <div id="mobile-menu" class="hidden lg:hidden liquid-glass rounded-3xl p-5 flex flex-col gap-2 -mt-2 shadow-lg border border-white/80">
+      <a href="#clients" class="font-medium text-[14px] px-4 py-2.5 bg-white/70 hover:bg-white rounded-2xl border border-slate-200/60 text-slate-800 transition-colors"><span class="lang-id">KLIEN KAMI</span><span class="lang-en">OUR CLIENTS</span></a>
+      <a href="#masalah" class="font-medium text-[14px] px-4 py-2.5 bg-white/70 hover:bg-white rounded-2xl border border-slate-200/60 text-slate-800 transition-colors"><span class="lang-id">MASALAH</span><span class="lang-en">PROBLEMS</span></a>
+      <a href="#fitur" class="font-medium text-[14px] px-4 py-2.5 bg-white/70 hover:bg-white rounded-2xl border border-slate-200/60 text-slate-800 transition-colors"><span class="lang-id">FITUR</span><span class="lang-en">FEATURES</span></a>
+      <a href="#hardware" class="font-medium text-[14px] px-4 py-2.5 bg-white/70 hover:bg-white rounded-2xl border border-slate-200/60 text-slate-800 transition-colors">HARDWARE</a>
+      <a href="#pricing" class="font-medium text-[14px] px-4 py-2.5 bg-white/70 hover:bg-white rounded-2xl border border-slate-200/60 text-slate-800 transition-colors"><span class="lang-id">HARGA</span><span class="lang-en">PRICING</span></a>
+      <a href="#faq" class="font-medium text-[14px] px-4 py-2.5 bg-white/70 hover:bg-white rounded-2xl border border-slate-200/60 text-slate-800 transition-colors">FAQ</a>
+      <div class="flex items-center gap-2 pt-2 border-t border-slate-200/60">
+        <div class="inline-flex items-center p-0.5 bg-slate-100/90 border border-slate-200/80 rounded-full font-mono text-[11px] font-bold" role="group" aria-label="Pilih Bahasa">
+          <button type="button" data-lang-mobile="id" class="px-3 py-1 bg-white text-slate-900 shadow-sm rounded-full cursor-pointer">ID</button>
+          <button type="button" data-lang-mobile="en" class="px-3 py-1 bg-transparent text-slate-500 rounded-full cursor-pointer">EN</button>
         </div>
-        <a href="https://demo.vexapos.my.id/" target="_blank" rel="noopener" class="flex-1 text-center font-heading font-bold text-[13px] uppercase px-4 py-2 bg-brand-lime border-2 border-brand-dark shadow-brutal-sm rounded-lg"><span class="lang-id">Coba Demo POS</span><span class="lang-en">Try POS Demo</span></a>
+        <a href="https://demo.vexapos.my.id/" target="_blank" rel="noopener" class="flex-1 text-center font-bold text-[13px] px-4 py-2 bg-[#84CC16] text-slate-950 rounded-full shadow-sm"><span class="lang-id">Coba Demo POS</span><span class="lang-en">Try POS Demo</span></a>
       </div>
     </div>
     <!-- ================= SECTION B END ================= -->
 
     <!-- ================= SECTION C START: ABOVE-THE-FOLD HERO ================= -->
-    <header class="dot-grid border-2 border-brand-dark shadow-brutal rounded-xl p-6 sm:p-10 lg:p-12 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
-      <!-- Left column (7 cols) -->
-      <div class="lg:col-span-7 flex flex-col gap-5">
-        <span class="inline-flex items-center self-start gap-2 px-3.5 py-1.5 bg-brand-cream-light text-brand-dark border-2 border-brand-dark shadow-brutal-sm rounded-md font-mono text-[10.5px] sm:text-[11.5px] font-bold uppercase tracking-wide">
-          <span class="w-2 h-2 rounded-full bg-brand-green animate-pulse" aria-hidden="true"></span>
+    <header class="liquid-glass rounded-3xl p-6 sm:p-10 lg:p-14 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative overflow-hidden">
+      <!-- Subtle top specular reflection -->
+      <div class="absolute top-0 left-1/4 right-1/4 h-[1px] bg-gradient-to-r from-transparent via-white to-transparent opacity-80" aria-hidden="true"></div>
+
+      <!-- Left Column (7 cols) -->
+      <div class="lg:col-span-7 flex flex-col gap-6">
+        <!-- Glowing Bali Tech Trust Badge -->
+        <span class="inline-flex items-center self-start gap-2 px-3.5 py-1.5 bg-white/80 border border-slate-200/80 rounded-full shadow-sm font-mono text-[11px] sm:text-[12px] font-semibold text-slate-700">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true"></span>
           <span class="lang-id">Dibangun di Bali untuk F&amp;B Perputaran Tinggi</span>
           <span class="lang-en">Built in Bali for High-Turnover F&amp;B</span>
         </span>
-        <h1 class="font-heading font-bold text-[34px] sm:text-[46px] xl:text-[56px] leading-[1.04] tracking-tight text-brand-dark">
-          <span class="lang-id">Sistem Kasir Cloud yang Tetap <span class="bg-brand-cream px-2 border-2 border-brand-dark shadow-brutal-sm inline-block -rotate-1">Ngebut Saat Internet Drop.</span></span>
-          <span class="lang-en">Cloud POS That Stays <span class="bg-brand-cream px-2 border-2 border-brand-dark shadow-brutal-sm inline-block -rotate-1">Fast When the Internet Drops.</span></span>
+
+        <!-- Main Display Headline (H1) -->
+        <h1 class="font-extrabold text-[36px] sm:text-[48px] xl:text-[58px] leading-[1.08] tracking-[-0.03em] text-slate-950">
+          <span class="lang-id">Sistem Kasir Cloud yang Tetap <span class="relative inline-block text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-teal-600 to-blue-600">Ngebut Saat Internet Drop.</span></span>
+          <span class="lang-en">Cloud POS That Stays <span class="relative inline-block text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-teal-600 to-blue-600">Fast When Internet Drops.</span></span>
         </h1>
-        <p class="font-body text-[15px] sm:text-[17px] text-brand-dark/85 font-medium leading-relaxed max-w-[620px]">
+
+        <!-- High-readability body copy -->
+        <p class="text-[16px] sm:text-[18px] text-slate-600 font-normal leading-relaxed max-w-[620px]">
           <span class="lang-id">Hujan badai, kabel terputus, atau lonjakan turis di peak hours — kasir tetap jalan tanpa jeda. Transaksi tersimpan lokal lalu tersinkron otomatis begitu koneksi pulih.</span>
           <span class="lang-en">Storms, cut cables, or peak-hour tourist surges — checkout keeps running with zero lag. Sales are stored locally, then auto-synced when the connection recovers.</span>
         </p>
-        <div class="flex flex-wrap items-center gap-3">
-          <a href="https://wa.me/6285338000872?text=Halo%20Tim%20vexaPOS%2C%20saya%20mau%20booking%20demo%20on-site%20GRATIS%20di%20outlet%20saya%20di%20Bali." target="_blank" rel="noopener" class="inline-flex items-center gap-2 font-heading font-bold text-[14px] sm:text-[15px] uppercase px-6 py-3.5 bg-brand-lime text-brand-dark border-2 border-brand-dark shadow-brutal rounded-xl hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none active:translate-x-[4px] active:translate-y-[4px] transition-all">
+
+        <!-- CTA Button Group -->
+        <div class="flex flex-wrap items-center gap-3.5 pt-1">
+          <!-- Primary WhatsApp Demo Booking CTA -->
+          <a href="https://wa.me/6285338000872?text=Halo%20Tim%20vexaPOS%2C%20saya%20mau%20booking%20demo%20on-site%20GRATIS%20di%20outlet%20saya%20di%20Bali." target="_blank" rel="noopener" class="inline-flex items-center gap-2 font-bold text-[14px] sm:text-[15px] px-7 py-3.5 bg-[#84CC16] hover:bg-[#65A30D] text-slate-950 rounded-2xl shadow-lg shadow-lime-500/20 hover:shadow-lime-500/35 hover:-translate-y-0.5 active:translate-y-0 transition-all">
             <span class="lang-id">Booking Demo On-Site Gratis</span><span class="lang-en">Book a Free On-Site Demo</span>
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2.5 8h10M9.5 4 13.5 8 9.5 12" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
-          <a href="https://demo.vexapos.my.id/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 font-heading font-bold text-[14px] sm:text-[15px] uppercase px-6 py-3.5 bg-brand-ivory text-brand-dark border-2 border-brand-dark shadow-brutal rounded-xl hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none active:translate-x-[4px] active:translate-y-[4px] transition-all">
+
+          <!-- Secondary Online Demo Button -->
+          <a href="https://demo.vexapos.my.id/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 font-semibold text-[14px] sm:text-[15px] px-6 py-3.5 bg-white/80 hover:bg-white text-slate-800 border border-slate-200/80 rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 transition-all">
             <span class="lang-id">Coba Demo Online</span><span class="lang-en">Try Online Demo</span>
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2.5 8h10M9.5 4 13.5 8 9.5 12" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
-          <a href="#fitur" class="inline-flex items-center gap-2 font-heading font-bold text-[14px] sm:text-[15px] uppercase px-6 py-3.5 bg-brand-ivory text-brand-dark border-2 border-brand-dark shadow-brutal rounded-xl hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none active:translate-x-[4px] active:translate-y-[4px] transition-all">
+
+          <!-- Tertiary Learn Link -->
+          <a href="#fitur" class="inline-flex items-center gap-1.5 font-semibold text-[14px] sm:text-[15px] px-4 py-3.5 text-slate-600 hover:text-slate-950 transition-colors">
             <span class="lang-id">Lihat Cara Kerja</span><span class="lang-en">See How It Works</span>
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 2.5v11M4 9.5 8 13.5 12 9.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
         </div>
-        <!-- Micro-metrics strip -->
-        <dl class="grid grid-cols-3 gap-3 max-w-[620px]">
-          <div class="bg-brand-cream-light border-2 border-brand-dark shadow-brutal-sm rounded-lg p-3 text-center">
-            <dt class="font-mono text-[10px] sm:text-[11px] font-bold uppercase text-brand-dark/70 order-2"><span class="lang-id">Cetak Struk</span><span class="lang-en">Receipt Print</span></dt>
-            <dd class="font-mono font-bold text-[18px] sm:text-[22px] text-brand-dark">0.2s</dd>
+
+        <!-- Micro-metrics strip (Translucent Liquid Stat Cards) -->
+        <dl class="grid grid-cols-3 gap-3 sm:gap-4 max-w-[620px] pt-2">
+          <div class="liquid-glass-subtle rounded-2xl p-3.5 sm:p-4 text-center border border-white/75 hover:bg-white/80 transition-all">
+            <dd class="font-mono font-bold text-[20px] sm:text-[24px] text-slate-900 tracking-tight">0.2s</dd>
+            <dt class="font-mono text-[10px] sm:text-[11px] font-semibold uppercase text-slate-500 mt-1"><span class="lang-id">Cetak Struk</span><span class="lang-en">Receipt Print</span></dt>
           </div>
-          <div class="bg-brand-cream-light border-2 border-brand-dark shadow-brutal-sm rounded-lg p-3 text-center">
-            <dt class="font-mono text-[10px] sm:text-[11px] font-bold uppercase text-brand-dark/70 order-2"><span class="lang-id">Ketahanan Offline</span><span class="lang-en">Offline Resilience</span></dt>
-            <dd class="font-mono font-bold text-[18px] sm:text-[22px] text-brand-emerald">100%</dd>
+          <div class="liquid-glass-subtle rounded-2xl p-3.5 sm:p-4 text-center border border-white/75 hover:bg-white/80 transition-all">
+            <dd class="font-mono font-bold text-[20px] sm:text-[24px] text-emerald-600 tracking-tight">100%</dd>
+            <dt class="font-mono text-[10px] sm:text-[11px] font-semibold uppercase text-slate-500 mt-1"><span class="lang-id">Ketahanan Offline</span><span class="lang-en">Offline Resilience</span></dt>
           </div>
-          <div class="bg-brand-cream-light border-2 border-brand-dark shadow-brutal-sm rounded-lg p-3 text-center">
-            <dt class="font-mono text-[10px] sm:text-[11px] font-bold uppercase text-brand-dark/70 order-2"><span class="lang-id">Pelatihan Kasir</span><span class="lang-en">Cashier Training</span></dt>
-            <dd class="font-mono font-bold text-[18px] sm:text-[22px] text-brand-blue">&lt;15m</dd>
+          <div class="liquid-glass-subtle rounded-2xl p-3.5 sm:p-4 text-center border border-white/75 hover:bg-white/80 transition-all">
+            <dd class="font-mono font-bold text-[20px] sm:text-[24px] text-blue-600 tracking-tight">&lt;15m</dd>
+            <dt class="font-mono text-[10px] sm:text-[11px] font-semibold uppercase text-slate-500 mt-1"><span class="lang-id">Pelatihan Kasir</span><span class="lang-en">Cashier Training</span></dt>
           </div>
         </dl>
       </div>
 
-      <!-- Right column (5 cols): pure CSS/HTML POS mockup -->
+      <!-- Right Column (5 cols): Curved Refractive Glass Tablet POS Mockup -->
       <div class="lg:col-span-5 relative">
-        <!-- Floating sticker: top-left -->
-        <div class="hidden sm:inline-flex absolute -top-5 -left-3 z-10 px-3 py-1.5 bg-brand-orange text-brand-dark border-2 border-brand-dark shadow-brutal-sm rounded-md font-mono text-[10.5px] font-bold uppercase -rotate-6">
-          Local Storage Sync Engine
+        <!-- Floating Glass Tag: Top Left -->
+        <div class="hidden sm:inline-flex items-center gap-1.5 absolute -top-4 -left-3 z-20 px-3.5 py-1.5 bg-white/90 backdrop-blur-md text-slate-800 border border-white/80 shadow-md rounded-full font-mono text-[11px] font-bold uppercase tracking-wider">
+          <span class="w-2 h-2 rounded-full bg-lime-500"></span>
+          Local Storage Sync
         </div>
-        <!-- Tablet frame -->
-        <div class="bg-brand-obsidian border-2 border-brand-dark shadow-brutal-lg rounded-xl overflow-hidden">
-          <!-- Tablet header -->
-          <div class="flex items-center justify-between px-4 py-2.5 bg-brand-dark border-b-2 border-brand-dark">
+
+        <!-- Glass Tablet Frame -->
+        <div class="bg-slate-900/90 backdrop-blur-2xl p-3 rounded-[28px] border border-white/20 shadow-2xl relative overflow-hidden">
+          <!-- Glass sheen overlay on tablet glass bezel -->
+          <div class="absolute inset-0 bg-gradient-to-tr from-white/10 via-transparent to-white/5 pointer-events-none rounded-[28px]" aria-hidden="true"></div>
+
+          <!-- Tablet Top Status Bar -->
+          <div class="flex items-center justify-between px-3 py-2 border-b border-slate-700/50 text-slate-400">
             <div class="flex items-center gap-1.5" aria-hidden="true">
-              <span class="w-2.5 h-2.5 rounded-full bg-brand-orange border border-brand-dark"></span>
-              <span class="w-2.5 h-2.5 rounded-full bg-brand-cream border border-brand-dark"></span>
-              <span class="w-2.5 h-2.5 rounded-full bg-brand-green border border-brand-dark"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-red-400/80"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-amber-400/80"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-400/80"></span>
             </div>
-            <span class="font-mono text-[10px] font-bold text-brand-cream">vexaPOS • Canggu Outlet</span>
-            <span class="inline-flex items-center gap-1 font-mono text-[10px] font-bold px-2 py-0.5 bg-brand-green text-white border border-brand-cream rounded">
-              <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse" aria-hidden="true"></span>ONLINE
+            <span class="font-mono text-[10px] font-semibold text-slate-300">vexaPOS • Canggu Outlet</span>
+            <span class="inline-flex items-center gap-1 font-mono text-[10px] font-bold px-2 py-0.5 bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 rounded-full">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" aria-hidden="true"></span>ONLINE
             </span>
           </div>
-          <!-- Screen body -->
-          <div class="bg-brand-cream-light p-4 flex flex-col gap-3" data-bill data-subtotal="200000" data-service-rate="0.1" data-pb1-rate="0.1">
+
+          <!-- Inner POS Screen Surface (Liquid Glass) -->
+          <div class="bg-white/95 rounded-2xl p-4 sm:p-5 flex flex-col gap-3.5 shadow-inner" data-bill data-subtotal="200000" data-service-rate="0.1" data-pb1-rate="0.1">
             <div class="flex items-center justify-between">
-              <p class="font-heading font-bold text-[15px] uppercase text-brand-dark">Table 08 • Poolside Deck</p>
-              <span class="font-mono text-[10px] font-bold px-2 py-0.5 bg-brand-lime border-2 border-brand-dark rounded">AUTO-SYNCED</span>
+              <div>
+                <p class="font-bold text-[15px] text-slate-900">Table 08 • Poolside Deck</p>
+                <p class="font-mono text-[10.5px] text-slate-500">Staff: Wayan K. • Order #1042</p>
+              </div>
+              <span class="font-mono text-[10px] font-bold px-2.5 py-1 bg-lime-100 text-lime-800 border border-lime-300 rounded-full">AUTO-SYNCED</span>
             </div>
-            <ul class="flex flex-col gap-2 font-body text-[13px] text-brand-dark">
-              <li class="flex items-center justify-between bg-white border-2 border-brand-dark rounded-lg px-3 py-2" data-price="90000">
-                <span><strong>2x</strong> Oat Milk Flat White <span class="font-mono text-[11px] text-brand-dark/60">@45rb</span></span>
-                <span class="font-mono font-bold" data-line-total>Rp90.000</span>
+
+            <!-- Receipt Line Items -->
+            <ul class="flex flex-col gap-2 text-[13px] text-slate-800">
+              <li class="flex items-center justify-between bg-slate-50/80 hover:bg-slate-100/80 border border-slate-200/70 rounded-xl px-3.5 py-2.5 transition-colors" data-price="90000">
+                <span><strong class="font-bold text-slate-900">2x</strong> Oat Milk Flat White <span class="font-mono text-[11px] text-slate-500 ml-1">@45rb</span></span>
+                <span class="font-mono font-bold text-slate-900" data-line-total>Rp90.000</span>
               </li>
-              <li class="flex items-center justify-between bg-white border-2 border-brand-dark rounded-lg px-3 py-2" data-price="65000">
-                <span><strong>1x</strong> Dragon Bowl <span class="font-mono text-[11px] text-brand-dark/60">@65rb</span></span>
-                <span class="font-mono font-bold" data-line-total>Rp65.000</span>
+              <li class="flex items-center justify-between bg-slate-50/80 hover:bg-slate-100/80 border border-slate-200/70 rounded-xl px-3.5 py-2.5 transition-colors" data-price="65000">
+                <span><strong class="font-bold text-slate-900">1x</strong> Dragon Bowl <span class="font-mono text-[11px] text-slate-500 ml-1">@65rb</span></span>
+                <span class="font-mono font-bold text-slate-900" data-line-total>Rp65.000</span>
               </li>
-              <li class="flex items-center justify-between bg-white border-2 border-brand-dark rounded-lg px-3 py-2" data-price="45000">
-                <span><strong>1x</strong> Truffle Fries <span class="font-mono text-[11px] text-brand-dark/60">@45rb</span></span>
-                <span class="font-mono font-bold" data-line-total>Rp45.000</span>
+              <li class="flex items-center justify-between bg-slate-50/80 hover:bg-slate-100/80 border border-slate-200/70 rounded-xl px-3.5 py-2.5 transition-colors" data-price="45000">
+                <span><strong class="font-bold text-slate-900">1x</strong> Truffle Fries <span class="font-mono text-[11px] text-slate-500 ml-1">@45rb</span></span>
+                <span class="font-mono font-bold text-slate-900" data-line-total>Rp45.000</span>
               </li>
             </ul>
-            <dl class="bg-white border-2 border-brand-dark rounded-lg px-3 py-2.5 font-mono text-[12px] font-bold text-brand-dark flex flex-col gap-1">
-              <div class="flex justify-between"><dt>Subtotal</dt><dd data-bill-subtotal>Rp200.000</dd></div>
-              <div class="flex justify-between"><dt>Service 10%</dt><dd data-bill-service>Rp20.000</dd></div>
-              <div class="flex justify-between"><dt>PB1 10%</dt><dd data-bill-pb1>Rp22.000</dd></div>
-              <div class="flex justify-between border-t-2 border-brand-dark pt-1.5 text-[15px]"><dt>TOTAL</dt><dd data-bill-total class="text-brand-emerald">Rp242.000</dd></div>
+
+            <!-- Calculation Summary Panel -->
+            <dl class="bg-slate-50/90 border border-slate-200/80 rounded-xl px-3.5 py-3 font-mono text-[12px] text-slate-700 flex flex-col gap-1.5">
+              <div class="flex justify-between"><dt class="font-medium text-slate-500">Subtotal</dt><dd data-bill-subtotal class="font-semibold text-slate-900">Rp200.000</dd></div>
+              <div class="flex justify-between"><dt class="font-medium text-slate-500">Service 10%</dt><dd data-bill-service class="font-semibold text-slate-900">Rp20.000</dd></div>
+              <div class="flex justify-between"><dt class="font-medium text-slate-500">PB1 10%</dt><dd data-bill-pb1 class="font-semibold text-slate-900">Rp22.000</dd></div>
+              <div class="flex justify-between border-t border-slate-200 pt-2 text-[15px] font-bold"><dt class="text-slate-950">TOTAL</dt><dd data-bill-total class="text-emerald-600">Rp242.000</dd></div>
             </dl>
-            <p data-bill-status class="font-mono text-[10.5px] font-bold text-brand-emerald" role="status">Kalkulasi terverifikasi otomatis.</p>
-            <div class="grid grid-cols-3 gap-2">
-              <button type="button" class="inline-flex items-center justify-center gap-1 font-heading font-bold text-[11px] uppercase px-2 py-2.5 bg-brand-orange text-brand-dark border-2 border-brand-dark shadow-brutal-sm rounded-lg cursor-pointer">
+
+            <!-- Status Calculation Verification Indicator -->
+            <p data-bill-status class="font-mono text-[11px] font-medium text-emerald-600 flex items-center gap-1.5" role="status">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M10 3 4.5 8.5 2 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Kalkulasi terverifikasi otomatis.
+            </p>
+
+            <!-- Action Buttons Grid -->
+            <div class="grid grid-cols-3 gap-2 pt-1">
+              <button type="button" class="inline-flex items-center justify-center gap-1 font-bold text-[11px] uppercase px-2 py-2.5 bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-200 rounded-xl transition-colors cursor-pointer">
                 <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7.5 1.5 3 8h3.5L6.5 12.5 11 6H7.5l1-4.5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
                 Split Bill
               </button>
-              <button type="button" class="inline-flex items-center justify-center gap-1 font-heading font-bold text-[11px] uppercase px-2 py-2.5 bg-brand-blue-tech text-white border-2 border-brand-dark shadow-brutal-sm rounded-lg cursor-pointer">
+              <button type="button" class="inline-flex items-center justify-center gap-1 font-bold text-[11px] uppercase px-2 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl shadow-sm transition-colors cursor-pointer">
                 <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><rect x="1.5" y="1.5" width="4" height="4" stroke="currentColor" stroke-width="1.6"/><rect x="8.5" y="1.5" width="4" height="4" stroke="currentColor" stroke-width="1.6"/><rect x="1.5" y="8.5" width="4" height="4" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 8.5h2v2h-2zM11.5 11.5h1v1h-1z" fill="currentColor"/></svg>
                 QRIS Instan
               </button>
-              <button type="button" class="inline-flex items-center justify-center gap-1 font-heading font-bold text-[11px] uppercase px-2 py-2.5 bg-brand-cream text-brand-dark border-2 border-brand-dark shadow-brutal-sm rounded-lg cursor-pointer">
+              <button type="button" class="inline-flex items-center justify-center gap-1 font-bold text-[11px] uppercase px-2 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-200 rounded-xl transition-colors cursor-pointer">
                 <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M4 5.5V2h6v3.5M4 9.5H2.5v-4h9v4H10M4 8.5h6v3.5H4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
                 Print Kitchen
               </button>
             </div>
           </div>
         </div>
-        <!-- Floating sticker: bottom-right -->
-        <div class="hidden sm:inline-flex absolute -bottom-5 -right-2 z-10 px-3 py-1.5 bg-brand-lime text-brand-dark border-2 border-brand-dark shadow-brutal-sm rounded-md font-mono text-[10.5px] font-bold uppercase rotate-3">
+
+        <!-- Floating Glass Tag: Bottom Right -->
+        <div class="hidden sm:inline-flex items-center gap-1.5 absolute -bottom-4 -right-2 z-20 px-3.5 py-1.5 bg-[#84CC16] text-slate-950 shadow-lg rounded-full font-mono text-[11px] font-bold uppercase tracking-wide">
+          <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="m2.5 7 3.5 3.5L11.5 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Compatible Thermal &amp; Sunmi
         </div>
       </div>
     </header>
     <!-- ================= SECTION C END ================= -->
 
-    <main class="flex flex-col gap-5 sm:gap-7 lg:gap-9">
+    <main class="flex flex-col gap-6 sm:gap-8 lg:gap-10">
 
       <!-- ================= OUR CLIENTS START ================= -->
-      <section id="clients" aria-labelledby="clients-title" class="bg-brand-ivory border-2 border-brand-dark shadow-brutal rounded-xl p-6 sm:p-10 lg:p-12 flex flex-col gap-6 scroll-mt-24">
-        <div class="flex flex-col gap-3 max-w-[760px]">
-          <span class="inline-flex self-start px-3 py-1 bg-brand-lime text-brand-dark border-2 border-brand-dark shadow-brutal-sm rounded-md font-mono text-[10.5px] sm:text-[11.5px] font-bold uppercase tracking-wide">Our Clients</span>
-          <h2 id="clients-title" class="font-heading font-bold text-[28px] sm:text-[38px] uppercase tracking-tight text-brand-dark leading-tight">
+      <section id="clients" aria-labelledby="clients-title" class="liquid-glass rounded-3xl p-6 sm:p-10 lg:p-12 flex flex-col gap-6 scroll-mt-24 section-contain">
+        <div class="flex flex-col gap-2.5 max-w-[760px]">
+          <span class="inline-flex self-start px-3.5 py-1 bg-lime-100 text-lime-900 border border-lime-300/80 rounded-full font-mono text-[11px] font-bold uppercase tracking-wide">Our Clients</span>
+          <h2 id="clients-title" class="font-extrabold text-[26px] sm:text-[34px] tracking-tight text-slate-900 leading-tight">
             <span class="lang-id">Klien Kami</span>
             <span class="lang-en">Meet Our Clients</span>
           </h2>
-          <p class="font-body text-[14px] sm:text-[16px] text-brand-dark/75 leading-relaxed">
-            <span class="lang-id">Daftar klien vexaPOS akan segera hadir di sini.</span>
+          <p class="text-[15px] sm:text-[16px] text-slate-600 leading-relaxed">
+            <span class="lang-id">Daftar klien kafe, resto, dan beach club vexaPOS akan segera hadir di sini.</span>
             <span class="lang-en">Our vexaPOS client showcase is coming soon.</span>
           </p>
         </div>
-        <!-- TODO: Replace these explicitly labelled placeholders with verified client names and approved logos. -->
+        
         <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 list-none m-0 p-0">
-          <li class="bg-brand-cream-light border-2 border-dashed border-brand-dark/25 rounded-xl p-6 flex flex-col items-center justify-center gap-3 text-center min-h-[160px]">
-            <span class="w-12 h-12 bg-brand-cream border-2 border-brand-dark/25 rounded-lg inline-flex items-center justify-center font-mono font-bold text-brand-dark/60" aria-hidden="true">01</span>
-            <span class="font-heading font-bold text-[18px] uppercase text-brand-dark/60"><span class="lang-id">Nama Klien</span><span class="lang-en">Client Name</span></span>
-            <span class="font-mono text-[10px] uppercase tracking-wider text-brand-dark/60">Placeholder</span>
+          <li class="liquid-glass-subtle rounded-2xl p-6 flex flex-col items-center justify-center gap-3 text-center min-h-[160px] border border-white/80 hover:border-lime-300 transition-colors">
+            <span class="w-12 h-12 bg-white rounded-xl shadow-sm border border-slate-200/60 inline-flex items-center justify-center font-mono font-bold text-slate-400" aria-hidden="true">01</span>
+            <span class="font-bold text-[16px] text-slate-700 uppercase tracking-tight"><span class="lang-id">Nama Klien</span><span class="lang-en">Client Name</span></span>
+            <span class="font-mono text-[10px] uppercase tracking-wider text-slate-400">Placeholder</span>
           </li>
-          <li class="bg-brand-cream-light border-2 border-dashed border-brand-dark/25 rounded-xl p-6 flex flex-col items-center justify-center gap-3 text-center min-h-[160px]">
-            <span class="w-12 h-12 bg-brand-cream border-2 border-brand-dark/25 rounded-lg inline-flex items-center justify-center font-mono font-bold text-brand-dark/60" aria-hidden="true">02</span>
-            <span class="font-heading font-bold text-[18px] uppercase text-brand-dark/60"><span class="lang-id">Nama Klien</span><span class="lang-en">Client Name</span></span>
-            <span class="font-mono text-[10px] uppercase tracking-wider text-brand-dark/60">Placeholder</span>
+          <li class="liquid-glass-subtle rounded-2xl p-6 flex flex-col items-center justify-center gap-3 text-center min-h-[160px] border border-white/80 hover:border-lime-300 transition-colors">
+            <span class="w-12 h-12 bg-white rounded-xl shadow-sm border border-slate-200/60 inline-flex items-center justify-center font-mono font-bold text-slate-400" aria-hidden="true">02</span>
+            <span class="font-bold text-[16px] text-slate-700 uppercase tracking-tight"><span class="lang-id">Nama Klien</span><span class="lang-en">Client Name</span></span>
+            <span class="font-mono text-[10px] uppercase tracking-wider text-slate-400">Placeholder</span>
           </li>
-          <li class="bg-brand-cream-light border-2 border-dashed border-brand-dark/25 rounded-xl p-6 flex flex-col items-center justify-center gap-3 text-center min-h-[160px]">
-            <span class="w-12 h-12 bg-brand-cream border-2 border-brand-dark/25 rounded-lg inline-flex items-center justify-center font-mono font-bold text-brand-dark/60" aria-hidden="true">03</span>
-            <span class="font-heading font-bold text-[18px] uppercase text-brand-dark/60"><span class="lang-id">Nama Klien</span><span class="lang-en">Client Name</span></span>
-            <span class="font-mono text-[10px] uppercase tracking-wider text-brand-dark/60">Placeholder</span>
+          <li class="liquid-glass-subtle rounded-2xl p-6 flex flex-col items-center justify-center gap-3 text-center min-h-[160px] border border-white/80 hover:border-lime-300 transition-colors">
+            <span class="w-12 h-12 bg-white rounded-xl shadow-sm border border-slate-200/60 inline-flex items-center justify-center font-mono font-bold text-slate-400" aria-hidden="true">03</span>
+            <span class="font-bold text-[16px] text-slate-700 uppercase tracking-tight"><span class="lang-id">Nama Klien</span><span class="lang-en">Client Name</span></span>
+            <span class="font-mono text-[10px] uppercase tracking-wider text-slate-400">Placeholder</span>
           </li>
-          <li class="bg-brand-cream-light border-2 border-dashed border-brand-dark/25 rounded-xl p-6 flex flex-col items-center justify-center gap-3 text-center min-h-[160px]">
-            <span class="w-12 h-12 bg-brand-cream border-2 border-brand-dark/25 rounded-lg inline-flex items-center justify-center font-mono font-bold text-brand-dark/60" aria-hidden="true">04</span>
-            <span class="font-heading font-bold text-[18px] uppercase text-brand-dark/60"><span class="lang-id">Nama Klien</span><span class="lang-en">Client Name</span></span>
-            <span class="font-mono text-[10px] uppercase tracking-wider text-brand-dark/60">Placeholder</span>
+          <li class="liquid-glass-subtle rounded-2xl p-6 flex flex-col items-center justify-center gap-3 text-center min-h-[160px] border border-white/80 hover:border-lime-300 transition-colors">
+            <span class="w-12 h-12 bg-white rounded-xl shadow-sm border border-slate-200/60 inline-flex items-center justify-center font-mono font-bold text-slate-400" aria-hidden="true">04</span>
+            <span class="font-bold text-[16px] text-slate-700 uppercase tracking-tight"><span class="lang-id">Nama Klien</span><span class="lang-en">Client Name</span></span>
+            <span class="font-mono text-[10px] uppercase tracking-wider text-slate-400">Placeholder</span>
           </li>
         </ul>
       </section>
       <!-- ================= OUR CLIENTS END ================= -->
 
       <!-- ================= SECTION D START: PROBLEM VS SOLUTION ================= -->
-      <section id="masalah" aria-labelledby="masalah-title" class="bg-brand-cream border-2 border-brand-dark shadow-brutal rounded-xl p-6 sm:p-10 lg:p-12 flex flex-col gap-7 scroll-mt-24">
-        <div class="flex flex-col gap-2 max-w-[760px]">
-          <span class="inline-flex self-start px-3 py-1 bg-brand-dark text-brand-lime border-2 border-brand-dark rounded-md font-mono text-[10.5px] sm:text-[11.5px] font-bold uppercase tracking-wide">Bali Hospitality Reality Check</span>
-          <h2 id="masalah-title" class="font-heading font-bold text-[28px] sm:text-[38px] uppercase tracking-tight text-brand-dark leading-tight">
+      <section id="masalah" aria-labelledby="masalah-title" class="liquid-glass rounded-3xl p-6 sm:p-10 lg:p-12 flex flex-col gap-8 scroll-mt-24 section-contain">
+        <div class="flex flex-col gap-2.5 max-w-[760px]">
+          <span class="inline-flex self-start px-3.5 py-1 bg-rose-50 text-rose-700 border border-rose-200 rounded-full font-mono text-[11px] font-bold uppercase tracking-wide">Bali Hospitality Reality Check</span>
+          <h2 id="masalah-title" class="font-extrabold text-[28px] sm:text-[36px] tracking-tight text-slate-900 leading-tight">
             <span class="lang-id">Kenapa POS Biasa Sering Gagal di Bali?</span>
             <span class="lang-en">Why Ordinary POS Often Fails in Bali?</span>
           </h2>
-          <p class="font-body text-[15px] sm:text-[16px] text-brand-dark/85 font-medium">
+          <p class="text-[15px] sm:text-[16px] text-slate-600 font-normal">
             <span class="lang-id">Tiga masalah operasional yang paling sering dikeluhkan owner F&amp;B — dan cara vexaPOS menyelesaikannya.</span>
             <span class="lang-en">The three operational issues F&amp;B owners complain about most — and how vexaPOS solves each one.</span>
           </p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-          <!-- Problem 1 -->
-          <article class="bg-brand-ivory border-2 border-brand-dark shadow-brutal rounded-xl p-5 flex flex-col gap-3">
-            <span class="w-11 h-11 rounded-lg bg-brand-orange border-2 border-brand-dark flex items-center justify-center text-brand-dark" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M2.5 9a15 15 0 0 1 19 0M5.5 12.5a10.5 10.5 0 0 1 13 0M8.6 16a6 6 0 0 1 6.8 0" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><circle cx="12" cy="19" r="1.6" fill="currentColor"/><path d="m3.5 3.5 17 17" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
-            </span>
-            <p class="font-mono text-[11px] font-bold uppercase text-brand-orange"><span class="lang-id">Masalah 01 — Wi-Fi Drop</span><span class="lang-en">Issue 01 — Wi-Fi Drop</span></p>
-            <h3 class="font-heading font-bold text-[19px] uppercase text-brand-dark leading-snug"><span class="lang-id">Internet Mati Saat Antrean Membludak</span><span class="lang-en">Internet Dies During Peak Queues</span></h3>
-            <p class="font-body text-[13.5px] text-brand-dark/80 leading-relaxed"><span class="lang-id">Pemadaman banjar, hujan badai, kabel terputus — POS konvensional macet total dan antrean sunset rush menumpuk.</span><span class="lang-en">Local blackouts, storms, cut cables — conventional POS freezes and sunset-rush queues pile up.</span></p>
-            <p class="font-body text-[13.5px] text-brand-dark leading-relaxed border-t-2 border-brand-dark/15 pt-3"><strong class="font-mono text-[11px] uppercase text-brand-emerald">Solusi vexaPOS — </strong><span class="lang-id">transaksi tetap diproses ke penyimpanan lokal tanpa jeda, lalu tersinkron otomatis ke cloud.</span><span class="lang-en">transactions keep processing into local storage with zero lag, then auto-sync to the cloud.</span></p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Problem 01: Wi-Fi Drop -->
+          <article class="liquid-glass-card rounded-3xl p-6 sm:p-7 flex flex-col gap-4 relative overflow-hidden group">
+            <div class="w-12 h-12 rounded-2xl bg-amber-100/90 text-amber-700 border border-amber-300/80 flex items-center justify-center shadow-sm" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M2.5 9a15 15 0 0 1 19 0M5.5 12.5a10.5 10.5 0 0 1 13 0M8.6 16a6 6 0 0 1 6.8 0" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><circle cx="12" cy="19" r="1.6" fill="currentColor"/><path d="m3.5 3.5 17 17" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+            </div>
+            <p class="font-mono text-[11px] font-bold uppercase text-amber-600 tracking-wider"><span class="lang-id">Masalah 01 — Wi-Fi Drop</span><span class="lang-en">Issue 01 — Wi-Fi Drop</span></p>
+            <h3 class="font-bold text-[19px] sm:text-[20px] text-slate-900 leading-snug"><span class="lang-id">Internet Mati Saat Antrean Membludak</span><span class="lang-en">Internet Dies During Peak Queues</span></h3>
+            <p class="text-[14px] text-slate-600 leading-relaxed"><span class="lang-id">Pemadaman banjar, hujan badai, kabel terputus — POS konvensional macet total dan antrean sunset rush menumpuk.</span><span class="lang-en">Local blackouts, storms, cut cables — conventional POS freezes and sunset-rush queues pile up.</span></p>
+            <div class="mt-auto pt-4 border-t border-slate-200/70">
+              <p class="text-[13.5px] text-slate-800 leading-relaxed"><strong class="font-mono text-[11px] uppercase font-bold text-emerald-600">Solusi vexaPOS — </strong><span class="lang-id">transaksi tetap diproses ke penyimpanan lokal tanpa jeda, lalu tersinkron otomatis ke cloud.</span><span class="lang-en">transactions keep processing into local storage with zero lag, then auto-sync to the cloud.</span></p>
+            </div>
           </article>
-          <!-- Problem 2 -->
-          <article class="bg-brand-ivory border-2 border-brand-dark shadow-brutal rounded-xl p-5 flex flex-col gap-3">
-            <span class="w-11 h-11 rounded-lg bg-brand-blue-tech border-2 border-brand-dark flex items-center justify-center text-white" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M8 3H4v4M16 3h4v4M8 21H4v-4M16 21h4v-4M3 12h18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-            <p class="font-mono text-[11px] font-bold uppercase text-brand-blue"><span class="lang-id">Masalah 02 — Split Bill Kacau</span><span class="lang-en">Issue 02 — Split Bill Chaos</span></p>
-            <h3 class="font-heading font-bold text-[19px] uppercase text-brand-dark leading-snug"><span class="lang-id">Rombongan Turis Minta Bayar Terpisah</span><span class="lang-en">Tourist Groups Ask to Pay Separately</span></h3>
-            <p class="font-body text-[13.5px] text-brand-dark/80 leading-relaxed"><span class="lang-id">Satu meja isi 8 orang asing, minta dipecah per item dan per kursi, campur cash, kartu, dan QRIS. Kasir kewalahan.</span><span class="lang-en">One table of 8 foreigners wants the bill split per item and per seat across cash, card, and QRIS. Cashiers get overwhelmed.</span></p>
-            <p class="font-body text-[13.5px] text-brand-dark leading-relaxed border-t-2 border-brand-dark/15 pt-3"><strong class="font-mono text-[11px] uppercase text-brand-emerald">Solusi vexaPOS — </strong><span class="lang-id">split bill instan per item, per kursi, multi-pembayaran dalam satu meja, selesai di bawah 15 detik.</span><span class="lang-en">instant per-item, per-seat, multi-payment splitting on one table in under 15 seconds.</span></p>
+
+          <!-- Problem 02: Split Bill Chaos -->
+          <article class="liquid-glass-card rounded-3xl p-6 sm:p-7 flex flex-col gap-4 relative overflow-hidden group">
+            <div class="w-12 h-12 rounded-2xl bg-blue-100/90 text-blue-700 border border-blue-300/80 flex items-center justify-center shadow-sm" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M8 3H4v4M16 3h4v4M8 21H4v-4M16 21h4v-4M3 12h18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <p class="font-mono text-[11px] font-bold uppercase text-blue-600 tracking-wider"><span class="lang-id">Masalah 02 — Split Bill Kacau</span><span class="lang-en">Issue 02 — Split Bill Chaos</span></p>
+            <h3 class="font-bold text-[19px] sm:text-[20px] text-slate-900 leading-snug"><span class="lang-id">Rombongan Turis Minta Bayar Terpisah</span><span class="lang-en">Tourist Groups Ask to Pay Separately</span></h3>
+            <p class="text-[14px] text-slate-600 leading-relaxed"><span class="lang-id">Satu meja isi 8 orang asing, minta dipecah per item dan per kursi, campur cash, kartu, dan QRIS. Kasir kewalahan.</span><span class="lang-en">One table of 8 foreigners wants the bill split per item and per seat across cash, card, and QRIS. Cashiers get overwhelmed.</span></p>
+            <div class="mt-auto pt-4 border-t border-slate-200/70">
+              <p class="text-[13.5px] text-slate-800 leading-relaxed"><strong class="font-mono text-[11px] uppercase font-bold text-emerald-600">Solusi vexaPOS — </strong><span class="lang-id">split bill instan per item, per kursi, multi-pembayaran dalam satu meja, selesai di bawah 15 detik.</span><span class="lang-en">instant per-item, per-seat, multi-payment splitting on one table in under 15 seconds.</span></p>
+            </div>
           </article>
-          <!-- Problem 3 -->
-          <article class="bg-brand-ivory border-2 border-brand-dark shadow-brutal rounded-xl p-5 flex flex-col gap-3">
-            <span class="w-11 h-11 rounded-lg bg-brand-lime border-2 border-brand-dark flex items-center justify-center text-brand-dark" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3 4 6.5v5c0 5 3.4 8.3 8 9.5 4.6-1.2 8-4.5 8-9.5v-5L12 3Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="m9 12 2 2 4-4.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-            <p class="font-mono text-[11px] font-bold uppercase text-brand-emerald"><span class="lang-id">Masalah 03 — Selisih Stok &amp; Kas</span><span class="lang-en">Issue 03 — Stock &amp; Cash Drift</span></p>
-            <h3 class="font-heading font-bold text-[19px] uppercase text-brand-dark leading-snug"><span class="lang-id">Bahan Menyusut, Laci Kas Tak Cocok</span><span class="lang-en">Ingredients Shrink, Drawer Never Matches</span></h3>
-            <p class="font-body text-[13.5px] text-brand-dark/80 leading-relaxed"><span class="lang-id">Kopi, susu, dan protein hilang tanpa jejak; rekap shift kasir selalu selisih dan void pesanan tak terlacak.</span><span class="lang-en">Coffee, milk, and proteins vanish without a trace; shift cash never reconciles and voids go untracked.</span></p>
-            <p class="font-body text-[13.5px] text-brand-dark leading-relaxed border-t-2 border-brand-dark/15 pt-3"><strong class="font-mono text-[11px] uppercase text-brand-emerald">Solusi vexaPOS — </strong><span class="lang-id">stok resep terpotong otomatis setiap menu terjual + PIN kasir, rekap laci, dan proteksi void.</span><span class="lang-en">recipe stock auto-deducts on every sale + cashier PINs, drawer reconciliation, and void protection.</span></p>
+
+          <!-- Problem 03: Stock & Cash Drift -->
+          <article class="liquid-glass-card rounded-3xl p-6 sm:p-7 flex flex-col gap-4 relative overflow-hidden group">
+            <div class="w-12 h-12 rounded-2xl bg-emerald-100/90 text-emerald-700 border border-emerald-300/80 flex items-center justify-center shadow-sm" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 3 4 6.5v5c0 5 3.4 8.3 8 9.5 4.6-1.2 8-4.5 8-9.5v-5L12 3Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="m9 12 2 2 4-4.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <p class="font-mono text-[11px] font-bold uppercase text-emerald-600 tracking-wider"><span class="lang-id">Masalah 03 — Selisih Stok &amp; Kas</span><span class="lang-en">Issue 03 — Stock &amp; Cash Drift</span></p>
+            <h3 class="font-bold text-[19px] sm:text-[20px] text-slate-900 leading-snug"><span class="lang-id">Bahan Menyusut, Laci Kas Tak Cocok</span><span class="lang-en">Ingredients Shrink, Drawer Never Matches</span></h3>
+            <p class="text-[14px] text-slate-600 leading-relaxed"><span class="lang-id">Kopi, susu, dan protein hilang tanpa jejak; rekap shift kasir selalu selisih dan void pesanan tak terlacak.</span><span class="lang-en">Coffee, milk, and proteins vanish without a trace; shift cash never reconciles and voids go untracked.</span></p>
+            <div class="mt-auto pt-4 border-t border-slate-200/70">
+              <p class="text-[13.5px] text-slate-800 leading-relaxed"><strong class="font-mono text-[11px] uppercase font-bold text-emerald-600">Solusi vexaPOS — </strong><span class="lang-id">stok resep terpotong otomatis setiap menu terjual + PIN kasir, rekap laci, dan proteksi void.</span><span class="lang-en">recipe stock auto-deducts on every sale + cashier PINs, drawer reconciliation, and void protection.</span></p>
+            </div>
           </article>
         </div>
       </section>
       <!-- ================= SECTION D END ================= -->
 
       <!-- ================= SECTION E START: BENTO GRID CORE FEATURES ================= -->
-      <section id="fitur" aria-labelledby="fitur-title" class="bg-brand-ivory border-2 border-brand-dark shadow-brutal rounded-xl p-6 sm:p-10 lg:p-12 flex flex-col gap-7 scroll-mt-24">
-        <div class="flex flex-col gap-2 max-w-[780px]">
-          <span class="inline-flex self-start px-3 py-1 bg-brand-lime text-brand-dark border-2 border-brand-dark shadow-brutal-sm rounded-md font-mono text-[10.5px] sm:text-[11.5px] font-bold uppercase tracking-wide">Core Engine</span>
-          <h2 id="fitur-title" class="font-heading font-bold text-[28px] sm:text-[38px] uppercase tracking-tight text-brand-dark leading-tight">
+      <section id="fitur" aria-labelledby="fitur-title" class="liquid-glass rounded-3xl p-6 sm:p-10 lg:p-12 flex flex-col gap-8 scroll-mt-24 section-contain">
+        <div class="flex flex-col gap-2.5 max-w-[780px]">
+          <span class="inline-flex self-start px-3.5 py-1 bg-lime-100 text-lime-900 border border-lime-300/80 rounded-full font-mono text-[11px] font-bold uppercase tracking-wide">Core Engine</span>
+          <h2 id="fitur-title" class="font-extrabold text-[28px] sm:text-[36px] tracking-tight text-slate-900 leading-tight">
             <span class="lang-id">Satu Sistem, Seluruh Operasional Terkendali</span>
             <span class="lang-en">One System, Every Operation Under Control</span>
           </h2>
-          <p class="font-body text-[15px] sm:text-[16px] text-brand-dark/85 font-medium">
-            <span class="lang-id">Arsitektur bento: dari mesin offline hingga audit staff — semuanya saling terhubung.</span>
-            <span class="lang-en">Bento architecture: from the offline engine to staff audit — everything connected.</span>
+          <p class="text-[15px] sm:text-[16px] text-slate-600 font-normal">
+            <span class="lang-id">Arsitektur bento liquid: dari mesin offline hingga audit staff — semuanya saling terhubung secara real-time.</span>
+            <span class="lang-en">Liquid bento architecture: from the offline engine to staff audit — everything connected in real-time.</span>
           </p>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
-          <!-- Big card: Offline Engine Architecture -->
-          <article class="lg:col-span-8 bg-brand-cream border-2 border-brand-dark shadow-brutal rounded-xl p-5 sm:p-6 flex flex-col gap-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+          <!-- Big Card: Offline Engine Architecture (8 cols) -->
+          <article class="lg:col-span-8 liquid-glass-card rounded-3xl p-6 sm:p-8 flex flex-col gap-5 border border-white/85">
             <div class="flex items-center justify-between flex-wrap gap-2">
-              <h3 class="font-heading font-bold text-[20px] uppercase text-brand-dark"><span class="lang-id">Mesin Offline Architecture</span><span class="lang-en">Offline Engine Architecture</span></h3>
-              <span class="font-mono text-[10.5px] font-bold px-2 py-0.5 bg-brand-dark text-brand-lime border-2 border-brand-dark rounded">FLAGSHIP</span>
+              <h3 class="font-bold text-[22px] text-slate-900"><span class="lang-id">Mesin Offline Architecture</span><span class="lang-en">Offline Engine Architecture</span></h3>
+              <span class="font-mono text-[11px] font-bold px-3 py-1 bg-lime-100 text-lime-900 border border-lime-300 rounded-full">FLAGSHIP ENGINE</span>
             </div>
-            <p class="font-body text-[13.5px] text-brand-dark/80 leading-relaxed"><span class="lang-id">Aliran data tiga lapis: kasir menulis ke cache lokal dulu, lalu mirror ke cloud saat online. Tidak ada satu milidetik pun yang terbuang.</span><span class="lang-en">Three-layer data flow: the cashier writes to local cache first, then mirrors to the cloud when online. Zero milliseconds wasted.</span></p>
-            <!-- Data-flow diagram (pure DOM) -->
-            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 font-mono text-[11px] font-bold text-brand-dark" aria-label="Diagram alir data offline">
-              <span class="flex-1 text-center px-3 py-2.5 bg-brand-ivory border-2 border-brand-dark shadow-brutal-sm rounded-lg">TABLET KASIR</span>
-              <svg class="self-center rotate-90 sm:rotate-0 shrink-0" width="26" height="16" viewBox="0 0 26 16" fill="none" aria-hidden="true"><path d="M1 8h21M15 2.5 21.5 8 15 13.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <span class="flex-1 text-center px-3 py-2.5 bg-brand-lime border-2 border-brand-dark shadow-brutal-sm rounded-lg">LOCAL CACHE</span>
-              <svg class="self-center rotate-90 sm:rotate-0 shrink-0" width="26" height="16" viewBox="0 0 26 16" fill="none" aria-hidden="true"><path d="M1 8h21M15 2.5 21.5 8 15 13.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <span class="flex-1 text-center px-3 py-2.5 bg-brand-blue-tech text-white border-2 border-brand-dark shadow-brutal-sm rounded-lg">CLOUD MIRROR</span>
+            <p class="text-[14.5px] text-slate-600 leading-relaxed"><span class="lang-id">Aliran data tiga lapis: kasir menulis ke cache lokal dulu, lalu mirror ke cloud saat online. Tidak ada satu milidetik pun yang terbuang.</span><span class="lang-en">Three-layer data flow: the cashier writes to local cache first, then mirrors to the cloud when online. Zero milliseconds wasted.</span></p>
+
+            <!-- Data-flow visual pipeline diagram -->
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 font-mono text-[12px] font-bold text-slate-800 pt-2" aria-label="Diagram alir data offline">
+              <div class="flex-1 text-center px-4 py-3.5 bg-white/90 border border-slate-200/80 shadow-sm rounded-2xl">
+                <span class="block text-[13px] text-slate-900">TABLET KASIR</span>
+                <span class="font-mono text-[10px] font-normal text-slate-500">IndexedDB Client</span>
+              </div>
+              <div class="flex items-center justify-center shrink-0">
+                <svg class="rotate-90 sm:rotate-0 text-lime-600 animate-pulse" width="28" height="18" viewBox="0 0 26 16" fill="none" aria-hidden="true"><path d="M1 8h21M15 2.5 21.5 8 15 13.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="flex-1 text-center px-4 py-3.5 bg-lime-50/90 border border-lime-300 text-lime-950 shadow-sm rounded-2xl">
+                <span class="block text-[13px] font-bold">LOCAL CACHE</span>
+                <span class="font-mono text-[10px] font-normal text-lime-800">Background Worker</span>
+              </div>
+              <div class="flex items-center justify-center shrink-0">
+                <svg class="rotate-90 sm:rotate-0 text-blue-600 animate-pulse" width="28" height="18" viewBox="0 0 26 16" fill="none" aria-hidden="true"><path d="M1 8h21M15 2.5 21.5 8 15 13.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="flex-1 text-center px-4 py-3.5 bg-blue-50/90 border border-blue-200 text-blue-950 shadow-sm rounded-2xl">
+                <span class="block text-[13px] font-bold">CLOUD MIRROR</span>
+                <span class="font-mono text-[10px] font-normal text-blue-700">Central PostgreSQL</span>
+              </div>
             </div>
           </article>
 
-          <!-- Medium card: KDS -->
-          <article class="lg:col-span-4 bg-brand-ivory border-2 border-brand-dark shadow-brutal rounded-xl p-5 flex flex-col gap-3">
-            <span class="w-11 h-11 rounded-lg bg-brand-blue-tech border-2 border-brand-dark flex items-center justify-center text-white" aria-hidden="true">
+          <!-- Medium Card: KDS (4 cols) -->
+          <article class="lg:col-span-4 liquid-glass-card rounded-3xl p-6 flex flex-col gap-4 border border-white/85">
+            <div class="w-11 h-11 rounded-2xl bg-blue-100 text-blue-700 border border-blue-300/70 flex items-center justify-center shadow-sm" aria-hidden="true">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><circle cx="19" cy="18" r="2.4" stroke="currentColor" stroke-width="2"/></svg>
-            </span>
-            <h3 class="font-heading font-bold text-[19px] uppercase text-brand-dark leading-snug">Kitchen Display System</h3>
-            <p class="font-body text-[13.5px] text-brand-dark/80 leading-relaxed"><span class="lang-id">Tiket dapur bertanda waktu real-time untuk barista &amp; chef — tanpa kertas hilang, tanpa teriakan.</span><span class="lang-en">Real-time timestamped kitchen tickets for baristas &amp; chefs — no lost paper, no shouting.</span></p>
-            <div class="bg-white border-2 border-brand-dark rounded-lg p-2.5 font-mono text-[11px] font-bold flex flex-col gap-1">
-              <div class="flex justify-between"><span>#A-114 Dragon Bowl</span><span class="text-brand-orange">02:14</span></div>
-              <div class="flex justify-between"><span>#A-115 Flat White x2</span><span class="text-brand-emerald">READY</span></div>
+            </div>
+            <h3 class="font-bold text-[19px] text-slate-900 leading-snug">Kitchen Display System</h3>
+            <p class="text-[13.5px] text-slate-600 leading-relaxed"><span class="lang-id">Tiket dapur bertanda waktu real-time untuk barista &amp; chef — tanpa kertas hilang, tanpa teriakan.</span><span class="lang-en">Real-time timestamped kitchen tickets for baristas &amp; chefs — no lost paper, no shouting.</span></p>
+            <div class="mt-auto bg-white/90 border border-slate-200/80 rounded-2xl p-3 font-mono text-[11px] font-semibold flex flex-col gap-1.5 shadow-sm">
+              <div class="flex justify-between items-center text-slate-800"><span>#A-114 Dragon Bowl</span><span class="text-amber-600 bg-amber-50 px-2 py-0.5 rounded-full border border-amber-200">02:14</span></div>
+              <div class="flex justify-between items-center text-slate-800"><span>#A-115 Flat White x2</span><span class="text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">READY</span></div>
             </div>
           </article>
 
-          <!-- Medium card: Multi-outlet -->
-          <article class="lg:col-span-4 bg-brand-ivory border-2 border-brand-dark shadow-brutal rounded-xl p-5 flex flex-col gap-3">
-            <span class="w-11 h-11 rounded-lg bg-brand-green border-2 border-brand-dark flex items-center justify-center text-white" aria-hidden="true">
+          <!-- Medium Card: Multi-Outlet Control (4 cols) -->
+          <article class="lg:col-span-4 liquid-glass-card rounded-3xl p-6 flex flex-col gap-4 border border-white/85">
+            <div class="w-11 h-11 rounded-2xl bg-emerald-100 text-emerald-700 border border-emerald-300/70 flex items-center justify-center shadow-sm" aria-hidden="true">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 17l5.5-5.5 3.5 3.5L20.5 6.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 6.5h5.5V12" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-            <h3 class="font-heading font-bold text-[19px] uppercase text-brand-dark leading-snug"><span class="lang-id">Kontrol Multi-Outlet</span><span class="lang-en">Multi-Outlet Control</span></h3>
-            <p class="font-body text-[13.5px] text-brand-dark/80 leading-relaxed"><span class="lang-id">Pantau omzet live Canggu, Ubud, dan Seminyak langsung dari HP pemilik.</span><span class="lang-en">Monitor live revenue across Canggu, Ubud, and Seminyak from the owner's phone.</span></p>
-            <div class="bg-white border-2 border-brand-dark rounded-lg p-2.5 font-mono text-[11px] font-bold flex flex-col gap-1">
-              <div class="flex justify-between"><span>CANGGU</span><span class="text-brand-emerald">Rp18,2jt</span></div>
-              <div class="flex justify-between"><span>UBUD</span><span class="text-brand-emerald">Rp11,7jt</span></div>
-              <div class="flex justify-between"><span>SEMINYAK</span><span class="text-brand-emerald">Rp14,9jt</span></div>
             </div>
-            <!-- TODO: ganti placeholder — angka omzet di atas ilustrasi, ganti dengan data demo/nyata. -->
+            <h3 class="font-bold text-[19px] text-slate-900 leading-snug"><span class="lang-id">Kontrol Multi-Outlet</span><span class="lang-en">Multi-Outlet Control</span></h3>
+            <p class="text-[13.5px] text-slate-600 leading-relaxed"><span class="lang-id">Pantau omzet live Canggu, Ubud, dan Seminyak langsung dari HP pemilik.</span><span class="lang-en">Monitor live revenue across Canggu, Ubud, and Seminyak from the owner's phone.</span></p>
+            <div class="mt-auto bg-white/90 border border-slate-200/80 rounded-2xl p-3 font-mono text-[11.5px] font-semibold flex flex-col gap-1.5 shadow-sm">
+              <div class="flex justify-between"><span>CANGGU</span><span class="text-emerald-600 font-bold">Rp18,2jt</span></div>
+              <div class="flex justify-between"><span>UBUD</span><span class="text-emerald-600 font-bold">Rp11,7jt</span></div>
+              <div class="flex justify-between"><span>SEMINYAK</span><span class="text-emerald-600 font-bold">Rp14,9jt</span></div>
+            </div>
           </article>
 
-          <!-- Medium card: inventory -->
-          <article class="lg:col-span-4 bg-brand-ivory border-2 border-brand-dark shadow-brutal rounded-xl p-5 flex flex-col gap-3">
-            <span class="w-11 h-11 rounded-lg bg-brand-orange border-2 border-brand-dark flex items-center justify-center text-brand-dark" aria-hidden="true">
+          <!-- Medium Card: Inventory per Recipe (4 cols) -->
+          <article class="lg:col-span-4 liquid-glass-card rounded-3xl p-6 flex flex-col gap-4 border border-white/85">
+            <div class="w-11 h-11 rounded-2xl bg-amber-100 text-amber-800 border border-amber-300/70 flex items-center justify-center shadow-sm" aria-hidden="true">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 8l8-4.5L20 8v8l-8 4.5L4 16V8Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M4 8l8 4.5L20 8M12 12.5V20" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg>
-            </span>
-            <h3 class="font-heading font-bold text-[19px] uppercase text-brand-dark leading-snug"><span class="lang-id">Inventaris per Resep</span><span class="lang-en">Per-Recipe Inventory</span></h3>
-            <p class="font-body text-[13.5px] text-brand-dark/80 leading-relaxed"><span class="lang-id">Gramatur kopi, susu, dan bahan baku terpotong otomatis setiap porsi terjual + peringatan stok menipis.</span><span class="lang-en">Coffee, milk, and ingredient weights auto-deduct on every portion sold + low-stock alerts.</span></p>
+            </div>
+            <h3 class="font-bold text-[19px] text-slate-900 leading-snug"><span class="lang-id">Inventaris per Resep</span><span class="lang-en">Per-Recipe Inventory</span></h3>
+            <p class="text-[13.5px] text-slate-600 leading-relaxed"><span class="lang-id">Gramatur kopi, susu, dan bahan baku terpotong otomatis setiap porsi terjual + peringatan stok menipis secara proaktif.</span><span class="lang-en">Coffee, milk, and ingredient weights auto-deduct on every portion sold + proactive low-stock alerts.</span></p>
+            <div class="mt-auto flex items-center gap-2 pt-2">
+              <span class="font-mono text-[11px] px-2.5 py-1 bg-amber-50 text-amber-700 border border-amber-200 rounded-full">Auto-BOM Engine</span>
+            </div>
           </article>
 
-          <!-- Medium card: staff audit -->
-          <article class="lg:col-span-4 bg-brand-ivory border-2 border-brand-dark shadow-brutal rounded-xl p-5 flex flex-col gap-3">
-            <span class="w-11 h-11 rounded-lg bg-brand-dark border-2 border-brand-dark flex items-center justify-center text-brand-lime" aria-hidden="true">
+          <!-- Medium Card: Staff Audit (4 cols) -->
+          <article class="lg:col-span-4 liquid-glass-card rounded-3xl p-6 flex flex-col gap-4 border border-white/85">
+            <div class="w-11 h-11 rounded-2xl bg-slate-100 text-slate-900 border border-slate-300/70 flex items-center justify-center shadow-sm" aria-hidden="true">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.5" stroke="currentColor" stroke-width="2.2"/><path d="M5 20c1.2-3.4 3.9-5 7-5s5.8 1.6 7 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
-            </span>
-            <h3 class="font-heading font-bold text-[19px] uppercase text-brand-dark leading-snug"><span class="lang-id">Audit Staff Cerdas</span><span class="lang-en">Smart Staff Audit</span></h3>
-            <p class="font-body text-[13.5px] text-brand-dark/80 leading-relaxed"><span class="lang-id">PIN per kasir, rekap selisih laci per shift, dan persetujuan void berlapis.</span><span class="lang-en">Per-cashier PINs, per-shift drawer variance reports, and layered void approvals.</span></p>
+            </div>
+            <h3 class="font-bold text-[19px] text-slate-900 leading-snug"><span class="lang-id">Audit Staff Cerdas</span><span class="lang-en">Smart Staff Audit</span></h3>
+            <p class="text-[13.5px] text-slate-600 leading-relaxed"><span class="lang-id">PIN per kasir, rekap selisih laci per shift, dan persetujuan void pesanan berlapis via otorisasi manajer.</span><span class="lang-en">Per-cashier PINs, per-shift drawer variance reports, and layered void approvals via manager auth.</span></p>
+            <div class="mt-auto flex items-center gap-2 pt-2">
+              <span class="font-mono text-[11px] px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded-full">PIN Protected</span>
+            </div>
           </article>
         </div>
       </section>
       <!-- ================= SECTION E END ================= -->
 
       <!-- ================= SECTION F START: HARDWARE COMPATIBILITY ================= -->
-      <section id="hardware" aria-labelledby="hardware-title" class="bg-brand-cream-light border-2 border-brand-dark shadow-brutal rounded-xl p-6 sm:p-10 lg:p-12 flex flex-col gap-7 scroll-mt-24">
-        <div class="flex flex-col gap-2 max-w-[760px]">
-          <span class="inline-flex self-start px-3 py-1 bg-brand-blue-tech text-white border-2 border-brand-dark shadow-brutal-sm rounded-md font-mono text-[10.5px] sm:text-[11.5px] font-bold uppercase tracking-wide">Hardware Ecosystem</span>
-          <h2 id="hardware-title" class="font-heading font-bold text-[28px] sm:text-[38px] uppercase tracking-tight text-brand-dark leading-tight">
+      <section id="hardware" aria-labelledby="hardware-title" class="liquid-glass rounded-3xl p-6 sm:p-10 lg:p-12 flex flex-col gap-8 scroll-mt-24 section-contain">
+        <div class="flex flex-col gap-2.5 max-w-[760px]">
+          <span class="inline-flex self-start px-3.5 py-1 bg-blue-50 text-blue-700 border border-blue-200 rounded-full font-mono text-[11px] font-bold uppercase tracking-wide">Hardware Ecosystem</span>
+          <h2 id="hardware-title" class="font-extrabold text-[28px] sm:text-[36px] tracking-tight text-slate-900 leading-tight">
             <span class="lang-id">Fleksibel. Tanpa Kunci Hardware Mahal.</span>
             <span class="lang-en">Flexible. No Expensive Hardware Lock-in.</span>
           </h2>
-          <p class="font-body text-[15px] sm:text-[16px] text-brand-dark/85 font-medium">
+          <p class="text-[15px] sm:text-[16px] text-slate-600 font-normal">
             <span class="lang-id">Pakai perangkat yang sudah Anda miliki. Plug &amp; play tanpa instalasi driver rumit.</span>
             <span class="lang-en">Use the devices you already own. Plug &amp; play with no complicated driver setup.</span>
           </p>
         </div>
-        <ul class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-4">
-          <li class="bg-brand-ivory border-2 border-brand-dark shadow-brutal-sm rounded-xl p-4 flex flex-col items-center text-center gap-2">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2" stroke="currentColor" stroke-width="2"/><path d="M10 18.5h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            <span class="font-heading font-bold text-[14px] uppercase text-brand-dark leading-tight">Sunmi V2 / T2 Terminal</span>
-            <span class="font-mono text-[10.5px] text-brand-dark/65">POS Android ready</span>
+
+        <ul class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-4 list-none m-0 p-0">
+          <li class="liquid-glass-pill rounded-2xl p-5 flex flex-col items-center text-center gap-2.5 border border-white/80">
+            <div class="w-12 h-12 rounded-xl bg-white shadow-sm border border-slate-200/70 flex items-center justify-center text-slate-800">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2" stroke="currentColor" stroke-width="2"/><path d="M10 18.5h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <span class="font-bold text-[14px] text-slate-900 leading-tight">Sunmi V2 / T2 Terminal</span>
+            <span class="font-mono text-[11px] text-slate-500">Android POS ready</span>
           </li>
-          <li class="bg-brand-ivory border-2 border-brand-dark shadow-brutal-sm rounded-xl p-4 flex flex-col items-center text-center gap-2">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="3" width="16" height="13" rx="1.5" stroke="currentColor" stroke-width="2"/><path d="M9 20h6M12 16v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            <span class="font-heading font-bold text-[14px] uppercase text-brand-dark leading-tight">iPad / Tablet Android</span>
-            <span class="font-mono text-[10.5px] text-brand-dark/65">Browser modern</span>
+          <li class="liquid-glass-pill rounded-2xl p-5 flex flex-col items-center text-center gap-2.5 border border-white/80">
+            <div class="w-12 h-12 rounded-xl bg-white shadow-sm border border-slate-200/70 flex items-center justify-center text-slate-800">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="3" width="16" height="13" rx="1.5" stroke="currentColor" stroke-width="2"/><path d="M9 20h6M12 16v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <span class="font-bold text-[14px] text-slate-900 leading-tight">iPad / Android Tablet</span>
+            <span class="font-mono text-[11px] text-slate-500">Modern browser</span>
           </li>
-          <li class="bg-brand-ivory border-2 border-brand-dark shadow-brutal-sm rounded-xl p-4 flex flex-col items-center text-center gap-2">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 9.5V6h16v3.5M4 13.5h16V18H4zM7 15.5h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span class="font-heading font-bold text-[14px] uppercase text-brand-dark leading-tight">Thermal 58 / 80mm</span>
-            <span class="font-mono text-[10.5px] text-brand-dark/65">Bluetooth / LAN / USB</span>
+          <li class="liquid-glass-pill rounded-2xl p-5 flex flex-col items-center text-center gap-2.5 border border-white/80">
+            <div class="w-12 h-12 rounded-xl bg-white shadow-sm border border-slate-200/70 flex items-center justify-center text-slate-800">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 9.5V6h16v3.5M4 13.5h16V18H4zM7 15.5h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <span class="font-bold text-[14px] text-slate-900 leading-tight">Thermal 58 / 80mm</span>
+            <span class="font-mono text-[11px] text-slate-500">Bluetooth / LAN / USB</span>
           </li>
-          <li class="bg-brand-ivory border-2 border-brand-dark shadow-brutal-sm rounded-xl p-4 flex flex-col items-center text-center gap-2">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h9M4 12h13M4 17h7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="m17 15 4 4m0-4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            <span class="font-heading font-bold text-[14px] uppercase text-brand-dark leading-tight">Barcode Scanner</span>
-            <span class="font-mono text-[10.5px] text-brand-dark/65">Plug &amp; play USB</span>
+          <li class="liquid-glass-pill rounded-2xl p-5 flex flex-col items-center text-center gap-2.5 border border-white/80">
+            <div class="w-12 h-12 rounded-xl bg-white shadow-sm border border-slate-200/70 flex items-center justify-center text-slate-800">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h9M4 12h13M4 17h7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="m17 15 4 4m0-4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <span class="font-bold text-[14px] text-slate-900 leading-tight">Barcode Scanner</span>
+            <span class="font-mono text-[11px] text-slate-500">Plug &amp; play USB</span>
           </li>
-          <li class="bg-brand-ivory border-2 border-brand-dark shadow-brutal-sm rounded-xl p-4 flex flex-col items-center text-center gap-2">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="9" width="18" height="11" rx="1.5" stroke="currentColor" stroke-width="2"/><path d="M3 12.5h18M12 9v11" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="15.5" r="1.3" fill="currentColor"/></svg>
-            <span class="font-heading font-bold text-[14px] uppercase text-brand-dark leading-tight">Cash Drawer RJ11</span>
-            <span class="font-mono text-[10.5px] text-brand-dark/65">Auto-kick printer</span>
+          <li class="liquid-glass-pill rounded-2xl p-5 flex flex-col items-center text-center gap-2.5 border border-white/80">
+            <div class="w-12 h-12 rounded-xl bg-white shadow-sm border border-slate-200/70 flex items-center justify-center text-slate-800">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="9" width="18" height="11" rx="1.5" stroke="currentColor" stroke-width="2"/><path d="M3 12.5h18M12 9v11" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="15.5" r="1.3" fill="currentColor"/></svg>
+            </div>
+            <span class="font-bold text-[14px] text-slate-900 leading-tight">Cash Drawer RJ11</span>
+            <span class="font-mono text-[11px] text-slate-500">Auto-kick printer</span>
           </li>
-          <li class="bg-brand-ivory border-2 border-brand-dark shadow-brutal-sm rounded-xl p-4 flex flex-col items-center text-center gap-2">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 17H5V7h4M15 7h4v10h-4M9 12h6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span class="font-heading font-bold text-[14px] uppercase text-brand-dark leading-tight">Printer Dapur</span>
-            <span class="font-mono text-[10.5px] text-brand-dark/65">KDS + kitchen ticket</span>
+          <li class="liquid-glass-pill rounded-2xl p-5 flex flex-col items-center text-center gap-2.5 border border-white/80">
+            <div class="w-12 h-12 rounded-xl bg-white shadow-sm border border-slate-200/70 flex items-center justify-center text-slate-800">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 17H5V7h4M15 7h4v10h-4M9 12h6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <span class="font-bold text-[14px] text-slate-900 leading-tight">Printer Dapur</span>
+            <span class="font-mono text-[11px] text-slate-500">KDS + kitchen ticket</span>
           </li>
         </ul>
       </section>
       <!-- ================= SECTION F END ================= -->
 
       <!-- ================= SECTION G START: TRANSPARENT PRICING ================= -->
-      <section id="pricing" aria-labelledby="pricing-title" class="bg-brand-ivory border-2 border-brand-dark shadow-brutal rounded-xl p-6 sm:p-10 lg:p-12 flex flex-col gap-7 scroll-mt-24">
-        <div class="flex flex-col gap-2 text-center max-w-[720px] mx-auto">
-          <span class="inline-flex self-center px-3 py-1 bg-brand-cream-light text-brand-dark border-2 border-brand-dark shadow-brutal-sm rounded-md font-mono text-[10.5px] sm:text-[11.5px] font-bold uppercase tracking-wide"><span class="lang-id">Tanpa Biaya Tersembunyi • Tanpa Komisi</span><span class="lang-en">No Hidden Fees • No Commissions</span></span>
-          <h2 id="pricing-title" class="font-heading font-bold text-[28px] sm:text-[38px] uppercase tracking-tight text-brand-dark leading-tight">
+      <section id="pricing" aria-labelledby="pricing-title" class="liquid-glass rounded-3xl p-6 sm:p-10 lg:p-12 flex flex-col gap-8 scroll-mt-24 section-contain">
+        <div class="flex flex-col gap-2.5 text-center max-w-[720px] mx-auto">
+          <span class="inline-flex self-center px-3.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded-full font-mono text-[11px] font-bold uppercase tracking-wide">
+            <span class="lang-id">Tanpa Biaya Tersembunyi • Tanpa Komisi</span><span class="lang-en">No Hidden Fees • No Commissions</span>
+          </span>
+          <h2 id="pricing-title" class="font-extrabold text-[28px] sm:text-[36px] tracking-tight text-slate-900 leading-tight">
             <span class="lang-id">Paket Investasi Transparan</span>
             <span class="lang-en">Transparent Investment Plans</span>
           </h2>
         </div>
+
+        <!-- Mode Toggle Switch (Software Only vs Software + Hardware) -->
         <fieldset class="w-full max-w-[420px] mx-auto" data-pricing-switch hidden>
-          <legend class="font-body text-[14px] text-brand-dark/75 text-center w-full mb-3"><span class="lang-id">Sudah punya alat kasir, atau perlu sekalian perangkatnya?</span><span class="lang-en">Already have your own devices, or need hardware too?</span></legend>
-          <div class="grid grid-cols-2 gap-1 p-1 bg-brand-cream-light border-2 border-brand-dark shadow-brutal-sm rounded-lg">
+          <legend class="text-[14px] text-slate-600 text-center w-full mb-3"><span class="lang-id">Sudah punya alat kasir, atau perlu sekalian perangkatnya?</span><span class="lang-en">Already have your own devices, or need hardware too?</span></legend>
+          <div class="grid grid-cols-2 gap-1 p-1 bg-slate-100/90 border border-slate-200/80 rounded-2xl">
             <label class="cursor-pointer">
               <input type="radio" name="pricing-mode" value="software" class="peer sr-only" aria-controls="pricing-software" checked />
-              <span class="flex items-center justify-center min-h-[44px] h-full rounded-md border-2 border-transparent px-2 py-2 text-center peer-checked:bg-brand-lime peer-checked:border-brand-dark peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2">
-                <strong class="font-heading text-[12px] sm:text-[14px]"><span class="lang-id">Aplikasi Saja</span><span class="lang-en">Software Only</span></strong>
+              <span class="flex items-center justify-center min-h-[42px] h-full rounded-xl border border-transparent px-3 py-2 text-center text-slate-600 font-semibold text-[13px] peer-checked:bg-white peer-checked:text-slate-900 peer-checked:shadow-sm transition-all">
+                <span class="lang-id">Aplikasi Saja</span><span class="lang-en">Software Only</span>
               </span>
             </label>
             <label class="cursor-pointer">
               <input type="radio" name="pricing-mode" value="hardware" class="peer sr-only" aria-controls="pricing-hardware" />
-              <span class="flex items-center justify-center min-h-[44px] h-full rounded-md border-2 border-transparent px-2 py-2 text-center peer-checked:bg-brand-lime peer-checked:border-brand-dark peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2">
-                <strong class="font-heading text-[12px] sm:text-[14px]"><span class="lang-id">Aplikasi + Perangkat</span><span class="lang-en">Software + Hardware</span></strong>
+              <span class="flex items-center justify-center min-h-[42px] h-full rounded-xl border border-transparent px-3 py-2 text-center text-slate-600 font-semibold text-[13px] peer-checked:bg-white peer-checked:text-slate-900 peer-checked:shadow-sm transition-all">
+                <span class="lang-id">Aplikasi + Perangkat</span><span class="lang-en">Software + Hardware</span>
               </span>
             </label>
           </div>
         </fieldset>
-        <!-- TODO: ganti placeholder — konfirmasi nominal & durasi paket ke tim sales sebelum rilis. -->
+
+        <!-- Panel 1: Software Only -->
         <div id="pricing-software" data-pricing-panel="software">
-        <p class="font-body text-[14px] text-brand-dark/75 text-center mb-8"><span class="lang-id">Langganan aplikasi vexaPOS dengan perangkat milik sendiri. Harga tidak termasuk pembelian alat; kompatibilitas perangkat dicek saat konsultasi.</span><span class="lang-en">Subscribe to vexaPOS using your own devices. Hardware purchases are not included; device compatibility is checked during consultation.</span></p>
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-[1200px] mx-auto w-full items-stretch">
-          <!-- Tier 1: UMKM Starter + Trial 14 Hari -->
-          <article class="relative bg-brand-cream-light border-2 border-brand-dark shadow-brutal rounded-xl p-6 flex flex-col gap-4">
-            <span class="absolute -top-3.5 left-1/2 -translate-x-1/2 whitespace-nowrap px-3 py-1 bg-brand-green text-white border-2 border-brand-dark shadow-brutal-sm rounded-full font-mono text-[10.5px] font-bold uppercase"><span class="lang-id">Trial 14 Hari Gratis • UMKM</span><span class="lang-en">Free 14-Day Trial • SMEs</span></span>
-            <h3 class="font-heading font-bold text-[21px] uppercase text-brand-dark pt-1"><span class="lang-id">Single Outlet Starter</span><span class="lang-en">Single Outlet Starter</span></h3>
-            <p class="font-body text-[13px] text-brand-dark/75"><span class="lang-id">Untuk UMKM, kafe independen &amp; kedai kopi spesialti satu lokasi. Coba gratis 14 hari, tanpa kartu kredit.</span><span class="lang-en">For SMEs, independent cafes &amp; single-site specialty coffee shops. Try free for 14 days, no credit card required.</span></p>
-            <div>
-              <p class="font-mono font-bold text-[32px] text-brand-dark leading-none">Rp249<span class="text-[16px]">rb</span> <span class="font-body font-medium text-[13px] text-brand-dark/70">/ bulan</span></p>
-              <p class="font-mono text-[11px] text-brand-dark/65 mt-1.5"><span class="lang-id">Ditagih tiap 3 bulan (Rp747.000)</span><span class="lang-en">Billed quarterly (Rp747,000)</span></p>
-            </div>
-            <p class="inline-flex self-start px-2 py-0.5 bg-brand-green text-white border-2 border-brand-dark rounded-md font-mono text-[10.5px] font-bold uppercase"><span class="lang-id">Gratis 14 hari pertama</span><span class="lang-en">First 14 days free</span></p>
-            <ul class="flex flex-col gap-2 font-body text-[13px] text-brand-dark border-t-2 border-brand-dark/15 pt-4">
-              <li class="flex gap-2"><svg class="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8.5 3.2 3.2L13 5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="lang-id"><strong>Trial gratis 14 hari</strong> — full fitur, tanpa kartu kredit</span><span class="lang-en"><strong>Free 14-day trial</strong> — full features, no credit card</span></li>
-              <li class="flex gap-2"><svg class="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8.5 3.2 3.2L13 5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="lang-id">Kasir cepat + cetak struk thermal</span><span class="lang-en">Fast checkout + thermal receipts</span></li>
-              <li class="flex gap-2"><svg class="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8.5 3.2 3.2L13 5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="lang-id">Mode offline penuh + auto-sync</span><span class="lang-en">Full offline mode + auto-sync</span></li>
-              <li class="flex gap-2"><svg class="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8.5 3.2 3.2L13 5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="lang-id">1 perangkat kasir aktif</span><span class="lang-en">1 active cashier device</span></li>
-              <li class="flex gap-2"><svg class="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8.5 3.2 3.2L13 5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="lang-id">Laporan harian (PDF)</span><span class="lang-en">Daily reports (PDF)</span></li>
-            </ul>
-            <div class="mt-auto flex flex-col gap-2">
-              <a href="https://wa.me/6285338000872?text=Halo%20Tim%20vexaPOS%2C%20saya%20mau%20aktivasikan%20TRIAL%20GRATIS%2014%20hari%20paket%20UMKM%20Starter%20untuk%20outlet%20saya.%20Nama%20outlet%3A%20___%20Saya%20memilih%20aplikasi%20saja%20dan%20sudah%20memiliki%20perangkat%20kasir." target="_blank" rel="noopener" class="text-center font-heading font-bold text-[13px] uppercase px-5 py-3 bg-brand-green text-white border-2 border-brand-dark shadow-brutal-sm rounded-lg hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all"><span class="lang-id">Mulai Trial 14 Hari Gratis</span><span class="lang-en">Start Free 14-Day Trial</span></a>
-              <a href="https://wa.me/6285338000872?text=Halo%20Tim%20vexaPOS%2C%20saya%20tertarik%20paket%20Single%20Outlet%20Starter%20(Rp249rb%2Fbln%20-%20ditagih%203%20bulan).%20Mohon%20info%20demo.%20Saya%20memilih%20aplikasi%20saja%20dan%20sudah%20memiliki%20perangkat%20kasir." target="_blank" rel="noopener" class="text-center font-heading font-bold text-[13px] uppercase px-5 py-3 bg-brand-ivory border-2 border-brand-dark shadow-brutal-sm rounded-lg hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all"><span class="lang-id">Pilih Starter</span><span class="lang-en">Choose Starter</span></a>
-            </div>
-          </article>
-          <!-- Tier 2 (popular) -->
-          <article class="relative bg-brand-cream border-2 border-brand-dark shadow-brutal-lg rounded-xl p-6 flex flex-col gap-4 lg:-translate-y-2">
-            <span class="absolute -top-3.5 left-1/2 -translate-x-1/2 whitespace-nowrap px-3 py-1 bg-brand-lime text-brand-dark border-2 border-brand-dark shadow-brutal-sm rounded-full font-mono text-[10.5px] font-bold uppercase"><span class="lang-id">Pilihan Populer Beach Club</span><span class="lang-en">Beach Clubs' Top Pick</span></span>
-            <h3 class="font-heading font-bold text-[21px] uppercase text-brand-dark pt-1">Multi-Outlet Pro</h3>
-            <p class="font-body text-[13px] text-brand-dark/75"><span class="lang-id">Untuk restoran, bar &amp; beach club multi-cabang bervolume tinggi.</span><span class="lang-en">For high-volume multi-branch restaurants, bars &amp; beach clubs.</span></p>
-            <div>
-              <p class="font-mono font-bold text-[32px] text-brand-dark leading-none">Rp449<span class="text-[16px]">rb</span> <span class="font-body font-medium text-[13px] text-brand-dark/70">/ bulan</span></p>
-              <p class="font-mono text-[11px] text-brand-dark/65 mt-1.5"><span class="lang-id">Ditagih per 6 bulan (Rp2.694.000)</span><span class="lang-en">Billed semi-annually (Rp2,694,000)</span></p>
-            </div>
-            <ul class="flex flex-col gap-2 font-body text-[13px] text-brand-dark border-t-2 border-brand-dark/15 pt-4">
-              <li class="flex gap-2"><svg class="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8.5 3.2 3.2L13 5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="lang-id">Semua fitur Starter</span><span class="lang-en">Everything in Starter</span></li>
-              <li class="flex gap-2"><svg class="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8.5 3.2 3.2L13 5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="lang-id">Split bill instan + QRIS + KDS dapur</span><span class="lang-en">Instant split bill + QRIS + kitchen KDS</span></li>
-              <li class="flex gap-2"><svg class="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8.5 3.2 3.2L13 5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="lang-id">Dashboard multi-outlet + inventaris resep</span><span class="lang-en">Multi-outlet dashboard + recipe inventory</span></li>
-              <li class="flex gap-2"><svg class="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8.5 3.2 3.2L13 5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="lang-id">Service charge &amp; PB1 otomatis</span><span class="lang-en">Automatic service charge &amp; PB1</span></li>
-              <li class="flex gap-2"><svg class="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8.5 3.2 3.2L13 5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="lang-id">Onboarding &amp; setup daring gratis</span><span class="lang-en">Free remote onboarding &amp; setup</span></li>
-              <li class="flex gap-2 bg-brand-cream-light border border-brand-dark/25 rounded-md p-2 -mx-1 text-[12px] leading-snug"><span class="font-mono font-bold text-brand-orange shrink-0">ADD-ON</span><span class="lang-id">Instalasi &amp; training on-site Bali: Rp500.000 (sekali bayar)</span><span class="lang-en">On-site Bali installation &amp; training: Rp500k (one-time)</span></li>
-            </ul>
-            <a href="https://wa.me/6285338000872?text=Halo%20Tim%20vexaPOS%2C%20saya%20tertarik%20paket%20Multi-Outlet%20Pro%20(Rp449rb%2Fbln%20-%20ditagih%206%20bulan).%20Mohon%20jadwal%20demo.%20Saya%20memilih%20aplikasi%20saja%20dan%20sudah%20memiliki%20perangkat%20kasir." target="_blank" rel="noopener" class="mt-auto text-center font-heading font-bold text-[13px] uppercase px-5 py-3 bg-brand-lime border-2 border-brand-dark shadow-brutal rounded-lg hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all"><span class="lang-id">Pilih Pro</span><span class="lang-en">Choose Pro</span></a>
-          </article>
-          <!-- Tier 3 -->
-          <article class="bg-brand-cream-light border-2 border-brand-dark shadow-brutal rounded-xl p-6 flex flex-col gap-4">
-            <h3 class="font-heading font-bold text-[21px] uppercase text-brand-dark"><span class="lang-id">Enterprise / Group</span><span class="lang-en">Enterprise / Group</span></h3>
-            <p class="font-body text-[13px] text-brand-dark/75"><span class="lang-id">Untuk grup villa, franchise F&amp;B &amp; resort multi-kitchen.</span><span class="lang-en">For villa groups, F&amp;B franchises &amp; multi-kitchen resorts.</span></p>
-            <p class="font-mono font-bold text-[30px] text-brand-dark leading-none"><span class="lang-id">Kustom</span><span class="lang-en">Custom</span> <span class="font-body font-medium text-[12.5px] text-brand-dark/65">/ survei kebutuhan</span></p>
-            <ul class="flex flex-col gap-2 font-body text-[13px] text-brand-dark border-t-2 border-brand-dark/15 pt-4">
-              <li class="flex gap-2"><svg class="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8.5 3.2 3.2L13 5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="lang-id">Semua fitur Pro + multi-gudang</span><span class="lang-en">Everything in Pro + multi-warehouse</span></li>
-              <li class="flex gap-2"><svg class="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8.5 3.2 3.2L13 5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="lang-id">CRM pelanggan &amp; analitik grup</span><span class="lang-en">Customer CRM &amp; group analytics</span></li>
-              <li class="flex gap-2"><svg class="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8.5 3.2 3.2L13 5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="lang-id">Dedicated manager + SLA prioritas</span><span class="lang-en">Dedicated manager + priority SLA</span></li>
-              <li class="flex gap-2"><svg class="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8.5 3.2 3.2L13 5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="lang-id">Pelatihan multi-outlet di Bali</span><span class="lang-en">Multi-outlet training in Bali</span></li>
-            </ul>
-            <a href="https://wa.me/6285338000872?text=Halo%20Tim%20vexaPOS%2C%20saya%20butuh%20penawaran%20Enterprise%2FGroup%20untuk%20bisnis%20saya.%20Mohon%20jadwal%20konsultasi.%20Saya%20memilih%20aplikasi%20saja%20dan%20sudah%20memiliki%20perangkat%20kasir." target="_blank" rel="noopener" class="mt-auto text-center font-heading font-bold text-[13px] uppercase px-5 py-3 bg-brand-ivory border-2 border-brand-dark shadow-brutal-sm rounded-lg hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all"><span class="lang-id">Minta Penawaran</span><span class="lang-en">Request a Quote</span></a>
-          </article>
+          <p class="text-[14px] text-slate-600 text-center mb-8"><span class="lang-id">Langganan aplikasi vexaPOS dengan perangkat milik sendiri. Harga tidak termasuk pembelian alat; kompatibilitas perangkat dicek saat konsultasi.</span><span class="lang-en">Subscribe to vexaPOS using your own devices. Hardware purchases are not included; device compatibility is checked during consultation.</span></p>
+          
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-[1240px] mx-auto w-full items-stretch">
+            <!-- Tier 1: Single Outlet Starter -->
+            <article class="liquid-glass-card rounded-3xl p-6 sm:p-8 flex flex-col gap-4 relative border border-white/80">
+              <span class="inline-flex self-start px-3 py-1 bg-emerald-100 text-emerald-800 border border-emerald-300 rounded-full font-mono text-[10.5px] font-bold uppercase tracking-wide">
+                <span class="lang-id">Trial 14 Hari Gratis • UMKM</span><span class="lang-en">Free 14-Day Trial • SMEs</span>
+              </span>
+              <h3 class="font-bold text-[22px] text-slate-900 pt-1"><span class="lang-id">Single Outlet Starter</span><span class="lang-en">Single Outlet Starter</span></h3>
+              <p class="text-[13.5px] text-slate-600"><span class="lang-id">Untuk UMKM, kafe independen &amp; kedai kopi spesialti satu lokasi. Coba gratis 14 hari, tanpa kartu kredit.</span><span class="lang-en">For SMEs, independent cafes &amp; single-site specialty coffee shops. Try free for 14 days, no credit card required.</span></p>
+              
+              <div>
+                <p class="font-mono font-bold text-[34px] text-slate-900 leading-none">Rp249<span class="text-[16px]">rb</span> <span class="font-sans font-normal text-[13px] text-slate-500">/ bulan</span></p>
+                <p class="font-mono text-[11px] text-slate-500 mt-1.5"><span class="lang-id">Ditagih tiap 3 bulan (Rp747.000)</span><span class="lang-en">Billed quarterly (Rp747,000)</span></p>
+              </div>
+
+              <ul class="flex flex-col gap-2.5 text-[13px] text-slate-700 border-t border-slate-200/80 pt-4">
+                <li class="flex items-start gap-2.5">
+                  <svg class="shrink-0 mt-0.5 text-emerald-600" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8.5 3.2 3.2L13 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span class="lang-id"><strong>Trial gratis 14 hari</strong> — full fitur, tanpa kartu kredit</span><span class="lang-en"><strong>Free 14-day trial</strong> — full features, no credit card</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="shrink-0 mt-0.5 text-emerald-600" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8.5 3.2 3.2L13 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span class="lang-id">Kasir cepat + cetak struk thermal</span><span class="lang-en">Fast checkout + thermal receipts</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="shrink-0 mt-0.5 text-emerald-600" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8.5 3.2 3.2L13 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span class="lang-id">Mode offline penuh + auto-sync</span><span class="lang-en">Full offline mode + auto-sync</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="shrink-0 mt-0.5 text-emerald-600" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8.5 3.2 3.2L13 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span class="lang-id">1 perangkat kasir aktif</span><span class="lang-en">1 active cashier device</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="shrink-0 mt-0.5 text-emerald-600" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8.5 3.2 3.2L13 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span class="lang-id">Laporan harian (PDF)</span><span class="lang-en">Daily reports (PDF)</span>
+                </li>
+              </ul>
+
+              <div class="mt-auto flex flex-col gap-2 pt-4">
+                <a href="https://wa.me/6285338000872?text=Halo%20Tim%20vexaPOS%2C%20saya%20mau%20aktivasikan%20TRIAL%20GRATIS%2014%20hari%20paket%20UMKM%20Starter%20untuk%20outlet%20saya.%20Nama%20outlet%3A%20___%20Saya%20memilih%20aplikasi%20saja%20dan%20sudah%20memiliki%20perangkat%20kasir." target="_blank" rel="noopener" class="text-center font-bold text-[13px] px-5 py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl shadow-sm transition-all"><span class="lang-id">Mulai Trial 14 Hari Gratis</span><span class="lang-en">Start Free 14-Day Trial</span></a>
+                <a href="https://wa.me/6285338000872?text=Halo%20Tim%20vexaPOS%2C%20saya%20tertarik%20paket%20Single%20Outlet%20Starter%20(Rp249rb%2Fbln%20-%20ditagih%203%20bulan).%20Mohon%20info%20demo.%20Saya%20memilih%20aplikasi%20saja%20dan%20sudah%20memiliki%20perangkat%20kasir." target="_blank" rel="noopener" class="text-center font-semibold text-[13px] px-5 py-3 bg-white/80 hover:bg-white text-slate-800 border border-slate-200/80 rounded-xl transition-all"><span class="lang-id">Pilih Starter</span><span class="lang-en">Choose Starter</span></a>
+              </div>
+            </article>
+
+            <!-- Tier 2: Multi-Outlet Pro (HIGHLIGHTED: Neon Lime Glow) -->
+            <article class="liquid-glass-card liquid-glass-glow rounded-3xl p-6 sm:p-8 flex flex-col gap-4 relative border-2 border-lime-400/90 lg:-translate-y-2 bg-white/85">
+              <span class="inline-flex self-start px-3 py-1 bg-[#84CC16] text-slate-950 rounded-full font-mono text-[10.5px] font-bold uppercase tracking-wide shadow-sm">
+                <span class="lang-id">Pilihan Populer Beach Club</span><span class="lang-en">Beach Clubs' Top Pick</span>
+              </span>
+              <h3 class="font-bold text-[22px] text-slate-900 pt-1">Multi-Outlet Pro</h3>
+              <p class="text-[13.5px] text-slate-600"><span class="lang-id">Untuk restoran, bar &amp; beach club multi-cabang bervolume tinggi di Bali.</span><span class="lang-en">For high-volume multi-branch restaurants, bars &amp; beach clubs in Bali.</span></p>
+
+              <div>
+                <p class="font-mono font-bold text-[34px] text-slate-900 leading-none">Rp449<span class="text-[16px]">rb</span> <span class="font-sans font-normal text-[13px] text-slate-500">/ bulan</span></p>
+                <p class="font-mono text-[11px] text-slate-500 mt-1.5"><span class="lang-id">Ditagih per 6 bulan (Rp2.694.000)</span><span class="lang-en">Billed semi-annually (Rp2,694,000)</span></p>
+              </div>
+
+              <ul class="flex flex-col gap-2.5 text-[13px] text-slate-700 border-t border-slate-200/80 pt-4">
+                <li class="flex items-start gap-2.5">
+                  <svg class="shrink-0 mt-0.5 text-emerald-600" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8.5 3.2 3.2L13 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span class="lang-id">Semua fitur Starter</span><span class="lang-en">Everything in Starter</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="shrink-0 mt-0.5 text-emerald-600" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8.5 3.2 3.2L13 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span class="lang-id">Split bill instan + QRIS + KDS dapur</span><span class="lang-en">Instant split bill + QRIS + kitchen KDS</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="shrink-0 mt-0.5 text-emerald-600" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8.5 3.2 3.2L13 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span class="lang-id">Dashboard multi-outlet + inventaris resep</span><span class="lang-en">Multi-outlet dashboard + recipe inventory</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="shrink-0 mt-0.5 text-emerald-600" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8.5 3.2 3.2L13 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span class="lang-id">Service charge &amp; PB1 otomatis</span><span class="lang-en">Automatic service charge &amp; PB1</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="shrink-0 mt-0.5 text-emerald-600" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8.5 3.2 3.2L13 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span class="lang-id">Onboarding &amp; setup daring gratis</span><span class="lang-en">Free remote onboarding &amp; setup</span>
+                </li>
+                <li class="flex items-start gap-2.5 bg-lime-50/90 border border-lime-200/80 rounded-xl p-2.5 text-[12.5px] leading-snug">
+                  <span class="font-mono font-bold text-lime-800 shrink-0">ADD-ON</span>
+                  <span class="lang-id">Instalasi &amp; training on-site Bali: Rp500.000 (sekali bayar)</span><span class="lang-en">On-site Bali installation &amp; training: Rp500k (one-time)</span>
+                </li>
+              </ul>
+
+              <a href="https://wa.me/6285338000872?text=Halo%20Tim%20vexaPOS%2C%20saya%20tertarik%20paket%20Multi-Outlet%20Pro%20(Rp449rb%2Fbln%20-%20ditagih%206%20bulan).%20Mohon%20jadwal%20demo.%20Saya%20memilih%20aplikasi%20saja%20dan%20sudah%20memiliki%20perangkat%20kasir." target="_blank" rel="noopener" class="mt-auto text-center font-bold text-[14px] px-5 py-3.5 bg-[#84CC16] hover:bg-[#65A30D] text-slate-950 rounded-xl shadow-lg shadow-lime-500/25 transition-all"><span class="lang-id">Pilih Pro</span><span class="lang-en">Choose Pro</span></a>
+            </article>
+
+            <!-- Tier 3: Enterprise / Group -->
+            <article class="liquid-glass-card rounded-3xl p-6 sm:p-8 flex flex-col gap-4 relative border border-white/80">
+              <span class="inline-flex self-start px-3 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded-full font-mono text-[10.5px] font-bold uppercase tracking-wide">Enterprise Scale</span>
+              <h3 class="font-bold text-[22px] text-slate-900 pt-1"><span class="lang-id">Enterprise / Group</span><span class="lang-en">Enterprise / Group</span></h3>
+              <p class="text-[13.5px] text-slate-600"><span class="lang-id">Untuk grup villa, franchise F&amp;B &amp; resort multi-kitchen.</span><span class="lang-en">For villa groups, F&amp;B franchises &amp; multi-kitchen resorts.</span></p>
+
+              <div>
+                <p class="font-mono font-bold text-[32px] text-slate-900 leading-none"><span class="lang-id">Kustom</span><span class="lang-en">Custom</span> <span class="font-sans font-normal text-[13px] text-slate-500">/ survei kebutuhan</span></p>
+              </div>
+
+              <ul class="flex flex-col gap-2.5 text-[13px] text-slate-700 border-t border-slate-200/80 pt-4">
+                <li class="flex items-start gap-2.5">
+                  <svg class="shrink-0 mt-0.5 text-emerald-600" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8.5 3.2 3.2L13 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span class="lang-id">Semua fitur Pro + multi-gudang</span><span class="lang-en">Everything in Pro + multi-warehouse</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="shrink-0 mt-0.5 text-emerald-600" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8.5 3.2 3.2L13 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span class="lang-id">CRM pelanggan &amp; analitik grup</span><span class="lang-en">Customer CRM &amp; group analytics</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="shrink-0 mt-0.5 text-emerald-600" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8.5 3.2 3.2L13 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span class="lang-id">Dedicated manager + SLA prioritas</span><span class="lang-en">Dedicated manager + priority SLA</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="shrink-0 mt-0.5 text-emerald-600" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8.5 3.2 3.2L13 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span class="lang-id">Pelatihan multi-outlet di Bali</span><span class="lang-en">Multi-outlet training in Bali</span>
+                </li>
+              </ul>
+
+              <a href="https://wa.me/6285338000872?text=Halo%20Tim%20vexaPOS%2C%20saya%20butuh%20penawaran%20Enterprise%2FGroup%20untuk%20bisnis%20saya.%20Mohon%20jadwal%20konsultasi.%20Saya%20memilih%20aplikasi%20saja%20dan%20sudah%20memiliki%20perangkat%20kasir." target="_blank" rel="noopener" class="mt-auto text-center font-semibold text-[13px] px-5 py-3.5 bg-white/80 hover:bg-white text-slate-800 border border-slate-200/80 rounded-xl transition-all"><span class="lang-id">Minta Penawaran</span><span class="lang-en">Request a Quote</span></a>
+            </article>
+          </div>
         </div>
-        </div>
+
+        <!-- Panel 2: Software + Hardware -->
         <div id="pricing-hardware" data-pricing-panel="hardware" hidden>
-          <p class="font-body text-[14px] text-brand-dark/75 text-center mb-8"><span class="lang-id">Butuh alat juga? Konsultasikan paket aplikasi beserta perangkat kasir. Rincian biaya langganan dan pembelian alat akan dipisahkan dalam penawaran.</span><span class="lang-en">Need devices too? Discuss a software and POS hardware package. Subscription and hardware purchase costs will be itemized separately in your quote.</span></p>
-          <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-[1200px] mx-auto w-full items-stretch">
-            <article class="bg-brand-cream-light border-2 border-brand-dark shadow-brutal rounded-xl p-6 flex flex-col gap-4">
-              <h3 class="font-heading font-bold text-[21px] uppercase text-brand-dark"><span class="lang-id">Starter + Perangkat</span><span class="lang-en">Starter + Hardware</span></h3>
-              <p class="font-body text-[13px] text-brand-dark/75"><span class="lang-id">Untuk warung, kedai kopi, atau toko pertama Anda.</span><span class="lang-en">For your first food stall, coffee shop, or store.</span></p>
-              <p class="font-mono font-bold text-[24px] text-brand-dark"><span class="lang-id">Minta Penawaran</span><span class="lang-en">Request a Quote</span></p>
-              <p class="font-body text-[12px] text-brand-dark/65"><span class="lang-id">Total mengikuti pilihan alat dan paket aplikasi.</span><span class="lang-en">Total depends on your hardware and software plan.</span></p>
-              <ul class="flex flex-col gap-2 font-body text-[13px] text-brand-dark border-t-2 border-brand-dark/15 pt-4"><li><span class="lang-id">Aplikasi Single Outlet Starter</span><span class="lang-en">Single Outlet Starter software</span></li><li><span class="lang-id">Pilihan tablet atau terminal kasir sesuai kebutuhan</span><span class="lang-en">Tablet or POS terminal options to suit your needs</span></li><li><span class="lang-id">Pilihan printer struk thermal yang kompatibel</span><span class="lang-en">Compatible thermal receipt printer options</span></li></ul>
-              <a href="https://wa.me/6285338000872?text=Halo%20Tim%20vexaPOS%2C%20saya%20tertarik%20Starter%20%2B%20Perangkat%20(aplikasi%20%2B%20perangkat).%20Mohon%20penawaran%20aplikasi%20dan%20alat.%20Nama%20usaha%3A%20___%20%7C%20Jumlah%20outlet%3A%20___%20%7C%20Perangkat%20yang%20dibutuhkan%3A%20___" target="_blank" rel="noopener" class="mt-auto text-center font-heading font-bold text-[13px] uppercase px-5 py-3 bg-brand-lime border-2 border-brand-dark shadow-brutal-sm rounded-lg hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all"><span class="lang-id">Konsultasi Paket Lengkap</span><span class="lang-en">Discuss Complete Setup</span></a>
+          <p class="text-[14px] text-slate-600 text-center mb-8"><span class="lang-id">Butuh alat juga? Konsultasikan paket aplikasi beserta perangkat kasir. Rincian biaya langganan dan pembelian alat akan dipisahkan dalam penawaran.</span><span class="lang-en">Need devices too? Discuss a software and POS hardware package. Subscription and hardware purchase costs will be itemized separately in your quote.</span></p>
+          
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-[1240px] mx-auto w-full items-stretch">
+            <article class="liquid-glass-card rounded-3xl p-6 sm:p-8 flex flex-col gap-4 border border-white/80">
+              <h3 class="font-bold text-[22px] text-slate-900"><span class="lang-id">Starter + Perangkat</span><span class="lang-en">Starter + Hardware</span></h3>
+              <p class="text-[13.5px] text-slate-600"><span class="lang-id">Untuk warung, kedai kopi, atau toko pertama Anda.</span><span class="lang-en">For your first food stall, coffee shop, or store.</span></p>
+              <p class="font-mono font-bold text-[24px] text-slate-900"><span class="lang-id">Minta Penawaran</span><span class="lang-en">Request a Quote</span></p>
+              <p class="text-[12px] text-slate-500"><span class="lang-id">Total mengikuti pilihan alat dan paket aplikasi.</span><span class="lang-en">Total depends on your hardware and software plan.</span></p>
+              <ul class="flex flex-col gap-2 text-[13px] text-slate-700 border-t border-slate-200/80 pt-4">
+                <li><span class="lang-id">Aplikasi Single Outlet Starter</span><span class="lang-en">Single Outlet Starter software</span></li>
+                <li><span class="lang-id">Pilihan tablet atau terminal kasir sesuai kebutuhan</span><span class="lang-en">Tablet or POS terminal options to suit your needs</span></li>
+                <li><span class="lang-id">Pilihan printer struk thermal yang kompatibel</span><span class="lang-en">Compatible thermal receipt printer options</span></li>
+              </ul>
+              <a href="https://wa.me/6285338000872?text=Halo%20Tim%20vexaPOS%2C%20saya%20tertarik%20Starter%20%2B%20Perangkat%20(aplikasi%20%2B%20perangkat).%20Mohon%20penawaran%20aplikasi%20dan%20alat.%20Nama%20usaha%3A%20___%20%7C%20Jumlah%20outlet%3A%20___%20%7C%20Perangkat%20yang%20dibutuhkan%3A%20___" target="_blank" rel="noopener" class="mt-auto text-center font-bold text-[13px] px-5 py-3.5 bg-[#84CC16] hover:bg-[#65A30D] text-slate-950 rounded-xl transition-all"><span class="lang-id">Konsultasi Paket Lengkap</span><span class="lang-en">Discuss Complete Setup</span></a>
             </article>
-            <article class="bg-brand-cream-light border-2 border-brand-dark shadow-brutal rounded-xl p-6 flex flex-col gap-4">
-              <h3 class="font-heading font-bold text-[21px] uppercase text-brand-dark"><span class="lang-id">Pro + Perangkat</span><span class="lang-en">Pro + Hardware</span></h3>
-              <p class="font-body text-[13px] text-brand-dark/75"><span class="lang-id">Untuk usaha yang mulai membuka cabang.</span><span class="lang-en">For businesses expanding to more locations.</span></p>
-              <p class="font-mono font-bold text-[24px] text-brand-dark"><span class="lang-id">Minta Penawaran</span><span class="lang-en">Request a Quote</span></p>
-              <p class="font-body text-[12px] text-brand-dark/65"><span class="lang-id">Total mengikuti pilihan alat dan paket aplikasi.</span><span class="lang-en">Total depends on your hardware and software plan.</span></p>
-              <ul class="flex flex-col gap-2 font-body text-[13px] text-brand-dark border-t-2 border-brand-dark/15 pt-4"><li><span class="lang-id">Aplikasi Multi-Outlet Pro</span><span class="lang-en">Multi-Outlet Pro software</span></li><li><span class="lang-id">Rencana perangkat kasir untuk setiap outlet</span><span class="lang-en">Cashier hardware plan for each outlet</span></li><li><span class="lang-id">Pilihan printer dapur dan cash drawer</span><span class="lang-en">Kitchen printer and cash drawer options</span></li></ul>
-              <a href="https://wa.me/6285338000872?text=Halo%20Tim%20vexaPOS%2C%20saya%20tertarik%20Pro%20%2B%20Perangkat%20(aplikasi%20%2B%20perangkat).%20Mohon%20penawaran%20aplikasi%20dan%20alat.%20Nama%20usaha%3A%20___%20%7C%20Jumlah%20outlet%3A%20___%20%7C%20Perangkat%20yang%20dibutuhkan%3A%20___" target="_blank" rel="noopener" class="mt-auto text-center font-heading font-bold text-[13px] uppercase px-5 py-3 bg-brand-lime border-2 border-brand-dark shadow-brutal-sm rounded-lg hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all"><span class="lang-id">Konsultasi Paket Lengkap</span><span class="lang-en">Discuss Complete Setup</span></a>
+
+            <article class="liquid-glass-card rounded-3xl p-6 sm:p-8 flex flex-col gap-4 border border-white/80">
+              <h3 class="font-bold text-[22px] text-slate-900"><span class="lang-id">Pro + Perangkat</span><span class="lang-en">Pro + Hardware</span></h3>
+              <p class="text-[13.5px] text-slate-600"><span class="lang-id">Untuk usaha yang mulai membuka cabang.</span><span class="lang-en">For businesses expanding to more locations.</span></p>
+              <p class="font-mono font-bold text-[24px] text-slate-900"><span class="lang-id">Minta Penawaran</span><span class="lang-en">Request a Quote</span></p>
+              <p class="text-[12px] text-slate-500"><span class="lang-id">Total mengikuti pilihan alat dan paket aplikasi.</span><span class="lang-en">Total depends on your hardware and software plan.</span></p>
+              <ul class="flex flex-col gap-2 text-[13px] text-slate-700 border-t border-slate-200/80 pt-4">
+                <li><span class="lang-id">Aplikasi Multi-Outlet Pro</span><span class="lang-en">Multi-Outlet Pro software</span></li>
+                <li><span class="lang-id">Rencana perangkat kasir untuk setiap outlet</span><span class="lang-en">Cashier hardware plan for each outlet</span></li>
+                <li><span class="lang-id">Pilihan printer dapur dan cash drawer</span><span class="lang-en">Kitchen printer and cash drawer options</span></li>
+              </ul>
+              <a href="https://wa.me/6285338000872?text=Halo%20Tim%20vexaPOS%2C%20saya%20tertarik%20Pro%20%2B%20Perangkat%20(aplikasi%20%2B%20perangkat).%20Mohon%20penawaran%20aplikasi%20dan%20alat.%20Nama%20usaha%3A%20___%20%7C%20Jumlah%20outlet%3A%20___%20%7C%20Perangkat%20yang%20dibutuhkan%3A%20___" target="_blank" rel="noopener" class="mt-auto text-center font-bold text-[13px] px-5 py-3.5 bg-[#84CC16] hover:bg-[#65A30D] text-slate-950 rounded-xl transition-all"><span class="lang-id">Konsultasi Paket Lengkap</span><span class="lang-en">Discuss Complete Setup</span></a>
             </article>
-            <article class="bg-brand-cream-light border-2 border-brand-dark shadow-brutal rounded-xl p-6 flex flex-col gap-4">
-              <h3 class="font-heading font-bold text-[21px] uppercase text-brand-dark"><span class="lang-id">Paket Kustom</span><span class="lang-en">Custom Setup</span></h3>
-              <p class="font-body text-[13px] text-brand-dark/75"><span class="lang-id">Sesuaikan aplikasi dan perangkat dengan skala usaha.</span><span class="lang-en">Tailor software and hardware to your business.</span></p>
-              <p class="font-mono font-bold text-[24px] text-brand-dark"><span class="lang-id">Minta Penawaran</span><span class="lang-en">Request a Quote</span></p>
-              <p class="font-body text-[12px] text-brand-dark/65"><span class="lang-id">Total mengikuti pilihan alat dan paket aplikasi.</span><span class="lang-en">Total depends on your hardware and software plan.</span></p>
-              <ul class="flex flex-col gap-2 font-body text-[13px] text-brand-dark border-t-2 border-brand-dark/15 pt-4"><li><span class="lang-id">Kebutuhan aplikasi Enterprise / Group</span><span class="lang-en">Enterprise / Group software requirements</span></li><li><span class="lang-id">Jumlah dan spesifikasi perangkat sesuai konsultasi</span><span class="lang-en">Device quantities and specifications agreed in consultation</span></li><li><span class="lang-id">Rencana instalasi dan pelatihan tim</span><span class="lang-en">Installation and team training plan</span></li></ul>
-              <a href="https://wa.me/6285338000872?text=Halo%20Tim%20vexaPOS%2C%20saya%20tertarik%20Paket%20Kustom%20(aplikasi%20%2B%20perangkat).%20Mohon%20penawaran%20aplikasi%20dan%20alat.%20Nama%20usaha%3A%20___%20%7C%20Jumlah%20outlet%3A%20___%20%7C%20Perangkat%20yang%20dibutuhkan%3A%20___" target="_blank" rel="noopener" class="mt-auto text-center font-heading font-bold text-[13px] uppercase px-5 py-3 bg-brand-lime border-2 border-brand-dark shadow-brutal-sm rounded-lg hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all"><span class="lang-id">Konsultasi Paket Lengkap</span><span class="lang-en">Discuss Complete Setup</span></a>
+
+            <article class="liquid-glass-card rounded-3xl p-6 sm:p-8 flex flex-col gap-4 border border-white/80">
+              <h3 class="font-bold text-[22px] text-slate-900"><span class="lang-id">Paket Kustom</span><span class="lang-en">Custom Setup</span></h3>
+              <p class="text-[13.5px] text-slate-600"><span class="lang-id">Sesuaikan aplikasi dan perangkat dengan skala usaha.</span><span class="lang-en">Tailor software and hardware to your business.</span></p>
+              <p class="font-mono font-bold text-[24px] text-slate-900"><span class="lang-id">Minta Penawaran</span><span class="lang-en">Request a Quote</span></p>
+              <p class="text-[12px] text-slate-500"><span class="lang-id">Total mengikuti pilihan alat dan paket aplikasi.</span><span class="lang-en">Total depends on your hardware and software plan.</span></p>
+              <ul class="flex flex-col gap-2 text-[13px] text-slate-700 border-t border-slate-200/80 pt-4">
+                <li><span class="lang-id">Kebutuhan aplikasi Enterprise / Group</span><span class="lang-en">Enterprise / Group software requirements</span></li>
+                <li><span class="lang-id">Jumlah dan spesifikasi perangkat sesuai konsultasi</span><span class="lang-en">Device quantities and specifications agreed in consultation</span></li>
+                <li><span class="lang-id">Rencana instalasi dan pelatihan tim</span><span class="lang-en">Installation and team training plan</span></li>
+              </ul>
+              <a href="https://wa.me/6285338000872?text=Halo%20Tim%20vexaPOS%2C%20saya%20tertarik%20Paket%20Kustom%20(aplikasi%20%2B%20perangkat).%20Mohon%20penawaran%20aplikasi%20dan%20alat.%20Nama%20usaha%3A%20___%20%7C%20Jumlah%20outlet%3A%20___%20%7C%20Perangkat%20yang%20dibutuhkan%3A%20___" target="_blank" rel="noopener" class="mt-auto text-center font-bold text-[13px] px-5 py-3.5 bg-[#84CC16] hover:bg-[#65A30D] text-slate-950 rounded-xl transition-all"><span class="lang-id">Konsultasi Paket Lengkap</span><span class="lang-en">Discuss Complete Setup</span></a>
             </article>
           </div>
         </div>
@@ -742,29 +912,32 @@
       <!-- ================= SECTION G END ================= -->
 
       <!-- ================= SECTION H START: LOCAL TRUST & TESTIMONIALS ================= -->
-      <section aria-labelledby="testimoni-title" class="bg-brand-cream border-2 border-brand-dark shadow-brutal rounded-xl p-6 sm:p-10 lg:p-12 flex flex-col gap-7">
-        <div class="flex flex-col gap-2 max-w-[760px]">
-          <span class="inline-flex self-start px-3 py-1 bg-brand-ivory text-brand-dark border-2 border-brand-dark shadow-brutal-sm rounded-md font-mono text-[10.5px] sm:text-[11.5px] font-bold uppercase tracking-wide"><span class="lang-id">Cerita UMKM Bali</span><span class="lang-en">Bali Small Business Stories</span></span>
-          <h2 id="testimoni-title" class="font-heading font-bold text-[28px] sm:text-[38px] uppercase tracking-tight text-brand-dark leading-tight">
+      <section aria-labelledby="testimoni-title" class="liquid-glass rounded-3xl p-6 sm:p-10 lg:p-12 flex flex-col gap-8 section-contain">
+        <div class="flex flex-col gap-2.5 max-w-[760px]">
+          <span class="inline-flex self-start px-3.5 py-1 bg-lime-100 text-lime-900 border border-lime-300 rounded-full font-mono text-[11px] font-bold uppercase tracking-wide">
+            <span class="lang-id">Cerita UMKM Bali</span><span class="lang-en">Bali Small Business Stories</span>
+          </span>
+          <h2 id="testimoni-title" class="font-extrabold text-[28px] sm:text-[36px] tracking-tight text-slate-900 leading-tight">
             <span class="lang-id">Cerita dari Garis Depan Operasional</span>
             <span class="lang-en">Stories from the Operational Front Line</span>
           </h2>
-          <p class="font-body text-[13px] text-brand-dark/75 leading-relaxed"><span class="lang-id">Nama, usaha, dan cerita berikut bersifat fiktif.</span><span class="lang-en">The names, businesses, and stories below are fictional.</span></p>
+          <p class="text-[13.5px] text-slate-500 leading-relaxed"><span class="lang-id">Nama, usaha, dan cerita berikut bersifat fiktif.</span><span class="lang-en">The names, businesses, and stories below are fictional.</span></p>
         </div>
-        <!-- TODO: Replace fictional testimonials with verified client stories before publishing them as real testimonials. -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-          <figure class="bg-brand-ivory border-2 border-brand-dark shadow-brutal rounded-xl p-5 flex flex-col gap-3">
-            <blockquote class="font-body text-[14.5px] text-brand-dark leading-relaxed"><span class="lang-id">"Pas jam makan siang, saya bisa catat pesanan dan hitung total belanja tanpa bolak-balik pakai kalkulator. Tutup warung juga lebih enak karena tinggal cek rekap penjualan hari itu."</span><span class="lang-en">"During the lunch rush, I can record orders and total up bills without reaching for a calculator. Closing up is easier too, since I can just check the day's sales summary."</span></blockquote>
-            <figcaption class="border-t-2 border-brand-dark/15 pt-3 flex items-center gap-3">
-              <span class="w-10 h-10 rounded-lg bg-brand-blue-tech text-white border-2 border-brand-dark flex items-center justify-center font-heading font-bold shrink-0" aria-hidden="true">IS</span>
-              <span><strong class="font-heading text-[14px] uppercase block">Ibu Sari</strong><span class="font-mono text-[11px] text-brand-dark/65"><span class="lang-id">Pemilik • Warung Dapur Sari, Denpasar</span><span class="lang-en">Owner • Warung Dapur Sari, Denpasar</span></span></span>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <figure class="liquid-glass-card rounded-3xl p-6 sm:p-7 flex flex-col gap-4 border border-white/80">
+            <blockquote class="text-[15px] text-slate-800 leading-relaxed"><span class="lang-id">"Pas jam makan siang, saya bisa catat pesanan dan hitung total belanja tanpa bolak-balik pakai kalkulator. Tutup warung juga lebih enak karena tinggal cek rekap penjualan hari itu."</span><span class="lang-en">"During the lunch rush, I can record orders and total up bills without reaching for a calculator. Closing up is easier too, since I can just check the day's sales summary."</span></blockquote>
+            <figcaption class="border-t border-slate-200/80 pt-4 flex items-center gap-3.5 mt-auto">
+              <span class="w-11 h-11 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-[15px] shadow-sm shrink-0" aria-hidden="true">IS</span>
+              <span><strong class="font-bold text-[15px] text-slate-900 block">Ibu Sari</strong><span class="font-mono text-[11.5px] text-slate-500"><span class="lang-id">Pemilik • Warung Dapur Sari, Denpasar</span><span class="lang-en">Owner • Warung Dapur Sari, Denpasar</span></span></span>
             </figcaption>
           </figure>
-          <figure class="bg-brand-ivory border-2 border-brand-dark shadow-brutal rounded-xl p-5 flex flex-col gap-3">
-            <blockquote class="font-body text-[14.5px] text-brand-dark leading-relaxed"><span class="lang-id">"Kedai kami kecil, jadi butuh kasir yang gampang dipakai. Staf bisa langsung belajar input menu, dan saat Wi-Fi putus pesanan tetap bisa dicatat. Saya juga lebih gampang lihat kopi mana yang paling laku."</span><span class="lang-en">"We run a small coffee shop, so we need a till that's easy to use. Staff can quickly learn to enter orders, and keep recording them when Wi-Fi drops. It's also easier for me to see which coffees sell best."</span></blockquote>
-            <figcaption class="border-t-2 border-brand-dark/15 pt-3 flex items-center gap-3">
-              <span class="w-10 h-10 rounded-lg bg-brand-green text-white border-2 border-brand-dark flex items-center justify-center font-heading font-bold shrink-0" aria-hidden="true">PA</span>
-              <span><strong class="font-heading text-[14px] uppercase block">Pak Adi</strong><span class="font-mono text-[11px] text-brand-dark/65"><span class="lang-id">Pemilik • Kedai Kopi Sudut Pagi, Badung</span><span class="lang-en">Owner • Kedai Kopi Sudut Pagi, Badung</span></span></span>
+
+          <figure class="liquid-glass-card rounded-3xl p-6 sm:p-7 flex flex-col gap-4 border border-white/80">
+            <blockquote class="text-[15px] text-slate-800 leading-relaxed"><span class="lang-id">"Kedai kami kecil, jadi butuh kasir yang gampang dipakai. Staf bisa langsung belajar input menu, dan saat Wi-Fi putus pesanan tetap bisa dicatat. Saya juga lebih gampang lihat kopi mana yang paling laku."</span><span class="lang-en">"We run a small coffee shop, so we need a till that's easy to use. Staff can quickly learn to enter orders, and keep recording them when Wi-Fi drops. It's also easier for me to see which coffees sell best."</span></blockquote>
+            <figcaption class="border-t border-slate-200/80 pt-4 flex items-center gap-3.5 mt-auto">
+              <span class="w-11 h-11 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold text-[15px] shadow-sm shrink-0" aria-hidden="true">PA</span>
+              <span><strong class="font-bold text-[15px] text-slate-900 block">Pak Adi</strong><span class="font-mono text-[11.5px] text-slate-500"><span class="lang-id">Pemilik • Kedai Kopi Sudut Pagi, Badung</span><span class="lang-en">Owner • Kedai Kopi Sudut Pagi, Badung</span></span></span>
             </figcaption>
           </figure>
         </div>
@@ -772,74 +945,88 @@
       <!-- ================= SECTION H END ================= -->
 
       <!-- ================= SECTION I START: FAQ ACCORDION ================= -->
-      <section id="faq" aria-labelledby="faq-title" class="bg-brand-ivory border-2 border-brand-dark shadow-brutal rounded-xl p-6 sm:p-10 lg:p-12 flex flex-col gap-6 scroll-mt-24">
-        <div class="flex flex-col gap-2 max-w-[720px]">
-          <span class="inline-flex self-start px-3 py-1 bg-brand-cream-light text-brand-dark border-2 border-brand-dark shadow-brutal-sm rounded-md font-mono text-[10.5px] sm:text-[11.5px] font-bold uppercase tracking-wide">FAQ Owner Bali</span>
-          <h2 id="faq-title" class="font-heading font-bold text-[28px] sm:text-[38px] uppercase tracking-tight text-brand-dark leading-tight">
+      <section id="faq" aria-labelledby="faq-title" class="liquid-glass rounded-3xl p-6 sm:p-10 lg:p-12 flex flex-col gap-7 scroll-mt-24 section-contain">
+        <div class="flex flex-col gap-2.5 max-w-[720px]">
+          <span class="inline-flex self-start px-3.5 py-1 bg-lime-100 text-lime-900 border border-lime-300 rounded-full font-mono text-[11px] font-bold uppercase tracking-wide">FAQ Owner Bali</span>
+          <h2 id="faq-title" class="font-extrabold text-[28px] sm:text-[36px] tracking-tight text-slate-900 leading-tight">
             <span class="lang-id">Pertanyaan yang Sering Ditanyakan</span>
             <span class="lang-en">Frequently Asked Questions</span>
           </h2>
         </div>
+
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="vexa-faq-list">
-          <div class="faq-item bg-brand-cream-light border-2 border-brand-dark shadow-brutal-sm rounded-xl p-4">
+          <div class="faq-item liquid-glass-subtle rounded-2xl p-5 border border-white/80 transition-all">
             <button type="button" class="faq-trigger w-full flex items-center justify-between gap-3 text-left cursor-pointer" aria-expanded="false">
-              <span class="font-heading font-bold text-[15.5px] text-brand-dark"><span class="lang-id">Bagaimana vexaPOS tetap berfungsi saat internet mati total?</span><span class="lang-en">How does vexaPOS keep working with zero internet?</span></span>
-              <svg class="faq-icon shrink-0" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="m4 7 5 5 5-5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="font-bold text-[16px] text-slate-900"><span class="lang-id">Bagaimana vexaPOS tetap berfungsi saat internet mati total?</span><span class="lang-en">How does vexaPOS keep working with zero internet?</span></span>
+              <svg class="faq-icon shrink-0 text-slate-500" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="m4 7 5 5 5-5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
-            <div class="faq-collapse"><div class="overflow-hidden"><p class="font-body text-[13.5px] text-brand-dark/80 leading-relaxed pt-3 mt-3 border-t-2 border-brand-dark/15"><span class="lang-id">Semua transaksi ditulis ke penyimpanan lokal perangkat terlebih dahulu, sehingga kasir, cetak struk, dan tiket dapur tetap jalan. Begitu koneksi pulih, data tersinkron otomatis ke laporan pusat tanpa input ulang.</span><span class="lang-en">Every transaction is written to on-device local storage first, so checkout, receipts, and kitchen tickets keep running. Once the connection recovers, data auto-syncs to central reports with no re-entry.</span></p></div></div>
+            <div class="faq-collapse"><div class="overflow-hidden"><p class="text-[14px] text-slate-600 leading-relaxed pt-3 mt-3 border-t border-slate-200/70"><span class="lang-id">Semua transaksi ditulis ke penyimpanan lokal perangkat terlebih dahulu, sehingga kasir, cetak struk, dan tiket dapur tetap jalan. Begitu koneksi pulih, data tersinkron otomatis ke laporan pusat tanpa input ulang.</span><span class="lang-en">Every transaction is written to on-device local storage first, so checkout, receipts, and kitchen tickets keep running. Once the connection recovers, data auto-syncs to central reports with no re-entry.</span></p></div></div>
           </div>
-          <div class="faq-item bg-brand-cream-light border-2 border-brand-dark shadow-brutal-sm rounded-xl p-4">
+
+          <div class="faq-item liquid-glass-subtle rounded-2xl p-5 border border-white/80 transition-all">
             <button type="button" class="faq-trigger w-full flex items-center justify-between gap-3 text-left cursor-pointer" aria-expanded="false">
-              <span class="font-heading font-bold text-[15.5px] text-brand-dark"><span class="lang-id">Apakah ada onboarding &amp; pelatihan langsung di outlet kami?</span><span class="lang-en">Do you provide on-site onboarding &amp; training?</span></span>
-              <svg class="faq-icon shrink-0" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="m4 7 5 5 5-5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="font-bold text-[16px] text-slate-900"><span class="lang-id">Apakah ada onboarding &amp; pelatihan langsung di outlet kami?</span><span class="lang-en">Do you provide on-site onboarding &amp; training?</span></span>
+              <svg class="faq-icon shrink-0 text-slate-500" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="m4 7 5 5 5-5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
-            <div class="faq-collapse"><div class="overflow-hidden"><p class="font-body text-[13.5px] text-brand-dark/80 leading-relaxed pt-3 mt-3 border-t-2 border-brand-dark/15"><span class="lang-id">Setup dan onboarding daring gratis untuk semua paket. Jika Anda menginginkan kunjungan teknisi langsung ke outlet di Bali (instalasi printer/LAN &amp; training kasir), tersedia opsi add-on on-site visit terjangkau (Rp500.000 sekali bayar) atau sudah termasuk penuh di paket Enterprise.</span><span class="lang-en">Free remote setup and onboarding are included with all plans. If you prefer our Bali-based team to visit your outlet in person for hardware setup and cashier training, an affordable on-site add-on is available (Rp500,000 one-time), or fully included in the Enterprise plan.</span></p></div></div>
+            <div class="faq-collapse"><div class="overflow-hidden"><p class="text-[14px] text-slate-600 leading-relaxed pt-3 mt-3 border-t border-slate-200/70"><span class="lang-id">Setup dan onboarding daring gratis untuk semua paket. Jika Anda menginginkan kunjungan teknisi langsung ke outlet di Bali (instalasi printer/LAN &amp; training kasir), tersedia opsi add-on on-site visit terjangkau (Rp500.000 sekali bayar) atau sudah termasuk penuh di paket Enterprise.</span><span class="lang-en">Free remote setup and onboarding are included with all plans. If you prefer our Bali-based team to visit your outlet in person for hardware setup and cashier training, an affordable on-site add-on is available (Rp500,000 one-time), or fully included in the Enterprise plan.</span></p></div></div>
           </div>
-          <div class="faq-item bg-brand-cream-light border-2 border-brand-dark shadow-brutal-sm rounded-xl p-4">
+
+          <div class="faq-item liquid-glass-subtle rounded-2xl p-5 border border-white/80 transition-all">
             <button type="button" class="faq-trigger w-full flex items-center justify-between gap-3 text-left cursor-pointer" aria-expanded="false">
-              <span class="font-heading font-bold text-[15.5px] text-brand-dark"><span class="lang-id">Apakah mendukung Service Charge &amp; Pajak PB1?</span><span class="lang-en">Does it support Service Charge &amp; PB1 tax?</span></span>
-              <svg class="faq-icon shrink-0" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="m4 7 5 5 5-5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="font-bold text-[16px] text-slate-900"><span class="lang-id">Apakah mendukung Service Charge &amp; Pajak PB1?</span><span class="lang-en">Does it support Service Charge &amp; PB1 tax?</span></span>
+              <svg class="faq-icon shrink-0 text-slate-500" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="m4 7 5 5 5-5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
-            <div class="faq-collapse"><div class="overflow-hidden"><p class="font-body text-[13.5px] text-brand-dark/80 leading-relaxed pt-3 mt-3 border-t-2 border-brand-dark/15"><span class="lang-id">Ya. Service charge 10% dan pajak restoran PB1 10% dihitung otomatis berurutan (PB1 dikenakan setelah service), persis seperti contoh struk di atas.</span><span class="lang-en">Yes. The 10% service charge and 10% PB1 restaurant tax are calculated automatically in sequence (PB1 applied after service), exactly like the receipt example above.</span></p></div></div>
+            <div class="faq-collapse"><div class="overflow-hidden"><p class="text-[14px] text-slate-600 leading-relaxed pt-3 mt-3 border-t border-slate-200/70"><span class="lang-id">Ya. Service charge 10% dan pajak restoran PB1 10% dihitung otomatis berurutan (PB1 dikenakan setelah service), persis seperti contoh struk di atas.</span><span class="lang-en">Yes. The 10% service charge and 10% PB1 restaurant tax are calculated automatically in sequence (PB1 applied after service), exactly like the receipt example above.</span></p></div></div>
           </div>
-          <div class="faq-item bg-brand-cream-light border-2 border-brand-dark shadow-brutal-sm rounded-xl p-4">
+
+          <div class="faq-item liquid-glass-subtle rounded-2xl p-5 border border-white/80 transition-all">
             <button type="button" class="faq-trigger w-full flex items-center justify-between gap-3 text-left cursor-pointer" aria-expanded="false">
-              <span class="font-heading font-bold text-[15.5px] text-brand-dark"><span class="lang-id">Bisakah dipakai dengan printer dapur yang sudah ada?</span><span class="lang-en">Can we use our existing kitchen printers?</span></span>
-              <svg class="faq-icon shrink-0" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="m4 7 5 5 5-5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="font-bold text-[16px] text-slate-900"><span class="lang-id">Bisakah dipakai dengan printer dapur yang sudah ada?</span><span class="lang-en">Can we use our existing kitchen printers?</span></span>
+              <svg class="faq-icon shrink-0 text-slate-500" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="m4 7 5 5 5-5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
-            <div class="faq-collapse"><div class="overflow-hidden"><p class="font-body text-[13.5px] text-brand-dark/80 leading-relaxed pt-3 mt-3 border-t-2 border-brand-dark/15"><span class="lang-id">Bisa. vexaPOS kompatibel dengan printer thermal 58/80mm standar (Bluetooth, USB, LAN) dan terminal Sunmi. Tim kami membantu pairing saat demo on-site.</span><span class="lang-en">Yes. vexaPOS works with standard 58/80mm thermal printers (Bluetooth, USB, LAN) and Sunmi terminals. Our team helps with pairing during the on-site demo.</span></p></div></div>
+            <div class="faq-collapse"><div class="overflow-hidden"><p class="text-[14px] text-slate-600 leading-relaxed pt-3 mt-3 border-t border-slate-200/70"><span class="lang-id">Bisa. vexaPOS kompatibel dengan printer thermal 58/80mm standar (Bluetooth, USB, LAN) dan terminal Sunmi. Tim kami membantu pairing saat demo on-site.</span><span class="lang-en">Yes. vexaPOS works with standard 58/80mm thermal printers (Bluetooth, USB, LAN) and Sunmi terminals. Our team helps with pairing during the on-site demo.</span></p></div></div>
           </div>
-          <div class="faq-item bg-brand-cream-light border-2 border-brand-dark shadow-brutal-sm rounded-xl p-4">
+
+          <div class="faq-item liquid-glass-subtle rounded-2xl p-5 border border-white/80 transition-all">
             <button type="button" class="faq-trigger w-full flex items-center justify-between gap-3 text-left cursor-pointer" aria-expanded="false">
-              <span class="font-heading font-bold text-[15.5px] text-brand-dark"><span class="lang-id">Bagaimana keamanan data jika tablet kasir rusak/hilang?</span><span class="lang-en">How safe is our data if the cashier tablet breaks?</span></span>
-              <svg class="faq-icon shrink-0" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="m4 7 5 5 5-5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="font-bold text-[16px] text-slate-900"><span class="lang-id">Bagaimana keamanan data jika tablet kasir rusak/hilang?</span><span class="lang-en">How safe is our data if the cashier tablet breaks?</span></span>
+              <svg class="faq-icon shrink-0 text-slate-500" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="m4 7 5 5 5-5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
-            <div class="faq-collapse"><div class="overflow-hidden"><p class="font-body text-[13.5px] text-brand-dark/80 leading-relaxed pt-3 mt-3 border-t-2 border-brand-dark/15"><span class="lang-id">Setiap transaksi yang sudah tersinkron tersimpan di cloud dan bisa diakses dari perangkat lain. Akses PIN per staff bisa dicabut seketika, dan seluruh data milik Anda — dapat diekspor ke Excel &amp; PDF kapan saja.</span><span class="lang-en">Every synced transaction lives in the cloud and stays accessible from other devices. Per-staff PINs can be revoked instantly, and all data is yours — exportable to Excel &amp; PDF anytime.</span></p></div></div>
+            <div class="faq-collapse"><div class="overflow-hidden"><p class="text-[14px] text-slate-600 leading-relaxed pt-3 mt-3 border-t border-slate-200/70"><span class="lang-id">Setiap transaksi yang sudah tersinkron tersimpan di cloud dan bisa diakses dari perangkat lain. Akses PIN per staff bisa dicabut seketika, dan seluruh data milik Anda — dapat diekspor ke Excel &amp; PDF kapan saja.</span><span class="lang-en">Every synced transaction lives in the cloud and stays accessible from other devices. Per-staff PINs can be revoked instantly, and all data is yours — exportable to Excel &amp; PDF anytime.</span></p></div></div>
           </div>
         </div>
       </section>
       <!-- ================= SECTION I END ================= -->
 
       <!-- ================= SECTION J START: FINAL CTA BANNER ================= -->
-      <section aria-labelledby="cta-title" class="bg-brand-obsidian border-2 border-brand-dark shadow-brutal-lg rounded-xl p-6 sm:p-10 lg:p-14 flex flex-col lg:flex-row items-center justify-between gap-7">
-        <div class="flex flex-col gap-3 max-w-[640px] text-center lg:text-left">
-          <span class="inline-flex self-center lg:self-start px-3 py-1 bg-brand-lime text-brand-dark border-2 border-brand-dark rounded-md font-mono text-[10.5px] sm:text-[11.5px] font-bold uppercase tracking-wide">VIP On-Site Demo • Bali</span>
-          <h2 id="cta-title" class="font-heading font-bold text-[26px] sm:text-[36px] uppercase tracking-tight text-brand-cream leading-tight">
+      <section aria-labelledby="cta-title" class="liquid-glass-dark rounded-3xl p-8 sm:p-12 lg:p-16 flex flex-col lg:flex-row items-center justify-between gap-8 relative overflow-hidden text-white section-contain">
+        <!-- Ambient radial reflection inside dark glass without expensive blur filter -->
+        <div class="absolute -top-32 -left-20 w-[400px] h-[400px] rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(163, 230, 53, 0.18) 0%, transparent 70%);" aria-hidden="true"></div>
+        <div class="absolute -bottom-32 -right-20 w-[400px] h-[400px] rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(34, 211, 238, 0.18) 0%, transparent 70%);" aria-hidden="true"></div>
+
+        <div class="flex flex-col gap-3.5 max-w-[640px] text-center lg:text-left relative z-10">
+          <span class="inline-flex self-center lg:self-start px-3.5 py-1 bg-lime-400/20 text-[#84CC16] border border-lime-400/30 rounded-full font-mono text-[11px] font-bold uppercase tracking-wide">
+            VIP On-Site Demo • Bali
+          </span>
+          <h2 id="cta-title" class="font-extrabold text-[28px] sm:text-[38px] tracking-tight text-white leading-tight">
             <span class="lang-id">Siap Menghilangkan Antrean Macet Selamanya?</span>
             <span class="lang-en">Ready to End Stuck Queues Forever?</span>
           </h2>
-          <p class="font-body text-[14px] sm:text-[16px] text-brand-cream/85 font-medium leading-relaxed">
+          <p class="text-[15px] sm:text-[17px] text-slate-300 font-normal leading-relaxed">
             <span class="lang-id">Tim teknis Extensia datang langsung ke outlet Anda di Bali — bawa perangkat demo, setup printer, latih kasir. Tanpa biaya komitmen.</span>
             <span class="lang-en">Extensia technicians come straight to your Bali outlet — bringing demo hardware, printer setup, and cashier training. Zero commitment cost.</span>
           </p>
-          <p class="font-mono text-[11.5px] font-bold text-brand-lime"><span class="lang-id">JAM OPERASIONAL: SENIN–SABTU • 09.00–18.00 WITA</span><span class="lang-en">OPERATING HOURS: MON–SAT • 09.00–18.00 WITA</span></p>
+          <p class="font-mono text-[11.5px] font-bold text-[#84CC16]">
+            <span class="lang-id">JAM OPERASIONAL: SENIN–SABTU • 09.00–18.00 WITA</span><span class="lang-en">OPERATING HOURS: MON–SAT • 09.00–18.00 WITA</span>
+          </p>
         </div>
-        <div class="flex flex-col gap-3 w-full lg:w-auto shrink-0">
-          <a href="https://wa.me/6285338000872?text=Halo%20Tim%20vexaPOS%2C%20saya%20mau%20booking%20VIP%20demo%20GRATIS%20di%20outlet%20saya.%20Nama%20outlet%3A%20___%20%7C%20Lokasi%3A%20___" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 font-heading font-bold text-[14px] sm:text-[15px] uppercase px-8 py-4 bg-brand-lime text-brand-dark border-2 border-brand-cream shadow-brutal rounded-xl hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none active:translate-x-[4px] active:translate-y-[4px] transition-all whitespace-nowrap">
+
+        <div class="flex flex-col sm:flex-row lg:flex-col gap-3.5 w-full lg:w-auto shrink-0 relative z-10">
+          <a href="https://wa.me/6285338000872?text=Halo%20Tim%20vexaPOS%2C%20saya%20mau%20booking%20VIP%20demo%20GRATIS%20di%20outlet%20saya.%20Nama%20outlet%3A%20___%20%7C%20Lokasi%3A%20___" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 font-bold text-[15px] px-8 py-4 bg-[#84CC16] hover:bg-[#65A30D] text-slate-950 rounded-2xl shadow-xl shadow-lime-500/25 hover:shadow-lime-500/40 hover:-translate-y-0.5 active:translate-y-0 transition-all whitespace-nowrap">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.7 13.6L3 21l4.6-1.2A9 9 0 1 0 12 3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 9.5c.5 2.5 2.5 4.5 5 5l1.5-1.5 2 2c-.5 1.5-1.5 2-3 1.5-3.5-1-6.5-4-7.5-7.5-.5-1.5 0-2.5 1.5-3l2 2L9 9.5Z" fill="currentColor"/></svg>
             <span class="lang-id">Booking VIP via WhatsApp</span><span class="lang-en">Book VIP via WhatsApp</span>
           </a>
-          <a href="/" class="inline-flex items-center justify-center gap-2 font-heading font-bold text-[13px] uppercase px-8 py-3 bg-transparent text-brand-cream border-2 border-brand-cream rounded-xl hover:bg-brand-cream hover:text-brand-dark transition-colors">
+          <a href="/" class="inline-flex items-center justify-center gap-2 font-semibold text-[14px] px-8 py-3.5 bg-white/10 hover:bg-white/20 text-white border border-white/20 rounded-2xl transition-all">
             <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13.5 8h-10M7 4.5 3.5 8 7 11.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             <span class="lang-id">Kembali ke Extensia</span><span class="lang-en">Back to Extensia</span>
           </a>
@@ -850,39 +1037,46 @@
     </main>
 
     <!-- ================= SECTION K START: SEMANTIC FOOTER ================= -->
-    <footer class="bg-brand-ivory border-2 border-brand-dark shadow-brutal rounded-xl p-6 sm:p-10 flex flex-col gap-6">
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 pb-6 border-b-2 border-brand-dark/15">
-        <div class="md:col-span-4 flex flex-col gap-2">
-          <span class="font-heading font-bold text-[20px] text-brand-dark">vexa<span class="text-brand-blue">POS</span></span>
-          <p class="font-body text-[13px] text-brand-dark/75 leading-relaxed"><span class="lang-id">Sistem kasir cloud offline-ready oleh Extensia Creative Bali untuk F&amp;B &amp; ritel modern.</span><span class="lang-en">Offline-ready cloud POS by Extensia Creative Bali for modern F&amp;B &amp; retail.</span></p>
-          <span class="inline-flex items-center gap-1.5 font-mono text-[11px] font-bold text-brand-emerald"><span class="w-2 h-2 rounded-full bg-brand-green animate-pulse" aria-hidden="true"></span><span class="lang-id">SEMUA SISTEM OPERASIONAL</span><span class="lang-en">ALL SYSTEMS OPERATIONAL</span></span>
+    <footer class="liquid-glass rounded-3xl p-6 sm:p-10 lg:p-12 flex flex-col gap-8 section-contain">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-8 border-b border-slate-200/80">
+        <div class="md:col-span-4 flex flex-col gap-3">
+          <span class="font-extrabold text-[22px] text-slate-900">vexa<span class="text-blue-600">POS</span></span>
+          <p class="text-[13.5px] text-slate-600 leading-relaxed"><span class="lang-id">Sistem kasir cloud offline-ready oleh Extensia Creative Bali untuk F&amp;B &amp; ritel modern.</span><span class="lang-en">Offline-ready cloud POS by Extensia Creative Bali for modern F&amp;B &amp; retail.</span></p>
+          <span class="inline-flex items-center gap-2 font-mono text-[11px] font-bold text-emerald-700 mt-1">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true"></span>
+            <span class="lang-id">SEMUA SISTEM OPERASIONAL</span><span class="lang-en">ALL SYSTEMS OPERATIONAL</span>
+          </span>
         </div>
-        <nav aria-label="Tautan produk" class="md:col-span-2 flex flex-col gap-2">
-          <span class="font-mono text-[11px] font-bold uppercase text-brand-dark/60"><span class="lang-id">Produk</span><span class="lang-en">Product</span></span>
-          <a href="#fitur" class="font-body font-bold text-[13.5px] text-brand-dark hover:underline"><span class="lang-id">Fitur</span><span class="lang-en">Features</span></a>
-          <a href="#clients" class="font-body font-bold text-[13.5px] text-brand-dark hover:underline"><span class="lang-id">Klien Kami</span><span class="lang-en">Our Clients</span></a>
-          <a href="#hardware" class="font-body font-bold text-[13.5px] text-brand-dark hover:underline">Hardware</a>
-          <a href="#pricing" class="font-body font-bold text-[13.5px] text-brand-dark hover:underline"><span class="lang-id">Harga</span><span class="lang-en">Pricing</span></a>
-          <a href="#faq" class="font-body font-bold text-[13.5px] text-brand-dark hover:underline">FAQ</a>
+
+        <nav aria-label="Tautan produk" class="md:col-span-2 flex flex-col gap-2.5">
+          <span class="font-mono text-[11px] font-bold uppercase text-slate-400"><span class="lang-id">Produk</span><span class="lang-en">Product</span></span>
+          <a href="#fitur" class="font-medium text-[14px] text-slate-700 hover:text-slate-950 transition-colors"><span class="lang-id">Fitur</span><span class="lang-en">Features</span></a>
+          <a href="#clients" class="font-medium text-[14px] text-slate-700 hover:text-slate-950 transition-colors"><span class="lang-id">Klien Kami</span><span class="lang-en">Our Clients</span></a>
+          <a href="#hardware" class="font-medium text-[14px] text-slate-700 hover:text-slate-950 transition-colors">Hardware</a>
+          <a href="#pricing" class="font-medium text-[14px] text-slate-700 hover:text-slate-950 transition-colors"><span class="lang-id">Harga</span><span class="lang-en">Pricing</span></a>
+          <a href="#faq" class="font-medium text-[14px] text-slate-700 hover:text-slate-950 transition-colors">FAQ</a>
         </nav>
-        <nav aria-label="Tautan solusi" class="md:col-span-3 flex flex-col gap-2">
-          <span class="font-mono text-[11px] font-bold uppercase text-brand-dark/60"><span class="lang-id">Solusi</span><span class="lang-en">Solutions</span></span>
-          <a href="#masalah" class="font-body font-bold text-[13.5px] text-brand-dark hover:underline"><span class="lang-id">Kafe &amp; Kopi Spesialti</span><span class="lang-en">Cafes &amp; Specialty Coffee</span></a>
-          <a href="#masalah" class="font-body font-bold text-[13.5px] text-brand-dark hover:underline"><span class="lang-id">Restoran, Bar &amp; Beach Club</span><span class="lang-en">Restaurants, Bars &amp; Beach Clubs</span></a>
-          <a href="#pricing" class="font-body font-bold text-[13.5px] text-brand-dark hover:underline"><span class="lang-id">Franchise &amp; Grup Villa</span><span class="lang-en">Franchises &amp; Villa Groups</span></a>
+
+        <nav aria-label="Tautan solusi" class="md:col-span-3 flex flex-col gap-2.5">
+          <span class="font-mono text-[11px] font-bold uppercase text-slate-400"><span class="lang-id">Solusi</span><span class="lang-en">Solutions</span></span>
+          <a href="#masalah" class="font-medium text-[14px] text-slate-700 hover:text-slate-950 transition-colors"><span class="lang-id">Kafe &amp; Kopi Spesialti</span><span class="lang-en">Cafes &amp; Specialty Coffee</span></a>
+          <a href="#masalah" class="font-medium text-[14px] text-slate-700 hover:text-slate-950 transition-colors"><span class="lang-id">Restoran, Bar &amp; Beach Club</span><span class="lang-en">Restaurants, Bars &amp; Beach Clubs</span></a>
+          <a href="#pricing" class="font-medium text-[14px] text-slate-700 hover:text-slate-950 transition-colors"><span class="lang-id">Franchise &amp; Grup Villa</span><span class="lang-en">Franchises &amp; Villa Groups</span></a>
         </nav>
-        <div class="md:col-span-3 flex flex-col gap-2">
-          <span class="font-mono text-[11px] font-bold uppercase text-brand-dark/60"><span class="lang-id">Workshop Bali</span><span class="lang-en">Bali Workshop</span></span>
-          <p class="font-body text-[13px] text-brand-dark/80 leading-relaxed">Canggu &amp; Denpasar, Bali<br /><span class="font-mono text-[11.5px] font-bold"><span class="lang-id">Senin–Sabtu • 09.00–18.00 WITA</span><span class="lang-en">Mon–Sat • 09.00–18.00 WITA</span></span></p>
-          <a href="mailto:info@extensiacreativebali.com" class="font-body font-bold text-[13.5px] text-brand-blue hover:underline">info@extensiacreativebali.com</a>
+
+        <div class="md:col-span-3 flex flex-col gap-2.5">
+          <span class="font-mono text-[11px] font-bold uppercase text-slate-400"><span class="lang-id">Workshop Bali</span><span class="lang-en">Bali Workshop</span></span>
+          <p class="text-[13.5px] text-slate-600 leading-relaxed">Canggu &amp; Denpasar, Bali<br /><span class="font-mono text-[11.5px] font-semibold text-slate-700"><span class="lang-id">Senin–Sabtu • 09.00–18.00 WITA</span><span class="lang-en">Mon–Sat • 09.00–18.00 WITA</span></span></p>
+          <a href="mailto:info@extensiacreativebali.com" class="font-semibold text-[13.5px] text-blue-600 hover:underline">info@extensiacreativebali.com</a>
         </div>
       </div>
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-3 font-mono text-[11px] sm:text-[12px] text-brand-dark/70 text-center sm:text-left">
+
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-3 font-mono text-[11px] sm:text-[12px] text-slate-500 text-center sm:text-left">
         <span>&copy; 2026 <strong>vexaPOS</strong> • Extensia Creative Bali. <span class="lang-id">Hak cipta dilindungi. Didesain &amp; direkayasa oleh <strong>Oggie Sutrisna</strong>.</span><span class="lang-en">All rights reserved. Designed &amp; engineered by <strong>Oggie Sutrisna</strong>.</span></span>
         <span class="flex items-center gap-3">
-          <a href="/" class="hover:underline font-bold text-brand-dark">Extensia Home</a>
+          <a href="/" class="hover:underline font-semibold text-slate-700">Extensia Home</a>
           <span aria-hidden="true">•</span>
-          <a href="https://wa.me/6285338000872" target="_blank" rel="noopener" class="hover:underline font-bold text-brand-dark">WhatsApp</a>
+          <a href="https://wa.me/6285338000872" target="_blank" rel="noopener" class="hover:underline font-semibold text-slate-700">WhatsApp</a>
         </span>
       </div>
     </footer>
