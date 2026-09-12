@@ -74,24 +74,26 @@ tailwind.config = {
 document.addEventListener("DOMContentLoaded", () => {
   // --- Live Bali WITA Clock (UTC+8) ---
   const updateBaliTime = () => {
-    const timeDisplay = document.getElementById("bali-time");
-    if (!timeDisplay) return;
+    const timeValue = document.getElementById("bali-time-value");
+    if (!timeValue) return;
 
     try {
-      const now = new Date();
-      const timeStr = now.toLocaleTimeString("en-US", {
+      const timeStr = new Date().toLocaleTimeString("en-US", {
         timeZone: "Asia/Makassar",
         hour: "2-digit",
         minute: "2-digit",
         hour12: true,
       });
-      timeDisplay.textContent = `BALI TIME (WITA): ${timeStr}`;
+      timeValue.textContent = `BALI TIME (WITA): ${timeStr}`;
     } catch {
       const now = new Date();
       const hours = String(now.getHours()).padStart(2, "0");
       const minutes = String(now.getMinutes()).padStart(2, "0");
-      timeDisplay.textContent = `BALI TIME (WITA): ${hours}:${minutes}`;
+      timeValue.textContent = `BALI TIME (WITA): ${hours}:${minutes}`;
     }
+
+    const staticLabel = document.getElementById("bali-time-static");
+    if (staticLabel) staticLabel.hidden = true;
   };
 
   updateBaliTime();
@@ -201,56 +203,57 @@ document.addEventListener("DOMContentLoaded", () => {
     const btnEn = document.getElementById("btn-lang-en");
     if (!btnId || !btnEn) return;
 
+    const languageButtons = [
+      btnId,
+      btnEn,
+      ...document.querySelectorAll("[data-lang-mobile]"),
+    ];
+
     const setLanguage = (lang) => {
       document.documentElement.lang = lang;
       try {
         localStorage.setItem("extensia_lang", lang);
         localStorage.setItem("vexapos_preferred_lang", lang);
-      } catch (e) {}
+      } catch {}
 
-      if (lang === "en") {
-        btnEn.classList.add("bg-white", "text-slate-900", "shadow-sm");
-        btnEn.classList.remove("bg-transparent", "text-slate-600");
-        btnId.classList.remove("bg-white", "text-slate-900", "shadow-sm");
-        btnId.classList.add("bg-transparent", "text-slate-600");
-      } else {
-        btnId.classList.add("bg-white", "text-slate-900", "shadow-sm");
-        btnId.classList.remove("bg-transparent", "text-slate-600");
-        btnEn.classList.remove("bg-white", "text-slate-900", "shadow-sm");
-        btnEn.classList.add("bg-transparent", "text-slate-600");
-      }
+      languageButtons.forEach((button) => {
+        const buttonLang =
+          button.getAttribute("data-lang-mobile") ||
+          (button.id === "btn-lang-en" ? "en" : "id");
+        const selected = buttonLang === lang;
+        button.classList.toggle("bg-white", selected);
+        button.classList.toggle("text-slate-900", selected);
+        button.classList.toggle("shadow-sm", selected);
+        button.classList.toggle("bg-transparent", !selected);
+        button.classList.toggle("text-slate-500", !selected);
+        button.setAttribute("aria-pressed", String(selected));
+      });
+
+      document.dispatchEvent(
+        new CustomEvent("vexa:language-change", { detail: { lang } })
+      );
     };
 
     btnId.addEventListener("click", () => setLanguage("id"));
     btnEn.addEventListener("click", () => setLanguage("en"));
+    document.querySelectorAll("[data-lang-mobile]").forEach((button) => {
+      button.addEventListener("click", () =>
+        setLanguage(button.getAttribute("data-lang-mobile") === "en" ? "en" : "id")
+      );
+    });
 
-    // Check saved preference
+    let initialLanguage = document.documentElement.lang === "en" ? "en" : "id";
     try {
-      const savedLang = localStorage.getItem("extensia_lang") || localStorage.getItem("vexapos_preferred_lang") || localStorage.getItem("zivopos_preferred_lang");
-      if (savedLang === "en" || savedLang === "id") {
-        setLanguage(savedLang);
-      }
-    } catch (e) {}
+      const savedLang =
+        localStorage.getItem("extensia_lang") ||
+        localStorage.getItem("vexapos_preferred_lang") ||
+        localStorage.getItem("zivopos_preferred_lang");
+      if (savedLang === "en" || savedLang === "id") initialLanguage = savedLang;
+    } catch {}
+    setLanguage(initialLanguage);
   };
 
   initLanguageSwitcher();
-
-  // Native radios support Tab and arrow keys, with software as the no-JS default.
-  const pricingSwitch = document.querySelector("[data-pricing-switch]");
-  if (pricingSwitch) {
-    const pricing = pricingSwitch.closest("section");
-    const options = pricingSwitch.querySelectorAll('input[name="pricing-mode"]');
-    const panels = pricing.querySelectorAll("[data-pricing-panel]");
-    const updatePricing = () => {
-      const selected = pricingSwitch.querySelector('input[name="pricing-mode"]:checked');
-      panels.forEach((panel) => {
-        panel.hidden = panel.dataset.pricingPanel !== selected.value;
-      });
-    };
-    options.forEach((option) => option.addEventListener("change", updatePricing));
-    updatePricing();
-    pricingSwitch.hidden = false;
-  }
 
   // --- vexaPOS: FAQ Accordion (single-open, scoped, additive only) ---
   const initVexaFaq = () => {
@@ -333,8 +336,8 @@ document.addEventListener("DOMContentLoaded", () => {
       if (linesOk && lineSum !== rawSubtotal) linesOk = false;
     }
 
-    if (statusEl) {
-      const lang = document.documentElement.lang === "en" ? "en" : "id";
+    const renderBillStatus = (lang) => {
+      if (!statusEl) return;
       if (!linesOk) {
         statusEl.textContent =
           lang === "en"
@@ -351,7 +354,12 @@ document.addEventListener("DOMContentLoaded", () => {
             ? "Calculation auto-verified: 200,000 + 20,000 + 22,000 = 242,000."
             : "Kalkulasi terverifikasi otomatis: 200.000 + 20.000 + 22.000 = 242.000.";
       }
-    }
+    };
+
+    renderBillStatus(document.documentElement.lang === "en" ? "en" : "id");
+    document.addEventListener("vexa:language-change", (event) => {
+      renderBillStatus(event.detail.lang === "en" ? "en" : "id");
+    });
   };
 
   // --- vexaPOS: Mobile Nav Toggle (additive only) ---
@@ -382,17 +390,6 @@ document.addEventListener("DOMContentLoaded", () => {
       link.addEventListener("click", () => setOpen(false));
     });
 
-    // Mobile language shortcuts reuse the primary switcher buttons.
-    menu.querySelectorAll("[data-lang-mobile]").forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const lang = btn.getAttribute("data-lang-mobile");
-        const target =
-          lang === "en"
-            ? document.getElementById("btn-lang-en")
-            : document.getElementById("btn-lang-id");
-        if (target) target.click();
-      });
-    });
   };
 
   initVexaFaq();
