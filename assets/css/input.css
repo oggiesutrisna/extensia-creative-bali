@@ -117,26 +117,18 @@
   /* Zero-blur radial gradient blobs (natively feathered by GPU shader, no Gaussian filter) */
   .radial-blob-cyan {
     background: radial-gradient(circle, rgba(165, 243, 252, 0.45) 0%, rgba(186, 230, 253, 0.22) 42%, transparent 70%);
-    will-change: transform;
-    transform: translateZ(0);
     backface-visibility: hidden;
   }
   .radial-blob-lime {
     background: radial-gradient(circle, rgba(217, 249, 157, 0.42) 0%, rgba(167, 243, 208, 0.2) 42%, transparent 70%);
-    will-change: transform;
-    transform: translateZ(0);
     backface-visibility: hidden;
   }
   .radial-blob-indigo {
     background: radial-gradient(circle, rgba(199, 210, 254, 0.38) 0%, rgba(221, 214, 254, 0.18) 42%, transparent 70%);
-    will-change: transform;
-    transform: translateZ(0);
     backface-visibility: hidden;
   }
   .radial-blob-emerald {
     background: radial-gradient(circle, rgba(167, 243, 208, 0.38) 0%, rgba(153, 246, 228, 0.18) 42%, transparent 70%);
-    will-change: transform;
-    transform: translateZ(0);
     backface-visibility: hidden;
   }
 
@@ -185,13 +177,11 @@
     box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.05), inset 0 1px 2px 0 rgba(255, 255, 255, 0.95);
   }
 
-  /* Core Section Container: Light, crisp 10px blur without nesting overhead */
+  /* Core Section Container: Crisp high-opacity frosted glass without backdrop-filter overhead */
   .liquid-glass {
-    background: rgba(255, 255, 255, 0.76);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.85);
-    box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.04), inset 0 1px 2px 0 rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.90);
+    border: 1px solid rgba(255, 255, 255, 0.92);
+    box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.05), inset 0 1px 2px 0 rgba(255, 255, 255, 0.95);
   }
 
   /* Content Cards: High-opacity frosted glass WITHOUT backdrop-filter overhead */
@@ -219,10 +209,8 @@
   }
 
   .liquid-glass-dark {
-    background: rgba(15, 23, 42, 0.94);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: #0F172A;
+    border: 1px solid rgba(255, 255, 255, 0.14);
     box-shadow: 0 25px 50px -15px rgba(0, 0, 0, 0.3), inset 0 1px 2px rgba(255, 255, 255, 0.15);
   }
 
@@ -238,10 +226,9 @@
     box-shadow: 0 10px 25px -6px rgba(15, 23, 42, 0.07), inset 0 1px 2px rgba(255, 255, 255, 1);
   }
 
-  /* Content visibility containment for silky 60-120fps scrolling */
+  /* Safe section containment - content-visibility removed to prevent scroll jank and layout shifts */
   .section-contain {
-    content-visibility: auto;
-    contain-intrinsic-size: 1px 650px;
+    contain: layout;
   }
 
   /* ==========================================================================

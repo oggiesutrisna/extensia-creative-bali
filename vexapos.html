@@ -197,16 +197,16 @@
 
 <body class="bg-[#F7F9FC] font-sans text-slate-900 min-h-screen relative selection:bg-lime-300 selection:text-slate-900 overflow-x-hidden">
 
-  <!-- ================= AMBIENT FLUID MESH BACKGROUND BLOBS (Zero-Filter Radial Shaders) ================= -->
-  <div class="fixed inset-0 overflow-hidden pointer-events-none -z-10" aria-hidden="true" style="will-change: transform; transform: translateZ(0);">
+  <!-- ================= AMBIENT FLUID MESH BACKGROUND BLOBS (Zero-Filter Radial Shaders, GPU-Cached) ================= -->
+  <div class="fixed inset-0 overflow-hidden pointer-events-none -z-10" aria-hidden="true">
     <!-- Top-left Cyan Fluid Blob -->
-    <div class="absolute -top-28 -left-20 w-[550px] sm:w-[720px] h-[550px] sm:h-[720px] rounded-full radial-blob-cyan animate-fluid-1"></div>
+    <div class="absolute -top-28 -left-20 w-[550px] sm:w-[720px] h-[550px] sm:h-[720px] rounded-full radial-blob-cyan"></div>
     <!-- Mid-right Mint / Lime Fluid Blob -->
-    <div class="absolute top-[28%] -right-24 w-[500px] sm:w-[680px] h-[500px] sm:h-[680px] rounded-full radial-blob-lime animate-fluid-2"></div>
+    <div class="absolute top-[28%] -right-24 w-[500px] sm:w-[680px] h-[500px] sm:h-[680px] rounded-full radial-blob-lime"></div>
     <!-- Center-left Soft Indigo / Lavender Fluid Blob -->
-    <div class="absolute top-[58%] -left-28 w-[550px] sm:w-[740px] h-[550px] sm:h-[740px] rounded-full radial-blob-indigo animate-fluid-3"></div>
+    <div class="absolute top-[58%] -left-28 w-[550px] sm:w-[740px] h-[550px] sm:h-[740px] rounded-full radial-blob-indigo"></div>
     <!-- Bottom-right Cyan & Mint Fluid Blob -->
-    <div class="absolute bottom-[-10%] right-[8%] w-[500px] sm:w-[700px] h-[500px] sm:h-[700px] rounded-full radial-blob-emerald animate-fluid-1"></div>
+    <div class="absolute bottom-[-10%] right-[8%] w-[500px] sm:w-[700px] h-[500px] sm:h-[700px] rounded-full radial-blob-emerald"></div>
   </div>
 
   <div class="max-w-[1500px] mx-auto px-3 sm:px-6 lg:px-8 py-3 sm:py-6 flex flex-col gap-6 sm:gap-8 lg:gap-10">
@@ -465,7 +465,7 @@
     <main class="flex flex-col gap-6 sm:gap-8 lg:gap-10">
 
       <!-- ================= OUR CLIENTS START ================= -->
-      <section id="clients" aria-labelledby="clients-title" class="liquid-glass rounded-3xl p-6 sm:p-10 lg:p-12 flex flex-col gap-6 scroll-mt-24 section-contain">
+      <section id="clients" aria-labelledby="clients-title" class="liquid-glass rounded-3xl p-6 sm:p-10 lg:p-12 flex flex-col gap-6 scroll-mt-24">
         <div class="flex flex-col gap-2.5 max-w-[760px]">
           <span class="inline-flex self-start px-3.5 py-1 bg-lime-100 text-lime-900 border border-lime-300/80 rounded-full font-mono text-[11px] font-bold uppercase tracking-wide">Our Clients</span>
           <h2 id="clients-title" class="font-extrabold text-[26px] sm:text-[34px] tracking-tight text-slate-900 leading-tight">
@@ -504,7 +504,7 @@
       <!-- ================= OUR CLIENTS END ================= -->
 
       <!-- ================= SECTION D START: PROBLEM VS SOLUTION ================= -->
-      <section id="masalah" aria-labelledby="masalah-title" class="liquid-glass rounded-3xl p-6 sm:p-10 lg:p-12 flex flex-col gap-8 scroll-mt-24 section-contain">
+      <section id="masalah" aria-labelledby="masalah-title" class="liquid-glass rounded-3xl p-6 sm:p-10 lg:p-12 flex flex-col gap-8 scroll-mt-24">
         <div class="flex flex-col gap-2.5 max-w-[760px]">
           <span class="inline-flex self-start px-3.5 py-1 bg-rose-50 text-rose-700 border border-rose-200 rounded-full font-mono text-[11px] font-bold uppercase tracking-wide">Bali Hospitality Reality Check</span>
           <h2 id="masalah-title" class="font-extrabold text-[28px] sm:text-[36px] tracking-tight text-slate-900 leading-tight">
@@ -561,7 +561,7 @@
       <!-- ================= SECTION D END ================= -->
 
       <!-- ================= SECTION E START: BENTO GRID CORE FEATURES ================= -->
-      <section id="fitur" aria-labelledby="fitur-title" class="liquid-glass rounded-3xl p-6 sm:p-10 lg:p-12 flex flex-col gap-8 scroll-mt-24 section-contain">
+      <section id="fitur" aria-labelledby="fitur-title" class="liquid-glass rounded-3xl p-6 sm:p-10 lg:p-12 flex flex-col gap-8 scroll-mt-24">
         <div class="flex flex-col gap-2.5 max-w-[780px]">
           <span class="inline-flex self-start px-3.5 py-1 bg-lime-100 text-lime-900 border border-lime-300/80 rounded-full font-mono text-[11px] font-bold uppercase tracking-wide">Core Engine</span>
           <h2 id="fitur-title" class="font-extrabold text-[28px] sm:text-[36px] tracking-tight text-slate-900 leading-tight">
@@ -661,7 +661,7 @@
       <!-- ================= SECTION E END ================= -->
 
       <!-- ================= SECTION F START: HARDWARE COMPATIBILITY ================= -->
-      <section id="hardware" aria-labelledby="hardware-title" class="liquid-glass rounded-3xl p-6 sm:p-10 lg:p-12 flex flex-col gap-8 scroll-mt-24 section-contain">
+      <section id="hardware" aria-labelledby="hardware-title" class="liquid-glass rounded-3xl p-6 sm:p-10 lg:p-12 flex flex-col gap-8 scroll-mt-24">
         <div class="flex flex-col gap-2.5 max-w-[760px]">
           <span class="inline-flex self-start px-3.5 py-1 bg-blue-50 text-blue-700 border border-blue-200 rounded-full font-mono text-[11px] font-bold uppercase tracking-wide">Hardware Ecosystem</span>
           <h2 id="hardware-title" class="font-extrabold text-[28px] sm:text-[36px] tracking-tight text-slate-900 leading-tight">
@@ -722,7 +722,7 @@
       <!-- ================= SECTION F END ================= -->
 
       <!-- ================= SECTION G START: TRANSPARENT PRICING ================= -->
-      <section id="pricing" aria-labelledby="pricing-title" class="liquid-glass rounded-3xl p-6 sm:p-10 lg:p-12 flex flex-col gap-8 scroll-mt-24 section-contain">
+      <section id="pricing" aria-labelledby="pricing-title" class="liquid-glass rounded-3xl p-6 sm:p-10 lg:p-12 flex flex-col gap-8 scroll-mt-24">
         <div class="flex flex-col gap-2.5 text-center max-w-[720px] mx-auto">
           <span class="inline-flex self-center px-3.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded-full font-mono text-[11px] font-bold uppercase tracking-wide">
             <span class="lang-id">Tanpa Biaya Tersembunyi • Tanpa Komisi</span><span class="lang-en">No Hidden Fees • No Commissions</span>
@@ -957,7 +957,7 @@
       <!-- ================= SECTION G END ================= -->
 
       <!-- ================= SECTION H START: LOCAL TRUST & TESTIMONIALS ================= -->
-      <section aria-labelledby="testimoni-title" class="liquid-glass rounded-3xl p-6 sm:p-10 lg:p-12 flex flex-col gap-8 section-contain">
+      <section aria-labelledby="testimoni-title" class="liquid-glass rounded-3xl p-6 sm:p-10 lg:p-12 flex flex-col gap-8">
         <div class="flex flex-col gap-2.5 max-w-[760px]">
           <span class="inline-flex self-start px-3.5 py-1 bg-lime-100 text-lime-900 border border-lime-300 rounded-full font-mono text-[11px] font-bold uppercase tracking-wide">
             <span class="lang-id">Cerita UMKM Bali</span><span class="lang-en">Bali Small Business Stories</span>
@@ -990,7 +990,7 @@
       <!-- ================= SECTION H END ================= -->
 
       <!-- ================= SECTION I START: FAQ ACCORDION ================= -->
-      <section id="faq" aria-labelledby="faq-title" class="liquid-glass rounded-3xl p-6 sm:p-10 lg:p-12 flex flex-col gap-7 scroll-mt-24 section-contain">
+      <section id="faq" aria-labelledby="faq-title" class="liquid-glass rounded-3xl p-6 sm:p-10 lg:p-12 flex flex-col gap-7 scroll-mt-24">
         <div class="flex flex-col gap-2.5 max-w-[720px]">
           <span class="inline-flex self-start px-3.5 py-1 bg-lime-100 text-lime-900 border border-lime-300 rounded-full font-mono text-[11px] font-bold uppercase tracking-wide">FAQ Owner Bali</span>
           <h2 id="faq-title" class="font-extrabold text-[28px] sm:text-[36px] tracking-tight text-slate-900 leading-tight">
@@ -1044,7 +1044,7 @@
       <!-- ================= SECTION I END ================= -->
 
       <!-- ================= SECTION J START: FINAL CTA BANNER ================= -->
-      <section aria-labelledby="cta-title" class="liquid-glass-dark rounded-3xl p-8 sm:p-12 lg:p-16 flex flex-col lg:flex-row items-center justify-between gap-8 relative overflow-hidden text-white section-contain">
+      <section aria-labelledby="cta-title" class="liquid-glass-dark rounded-3xl p-8 sm:p-12 lg:p-16 flex flex-col lg:flex-row items-center justify-between gap-8 relative overflow-hidden text-white">
         <!-- Ambient radial reflection inside dark glass without expensive blur filter -->
         <div class="absolute -top-32 -left-20 w-[400px] h-[400px] rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(163, 230, 53, 0.18) 0%, transparent 70%);" aria-hidden="true"></div>
         <div class="absolute -bottom-32 -right-20 w-[400px] h-[400px] rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(34, 211, 238, 0.18) 0%, transparent 70%);" aria-hidden="true"></div>
@@ -1082,7 +1082,7 @@
     </main>
 
     <!-- ================= SECTION K START: SEMANTIC FOOTER ================= -->
-    <footer class="liquid-glass rounded-3xl p-6 sm:p-10 lg:p-12 flex flex-col gap-8 section-contain">
+    <footer class="liquid-glass rounded-3xl p-6 sm:p-10 lg:p-12 flex flex-col gap-8">
       <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-8 border-b border-slate-200/80">
         <div class="md:col-span-4 flex flex-col gap-3">
           <div class="flex items-center gap-2.5">
