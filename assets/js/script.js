@@ -75,25 +75,44 @@ document.addEventListener("DOMContentLoaded", () => {
   // --- Live Bali WITA Clock (UTC+8) ---
   const updateBaliTime = () => {
     const timeValue = document.getElementById("bali-time-value");
-    if (!timeValue) return;
+    const container = document.getElementById("bali-time");
+    if (!timeValue && !container) return;
 
+    let timeStr = "";
     try {
-      const timeStr = new Date().toLocaleTimeString("en-US", {
+      timeStr = new Date().toLocaleTimeString("en-US", {
         timeZone: "Asia/Makassar",
         hour: "2-digit",
         minute: "2-digit",
         hour12: true,
       });
-      timeValue.textContent = `BALI TIME (WITA): ${timeStr}`;
     } catch {
       const now = new Date();
-      const hours = String(now.getHours()).padStart(2, "0");
-      const minutes = String(now.getMinutes()).padStart(2, "0");
-      timeValue.textContent = `BALI TIME (WITA): ${hours}:${minutes}`;
+      const utc = now.getTime() + now.getTimezoneOffset() * 60000;
+      const wita = new Date(utc + 8 * 3600000);
+      const hours = String(wita.getHours()).padStart(2, "0");
+      const minutes = String(wita.getMinutes()).padStart(2, "0");
+      timeStr = `${hours}:${minutes}`;
     }
 
-    const staticLabel = document.getElementById("bali-time-static");
-    if (staticLabel) staticLabel.hidden = true;
+    if (timeValue) {
+      timeValue.textContent = `BALI TIME (WITA): ${timeStr}`;
+      const staticLabel = document.getElementById("bali-time-static");
+      if (staticLabel) staticLabel.hidden = true;
+    } else if (container) {
+      let textNode = null;
+      for (const node of container.childNodes) {
+        if (node.nodeType === Node.TEXT_NODE && node.textContent.trim().length > 0) {
+          textNode = node;
+          break;
+        }
+      }
+      if (textNode) {
+        textNode.textContent = ` BALI TIME (WITA): ${timeStr}`;
+      } else {
+        container.appendChild(document.createTextNode(` BALI TIME (WITA): ${timeStr}`));
+      }
+    }
   };
 
   updateBaliTime();
@@ -258,6 +277,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // --- vexaPOS: FAQ Accordion (single-open, scoped, additive only) ---
   const initVexaFaq = () => {
     const list = document.getElementById("vexa-faq-list") || document.getElementById("zivo-faq-list");
+    if (!list) return;
     const items = list.querySelectorAll(".faq-item");
     if (!items || items.length === 0) return;
 
@@ -362,8 +382,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  // --- vexaPOS: Mobile Nav Toggle (additive only) ---
-  const initVexaMobileNav = () => {
+  // --- Responsive Mobile Nav Toggle (Shared for Studio & vexaPOS) ---
+  const initMobileNav = () => {
     const toggle = document.getElementById("nav-toggle");
     const menu = document.getElementById("mobile-menu");
     if (!toggle || !menu) return;
@@ -382,17 +402,33 @@ document.addEventListener("DOMContentLoaded", () => {
       if (iconClose) iconClose.classList.toggle("hidden", !open);
     };
 
-    toggle.addEventListener("click", () => {
+    toggle.addEventListener("click", (e) => {
+      e.stopPropagation();
       setOpen(menu.classList.contains("hidden"));
     });
 
-    menu.querySelectorAll('a[href^="#"]').forEach((link) => {
+    // Close when any link inside the mobile menu is clicked
+    menu.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", () => setOpen(false));
     });
 
+    // Close when clicking outside of menu and toggle
+    document.addEventListener("click", (e) => {
+      if (!menu.classList.contains("hidden") && !menu.contains(e.target) && !toggle.contains(e.target)) {
+        setOpen(false);
+      }
+    });
+
+    // Close on Escape key press
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && !menu.classList.contains("hidden")) {
+        setOpen(false);
+        toggle.focus();
+      }
+    });
   };
 
   initVexaFaq();
   initVexaBillCalc();
-  initVexaMobileNav();
+  initMobileNav();
 });

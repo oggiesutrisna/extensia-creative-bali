@@ -5,8 +5,13 @@
 @tailwind utilities;
 
 @layer base {
-  html,
+  html {
+    overflow-x: clip;
+    max-width: 100vw;
+  }
   body {
+    overflow-x: clip;
+    max-width: 100vw;
     font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   }
   h1, h2, h3, h4, h5, h6 {
@@ -321,6 +326,25 @@
     transform: scaleY(-1);
     pointer-events: none;
     opacity: 0.22;
+  }
+
+  @media (max-width: 640px) {
+    .mandala-corner-tr,
+    .mandala-corner-tl,
+    .mandala-corner-br {
+      width: 70px;
+      height: 70px;
+      opacity: 0.12;
+    }
+  }
+
+  /* Touch chip horizontal scrollbar removal */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
   /* vexaPOS 2026 redesign: isolated from the Extensia studio page. */
   .vexa-page {
