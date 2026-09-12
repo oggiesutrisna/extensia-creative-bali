@@ -243,5 +243,68 @@
     content-visibility: auto;
     contain-intrinsic-size: 1px 650px;
   }
+
+  /* ==========================================================================
+     BALINESE TECH UTILITIES (Neubrutalism Bali Tech & Cultural Elements)
+     ========================================================================== */
+  /* Poleng (Rwa Bhineda) checkerboard micro-strip */
+  .bg-poleng-strip {
+    background-image: url('../images/poleng-pattern.svg');
+    background-size: 8px 8px;
+    background-repeat: repeat-x;
+  }
+  .bg-poleng-border {
+    background-image: url('../images/poleng-pattern.svg');
+    background-size: 10px 10px;
+    background-repeat: repeat;
+  }
+
+  /* Balinese temple gold pendaran glow */
+  .bali-gold-glow {
+    box-shadow: 0 10px 30px -8px rgba(217, 119, 6, 0.35), 0 0 0 1px rgba(245, 158, 11, 0.25);
+  }
+
+  /* Balinese Mandala & Floral Corner watermark */
+  .mandala-corner-tr {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 140px;
+    height: 140px;
+    background-image: url('../images/mandala-corner.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top right;
+    pointer-events: none;
+    opacity: 0.22;
+  }
+  .mandala-corner-tl {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 140px;
+    height: 140px;
+    background-image: url('../images/mandala-corner.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top left;
+    transform: scaleX(-1);
+    pointer-events: none;
+    opacity: 0.22;
+  }
+  .mandala-corner-br {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 140px;
+    height: 140px;
+    background-image: url('../images/mandala-corner.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    transform: scaleY(-1);
+    pointer-events: none;
+    opacity: 0.22;
+  }
 }
 

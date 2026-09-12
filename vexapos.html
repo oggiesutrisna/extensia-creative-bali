@@ -212,7 +212,10 @@
   <div class="max-w-[1500px] mx-auto px-3 sm:px-6 lg:px-8 py-3 sm:py-6 flex flex-col gap-6 sm:gap-8 lg:gap-10">
 
     <!-- ================= SECTION B START: FLOATING LIQUID GLASS NAVBAR ================= -->
-    <nav aria-label="Navigasi utama vexaPOS" data-active-classes="bg-white/90 text-slate-900 shadow-sm" class="sticky top-3 sm:top-5 z-50 liquid-glass-nav rounded-full px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between gap-3 sm:gap-4 transition-all duration-300">
+    <nav aria-label="Navigasi utama vexaPOS" data-active-classes="bg-white/90 text-slate-900 shadow-sm" class="sticky top-3 sm:top-5 z-50 liquid-glass-nav rounded-2xl sm:rounded-full px-4 sm:px-6 py-2 sm:py-2.5 flex flex-col gap-1.5 transition-all duration-300">
+      <!-- Balinese Poleng (Rwa Bhineda) Micro-Ribbon -->
+      <div class="w-full h-1 bg-poleng-strip rounded-full opacity-60" aria-hidden="true"></div>
+      <div class="flex items-center justify-between gap-3 sm:gap-4 w-full">
       <!-- Left: Minimalist Logo + Alpha Pill -->
       <div class="flex items-center gap-3">
         <a href="/" class="flex items-center gap-2.5 group" aria-label="Kembali ke Extensia Creative Bali">
@@ -250,7 +253,10 @@
 
       <!-- Right: Bali Time + Offline Status + Language + Primary CTA -->
       <div class="flex items-center gap-2 sm:gap-3">
-        <span id="bali-time" class="hidden xl:inline-flex font-mono text-[11px] font-semibold px-3 py-1.5 bg-white/70 text-slate-700 border border-slate-200/70 rounded-full whitespace-nowrap shadow-sm">BALI TIME (WITA): --:--</span>
+        <span id="bali-time" class="hidden xl:inline-flex items-center gap-1.5 font-mono text-[11px] font-semibold px-3 py-1.5 bg-amber-50/90 text-amber-950 border border-amber-200/80 rounded-full whitespace-nowrap shadow-sm">
+          <img src="assets/images/frangipani.webp" alt="Bali" class="w-3.5 h-3.5 object-contain" />
+          BALI TIME (WITA): --:--
+        </span>
         
         <span class="hidden md:inline-flex items-center gap-1.5 font-mono text-[11px] font-bold px-3 py-1.5 bg-emerald-50/90 text-emerald-700 border border-emerald-200/80 rounded-full whitespace-nowrap shadow-sm">
           <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true"></span>
@@ -275,6 +281,7 @@
           <svg id="nav-toggle-icon-close" class="hidden" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="m4 4 10 10M14 4 4 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         </button>
       </div>
+      </div>
     </nav>
 
     <!-- Mobile Menu Panel (Liquid Glass) -->
@@ -297,14 +304,21 @@
 
     <!-- ================= SECTION C START: ABOVE-THE-FOLD HERO ================= -->
     <header class="liquid-glass rounded-3xl p-6 sm:p-10 lg:p-14 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative overflow-hidden">
+      <!-- Balinese Corner Mandalas -->
+      <div class="mandala-corner-tl" aria-hidden="true"></div>
+      <div class="mandala-corner-tr" aria-hidden="true"></div>
+
+      <!-- Balinese Poleng Micro-Ribbon Trim -->
+      <div class="absolute top-0 left-0 right-0 h-1 bg-poleng-strip opacity-60" aria-hidden="true"></div>
+
       <!-- Subtle top specular reflection -->
       <div class="absolute top-0 left-1/4 right-1/4 h-[1px] bg-gradient-to-r from-transparent via-white to-transparent opacity-80" aria-hidden="true"></div>
 
       <!-- Left Column (7 cols) -->
-      <div class="lg:col-span-7 flex flex-col gap-6">
+      <div class="lg:col-span-7 flex flex-col gap-6 relative z-10">
         <!-- Glowing Bali Tech Trust Badge -->
-        <span class="inline-flex items-center self-start gap-2 px-3.5 py-1.5 bg-white/80 border border-slate-200/80 rounded-full shadow-sm font-mono text-[11px] sm:text-[12px] font-semibold text-slate-700">
-          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true"></span>
+        <span class="inline-flex items-center self-start gap-2 px-3.5 py-1.5 bg-amber-50/90 border border-amber-200/80 rounded-full shadow-sm font-mono text-[11px] sm:text-[12px] font-semibold text-amber-950">
+          <img src="assets/images/frangipani.webp" alt="Bali" class="w-4 h-4 object-contain" />
           <span class="lang-id">Dibangun di Bali untuk F&amp;B Perputaran Tinggi</span>
           <span class="lang-en">Built in Bali for High-Turnover F&amp;B</span>
         </span>
@@ -392,7 +406,7 @@
           <div class="bg-white/95 rounded-2xl p-4 sm:p-5 flex flex-col gap-3.5 shadow-inner" data-bill data-subtotal="200000" data-service-rate="0.1" data-pb1-rate="0.1">
             <div class="flex items-center justify-between">
               <div>
-                <p class="font-bold text-[15px] text-slate-900">Table 08 • Poolside Deck</p>
+                <p class="font-bold text-[15px] text-slate-900">Table 08 • Poolside Deck — Batu Bolong, Canggu</p>
                 <p class="font-mono text-[10.5px] text-slate-500">Staff: Wayan K. • Order #1042</p>
               </div>
               <span class="font-mono text-[10px] font-bold px-2.5 py-1 bg-lime-100 text-lime-800 border border-lime-300 rounded-full">AUTO-SYNCED</span>
@@ -401,15 +415,15 @@
             <!-- Receipt Line Items -->
             <ul class="flex flex-col gap-2 text-[13px] text-slate-800">
               <li class="flex items-center justify-between bg-slate-50/80 hover:bg-slate-100/80 border border-slate-200/70 rounded-xl px-3.5 py-2.5 transition-colors" data-price="90000">
-                <span><strong class="font-bold text-slate-900">2x</strong> Oat Milk Flat White <span class="font-mono text-[11px] text-slate-500 ml-1">@45rb</span></span>
+                <span><strong class="font-bold text-slate-900">2x</strong> Kintamani Cold Brew Latte <span class="font-mono text-[11px] text-slate-500 ml-1">@45rb</span></span>
                 <span class="font-mono font-bold text-slate-900" data-line-total>Rp90.000</span>
               </li>
               <li class="flex items-center justify-between bg-slate-50/80 hover:bg-slate-100/80 border border-slate-200/70 rounded-xl px-3.5 py-2.5 transition-colors" data-price="65000">
-                <span><strong class="font-bold text-slate-900">1x</strong> Dragon Bowl <span class="font-mono text-[11px] text-slate-500 ml-1">@65rb</span></span>
+                <span><strong class="font-bold text-slate-900">1x</strong> Dragonfruit Açaí Bowl <span class="font-mono text-[11px] text-slate-500 ml-1">@65rb</span></span>
                 <span class="font-mono font-bold text-slate-900" data-line-total>Rp65.000</span>
               </li>
               <li class="flex items-center justify-between bg-slate-50/80 hover:bg-slate-100/80 border border-slate-200/70 rounded-xl px-3.5 py-2.5 transition-colors" data-price="45000">
-                <span><strong class="font-bold text-slate-900">1x</strong> Truffle Fries <span class="font-mono text-[11px] text-slate-500 ml-1">@45rb</span></span>
+                <span><strong class="font-bold text-slate-900">1x</strong> Crispy Duck Sambal Matah Roll <span class="font-mono text-[11px] text-slate-500 ml-1">@45rb</span></span>
                 <span class="font-mono font-bold text-slate-900" data-line-total>Rp45.000</span>
               </li>
             </ul>
@@ -1075,7 +1089,10 @@
     </main>
 
     <!-- ================= SECTION K START: SEMANTIC FOOTER ================= -->
-    <footer class="liquid-glass rounded-3xl p-6 sm:p-10 lg:p-12 flex flex-col gap-8 section-contain">
+    <footer class="liquid-glass rounded-3xl p-6 sm:p-10 lg:p-12 flex flex-col gap-8 section-contain relative overflow-hidden">
+      <!-- Balinese Poleng Micro-Ribbon Trim -->
+      <div class="absolute top-0 left-0 right-0 h-1 bg-poleng-strip opacity-60" aria-hidden="true"></div>
+
       <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-8 border-b border-slate-200/80">
         <div class="md:col-span-4 flex flex-col gap-3">
           <div class="flex items-center gap-2.5">
@@ -1115,7 +1132,10 @@
       </div>
 
       <div class="flex flex-col sm:flex-row items-center justify-between gap-3 font-mono text-[11px] sm:text-[12px] text-slate-500 text-center sm:text-left">
-        <span>&copy; 2026 <strong>vexaPOS</strong> • Extensia Creative Bali. <span class="lang-id">Hak cipta dilindungi. Didesain &amp; direkayasa oleh <strong>Oggie Sutrisna</strong>.</span><span class="lang-en">All rights reserved. Designed &amp; engineered by <strong>Oggie Sutrisna</strong>.</span></span>
+        <span class="flex items-center gap-1.5 justify-center sm:justify-start">
+          <img src="assets/images/frangipani.webp" alt="Bali" class="w-3.5 h-3.5 object-contain inline-block shrink-0" />
+          <span>&copy; 2026 <strong>vexaPOS</strong> • Extensia Creative Bali. <span class="lang-id">Dibuat dengan Taksu &amp; Nilai Luhur Budaya Bali di Canggu &amp; Denpasar.</span><span class="lang-en">All rights reserved. Designed &amp; engineered with Bali Taksu in Canggu &amp; Denpasar.</span></span>
+        </span>
         <span class="flex items-center gap-3">
           <a href="/" class="hover:underline font-semibold text-slate-700">Extensia Home</a>
           <span aria-hidden="true">•</span>
