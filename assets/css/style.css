@@ -7,28 +7,28 @@
    1. Neubrutalism Design Tokens
    ========================================================================== */
 :root {
-  --border: 3px solid #111118;
-  --border-thin: 2px solid #111118;
-  --border-thick: 4px solid #111118;
-  --shadow-sm: 3px 3px 0 0 #111118;
-  --shadow: 5px 5px 0 0 #111118;
-  --shadow-lg: 7px 7px 0 0 #111118;
-  --shadow-xl: 10px 10px 0 0 #111118;
+  --border: 3px solid #402e32;
+  --border-thin: 2px solid #402e32;
+  --border-thick: 4px solid #402e32;
+  --shadow-sm: 3px 3px 0 0 #402e32;
+  --shadow: 5px 5px 0 0 #402e32;
+  --shadow-lg: 7px 7px 0 0 #402e32;
+  --shadow-xl: 10px 10px 0 0 #402e32;
   --radius-sm: 4px;
   --radius-md: 8px;
   --radius-lg: 12px;
-  --bg-canvas: #ffffff;
-  --bg-cream: #fff9d5;
-  --bg-ivory: #fffdf5;
-  --bg-white: #fffdf0;
-  --lime: #d4ff00;
-  --blue: #2563eb;
-  --blue-tech: #3b82f6;
-  --emerald: #10b981;
-  --emerald-deep: #059669;
-  --amber: #d97706;
-  --orange: #ff9d50;
-  --dark: #111118;
+  --bg-canvas: #dfe0df;
+  --bg-cream: #dfe0df;
+  --bg-ivory: #dfe0df;
+  --bg-white: #ffffff;
+  --lime: #ff9e1f;
+  --blue: #ff9e1f;
+  --blue-tech: #613f1a;
+  --emerald: #613f1a;
+  --emerald-deep: #613f1a;
+  --amber: #ff9e1f;
+  --orange: #ff9e1f;
+  --dark: #402e32;
 }
 
 /* ==========================================================================
