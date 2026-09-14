@@ -428,7 +428,103 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
+  // --- vexaPOS: Interactive Offline vs Synced Simulator ---
+  const initVexaSimulator = () => {
+    const sim = document.querySelector("[data-vexa-simulator]");
+    if (!sim) return;
+
+    const btnOffline = sim.querySelector('[data-sim-btn="offline"]');
+    const btnOnline = sim.querySelector('[data-sim-btn="online"]');
+    const statusPill = sim.querySelector("[data-sim-status-pill]");
+    const statusText = sim.querySelector("[data-sim-status-text]");
+    const badgeText = sim.querySelector("[data-sim-badge]");
+    const counterEl = sim.querySelector("[data-sim-counter]");
+    const noteEl = sim.querySelector("[data-sim-note]");
+    const syncTimeEl = sim.querySelector("[data-sim-synctime]");
+    const pulseDot = sim.querySelector("[data-sim-dot]");
+
+    let isOffline = true;
+
+    const updateState = (offline) => {
+      isOffline = offline;
+      const currentLang = document.documentElement.lang || "id";
+
+      if (btnOffline) {
+        btnOffline.setAttribute("aria-pressed", String(offline));
+        btnOffline.className = offline
+          ? "px-4 py-2.5 rounded-xl font-bold text-[12px] sm:text-[13px] bg-rose-600 text-white shadow-md transition-all cursor-pointer"
+          : "px-4 py-2.5 rounded-xl font-semibold text-[12px] sm:text-[13px] bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all cursor-pointer";
+      }
+
+      if (btnOnline) {
+        btnOnline.setAttribute("aria-pressed", String(!offline));
+        btnOnline.className = !offline
+          ? "px-4 py-2.5 rounded-xl font-bold text-[12px] sm:text-[13px] bg-emerald-600 text-white shadow-md transition-all cursor-pointer"
+          : "px-4 py-2.5 rounded-xl font-semibold text-[12px] sm:text-[13px] bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all cursor-pointer";
+      }
+
+      if (statusPill) {
+        statusPill.className = offline
+          ? "inline-flex items-center gap-1.5 px-3 py-1 rounded-full font-mono text-[10px] sm:text-[11px] font-bold bg-rose-500/20 text-rose-300 border border-rose-500/40"
+          : "inline-flex items-center gap-1.5 px-3 py-1 rounded-full font-mono text-[10px] sm:text-[11px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40";
+      }
+
+      if (pulseDot) {
+        pulseDot.className = offline
+          ? "w-2 h-2 rounded-full bg-rose-400 animate-ping"
+          : "w-2 h-2 rounded-full bg-emerald-400 animate-pulse";
+      }
+
+      if (statusText) {
+        statusText.textContent = offline
+          ? (currentLang === "en" ? "OFFLINE MODE • FIBER DROPPED" : "MODE OFFLINE • FIBER DROP")
+          : (currentLang === "en" ? "ONLINE • SYNCED TO CLOUD" : "ONLINE • TERSINKRONISASI");
+      }
+
+      if (badgeText) {
+        badgeText.textContent = offline
+          ? (currentLang === "en" ? "24 Orders Saved Locally" : "24 Struk Tersimpan di Perangkat")
+          : (currentLang === "en" ? "24 Orders Synced (0 Errors)" : "24 Struk Berhasil Masuk Cloud");
+      }
+
+      if (counterEl) {
+        counterEl.textContent = offline ? "24" : "0";
+      }
+
+      if (noteEl) {
+        noteEl.textContent = offline
+          ? (currentLang === "en"
+              ? "Kitchen ticket & receipt printer active via LAN. Zero data loss."
+              : "Tiket dapur & struk kasir tetap tercetak via LAN lokal. Bebas risiko.")
+          : (currentLang === "en"
+              ? "All 24 local records synced to central cloud in 0.8 seconds. Zero re-entry."
+              : "Seluruh 24 struk lokal selesai disinkronkan ke cloud dalam 0.8 detik. Tanpa input ulang.");
+      }
+
+      if (syncTimeEl) {
+        syncTimeEl.textContent = offline
+          ? (currentLang === "en" ? "Awaiting fiber reconnect..." : "Menunggu fiber pulih...")
+          : (currentLang === "en" ? "Sync completed in 0.8s" : "Sinkronisasi selesai dalam 0.8 detik");
+      }
+    };
+
+    if (btnOffline) {
+      btnOffline.addEventListener("click", () => updateState(true));
+    }
+    if (btnOnline) {
+      btnOnline.addEventListener("click", () => updateState(false));
+    }
+
+    document.addEventListener("vexa:language-change", () => {
+      updateState(isOffline);
+    });
+
+    // Default to offline demonstration
+    updateState(true);
+  };
+
   initVexaFaq();
   initVexaBillCalc();
   initMobileNav();
+  initVexaSimulator();
 });

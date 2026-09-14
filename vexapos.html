@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>vexaPOS — POS Offline-First untuk Operasional F&amp;B Bali</title>
-  <meta name="description" content="POS offline-first untuk operasional F&amp;B Bali. Transaksi dan printer tetap berjalan saat koneksi putus, lalu data tersinkron otomatis." />
-  <meta name="keywords" content="aplikasi kasir bali, pos bali, software kasir restoran bali, pos offline first bali, point of sale canggu, pos beach club bali, vexapos" />
+  <meta name="description"
+    content="POS offline-first untuk operasional F&amp;B Bali. Transaksi dan printer tetap berjalan saat koneksi putus, lalu data tersinkron otomatis." />
+  <meta name="keywords"
+    content="aplikasi kasir bali, pos bali, software kasir restoran bali, pos offline first bali, point of sale canggu, pos beach club bali, vexapos" />
   <link rel="canonical" href="https://www.extensiacreativebali.my.id/vexapos" />
   <link rel="alternate" hreflang="id" href="https://www.extensiacreativebali.my.id/vexapos" />
   <link rel="alternate" hreflang="x-default" href="https://www.extensiacreativebali.my.id/vexapos" />
@@ -17,14 +20,16 @@
   <meta property="og:type" content="product" />
   <meta property="og:site_name" content="Extensia Creative Bali" />
   <meta property="og:title" content="vexaPOS — Offline-First POS Bali" />
-  <meta property="og:description" content="POS offline-first untuk operasional F&amp;B Bali. Transaksi dan printer tetap berjalan saat koneksi putus, lalu data tersinkron otomatis." />
+  <meta property="og:description"
+    content="POS offline-first untuk operasional F&amp;B Bali. Transaksi dan printer tetap berjalan saat koneksi putus, lalu data tersinkron otomatis." />
   <meta property="og:url" content="https://www.extensiacreativebali.my.id/vexapos" />
   <meta property="og:image" content="https://www.extensiacreativebali.my.id/assets/images/og-cover.jpg" />
   <meta property="og:locale" content="id_ID" />
   <meta property="og:locale:alternate" content="en_US" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="vexaPOS — Offline-First POS Bali" />
-  <meta name="twitter:description" content="POS offline-first untuk operasional F&amp;B Bali. Transaksi dan printer tetap berjalan saat koneksi putus, lalu data tersinkron otomatis." />
+  <meta name="twitter:description"
+    content="POS offline-first untuk operasional F&amp;B Bali. Transaksi dan printer tetap berjalan saat koneksi putus, lalu data tersinkron otomatis." />
   <meta name="twitter:image" content="https://www.extensiacreativebali.my.id/assets/images/og-cover.jpg" />
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png" />
@@ -75,211 +80,1199 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Space+Mono:wght@400;700&amp;display=swap" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Space+Mono:wght@400;700&amp;display=swap" />
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/compiled.v2.css" />
   <script defer src="assets/js/script.js"></script>
   <style>
-    html[lang="id"] .lang-en { display: none !important; }
-    html[lang="en"] .lang-id { display: none !important; }
-    html[lang="id"] p.lang-id, html[lang="id"] div.lang-id, html[lang="id"] h1.lang-id, html[lang="id"] h2.lang-id, html[lang="id"] h3.lang-id,
-    html[lang="en"] p.lang-en, html[lang="en"] div.lang-en, html[lang="en"] h1.lang-en, html[lang="en"] h2.lang-en, html[lang="en"] h3.lang-en { display: block; }
+    html[lang="id"] .lang-en {
+      display: none !important;
+    }
+
+    html[lang="en"] .lang-id {
+      display: none !important;
+    }
+
+    html[lang="id"] p.lang-id,
+    html[lang="id"] div.lang-id,
+    html[lang="id"] h1.lang-id,
+    html[lang="id"] h2.lang-id,
+    html[lang="id"] h3.lang-id,
+    html[lang="en"] p.lang-en,
+    html[lang="en"] div.lang-en,
+    html[lang="en"] h1.lang-en,
+    html[lang="en"] h2.lang-en,
+    html[lang="en"] h3.lang-en {
+      display: block;
+    }
   </style>
 </head>
-<body class="vexa-page bg-[#F8FAFC] font-sans text-slate-900 min-h-screen relative selection:bg-amber-200 selection:text-slate-950 overflow-x-hidden">
+
+<body
+  class="vexa-page bg-[#F8FAFC] font-sans text-slate-900 min-h-screen relative selection:bg-amber-200 selection:text-slate-950 overflow-x-hidden">
   <div class="fixed inset-0 overflow-hidden pointer-events-none -z-10" aria-hidden="true">
-    <div class="absolute -top-28 -left-20 w-[550px] sm:w-[720px] h-[550px] sm:h-[720px] rounded-full radial-mesh-cyan animate-fluid-1"></div>
-    <div class="absolute top-[28%] -right-24 w-[500px] sm:w-[680px] h-[500px] sm:h-[680px] rounded-full radial-mesh-amber animate-fluid-2"></div>
-    <div class="absolute top-[56%] -left-28 w-[550px] sm:w-[740px] h-[550px] sm:h-[740px] rounded-full radial-mesh-basalt animate-fluid-3"></div>
-    <div class="absolute bottom-[-10%] right-[8%] w-[500px] sm:w-[700px] h-[500px] sm:h-[700px] rounded-full radial-mesh-emerald animate-fluid-1"></div>
+    <div
+      class="absolute -top-28 -left-20 w-[550px] sm:w-[720px] h-[550px] sm:h-[720px] rounded-full radial-mesh-cyan animate-fluid-1">
+    </div>
+    <div
+      class="absolute top-[28%] -right-24 w-[500px] sm:w-[680px] h-[500px] sm:h-[680px] rounded-full radial-mesh-amber animate-fluid-2">
+    </div>
+    <div
+      class="absolute top-[56%] -left-28 w-[550px] sm:w-[740px] h-[550px] sm:h-[740px] rounded-full radial-mesh-basalt animate-fluid-3">
+    </div>
+    <div
+      class="absolute bottom-[-10%] right-[8%] w-[500px] sm:w-[700px] h-[500px] sm:h-[700px] rounded-full radial-mesh-emerald animate-fluid-1">
+    </div>
   </div>
 
   <div class="max-w-[1500px] mx-auto px-3 sm:px-6 lg:px-8 py-3 sm:py-6 flex flex-col gap-6 sm:gap-8 lg:gap-10">
-    <nav aria-label="Navigasi utama vexaPOS" data-active-classes="bg-white/90 text-slate-900 shadow-sm" class="sticky top-3 sm:top-5 z-50 liquid-glass-nav rounded-full px-3.5 sm:px-6 py-2 sm:py-3 flex items-center justify-between gap-3 transition-all duration-300">
-      <a href="/" class="flex items-center gap-2 sm:gap-2.5 group min-w-0" aria-label="Kembali ke Extensia Creative Bali">
-        <img src="assets/images/extensialogo.png" alt="Extensia Creative Bali" class="w-8 h-8 sm:w-10 sm:h-10 object-contain shrink-0 group-hover:scale-105 transition-transform" width="40" height="40" />
+    <nav aria-label="Navigasi utama vexaPOS" data-active-classes="bg-white/90 text-slate-900 shadow-sm"
+      class="sticky top-3 sm:top-5 z-50 liquid-glass-nav rounded-full px-3.5 sm:px-6 py-2 sm:py-3 flex items-center justify-between gap-3 transition-all duration-300">
+      <a href="/" class="flex items-center gap-2 sm:gap-2.5 group min-w-0"
+        aria-label="Kembali ke Extensia Creative Bali">
+        <img src="assets/images/extensialogo.png" alt="Extensia Creative Bali"
+          class="w-8 h-8 sm:w-10 sm:h-10 object-contain shrink-0 group-hover:scale-105 transition-transform" width="40"
+          height="40" />
         <span class="flex flex-col leading-none min-w-0">
-          <span class="font-bold text-[16px] sm:text-[17px] tracking-tight text-slate-900">vexa<span class="text-emerald-600">POS</span></span>
-          <span class="font-mono text-[8.5px] min-[360px]:text-[9px] sm:text-[10px] font-medium text-slate-500 uppercase tracking-wider whitespace-nowrap">OFFLINE-FIRST • BALI</span>
+          <span class="font-bold text-[16px] sm:text-[17px] tracking-tight text-slate-900">vexa<span
+              class="text-emerald-600">POS</span></span>
+          <span
+            class="font-mono text-[8.5px] min-[360px]:text-[9px] sm:text-[10px] font-medium text-slate-500 uppercase tracking-wider whitespace-nowrap">OFFLINE-FIRST
+            • BALI</span>
         </span>
       </a>
       <div class="hidden lg:flex items-center gap-1 bg-slate-100/60 p-1 rounded-full border border-white/60">
-        <a href="#operasional" data-path="operasional" class="text-[12px] font-semibold px-3 py-1.5 text-slate-600 hover:text-slate-900 rounded-full hover:bg-white/80 transition-all"><span class="lang-id">Operasional</span><span class="lang-en">Operations</span></a>
-        <a href="#masalah" data-path="masalah" class="text-[12px] font-semibold px-3 py-1.5 text-slate-600 hover:text-slate-900 rounded-full hover:bg-white/80 transition-all"><span class="lang-id">Risiko</span><span class="lang-en">Risks</span></a>
-        <a href="#fitur" data-path="fitur" class="text-[12px] font-semibold px-3 py-1.5 text-slate-600 hover:text-slate-900 rounded-full hover:bg-white/80 transition-all"><span class="lang-id">Fitur</span><span class="lang-en">Features</span></a>
-        <a href="#hardware" data-path="hardware" class="text-[12px] font-semibold px-3 py-1.5 text-slate-600 hover:text-slate-900 rounded-full hover:bg-white/80 transition-all"><span class="lang-id">Perangkat</span><span class="lang-en">Hardware</span></a>
-        <a href="#pricing" data-path="pricing" class="text-[12px] font-semibold px-3 py-1.5 text-slate-600 hover:text-slate-900 rounded-full hover:bg-white/80 transition-all"><span class="lang-id">Harga</span><span class="lang-en">Pricing</span></a>
-        <a href="#faq" data-path="faq" class="text-[12px] font-semibold px-3 py-1.5 text-slate-600 hover:text-slate-900 rounded-full hover:bg-white/80 transition-all"><span class="lang-id">Pertanyaan</span><span class="lang-en">FAQ</span></a>
+        <a href="#operasional" data-path="operasional"
+          class="text-[12px] font-semibold px-3 py-1.5 text-slate-600 hover:text-slate-900 rounded-full hover:bg-white/80 transition-all"><span
+            class="lang-id">Operasional</span><span class="lang-en">Operations</span></a>
+        <a href="#masalah" data-path="masalah"
+          class="text-[12px] font-semibold px-3 py-1.5 text-slate-600 hover:text-slate-900 rounded-full hover:bg-white/80 transition-all"><span
+            class="lang-id">Risiko</span><span class="lang-en">Risks</span></a>
+        <a href="#fitur" data-path="fitur"
+          class="text-[12px] font-semibold px-3 py-1.5 text-slate-600 hover:text-slate-900 rounded-full hover:bg-white/80 transition-all"><span
+            class="lang-id">Fitur</span><span class="lang-en">Features</span></a>
+        <a href="#hardware" data-path="hardware"
+          class="text-[12px] font-semibold px-3 py-1.5 text-slate-600 hover:text-slate-900 rounded-full hover:bg-white/80 transition-all"><span
+            class="lang-id">Perangkat</span><span class="lang-en">Hardware</span></a>
+        <a href="#testimoni" data-path="testimoni"
+          class="text-[12px] font-semibold px-3 py-1.5 text-slate-600 hover:text-slate-900 rounded-full hover:bg-white/80 transition-all"><span
+            class="lang-id">Testimoni</span><span class="lang-en">Stories</span></a>
+        <a href="#pricing" data-path="pricing"
+          class="text-[12px] font-semibold px-3 py-1.5 text-slate-600 hover:text-slate-900 rounded-full hover:bg-white/80 transition-all"><span
+            class="lang-id">Harga</span><span class="lang-en">Pricing</span></a>
+        <a href="#faq" data-path="faq"
+          class="text-[12px] font-semibold px-3 py-1.5 text-slate-600 hover:text-slate-900 rounded-full hover:bg-white/80 transition-all"><span
+            class="lang-id">Pertanyaan</span><span class="lang-en">FAQ</span></a>
       </div>
       <div class="flex items-center gap-2 sm:gap-3">
-        <span id="bali-time" class="hidden xl:inline-flex items-center gap-1.5 font-mono text-[11px] font-semibold px-3 py-1.5 bg-amber-50/90 text-amber-950 border border-amber-200/80 rounded-full whitespace-nowrap shadow-sm">
+        <span id="bali-time"
+          class="hidden xl:inline-flex items-center gap-1.5 font-mono text-[11px] font-semibold px-3 py-1.5 bg-amber-50/90 text-amber-950 border border-amber-200/80 rounded-full whitespace-nowrap shadow-sm">
           <img src="assets/images/frangipani.webp" alt="" class="w-3.5 h-3.5 object-contain" aria-hidden="true" />
           <span id="bali-time-static">BALI TIME (WITA)</span><span id="bali-time-value"></span>
         </span>
-        <div class="hidden sm:inline-flex items-center p-0.5 bg-slate-100/80 border border-slate-200/80 rounded-full font-mono text-[11px] font-bold" role="group" aria-label="Pilih Bahasa / Language Selection">
-          <button type="button" id="btn-lang-id" aria-pressed="true" class="px-2.5 py-1 bg-white text-slate-900 shadow-sm rounded-full transition-all cursor-pointer">ID</button>
-          <button type="button" id="btn-lang-en" aria-pressed="false" class="px-2.5 py-1 bg-transparent text-slate-500 rounded-full hover:text-slate-900 transition-colors cursor-pointer">EN</button>
+        <div
+          class="hidden sm:inline-flex items-center p-0.5 bg-slate-100/80 border border-slate-200/80 rounded-full font-mono text-[11px] font-bold"
+          role="group" aria-label="Pilih Bahasa / Language Selection">
+          <button type="button" id="btn-lang-id" aria-pressed="true"
+            class="px-2.5 py-1 bg-white text-slate-900 shadow-sm rounded-full transition-all cursor-pointer">ID</button>
+          <button type="button" id="btn-lang-en" aria-pressed="false"
+            class="px-2.5 py-1 bg-transparent text-slate-500 rounded-full hover:text-slate-900 transition-colors cursor-pointer">EN</button>
         </div>
-        <a href="https://demo.vexapos.my.id/" target="_blank" rel="noopener" class="hidden sm:inline-flex items-center gap-1.5 font-bold text-[13px] px-4 sm:px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-full shadow-sm hover:-translate-y-0.5 transition-all whitespace-nowrap"><span class="lang-id">Coba Demo</span><span class="lang-en">Try Demo</span></a>
-        <button type="button" id="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Buka menu navigasi" class="lg:hidden w-11 h-11 inline-flex items-center justify-center shrink-0 bg-white/80 text-slate-700 border border-slate-200/80 rounded-full shadow-sm cursor-pointer hover:bg-white transition-colors">
-          <svg id="nav-toggle-icon-open" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2 4.5h14M2 9h14M2 13.5h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          <svg id="nav-toggle-icon-close" class="hidden" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="m4 4 10 10M14 4 4 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <a href="https://demo.vexapos.my.id/" target="_blank" rel="noopener"
+          class="hidden sm:inline-flex items-center gap-1.5 font-bold text-[13px] px-4 sm:px-5 py-2.5 bg-amber-600 hover:bg-amber-700 text-white rounded-full shadow-sm hover:-translate-y-0.5 transition-all whitespace-nowrap"><span
+            class="lang-id">Coba Demo</span><span class="lang-en">Try Demo</span></a>
+        <button type="button" id="nav-toggle" aria-expanded="false" aria-controls="mobile-menu"
+          aria-label="Buka menu navigasi"
+          class="lg:hidden w-11 h-11 inline-flex items-center justify-center shrink-0 bg-white/80 text-slate-700 border border-slate-200/80 rounded-full shadow-sm cursor-pointer hover:bg-white transition-colors">
+          <svg id="nav-toggle-icon-open" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+            <path d="M2 4.5h14M2 9h14M2 13.5h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+          <svg id="nav-toggle-icon-close" class="hidden" width="18" height="18" viewBox="0 0 18 18" fill="none"
+            aria-hidden="true">
+            <path d="m4 4 10 10M14 4 4 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
         </button>
       </div>
     </nav>
 
-    <div id="mobile-menu" class="hidden lg:hidden relative z-50 liquid-glass rounded-3xl p-4 sm:p-5 flex-col gap-2 -mt-2 shadow-lg border border-white/80">
-      <a href="#operasional" class="min-h-[44px] flex items-center font-medium text-[14px] px-4 py-2.5 bg-white/70 rounded-2xl border border-slate-200/60 text-slate-800"><span class="lang-id">OPERASIONAL</span><span class="lang-en">OPERATIONS</span></a>
-      <a href="#masalah" class="min-h-[44px] flex items-center font-medium text-[14px] px-4 py-2.5 bg-white/70 rounded-2xl border border-slate-200/60 text-slate-800"><span class="lang-id">RISIKO</span><span class="lang-en">RISKS</span></a>
-      <a href="#fitur" class="min-h-[44px] flex items-center font-medium text-[14px] px-4 py-2.5 bg-white/70 rounded-2xl border border-slate-200/60 text-slate-800"><span class="lang-id">FITUR</span><span class="lang-en">FEATURES</span></a>
-      <a href="#hardware" class="min-h-[44px] flex items-center font-medium text-[14px] px-4 py-2.5 bg-white/70 rounded-2xl border border-slate-200/60 text-slate-800"><span class="lang-id">PERANGKAT</span><span class="lang-en">HARDWARE</span></a>
-      <a href="#pricing" class="min-h-[44px] flex items-center font-medium text-[14px] px-4 py-2.5 bg-white/70 rounded-2xl border border-slate-200/60 text-slate-800"><span class="lang-id">HARGA</span><span class="lang-en">PRICING</span></a>
-      <a href="#faq" class="min-h-[44px] flex items-center font-medium text-[14px] px-4 py-2.5 bg-white/70 rounded-2xl border border-slate-200/60 text-slate-800"><span class="lang-id">PERTANYAAN</span><span class="lang-en">FAQ</span></a>
+    <div id="mobile-menu"
+      class="hidden lg:hidden relative z-50 liquid-glass rounded-3xl p-4 sm:p-5 flex-col gap-2 -mt-2 shadow-lg border border-white/80">
+      <a href="#operasional"
+        class="min-h-[44px] flex items-center font-medium text-[14px] px-4 py-2.5 bg-white/70 rounded-2xl border border-slate-200/60 text-slate-800"><span
+          class="lang-id">OPERASIONAL</span><span class="lang-en">OPERATIONS</span></a>
+      <a href="#masalah"
+        class="min-h-[44px] flex items-center font-medium text-[14px] px-4 py-2.5 bg-white/70 rounded-2xl border border-slate-200/60 text-slate-800"><span
+          class="lang-id">RISIKO</span><span class="lang-en">RISKS</span></a>
+      <a href="#fitur"
+        class="min-h-[44px] flex items-center font-medium text-[14px] px-4 py-2.5 bg-white/70 rounded-2xl border border-slate-200/60 text-slate-800"><span
+          class="lang-id">FITUR</span><span class="lang-en">FEATURES</span></a>
+      <a href="#hardware"
+        class="min-h-[44px] flex items-center font-medium text-[14px] px-4 py-2.5 bg-white/70 rounded-2xl border border-slate-200/60 text-slate-800"><span
+          class="lang-id">PERANGKAT</span><span class="lang-en">HARDWARE</span></a>
+      <a href="#testimoni"
+        class="min-h-[44px] flex items-center font-medium text-[14px] px-4 py-2.5 bg-white/70 rounded-2xl border border-slate-200/60 text-slate-800"><span
+          class="lang-id">TESTIMONI</span><span class="lang-en">STORIES</span></a>
+      <a href="#pricing"
+        class="min-h-[44px] flex items-center font-medium text-[14px] px-4 py-2.5 bg-white/70 rounded-2xl border border-slate-200/60 text-slate-800"><span
+          class="lang-id">HARGA</span><span class="lang-en">PRICING</span></a>
+      <a href="#faq"
+        class="min-h-[44px] flex items-center font-medium text-[14px] px-4 py-2.5 bg-white/70 rounded-2xl border border-slate-200/60 text-slate-800"><span
+          class="lang-id">PERTANYAAN</span><span class="lang-en">FAQ</span></a>
       <div class="flex items-center gap-2 pt-2 border-t border-slate-200/60">
-        <div class="inline-flex items-center p-0.5 bg-slate-100/90 border border-slate-200/80 rounded-full font-mono text-[11px] font-bold" role="group" aria-label="Pilih Bahasa">
-          <button type="button" data-lang-mobile="id" aria-pressed="true" class="min-h-[38px] px-3.5 py-1.5 bg-white text-slate-900 shadow-sm rounded-full cursor-pointer">ID</button>
-          <button type="button" data-lang-mobile="en" aria-pressed="false" class="min-h-[38px] px-3.5 py-1.5 bg-transparent text-slate-500 rounded-full cursor-pointer">EN</button>
+        <div
+          class="inline-flex items-center p-0.5 bg-slate-100/90 border border-slate-200/80 rounded-full font-mono text-[11px] font-bold"
+          role="group" aria-label="Pilih Bahasa">
+          <button type="button" data-lang-mobile="id" aria-pressed="true"
+            class="min-h-[38px] px-3.5 py-1.5 bg-white text-slate-900 shadow-sm rounded-full cursor-pointer">ID</button>
+          <button type="button" data-lang-mobile="en" aria-pressed="false"
+            class="min-h-[38px] px-3.5 py-1.5 bg-transparent text-slate-500 rounded-full cursor-pointer">EN</button>
         </div>
-        <a href="https://demo.vexapos.my.id/" target="_blank" rel="noopener" class="flex-1 min-h-[44px] inline-flex items-center justify-center text-center font-bold text-[13px] px-4 py-2 bg-emerald-600 text-white rounded-full"><span class="lang-id">Coba Demo</span><span class="lang-en">Try Demo</span></a>
+        <a href="https://demo.vexapos.my.id/" target="_blank" rel="noopener"
+          class="flex-1 min-h-[44px] inline-flex items-center justify-center text-center font-bold text-[13px] px-4 py-2 bg-amber-600 text-white rounded-full"><span
+            class="lang-id">Coba Demo</span><span class="lang-en">Try Demo</span></a>
       </div>
     </div>
 
-    <header class="liquid-glass liquid-glass-2026 rounded-2xl sm:rounded-3xl p-5 sm:p-10 lg:p-14 grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 items-center relative overflow-hidden">
-      <div class="mandala-corner-tl" aria-hidden="true"></div><div class="mandala-corner-tr" aria-hidden="true"></div>
+    <header
+      class="liquid-glass liquid-glass-2026 rounded-2xl sm:rounded-3xl p-5 sm:p-10 lg:p-14 grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 items-center relative overflow-hidden">
+      <div class="mandala-corner-tl" aria-hidden="true"></div>
+      <div class="mandala-corner-tr" aria-hidden="true"></div>
       <div class="lg:col-span-7 flex flex-col gap-5 sm:gap-6 relative z-10 min-w-0">
-        <span class="inline-flex items-center self-start gap-2 px-3.5 py-1.5 bg-amber-50/90 border border-amber-200/80 rounded-full shadow-sm font-mono text-[10px] sm:text-[12px] font-semibold text-amber-950">
+        <span
+          class="inline-flex items-center self-start gap-2 px-3.5 py-1.5 bg-amber-50/90 border border-amber-200/80 rounded-full shadow-sm font-mono text-[10px] sm:text-[12px] font-semibold text-amber-950">
           <img src="assets/images/frangipani.webp" alt="Bali" class="w-4 h-4 object-contain" />
-          <span class="lang-id">Dibangun di Bali. Tetap Jalan Saat Cloud Berhenti.</span><span class="lang-en">Built in Bali. Keeps Selling When the Cloud Stops.</span>
+          <span class="lang-id">Dibangun di Bali. Tetap Jalan Saat Cloud Berhenti.</span><span class="lang-en">Built in
+            Bali. Keeps Selling When the Cloud Stops.</span>
         </span>
-        <h1 class="vexa-heading-safe font-extrabold text-[26px] min-[380px]:text-[32px] sm:text-[44px] xl:text-[56px] tracking-tight leading-[1.18] sm:leading-[1.1] text-[#0F172A]">
-          <span class="lang-id">Saat Internet Bali Drop dan Antrean Menumpuk 10 Meter, Kasir Anda Tetap <span class="vexa-heading-safe inline-block text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-emerald-600">Mencetak Uang atau Mencetak Masalah?</span></span>
-          <span class="lang-en">When Bali Internet Drops and Queues Stretch 10 Meters, Does Your Cashier <span class="vexa-heading-safe inline-block text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-emerald-600">Print Money or Print Problems?</span></span>
+        <h1
+          class="vexa-heading-safe font-extrabold text-[26px] min-[380px]:text-[32px] sm:text-[44px] xl:text-[56px] tracking-tight leading-[1.18] sm:leading-[1.1] text-[#0F172A]">
+          <span class="lang-id">Saat Internet Bali Drop dan Antrean Menumpuk 10 Meter, Kasir Anda Tetap <span
+              class="vexa-heading-safe inline-block text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-emerald-600">Mencetak
+              Uang atau Mencetak Masalah?</span></span>
+          <span class="lang-en">When Bali Internet Drops and Queues Stretch 10 Meters, Does Your Cashier <span
+              class="vexa-heading-safe inline-block text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-emerald-600">Print
+              Money or Print Problems?</span></span>
         </h1>
-        <p class="text-[15px] sm:text-[18px] text-slate-600 leading-relaxed max-w-[680px]"><span class="lang-id">Offline-First Engine vexaPOS menulis setiap transaksi ke perangkat sebelum menyentuh cloud. Saat koneksi fiber Bali putus di tengah jam sibuk, order tetap masuk, struk dan tiket dapur tetap tercetak, laci kas tetap aktif, lalu seluruh data tersinkron otomatis saat koneksi pulih—tanpa input ulang.</span><span class="lang-en">The vexaPOS Offline-First Engine writes every transaction to the device before it touches the cloud. When Bali’s fiber fails mid-rush, orders keep moving, receipts and kitchen tickets keep printing, cash drawers stay active, and every record syncs automatically when connectivity returns—no re-entry.</span></p>
+        <p class="text-[15px] sm:text-[18px] text-slate-600 leading-relaxed max-w-[680px]"><span
+            class="lang-id">Offline-First Engine vexaPOS menulis setiap transaksi ke perangkat sebelum menyentuh cloud.
+            Saat koneksi fiber Bali putus di tengah jam sibuk, order tetap masuk, struk dan tiket dapur tetap tercetak,
+            laci kas tetap aktif, lalu seluruh data tersinkron otomatis saat koneksi pulih—tanpa input
+            ulang.</span><span class="lang-en">The vexaPOS Offline-First Engine writes every transaction to the device
+            before it touches the cloud. When Bali’s fiber fails mid-rush, orders keep moving, receipts and kitchen
+            tickets keep printing, cash drawers stay active, and every record syncs automatically when connectivity
+            returns—no re-entry.</span></p>
         <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-3.5">
-          <a href="https://wa.me/6285338000872?text=Halo%20tim%20vexaPOS.%20Saya%20ingin%20menjadwalkan%20demo%20di%20outlet%20saya." target="_blank" rel="noopener" class="w-full sm:w-auto min-h-[48px] inline-flex items-center justify-center text-center gap-2 font-bold text-[14px] sm:text-[15px] px-6 sm:px-7 py-3 sm:py-3.5 bg-amber-600 hover:bg-amber-700 text-white rounded-2xl shadow-lg hover:-translate-y-0.5 transition-all"><span class="lang-id">Jadwalkan Demo di Outlet</span><span class="lang-en">Book an On-Site Demo</span></a>
-          <a href="https://demo.vexapos.my.id/" target="_blank" rel="noopener" class="w-full sm:w-auto min-h-[48px] inline-flex items-center justify-center text-center gap-2 font-semibold text-[14px] sm:text-[15px] px-5 sm:px-6 py-3 sm:py-3.5 bg-white/80 hover:bg-white text-slate-800 border border-slate-200/80 rounded-2xl shadow-sm hover:-translate-y-0.5 transition-all"><span class="lang-id">Coba Demo Online</span><span class="lang-en">Try Online Demo</span></a>
-          <a href="#fitur" class="w-full sm:w-auto min-h-[44px] inline-flex items-center justify-center text-center gap-1.5 font-semibold text-[14px] sm:text-[15px] px-4 py-2.5 sm:py-3.5 text-slate-600 hover:text-slate-950 transition-colors"><span class="lang-id">Lihat Mesin Offline-First</span><span class="lang-en">See the Offline-First Engine</span></a>
+          <a href="https://wa.me/6285338000872?text=Halo%20tim%20vexaPOS.%20Saya%20ingin%20menjadwalkan%20demo%20di%20outlet%20saya."
+            target="_blank" rel="noopener"
+            class="w-full sm:w-auto min-h-[48px] inline-flex items-center justify-center text-center gap-2 font-bold text-[14px] sm:text-[15px] px-6 sm:px-7 py-3 sm:py-3.5 bg-amber-600 hover:bg-amber-700 text-white rounded-2xl shadow-lg hover:-translate-y-0.5 transition-all"><span
+              class="lang-id">Jadwalkan Demo di Outlet</span><span class="lang-en">Book an On-Site Demo</span></a>
+          <a href="https://demo.vexapos.my.id/" target="_blank" rel="noopener"
+            class="w-full sm:w-auto min-h-[48px] inline-flex items-center justify-center text-center gap-2 font-semibold text-[14px] sm:text-[15px] px-5 sm:px-6 py-3 sm:py-3.5 bg-white/80 hover:bg-white text-slate-800 border border-slate-200/80 rounded-2xl shadow-sm hover:-translate-y-0.5 transition-all"><span
+              class="lang-id">Coba Demo Online</span><span class="lang-en">Try Online Demo</span></a>
+          <a href="#fitur"
+            class="w-full sm:w-auto min-h-[44px] inline-flex items-center justify-center text-center gap-1.5 font-semibold text-[14px] sm:text-[15px] px-4 py-2.5 sm:py-3.5 text-slate-600 hover:text-slate-950 transition-colors"><span
+              class="lang-id">Lihat Mesin Offline-First</span><span class="lang-en">See the Offline-First
+              Engine</span></a>
         </div>
         <dl class="grid grid-cols-1 min-[360px]:grid-cols-3 gap-3 sm:gap-4 max-w-[680px]">
-          <div class="liquid-glass-subtle rounded-2xl p-3.5"><dd class="font-mono font-bold text-[13px] text-slate-900">LOCAL-FIRST</dd><dt class="text-[11px] text-slate-500 mt-1"><span class="lang-id">Transaksi masuk ke perangkat</span><span class="lang-en">Saved on device</span></dt></div>
-          <div class="liquid-glass-subtle rounded-2xl p-3.5"><dd class="font-mono font-bold text-[13px] text-amber-700"><span class="lang-id">TETAP CETAK</span><span class="lang-en">KEEP PRINTING</span></dd><dt class="text-[11px] text-slate-500 mt-1"><span class="lang-id">Struk &amp; tiket dapur</span><span class="lang-en">Receipts &amp; kitchen tickets</span></dt></div>
-          <div class="liquid-glass-subtle rounded-2xl p-3.5"><dd class="font-mono font-bold text-[13px] text-emerald-700">AUTO-SYNC</dd><dt class="text-[11px] text-slate-500 mt-1"><span class="lang-id">Saat koneksi pulih</span><span class="lang-en">When connectivity returns</span></dt></div>
-        </dl>
-      </div>
-
-      <div class="lg:col-span-5 relative min-w-0">
-        <div class="hidden sm:inline-flex items-center gap-1.5 absolute -top-4 -left-3 z-20 px-3.5 py-1.5 bg-white/90 text-slate-800 border border-white/80 shadow-md rounded-full font-mono text-[10px] font-bold uppercase"><span class="w-2 h-2 rounded-full bg-emerald-500"></span><span class="lang-id">SINKRONISASI LOKAL</span><span class="lang-en">LOCAL STORAGE SYNC</span></div>
-        <div class="bg-[#0F141C] p-3 rounded-[28px] border border-white/20 shadow-2xl relative overflow-hidden">
-          <div class="flex items-center justify-between gap-2 px-3 py-2 border-b border-slate-700/50 text-slate-400">
-            <span class="font-mono text-[9px] sm:text-[10px] font-semibold text-slate-300 truncate">vexaPOS • <span class="lang-id">Outlet Canggu</span><span class="lang-en">Canggu Outlet</span></span>
-            <span class="inline-flex items-center gap-1 font-mono text-[9px] font-bold px-2 py-0.5 bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 rounded-full"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" aria-hidden="true"></span><span class="lang-id">AKTIF</span><span class="lang-en">ONLINE</span></span>
+          <div class="liquid-glass-subtle rounded-2xl p-3.5">
+            <dd class="font-mono font-bold text-[13px] text-slate-900">LOCAL-FIRST</dd>
+            <dt class="text-[11px] text-slate-500 mt-1"><span class="lang-id">Transaksi masuk ke perangkat</span><span
+                class="lang-en">Saved on device</span></dt>
           </div>
-          <div class="bg-white/95 rounded-2xl p-4 sm:p-5 flex flex-col gap-3.5 shadow-inner" data-bill data-subtotal="200000" data-service-rate="0.1" data-pb1-rate="0.1">
-            <div class="flex items-start justify-between gap-2"><div class="min-w-0"><p class="font-bold text-[13px] sm:text-[15px] text-slate-900"><span class="lang-id">Meja 08 • Dek Kolam</span><span class="lang-en">Table 08 • Poolside Deck</span></p><p class="font-mono text-[9px] sm:text-[10.5px] text-slate-500"><span class="lang-id">Kasir: Kasir 02 • Pesanan #1042</span><span class="lang-en">Cashier: Register 02 • Order #1042</span></p></div><span class="font-mono text-[9px] font-bold px-2 py-1 bg-emerald-100 text-emerald-800 border border-emerald-300 rounded-full whitespace-nowrap"><span class="lang-id">TERSINKRON</span><span class="lang-en">SYNCED</span></span></div>
-            <ul class="flex flex-col gap-2 text-[11px] sm:text-[13px] text-slate-800">
-              <li class="flex items-center justify-between gap-2 bg-slate-50/80 border border-slate-200/70 rounded-xl px-3 py-2" data-price="90000"><span><strong>2x</strong> Kintamani Cold Brew</span><span class="font-mono font-bold" data-line-total>Rp90.000</span></li>
-              <li class="flex items-center justify-between gap-2 bg-slate-50/80 border border-slate-200/70 rounded-xl px-3 py-2" data-price="65000"><span><strong>1x</strong> Dragonfruit Açaí Bowl</span><span class="font-mono font-bold" data-line-total>Rp65.000</span></li>
-              <li class="flex items-center justify-between gap-2 bg-slate-50/80 border border-slate-200/70 rounded-xl px-3 py-2" data-price="45000"><span><strong>1x</strong> Sambal Matah Roll</span><span class="font-mono font-bold" data-line-total>Rp45.000</span></li>
-            </ul>
-            <dl class="bg-slate-50/90 border border-slate-200/80 rounded-xl px-3.5 py-3 font-mono text-[11px] sm:text-[12px] text-slate-700 flex flex-col gap-1.5"><div class="flex justify-between"><dt>Subtotal</dt><dd data-bill-subtotal>Rp200.000</dd></div><div class="flex justify-between"><dt><span class="lang-id">Biaya layanan</span><span class="lang-en">Service</span> 10%</dt><dd data-bill-service>Rp20.000</dd></div><div class="flex justify-between"><dt>PB1 10%</dt><dd data-bill-pb1>Rp22.000</dd></div><div class="flex justify-between border-t border-slate-200 pt-2 text-[14px] font-bold"><dt>TOTAL</dt><dd data-bill-total class="text-emerald-600">Rp242.000</dd></div></dl>
-            <p data-bill-status class="font-mono text-[10px] sm:text-[11px] font-medium text-emerald-600" role="status"></p>
-            <div class="grid grid-cols-3 gap-2 pt-1" role="group" aria-label="Pratinjau kontrol kasir / Cashier control preview">
-              <span class="inline-flex items-center justify-center text-center font-bold text-[9px] sm:text-[10px] uppercase px-2 py-2.5 bg-amber-50 text-amber-900 border border-amber-200 rounded-xl"><span class="lang-id">Pisah Tagihan</span><span class="lang-en">Split Bill</span></span>
-              <span class="inline-flex items-center justify-center text-center font-bold text-[9px] sm:text-[10px] uppercase px-2 py-2.5 bg-emerald-600 text-white rounded-xl">QRIS</span>
-              <span class="inline-flex items-center justify-center text-center font-bold text-[9px] sm:text-[10px] uppercase px-2 py-2.5 bg-slate-100 text-slate-800 border border-slate-200 rounded-xl"><span class="lang-id">Cetak Dapur</span><span class="lang-en">Print Kitchen</span></span>
+          <div class="liquid-glass-subtle rounded-2xl p-3.5">
+            <dd class="font-mono font-bold text-[13px] text-amber-700"><span class="lang-id">TETAP CETAK</span><span
+                class="lang-en">KEEP PRINTING</span></dd>
+            <dt class="text-[11px] text-slate-500 mt-1"><span class="lang-id">Struk &amp; tiket dapur</span><span
+                class="lang-en">Receipts &amp; kitchen tickets</span></dt>
+          </div>
+          <div class="liquid-glass-subtle rounded-2xl p-3.5">
+            <dd class="font-mono font-bold text-[13px] text-emerald-700">AUTO-SYNC</dd>
+            <dt class="text-[11px] text-slate-500 mt-1"><span class="lang-id">Saat koneksi pulih</span><span
+                class="lang-en">When connectivity returns</span></dt>
+          </div>
+        </dl>
+
+        <!-- Social Proof: Merchant Logo Strip -->
+        <div class="pt-5 border-t border-slate-200/80 flex flex-col gap-2.5 max-w-[680px]">
+          <p class="font-mono text-[10px] sm:text-[11px] font-bold text-slate-500 uppercase tracking-wider flex items-center gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+            <span class="lang-id">Dipercaya oleh 40+ Outlet &amp; Bar Terkemuka di Bali:</span>
+            <span class="lang-en">Trusted by 40+ Top Venues &amp; Bars in Bali:</span>
+          </p>
+          <div class="grid grid-cols-2 min-[420px]:grid-cols-3 sm:grid-cols-6 gap-2 sm:gap-2.5 text-slate-700">
+            <div class="px-2.5 py-1.5 bg-white/70 border border-slate-200/70 rounded-xl flex items-center gap-1.5 shadow-2xs hover:bg-white transition-colors">
+              <span class="text-amber-600 text-xs">🏖️</span>
+              <span class="font-bold text-[10px] tracking-tight truncate">Canggu Sands</span>
+            </div>
+            <div class="px-2.5 py-1.5 bg-white/70 border border-slate-200/70 rounded-xl flex items-center gap-1.5 shadow-2xs hover:bg-white transition-colors">
+              <span class="text-amber-800 text-xs">☕</span>
+              <span class="font-bold text-[10px] tracking-tight truncate">Kintamani Lab</span>
+            </div>
+            <div class="px-2.5 py-1.5 bg-white/70 border border-slate-200/70 rounded-xl flex items-center gap-1.5 shadow-2xs hover:bg-white transition-colors">
+              <span class="text-emerald-600 text-xs">🌴</span>
+              <span class="font-bold text-[10px] tracking-tight truncate">Seminyak Coast</span>
+            </div>
+            <div class="px-2.5 py-1.5 bg-white/70 border border-slate-200/70 rounded-xl flex items-center gap-1.5 shadow-2xs hover:bg-white transition-colors">
+              <span class="text-amber-700 text-xs">🍹</span>
+              <span class="font-bold text-[10px] tracking-tight truncate">Uluwatu Cliff</span>
+            </div>
+            <div class="px-2.5 py-1.5 bg-white/70 border border-slate-200/70 rounded-xl flex items-center gap-1.5 shadow-2xs hover:bg-white transition-colors">
+              <span class="text-slate-700 text-xs">🥖</span>
+              <span class="font-bold text-[10px] tracking-tight truncate">Sanur Bistro</span>
+            </div>
+            <div class="px-2.5 py-1.5 bg-white/70 border border-slate-200/70 rounded-xl flex items-center gap-1.5 shadow-2xs hover:bg-white transition-colors">
+              <span class="text-blue-600 text-xs">🏄</span>
+              <span class="font-bold text-[10px] tracking-tight truncate">Pererenan Surf</span>
             </div>
           </div>
         </div>
-        <div class="hidden sm:inline-flex items-center gap-1.5 absolute -bottom-4 -right-2 z-20 px-3.5 py-1.5 bg-emerald-600 text-white shadow-lg rounded-full font-mono text-[10px] font-bold uppercase"><span class="lang-id">Printer Thermal &amp; Sunmi Kompatibel</span><span class="lang-en">Compatible Thermal &amp; Sunmi</span></div>
+      </div>
+
+      <!-- Commercial Cashier Station Hero: Landscape Tablet POS on Stand + Connected Thermal Printer -->
+      <div class="lg:col-span-5 relative min-w-0 flex flex-col items-center justify-center py-2">
+        <div class="hidden sm:inline-flex items-center gap-1.5 absolute -top-4 -left-3 z-30 px-3.5 py-1.5 bg-white/95 text-slate-800 border border-slate-200/80 shadow-lg rounded-full font-mono text-[10px] font-bold uppercase backdrop-blur-md">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+          <span class="w-2 h-2 rounded-full bg-emerald-500 -ml-3.5"></span>
+          <span class="lang-id">SINKRONISASI LOKAL</span><span class="lang-en">LOCAL STORAGE SYNC</span>
+        </div>
+        
+        <!-- Cashier Station Group Container -->
+        <div class="relative w-full max-w-[560px] mx-auto select-none">
+          <!-- Counter Base Ground Shadow -->
+          <div class="absolute -bottom-4 inset-x-6 h-8 bg-gradient-to-t from-slate-900/15 to-transparent rounded-[100%] blur-md pointer-events-none"></div>
+
+          <div class="grid grid-cols-12 gap-2 sm:gap-3 items-end relative z-10">
+            <!-- Tablet POS in Landscape on Stand -->
+            <div class="col-span-12 sm:col-span-8 relative">
+              <div class="relative w-full aspect-[1400/1010] filter drop-shadow-[0_20px_30px_rgba(15,23,42,0.22)]">
+                <!-- Screen Cutout Container -->
+                <div class="absolute inset-[5.84%_4.14%_5.74%_4.21%] overflow-hidden rounded-[2.2%] bg-[#0F141C] flex flex-col justify-between select-none">
+                  <!-- POS App Top Bar -->
+                  <div class="flex items-center justify-between px-2.5 sm:px-3 py-1.5 bg-slate-900/95 border-b border-slate-800 text-slate-300">
+                    <div class="flex items-center gap-1.5 truncate">
+                      <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                      <span class="font-bold text-[10px] sm:text-[11px] text-white tracking-tight font-mono">vexa<span class="text-amber-400">POS</span></span>
+                      <span class="text-slate-600 text-[10px]">•</span>
+                      <span class="font-mono text-[8.5px] sm:text-[9.5px] text-slate-400 truncate"><span class="lang-id">Outlet Canggu</span><span class="lang-en">Canggu Outlet</span></span>
+                    </div>
+                    <span class="inline-flex items-center gap-1 font-mono text-[8px] sm:text-[8.5px] font-bold px-1.5 py-0.5 bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 rounded-full">
+                      <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" aria-hidden="true"></span>
+                      <span class="lang-id">ONLINE</span><span class="lang-en">ONLINE</span>
+                    </span>
+                  </div>
+
+                  <!-- POS Order Card Interior -->
+                  <div class="flex-1 bg-white p-2 sm:p-2.5 flex flex-col justify-between overflow-hidden shadow-inner" data-bill data-subtotal="200000" data-service-rate="0.1" data-pb1-rate="0.1">
+                    <!-- Order Header -->
+                    <div class="flex items-start justify-between gap-1 pb-1 border-b border-slate-100">
+                      <div class="min-w-0">
+                        <p class="font-bold text-[11px] sm:text-[12.5px] text-slate-900 leading-tight truncate">
+                          <span class="lang-id">Meja 08 • Dek Kolam</span><span class="lang-en">Table 08 • Poolside Deck</span>
+                        </p>
+                        <p class="font-mono text-[8px] sm:text-[9px] text-slate-500 leading-tight truncate">
+                          <span class="lang-id">Kasir 02 • Order #1042</span><span class="lang-en">Register 02 • Order #1042</span>
+                        </p>
+                      </div>
+                      <span class="font-mono text-[7.5px] sm:text-[8.5px] font-bold px-1.5 py-0.5 bg-emerald-100 text-emerald-800 border border-emerald-300 rounded-full whitespace-nowrap flex items-center gap-0.5 flex-shrink-0">
+                        <svg class="w-2 h-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                        <span class="lang-id">TERSINKRON</span><span class="lang-en">SYNCED</span>
+                      </span>
+                    </div>
+
+                    <!-- Order Items with Product Thumbnails -->
+                    <ul class="flex flex-col gap-1 my-1 overflow-y-auto max-h-[105px] sm:max-h-[120px] pr-0.5">
+                      <li class="flex items-center justify-between gap-1 bg-slate-50/90 border border-slate-200/70 rounded-lg p-1 transition-colors hover:bg-slate-100/80" data-price="90000">
+                        <div class="flex items-center gap-1.5 min-w-0">
+                          <img src="assets/images/vexapos-coldbrew.webp" alt="Kintamani Cold Brew" class="w-6 h-6 sm:w-7 sm:h-7 rounded-md object-cover flex-shrink-0 border border-slate-200" />
+                          <div class="min-w-0">
+                            <p class="text-[10px] sm:text-[11px] font-medium text-slate-900 truncate leading-tight">
+                              <strong class="font-bold text-amber-700">2x</strong> Kintamani Cold Brew
+                            </p>
+                          </div>
+                        </div>
+                        <span class="font-mono font-bold text-[10px] sm:text-[11px] text-slate-900 flex-shrink-0" data-line-total>Rp90.000</span>
+                      </li>
+
+                      <li class="flex items-center justify-between gap-1 bg-slate-50/90 border border-slate-200/70 rounded-lg p-1 transition-colors hover:bg-slate-100/80" data-price="65000">
+                        <div class="flex items-center gap-1.5 min-w-0">
+                          <img src="assets/images/vexapos-acai.webp" alt="Dragonfruit Açaí Bowl" class="w-6 h-6 sm:w-7 sm:h-7 rounded-md object-cover flex-shrink-0 border border-slate-200" />
+                          <div class="min-w-0">
+                            <p class="text-[10px] sm:text-[11px] font-medium text-slate-900 truncate leading-tight">
+                              <strong class="font-bold text-amber-700">1x</strong> Dragonfruit Açaí
+                            </p>
+                          </div>
+                        </div>
+                        <span class="font-mono font-bold text-[10px] sm:text-[11px] text-slate-900 flex-shrink-0" data-line-total>Rp65.000</span>
+                      </li>
+
+                      <li class="flex items-center justify-between gap-1 bg-slate-50/90 border border-slate-200/70 rounded-lg p-1 transition-colors hover:bg-slate-100/80" data-price="45000">
+                        <div class="flex items-center gap-1.5 min-w-0">
+                          <img src="assets/images/vexapos-sambalroll.webp" alt="Sambal Matah Roll" class="w-6 h-6 sm:w-7 sm:h-7 rounded-md object-cover flex-shrink-0 border border-slate-200" />
+                          <div class="min-w-0">
+                            <p class="text-[10px] sm:text-[11px] font-medium text-slate-900 truncate leading-tight">
+                              <strong class="font-bold text-amber-700">1x</strong> Sambal Matah Roll
+                            </p>
+                          </div>
+                        </div>
+                        <span class="font-mono font-bold text-[10px] sm:text-[11px] text-slate-900 flex-shrink-0" data-line-total>Rp45.000</span>
+                      </li>
+                    </ul>
+
+                    <!-- Calculation DL -->
+                    <dl class="bg-slate-50/90 border border-slate-200/80 rounded-lg px-2 py-1 font-mono text-[8.5px] sm:text-[10px] text-slate-700 flex flex-col gap-0.5">
+                      <div class="flex justify-between"><dt>Subtotal</dt><dd data-bill-subtotal>Rp200.000</dd></div>
+                      <div class="flex justify-between"><dt><span class="lang-id">Layanan</span><span class="lang-en">Service</span> 10%</dt><dd data-bill-service>Rp20.000</dd></div>
+                      <div class="flex justify-between"><dt>PB1 10%</dt><dd data-bill-pb1>Rp22.000</dd></div>
+                      <div class="flex justify-between border-t border-slate-200 pt-0.5 text-[10.5px] sm:text-[12px] font-bold"><dt>TOTAL</dt><dd data-bill-total class="text-emerald-600 font-extrabold">Rp242.000</dd></div>
+                    </dl>
+
+                    <!-- Verification Status -->
+                    <p data-bill-status class="font-mono text-[7px] sm:text-[8.5px] font-medium text-emerald-600 truncate py-0.5 leading-none" role="status"></p>
+
+                    <!-- Action Buttons -->
+                    <div class="grid grid-cols-3 gap-1 pt-0.5" role="group">
+                      <span class="inline-flex items-center justify-center text-center gap-0.5 font-bold text-[7px] sm:text-[8.5px] uppercase px-1 py-1 bg-amber-50 text-amber-900 border border-amber-200 rounded-md">
+                        <span class="truncate"><span class="lang-id">Pisah Tagihan</span><span class="lang-en">Split Bill</span></span>
+                      </span>
+                      <span class="inline-flex items-center justify-center text-center gap-0.5 font-bold text-[7px] sm:text-[8.5px] uppercase px-1 py-1 bg-emerald-600 text-white rounded-md shadow-sm">
+                        <span>QRIS</span>
+                      </span>
+                      <span class="inline-flex items-center justify-center text-center gap-0.5 font-bold text-[7px] sm:text-[8.5px] uppercase px-1 py-1 bg-slate-100 text-slate-800 border border-slate-200 rounded-md">
+                        <span class="truncate"><span class="lang-id">Cetak Dapur</span><span class="lang-en">Print Kitchen</span></span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Tablet Frame Mockup Image Overlay -->
+                <img src="assets/images/vexapos-tablet-frame.webp" alt="vexaPOS Commercial Tablet POS" class="absolute inset-0 w-full h-full object-contain pointer-events-none z-10 select-none" loading="eager" width="1400" height="1010" />
+              </div>
+
+              <!-- Countertop Aluminum Cashier Stand Mount Foot -->
+              <div class="w-24 sm:w-28 h-4 bg-gradient-to-r from-slate-400 via-slate-200 to-slate-400 rounded-b-xl mx-auto shadow-md border-t border-slate-500/40 -mt-1 relative z-0 flex items-center justify-center">
+                <div class="w-12 h-1 bg-slate-600/30 rounded-full"></div>
+              </div>
+            </div>
+
+            <!-- Thermal Receipt Printer Station with Printed Ticket -->
+            <div class="col-span-12 sm:col-span-4 flex flex-col items-center sm:items-start relative z-10">
+              <div class="w-full max-w-[200px] bg-gradient-to-b from-slate-800 to-slate-900 rounded-2xl p-2.5 sm:p-3 border border-slate-700 shadow-xl relative flex flex-col gap-2">
+                <!-- Printer Head Slot & Ready LED -->
+                <div class="flex items-center justify-between border-b border-slate-700/80 pb-1.5">
+                  <div class="flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span class="font-mono text-[8px] font-bold text-slate-300">THERMAL 80MM</span>
+                  </div>
+                  <span class="font-mono text-[7.5px] text-emerald-400 bg-emerald-950/90 px-1.5 py-0.5 rounded border border-emerald-500/30">ONLINE</span>
+                </div>
+
+                <!-- Live Printed Thermal Paper Slip -->
+                <div class="bg-amber-50/95 text-slate-900 font-mono text-[8px] sm:text-[8.5px] p-2 rounded-b-lg shadow-md border-x border-b border-amber-200/80 flex flex-col gap-0.5 leading-tight -mt-1 -mb-3 relative z-20">
+                  <div class="text-center border-b border-dashed border-slate-400 pb-1">
+                    <p class="font-bold text-[8.5px]">*** vexaPOS ***</p>
+                    <p class="text-[7px] text-slate-600">Canggu Outlet • Bali</p>
+                    <p class="text-[6.5px] text-slate-500">Order #1042 • Meja 08</p>
+                  </div>
+                  <div class="flex flex-col gap-0.5 py-0.5 border-b border-dashed border-slate-400 text-[7px]">
+                    <div class="flex justify-between"><span>2x Cold Brew</span><span>90.000</span></div>
+                    <div class="flex justify-between"><span>1x Açaí Bowl</span><span>65.000</span></div>
+                    <div class="flex justify-between"><span>1x Sambal Matah</span><span>45.000</span></div>
+                  </div>
+                  <div class="flex flex-col gap-0.5 pt-0.5 text-[7.5px] font-bold">
+                    <div class="flex justify-between text-emerald-800"><span>TOTAL</span><span>Rp242.000</span></div>
+                    <p class="text-[6px] text-slate-500 font-normal text-center">LUNAS • QRIS</p>
+                    <p class="text-[6px] text-emerald-700 text-center font-bold">✓ TERSINKRON KE CLOUD</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hidden sm:inline-flex items-center gap-1.5 absolute -bottom-3 -right-2 z-30 px-3.5 py-1.5 bg-emerald-600 text-white shadow-lg rounded-full font-mono text-[10px] font-bold uppercase backdrop-blur-md">
+          <svg class="w-3 h-3 text-emerald-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <span class="lang-id">Printer Thermal &amp; Sunmi Kompatibel</span><span class="lang-en">Compatible Thermal &amp; Sunmi</span>
+        </div>
       </div>
     </header>
 
     <main class="flex flex-col gap-6 sm:gap-8 lg:gap-10">
-      <section id="operasional" aria-labelledby="operasional-title" class="liquid-glass rounded-3xl p-6 sm:p-10 lg:p-12 flex flex-col gap-8 scroll-mt-24">
-        <div class="vexa-vertical-rule flex flex-col gap-2.5 max-w-[850px]"><span class="inline-flex self-start px-3.5 py-1 bg-amber-50 text-amber-800 border border-amber-200 rounded-full font-mono text-[11px] font-bold uppercase"><span class="lang-id">OPERASIONAL BALI</span><span class="lang-en">BALI OPERATIONS</span></span><h2 id="operasional-title" class="vexa-heading-safe font-extrabold text-[26px] sm:text-[34px] tracking-tight text-[#0F172A]"><span class="lang-id">Satu Mesin. Empat Tekanan Operasional Berbeda.</span><span class="lang-en">One Engine. Four Different Operating Pressures.</span></h2><p class="text-[15px] sm:text-[16px] text-slate-600 leading-relaxed"><span class="lang-id">Satu mesin kasir tidak boleh memaksa beach club, kedai kopi, grup restoran, dan resort bekerja dengan kompromi yang sama.</span><span class="lang-en">One POS engine should not force beach clubs, coffee shops, restaurant groups, and resorts into the same operational compromise.</span></p></div>
+      <section id="operasional" aria-labelledby="operasional-title"
+        class="liquid-glass rounded-3xl p-6 sm:p-10 lg:p-12 flex flex-col gap-8 scroll-mt-24">
+        <div class="vexa-vertical-rule flex flex-col gap-2.5 max-w-[850px]"><span
+            class="inline-flex self-start px-3.5 py-1 bg-amber-50 text-amber-800 border border-amber-200 rounded-full font-mono text-[11px] font-bold uppercase"><span
+              class="lang-id">OPERASIONAL BALI</span><span class="lang-en">BALI OPERATIONS</span></span>
+          <h2 id="operasional-title"
+            class="vexa-heading-safe font-extrabold text-[26px] sm:text-[34px] tracking-tight text-[#0F172A]"><span
+              class="lang-id">Satu Mesin. Empat Tekanan Operasional Berbeda.</span><span class="lang-en">One Engine.
+              Four Different Operating Pressures.</span></h2>
+          <p class="text-[15px] sm:text-[16px] text-slate-600 leading-relaxed"><span class="lang-id">Satu mesin kasir
+              tidak boleh memaksa beach club, kedai kopi, grup restoran, dan resort bekerja dengan kompromi yang
+              sama.</span><span class="lang-en">One POS engine should not force beach clubs, coffee shops, restaurant
+              groups, and resorts into the same operational compromise.</span></p>
+        </div>
         <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 list-none m-0 p-0">
-          <li class="liquid-glass-card-2026 rounded-3xl p-6 flex flex-col gap-3"><span class="font-mono text-[11px] font-bold text-amber-700">01 • CANGGU / SEMINYAK / ULUWATU</span><h3 class="vexa-heading-safe font-bold text-[17px] text-[#0F172A]"><span class="lang-id">Beach Club &amp; Bar Pesisir</span><span class="lang-en">Beach Clubs &amp; Coastal Bars</span></h3><p class="text-[13px] text-slate-600 leading-relaxed"><span class="lang-id">Kasir paralel, split bill meja rombongan, dan tiket bar yang tetap tercetak saat koneksi terputus.</span><span class="lang-en">Parallel checkout, group split bills, and bar tickets that keep printing when connectivity drops.</span></p></li>
-          <li class="liquid-glass-card-2026 rounded-3xl p-6 flex flex-col gap-3"><span class="font-mono text-[11px] font-bold text-emerald-700">02 • PERERENAN / UBUD / SANUR</span><h3 class="vexa-heading-safe font-bold text-[17px] text-[#0F172A]"><span class="lang-id">Roastery &amp; Kedai Kopi</span><span class="lang-en">Roasteries &amp; Coffee Shops</span></h3><p class="text-[13px] text-slate-600 leading-relaxed"><span class="lang-id">Pemindaian barcode retail, potong stok biji kopi per resep, dan QRIS dalam satu alur kasir.</span><span class="lang-en">Retail barcode scanning, per-recipe coffee-stock deduction, and QRIS in one cashier flow.</span></p></li>
-          <li class="liquid-glass-card-2026 rounded-3xl p-6 flex flex-col gap-3"><span class="font-mono text-[11px] font-bold text-slate-700">03 • DENPASAR / BADUNG / GIANYAR</span><h3 class="vexa-heading-safe font-bold text-[17px] text-[#0F172A]"><span class="lang-id">Grup Restoran Multi-Outlet</span><span class="lang-en">Multi-Outlet Restaurant Groups</span></h3><p class="text-[13px] text-slate-600 leading-relaxed"><span class="lang-id">Master menu terpusat, audit inventaris multi-gudang, dan proteksi void pesanan dengan PIN.</span><span class="lang-en">Centralized master menus, multi-warehouse inventory audits, and PIN-protected void controls.</span></p></li>
-          <li class="liquid-glass-card-2026 rounded-3xl p-6 flex flex-col gap-3"><span class="font-mono text-[11px] font-bold text-slate-700">04 • JIMBARAN / NUSA DUA / TABANAN</span><h3 class="vexa-heading-safe font-bold text-[17px] text-[#0F172A]"><span class="lang-id">Resort &amp; Poolside Lounge</span><span class="lang-en">Resorts &amp; Poolside Lounges</span></h3><p class="text-[13px] text-slate-600 leading-relaxed"><span class="lang-id">Order meja via Android EDC, split pembayaran room-charge dan kartu, serta kalkulasi PB1.</span><span class="lang-en">Tableside Android EDC orders, room-charge and card split payments, plus PB1 calculation.</span></p></li>
+          <li class="liquid-glass-card-2026 rounded-3xl p-6 flex flex-col gap-3"><span
+              class="font-mono text-[11px] font-bold text-amber-700">01 • CANGGU / SEMINYAK / ULUWATU</span>
+            <h3 class="vexa-heading-safe font-bold text-[17px] text-[#0F172A]"><span class="lang-id">Beach Club &amp;
+                Bar Pesisir</span><span class="lang-en">Beach Clubs &amp; Coastal Bars</span></h3>
+            <p class="text-[13px] text-slate-600 leading-relaxed"><span class="lang-id">Kasir paralel, split bill meja
+                rombongan, dan tiket bar yang tetap tercetak saat koneksi terputus.</span><span class="lang-en">Parallel
+                checkout, group split bills, and bar tickets that keep printing when connectivity drops.</span></p>
+          </li>
+          <li class="liquid-glass-card-2026 rounded-3xl p-6 flex flex-col gap-3"><span
+              class="font-mono text-[11px] font-bold text-emerald-700">02 • PERERENAN / UBUD / SANUR</span>
+            <h3 class="vexa-heading-safe font-bold text-[17px] text-[#0F172A]"><span class="lang-id">Roastery &amp;
+                Kedai Kopi</span><span class="lang-en">Roasteries &amp; Coffee Shops</span></h3>
+            <p class="text-[13px] text-slate-600 leading-relaxed"><span class="lang-id">Pemindaian barcode retail,
+                potong stok biji kopi per resep, dan QRIS dalam satu alur kasir.</span><span class="lang-en">Retail
+                barcode scanning, per-recipe coffee-stock deduction, and QRIS in one cashier flow.</span></p>
+          </li>
+          <li class="liquid-glass-card-2026 rounded-3xl p-6 flex flex-col gap-3"><span
+              class="font-mono text-[11px] font-bold text-slate-700">03 • DENPASAR / BADUNG / GIANYAR</span>
+            <h3 class="vexa-heading-safe font-bold text-[17px] text-[#0F172A]"><span class="lang-id">Grup Restoran
+                Multi-Outlet</span><span class="lang-en">Multi-Outlet Restaurant Groups</span></h3>
+            <p class="text-[13px] text-slate-600 leading-relaxed"><span class="lang-id">Master menu terpusat, audit
+                inventaris multi-gudang, dan proteksi void pesanan dengan PIN.</span><span class="lang-en">Centralized
+                master menus, multi-warehouse inventory audits, and PIN-protected void controls.</span></p>
+          </li>
+          <li class="liquid-glass-card-2026 rounded-3xl p-6 flex flex-col gap-3"><span
+              class="font-mono text-[11px] font-bold text-slate-700">04 • JIMBARAN / NUSA DUA / TABANAN</span>
+            <h3 class="vexa-heading-safe font-bold text-[17px] text-[#0F172A]"><span class="lang-id">Resort &amp;
+                Poolside Lounge</span><span class="lang-en">Resorts &amp; Poolside Lounges</span></h3>
+            <p class="text-[13px] text-slate-600 leading-relaxed"><span class="lang-id">Order meja via Android EDC,
+                split pembayaran room-charge dan kartu, serta kalkulasi PB1.</span><span class="lang-en">Tableside
+                Android EDC orders, room-charge and card split payments, plus PB1 calculation.</span></p>
+          </li>
         </ul>
       </section>
 
-      <section id="masalah" aria-labelledby="masalah-title" class="liquid-glass rounded-3xl p-6 sm:p-10 lg:p-12 flex flex-col gap-8 scroll-mt-24">
-        <div class="vexa-vertical-rule flex flex-col gap-2.5 max-w-[850px]"><span class="inline-flex self-start px-3.5 py-1 bg-rose-50 text-rose-700 border border-rose-200 rounded-full font-mono text-[11px] font-bold uppercase"><span class="lang-id">TIGA RISIKO YANG TIDAK BOLEH LOLOS</span><span class="lang-en">THREE RISKS YOU CANNOT IGNORE</span></span><h2 id="masalah-title" class="vexa-heading-safe font-extrabold text-[28px] sm:text-[36px] tracking-tight text-[#0F172A]"><span class="lang-id">Tutup Kebocoran Ini Sebelum Rush Hour Berikutnya.</span><span class="lang-en">Close These Gaps Before the Next Rush.</span></h2><p class="text-[15px] sm:text-[16px] text-slate-600"><span class="lang-id">Koneksi putus, perangkat terkunci vendor, dan stok lintas outlet yang tidak pernah cocok bukan gangguan kecil. Ketiganya langsung memukul transaksi, margin, dan kontrol pemilik.</span><span class="lang-en">A lost connection, vendor-locked devices, and inventory that never reconciles across outlets are not minor disruptions. Each one hits transactions, margin, and owner control.</span></p></div>
+      <section id="masalah" aria-labelledby="masalah-title"
+        class="bg-[#0A0E17] text-white border border-slate-800/80 rounded-3xl p-6 sm:p-10 lg:p-12 flex flex-col gap-8 scroll-mt-24 shadow-2xl relative overflow-hidden">
+        <div class="vexa-vertical-rule flex flex-col gap-2.5 max-w-[850px]"><span
+            class="inline-flex self-start px-3.5 py-1 bg-rose-950/60 text-rose-300 border border-rose-700/50 rounded-full font-mono text-[11px] font-bold uppercase"><span
+              class="lang-id">TIGA RISIKO YANG TIDAK BOLEH LOLOS</span><span class="lang-en">THREE RISKS YOU CANNOT
+              IGNORE</span></span>
+          <h2 id="masalah-title"
+            class="vexa-heading-safe font-extrabold text-[28px] sm:text-[36px] tracking-tight text-white"><span
+              class="lang-id">Tutup Kebocoran Ini Sebelum Rush Hour Berikutnya.</span><span class="lang-en">Close These
+              Gaps Before the Next Rush.</span></h2>
+          <p class="text-[15px] sm:text-[16px] text-slate-300"><span class="lang-id">Koneksi putus, perangkat terkunci
+              vendor, dan stok lintas outlet yang tidak pernah cocok bukan gangguan kecil. Ketiganya langsung memukul
+              transaksi, margin, dan kontrol pemilik.</span><span class="lang-en">A lost connection, vendor-locked
+              devices, and inventory that never reconciles across outlets are not minor disruptions. Each one hits
+              transactions, margin, and owner control.</span></p>
+        </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <article class="liquid-glass-card-2026 rounded-3xl p-6 sm:p-7 flex flex-col gap-4"><span class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center font-mono font-bold">01</span><h3 class="vexa-heading-safe font-bold text-[20px] text-[#0F172A]"><span class="lang-id">Fiber Putus. Antrean Tidak Peduli.</span><span class="lang-en">Fiber Fails. The Queue Does Not Care.</span></h3><p class="text-[14px] text-slate-600 leading-relaxed"><span class="lang-id">Saat koneksi ISP terputus di tengah jam sibuk, POS cloud-only berhenti menerima order dan staf dipaksa pindah ke proses manual.</span><span class="lang-en">When the ISP fails mid-rush, cloud-only POS stops taking orders and staff are forced into manual work.</span></p><p class="vexa-vertical-rule mt-auto pt-4 border-t border-slate-200/70 text-[13.5px] text-slate-800 leading-relaxed"><strong class="font-mono text-emerald-700"><span class="lang-id">KONTROL — </span><span class="lang-en">CONTROL — </span></strong><span class="lang-id">vexaPOS menyimpan transaksi di perangkat terlebih dahulu. Order, struk, dan tiket dapur tetap berjalan; data tersinkron saat koneksi kembali.</span><span class="lang-en">vexaPOS stores each transaction on the device first. Orders, receipts, and kitchen tickets keep moving; data syncs when connectivity returns.</span></p></article>
-          <article class="liquid-glass-card-2026 rounded-3xl p-6 sm:p-7 flex flex-col gap-4"><span class="w-12 h-12 rounded-2xl bg-slate-200 text-slate-700 flex items-center justify-center font-mono font-bold">02</span><h3 class="vexa-heading-safe font-bold text-[20px] text-[#0F172A]"><span class="lang-id">Hardware Terkunci. Margin Anda yang Membayar.</span><span class="lang-en">Locked Hardware. Your Margin Pays.</span></h3><p class="text-[14px] text-slate-600 leading-relaxed"><span class="lang-id">Perangkat proprietary memaksa setiap penggantian tablet, printer, atau terminal kembali ke vendor yang sama—dengan harga dan waktu tunggu yang tidak Anda kendalikan.</span><span class="lang-en">Proprietary devices force every tablet, printer, or terminal replacement back through the same vendor—at a price and lead time you do not control.</span></p><p class="vexa-vertical-rule mt-auto pt-4 border-t border-slate-200/70 text-[13.5px] text-slate-800 leading-relaxed"><strong class="font-mono text-emerald-700"><span class="lang-id">KONTROL — </span><span class="lang-en">CONTROL — </span></strong><span class="lang-id">Arsitektur BYOD memakai Android, iPad, ponsel, serta printer USB, Bluetooth, atau LAN yang lolos pemeriksaan kompatibilitas.</span><span class="lang-en">The BYOD architecture uses compatible Android devices, iPads, phones, and USB, Bluetooth, or LAN printers.</span></p></article>
-          <article class="liquid-glass-card-2026 rounded-3xl p-6 sm:p-7 flex flex-col gap-4"><span class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-mono font-bold">03</span><h3 class="vexa-heading-safe font-bold text-[20px] text-[#0F172A]"><span class="lang-id">Stok Bocor di Satu Outlet Menular ke Semua Cabang.</span><span class="lang-en">Leakage in One Outlet Spreads Across the Group.</span></h3><p class="text-[14px] text-slate-600 leading-relaxed"><span class="lang-id">Selisih bahan baku, void tanpa otorisasi, dan laci kas yang tidak cocok per shift membuat pemilik kehilangan jejak sebelum laporan pusat selesai.</span><span class="lang-en">Ingredient variance, unauthorized voids, and unreconciled shift drawers break the audit trail before central reporting is complete.</span></p><p class="vexa-vertical-rule mt-auto pt-4 border-t border-slate-200/70 text-[13.5px] text-slate-800 leading-relaxed"><strong class="font-mono text-emerald-700"><span class="lang-id">KONTROL — </span><span class="lang-en">CONTROL — </span></strong><span class="lang-id">Deduksi resep per gram atau mililiter, PIN supervisor untuk void, dan rekonsiliasi kas mengunci jejak audit di setiap outlet.</span><span class="lang-en">Per-recipe deduction, supervisor-PIN voids, and cash reconciliation preserve the audit trail at every outlet.</span></p></article>
+          <article class="bg-slate-900/90 border border-slate-800 rounded-3xl p-6 sm:p-7 flex flex-col gap-4 shadow-lg hover:border-slate-700 transition-colors"><span
+              class="w-12 h-12 rounded-2xl bg-amber-500/20 text-amber-400 border border-amber-500/30 flex items-center justify-center font-mono font-bold">01</span>
+            <h3 class="vexa-heading-safe font-bold text-[20px] text-white"><span class="lang-id">Fiber Putus.
+                Antrean Tidak Peduli.</span><span class="lang-en">Fiber Fails. The Queue Does Not Care.</span></h3>
+            <p class="text-[14px] text-slate-300 leading-relaxed"><span class="lang-id">Saat koneksi ISP terputus di
+                tengah jam sibuk, POS cloud-only berhenti menerima order dan staf dipaksa pindah ke proses
+                manual.</span><span class="lang-en">When the ISP fails mid-rush, cloud-only POS stops taking orders and
+                staff are forced into manual work.</span></p>
+            <p
+              class="vexa-vertical-rule mt-auto pt-4 border-t border-slate-800 text-[13.5px] text-slate-300 leading-relaxed">
+              <strong class="font-mono text-emerald-400"><span class="lang-id">KONTROL — </span><span
+                  class="lang-en">CONTROL — </span></strong><span class="lang-id">vexaPOS menyimpan transaksi di
+                perangkat terlebih dahulu. Order, struk, dan tiket dapur tetap berjalan; data tersinkron saat koneksi
+                kembali.</span><span class="lang-en">vexaPOS stores each transaction on the device first. Orders,
+                receipts, and kitchen tickets keep moving; data syncs when connectivity returns.</span></p>
+          </article>
+          <article class="bg-slate-900/90 border border-slate-800 rounded-3xl p-6 sm:p-7 flex flex-col gap-4 shadow-lg hover:border-slate-700 transition-colors"><span
+              class="w-12 h-12 rounded-2xl bg-slate-800 text-slate-300 border border-slate-700 flex items-center justify-center font-mono font-bold">02</span>
+            <h3 class="vexa-heading-safe font-bold text-[20px] text-white"><span class="lang-id">Hardware Terkunci.
+                Margin Anda yang Membayar.</span><span class="lang-en">Locked Hardware. Your Margin Pays.</span></h3>
+            <p class="text-[14px] text-slate-300 leading-relaxed"><span class="lang-id">Perangkat proprietary memaksa
+                setiap penggantian tablet, printer, atau terminal kembali ke vendor yang sama—dengan harga dan waktu
+                tunggu yang tidak Anda kendalikan.</span><span class="lang-en">Proprietary devices force every tablet,
+                printer, or terminal replacement back through the same vendor—at a price and lead time you do not
+                control.</span></p>
+            <p
+              class="vexa-vertical-rule mt-auto pt-4 border-t border-slate-800 text-[13.5px] text-slate-300 leading-relaxed">
+              <strong class="font-mono text-emerald-400"><span class="lang-id">KONTROL — </span><span
+                  class="lang-en">CONTROL — </span></strong><span class="lang-id">Arsitektur BYOD memakai Android, iPad,
+                ponsel, serta printer USB, Bluetooth, atau LAN yang lolos pemeriksaan kompatibilitas.</span><span
+                class="lang-en">The BYOD architecture uses compatible Android devices, iPads, phones, and USB,
+                Bluetooth, or LAN printers.</span></p>
+          </article>
+          <article class="bg-slate-900/90 border border-slate-800 rounded-3xl p-6 sm:p-7 flex flex-col gap-4 shadow-lg hover:border-slate-700 transition-colors"><span
+              class="w-12 h-12 rounded-2xl bg-emerald-950/60 text-emerald-400 border border-emerald-500/30 flex items-center justify-center font-mono font-bold">03</span>
+            <h3 class="vexa-heading-safe font-bold text-[20px] text-white"><span class="lang-id">Stok Bocor di Satu
+                Outlet Menular ke Semua Cabang.</span><span class="lang-en">Leakage in One Outlet Spreads Across the
+                Group.</span></h3>
+            <p class="text-[14px] text-slate-300 leading-relaxed"><span class="lang-id">Selisih bahan baku, void tanpa
+                otorisasi, dan laci kas yang tidak cocok per shift membuat pemilik kehilangan jejak sebelum laporan
+                pusat selesai.</span><span class="lang-en">Ingredient variance, unauthorized voids, and unreconciled
+                shift drawers break the audit trail before central reporting is complete.</span></p>
+            <p
+              class="vexa-vertical-rule mt-auto pt-4 border-t border-slate-800 text-[13.5px] text-slate-300 leading-relaxed">
+              <strong class="font-mono text-emerald-400"><span class="lang-id">KONTROL — </span><span
+                  class="lang-en">CONTROL — </span></strong><span class="lang-id">Deduksi resep per gram atau mililiter,
+                PIN supervisor untuk void, dan rekonsiliasi kas mengunci jejak audit di setiap outlet.</span><span
+                class="lang-en">Per-recipe deduction, supervisor-PIN voids, and cash reconciliation preserve the audit
+                trail at every outlet.</span></p>
+          </article>
         </div>
       </section>
 
-      <section id="fitur" aria-labelledby="fitur-title" class="liquid-glass rounded-2xl sm:rounded-3xl p-5 sm:p-10 lg:p-12 flex flex-col gap-6 sm:gap-8 scroll-mt-24">
-        <div class="vexa-vertical-rule flex flex-col gap-2.5 max-w-[800px]"><span class="inline-flex self-start px-3.5 py-1 bg-emerald-50 text-emerald-700 border border-emerald-200 rounded-full font-mono text-[11px] font-bold uppercase">CORE ENGINE</span><h2 id="fitur-title" class="vexa-heading-safe font-extrabold text-[24px] sm:text-[36px] tracking-tight text-[#0F172A]"><span class="lang-id">Satu Rantai Operasional. Bukan Lima Modul Terpisah.</span><span class="lang-en">One Operating Chain. Not Five Separate Modules.</span></h2></div>
+      <section id="fitur" aria-labelledby="fitur-title"
+        class="liquid-glass rounded-2xl sm:rounded-3xl p-5 sm:p-10 lg:p-12 flex flex-col gap-6 sm:gap-8 scroll-mt-24">
+        <div class="vexa-vertical-rule flex flex-col gap-2.5 max-w-[800px]"><span
+            class="inline-flex self-start px-3.5 py-1 bg-emerald-50 text-emerald-700 border border-emerald-200 rounded-full font-mono text-[11px] font-bold uppercase">CORE
+            ENGINE</span>
+          <h2 id="fitur-title"
+            class="vexa-heading-safe font-extrabold text-[24px] sm:text-[36px] tracking-tight text-[#0F172A]"><span
+              class="lang-id">Satu Rantai Operasional. Bukan Lima Modul Terpisah.</span><span class="lang-en">One
+              Operating Chain. Not Five Separate Modules.</span></h2>
+        </div>
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6">
-          <article class="lg:col-span-8 liquid-glass-card rounded-2xl sm:rounded-3xl p-5 sm:p-8 flex flex-col gap-5"><h3 class="vexa-heading-safe font-bold text-[20px] sm:text-[22px] text-[#0F172A]"><span class="lang-id">Arsitektur Offline-First</span><span class="lang-en">Offline-First Architecture</span></h3><p class="text-[14px] sm:text-[14.5px] text-slate-600 leading-relaxed"><span class="lang-id">Transaksi lokal, tiket dapur, inventaris resep, audit staf, dan laporan pusat bekerja sebagai satu rantai operasional—bukan lima modul yang harus dikejar manual.</span><span class="lang-en">Local transactions, kitchen tickets, recipe inventory, staff audits, and central reports operate as one chain—not five modules your team must chase manually.</span></p><div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 font-mono text-[11px] font-bold" aria-label="Diagram alir data offline"><span class="flex-1 text-center px-4 py-3.5 bg-white/90 border border-slate-200 rounded-2xl">TABLET KASIR<br><small class="font-normal text-slate-500">IndexedDB Client</small></span><span class="text-center text-emerald-600 font-bold" aria-hidden="true"><span class="sm:hidden">↓</span><span class="hidden sm:inline">→</span></span><span class="flex-1 text-center px-4 py-3.5 bg-emerald-50 border border-emerald-200 rounded-2xl">LOCAL CACHE<br><small class="font-normal text-emerald-700">Background Worker</small></span><span class="text-center text-amber-600 font-bold" aria-hidden="true"><span class="sm:hidden">↓</span><span class="hidden sm:inline">→</span></span><span class="flex-1 text-center px-4 py-3.5 bg-amber-50 border border-amber-200 rounded-2xl">CLOUD MIRROR<br><small class="font-normal text-amber-700">Central Reports</small></span></div></article>
-          <article class="lg:col-span-4 liquid-glass-card rounded-2xl sm:rounded-3xl p-5 sm:p-6 flex flex-col gap-3.5"><h3 class="vexa-heading-safe font-bold text-[18px] sm:text-[19px] text-[#0F172A]">Kitchen Display System</h3><p class="text-[13.5px] text-slate-600"><span class="lang-id">Tiket dapur terarah untuk barista dan chef, termasuk saat koneksi keluar terputus.</span><span class="lang-en">Routed kitchen tickets for baristas and chefs, including during an external connection loss.</span></p></article>
-          <article class="lg:col-span-4 liquid-glass-card rounded-2xl sm:rounded-3xl p-5 sm:p-6 flex flex-col gap-3.5"><h3 class="vexa-heading-safe font-bold text-[18px] sm:text-[19px] text-[#0F172A]"><span class="lang-id">Kontrol Multi-Outlet</span><span class="lang-en">Multi-Outlet Control</span></h3><p class="text-[13.5px] text-slate-600"><span class="lang-id">Master menu, laporan pusat, dan kontrol outlet dari satu dashboard pemilik.</span><span class="lang-en">Master menus, central reports, and venue controls from one owner dashboard.</span></p></article>
-          <article class="lg:col-span-4 liquid-glass-card rounded-2xl sm:rounded-3xl p-5 sm:p-6 flex flex-col gap-3.5"><h3 class="vexa-heading-safe font-bold text-[18px] sm:text-[19px] text-[#0F172A]"><span class="lang-id">Inventaris per Resep</span><span class="lang-en">Per-Recipe Inventory</span></h3><p class="text-[13.5px] text-slate-600"><span class="lang-id">Bahan baku terpotong per gram atau mililiter setiap porsi terjual.</span><span class="lang-en">Ingredients deduct by gram or milliliter as each portion sells.</span></p></article>
-          <article class="lg:col-span-4 liquid-glass-card rounded-2xl sm:rounded-3xl p-5 sm:p-6 flex flex-col gap-3.5"><h3 class="vexa-heading-safe font-bold text-[18px] sm:text-[19px] text-[#0F172A]"><span class="lang-id">Audit Staf</span><span class="lang-en">Staff Audit</span></h3><p class="text-[13.5px] text-slate-600"><span class="lang-id">PIN kasir, persetujuan void, dan rekonsiliasi laci per shift.</span><span class="lang-en">Cashier PINs, void approvals, and drawer reconciliation per shift.</span></p></article>
+          <article class="lg:col-span-8 liquid-glass-card rounded-2xl sm:rounded-3xl p-5 sm:p-8 flex flex-col gap-5">
+            <h3 class="vexa-heading-safe font-bold text-[20px] sm:text-[22px] text-[#0F172A]"><span
+                class="lang-id">Arsitektur Offline-First</span><span class="lang-en">Offline-First Architecture</span>
+            </h3>
+            <p class="text-[14px] sm:text-[14.5px] text-slate-600 leading-relaxed"><span class="lang-id">Transaksi
+                lokal, tiket dapur, inventaris resep, audit staf, dan laporan pusat bekerja sebagai satu rantai
+                operasional—bukan lima modul yang harus dikejar manual.</span><span class="lang-en">Local transactions,
+                kitchen tickets, recipe inventory, staff audits, and central reports operate as one chain—not five
+                modules your team must chase manually.</span></p>
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 font-mono text-[11px] font-bold"
+              aria-label="Diagram alir data offline"><span
+                class="flex-1 text-center px-4 py-3.5 bg-white/90 border border-slate-200 rounded-2xl">TABLET
+                KASIR<br><small class="font-normal text-slate-500">IndexedDB Client</small></span><span
+                class="text-center text-emerald-600 font-bold" aria-hidden="true"><span class="sm:hidden">↓</span><span
+                  class="hidden sm:inline">→</span></span><span
+                class="flex-1 text-center px-4 py-3.5 bg-emerald-50 border border-emerald-200 rounded-2xl">LOCAL
+                CACHE<br><small class="font-normal text-emerald-700">Background Worker</small></span><span
+                class="text-center text-amber-600 font-bold" aria-hidden="true"><span class="sm:hidden">↓</span><span
+                  class="hidden sm:inline">→</span></span><span
+                class="flex-1 text-center px-4 py-3.5 bg-amber-50 border border-amber-200 rounded-2xl">CLOUD
+                MIRROR<br><small class="font-normal text-amber-700">Central Reports</small></span></div>
+          </article>
+          <article class="lg:col-span-4 liquid-glass-card rounded-2xl sm:rounded-3xl p-5 sm:p-6 flex flex-col gap-3.5">
+            <h3 class="vexa-heading-safe font-bold text-[18px] sm:text-[19px] text-[#0F172A]">Kitchen Display System
+            </h3>
+            <p class="text-[13.5px] text-slate-600"><span class="lang-id">Tiket dapur terarah untuk barista dan chef,
+                termasuk saat koneksi keluar terputus.</span><span class="lang-en">Routed kitchen tickets for baristas
+                and chefs, including during an external connection loss.</span></p>
+          </article>
+          <article class="lg:col-span-4 liquid-glass-card rounded-2xl sm:rounded-3xl p-5 sm:p-6 flex flex-col gap-3.5">
+            <h3 class="vexa-heading-safe font-bold text-[18px] sm:text-[19px] text-[#0F172A]"><span
+                class="lang-id">Kontrol Multi-Outlet</span><span class="lang-en">Multi-Outlet Control</span></h3>
+            <p class="text-[13.5px] text-slate-600"><span class="lang-id">Master menu, laporan pusat, dan kontrol outlet
+                dari satu dashboard pemilik.</span><span class="lang-en">Master menus, central reports, and venue
+                controls from one owner dashboard.</span></p>
+          </article>
+          <article class="lg:col-span-4 liquid-glass-card rounded-2xl sm:rounded-3xl p-5 sm:p-6 flex flex-col gap-3.5">
+            <h3 class="vexa-heading-safe font-bold text-[18px] sm:text-[19px] text-[#0F172A]"><span
+                class="lang-id">Inventaris per Resep</span><span class="lang-en">Per-Recipe Inventory</span></h3>
+            <p class="text-[13.5px] text-slate-600"><span class="lang-id">Bahan baku terpotong per gram atau mililiter
+                setiap porsi terjual.</span><span class="lang-en">Ingredients deduct by gram or milliliter as each
+                portion sells.</span></p>
+          </article>
+          <article class="lg:col-span-4 liquid-glass-card rounded-2xl sm:rounded-3xl p-5 sm:p-6 flex flex-col gap-3.5">
+            <h3 class="vexa-heading-safe font-bold text-[18px] sm:text-[19px] text-[#0F172A]"><span
+                class="lang-id">Audit Staf</span><span class="lang-en">Staff Audit</span></h3>
+            <p class="text-[13.5px] text-slate-600"><span class="lang-id">PIN kasir, persetujuan void, dan rekonsiliasi
+                laci per shift.</span><span class="lang-en">Cashier PINs, void approvals, and drawer reconciliation per
+                shift.</span></p>
+          </article>
         </div>
       </section>
 
-      <section id="hardware" aria-labelledby="hardware-title" class="liquid-glass rounded-2xl sm:rounded-3xl p-5 sm:p-10 lg:p-12 flex flex-col gap-6 sm:gap-8 scroll-mt-24">
-        <div class="vexa-vertical-rule flex flex-col gap-2.5 max-w-[850px]"><span class="inline-flex self-start px-3.5 py-1 bg-amber-50 text-amber-800 border border-amber-200 rounded-full font-mono text-[11px] font-bold uppercase"><span class="lang-id">PERANGKAT BEBAS VENDOR</span><span class="lang-en">VENDOR-INDEPENDENT HARDWARE</span></span><h2 id="hardware-title" class="vexa-heading-safe font-extrabold text-[24px] sm:text-[36px] tracking-tight text-[#0F172A]"><span class="lang-id">Gunakan Hardware yang Masuk Akal. Bukan yang Dipaksakan Vendor.</span><span class="lang-en">Use Hardware That Makes Sense. Not Hardware a Vendor Forces on You.</span></h2><p class="text-[14px] sm:text-[16px] text-slate-600"><span class="lang-id">Tim kami memeriksa kompatibilitas perangkat yang sudah Anda miliki sebelum merekomendasikan pembelian baru. Tidak ada lisensi alat, tidak ada paket mubazir.</span><span class="lang-en">We check the devices you already own before recommending anything new. No device license and no wasteful bundle.</span></p></div>
+      <section id="hardware" aria-labelledby="hardware-title"
+        class="bg-slate-100/90 border border-slate-200/90 rounded-2xl sm:rounded-3xl p-5 sm:p-10 lg:p-12 flex flex-col gap-6 sm:gap-8 scroll-mt-24 shadow-sm">
+        <div class="vexa-vertical-rule flex flex-col gap-2.5 max-w-[850px]"><span
+            class="inline-flex self-start px-3.5 py-1 bg-amber-50 text-amber-800 border border-amber-200 rounded-full font-mono text-[11px] font-bold uppercase"><span
+              class="lang-id">PERANGKAT BEBAS VENDOR</span><span class="lang-en">VENDOR-INDEPENDENT
+              HARDWARE</span></span>
+          <h2 id="hardware-title"
+            class="vexa-heading-safe font-extrabold text-[24px] sm:text-[36px] tracking-tight text-[#0F172A]"><span
+              class="lang-id">Gunakan Hardware yang Masuk Akal. Bukan yang Dipaksakan Vendor.</span><span
+              class="lang-en">Use Hardware That Makes Sense. Not Hardware a Vendor Forces on You.</span></h2>
+          <p class="text-[14px] sm:text-[16px] text-slate-600"><span class="lang-id">Tim kami memeriksa kompatibilitas
+              perangkat yang sudah Anda miliki sebelum merekomendasikan pembelian baru. Tidak ada lisensi alat, tidak
+              ada paket mubazir.</span><span class="lang-en">We check the devices you already own before recommending
+              anything new. No device license and no wasteful bundle.</span></p>
+        </div>
         <ul class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 list-none m-0 p-0">
-          <li class="liquid-glass-card-2026 rounded-2xl sm:rounded-3xl p-5 sm:p-6 flex items-start gap-4"><svg class="w-6 h-6 shrink-0 text-emerald-600" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg><div><h3 class="vexa-heading-safe font-bold text-[16px] text-[#0F172A]">Thermal Printer 58/80mm</h3><p class="font-mono text-[11px] text-slate-500 mt-2">Bluetooth / LAN / USB</p></div></li>
-          <li class="liquid-glass-card-2026 rounded-2xl sm:rounded-3xl p-5 sm:p-6 flex items-start gap-4"><svg class="w-6 h-6 shrink-0 text-emerald-600" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5v4M3 15v4M21 5v4M21 15v4M7 8v8M11 8v8M15 8v8M19 8v8"></path></svg><div><h3 class="vexa-heading-safe font-bold text-[16px] text-[#0F172A]">Barcode Scanner</h3><p class="font-mono text-[11px] text-slate-500 mt-2"><span class="lang-id">USB / pemindai 2D</span><span class="lang-en">USB / 2D scanning</span></p></div></li>
-          <li class="liquid-glass-card-2026 rounded-2xl sm:rounded-3xl p-5 sm:p-6 flex items-start gap-4"><svg class="w-6 h-6 shrink-0 text-emerald-600" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8v13H3V8"></path><path d="M1 3h22v5H1z"></path><path d="M10 12h4"></path></svg><div><h3 class="vexa-heading-safe font-bold text-[16px] text-[#0F172A]">Cash Drawer RJ11</h3><p class="font-mono text-[11px] text-slate-500 mt-2"><span class="lang-id">RJ11 / buka otomatis</span><span class="lang-en">RJ11 / automatic opening</span></p></div></li>
-          <li class="liquid-glass-card-2026 rounded-2xl sm:rounded-3xl p-5 sm:p-6 flex items-start gap-4"><svg class="w-6 h-6 shrink-0 text-emerald-600" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect><path d="M12 18h.01"></path></svg><div><h3 class="vexa-heading-safe font-bold text-[16px] text-[#0F172A]">Android EDC/Sunmi</h3><p class="font-mono text-[11px] text-slate-500 mt-2"><span class="lang-id">Android / layanan meja</span><span class="lang-en">Android / tableside service</span></p></div></li>
+          <li class="bg-white/95 border border-slate-200 shadow-sm hover:shadow-md hover:border-slate-300 rounded-2xl sm:rounded-3xl p-5 sm:p-6 flex items-start gap-4 transition-all"><svg
+              class="w-6 h-6 shrink-0 text-emerald-600" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 6 2 18 2 18 9"></polyline>
+              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+              <rect x="6" y="14" width="12" height="8"></rect>
+            </svg>
+            <div>
+              <h3 class="vexa-heading-safe font-bold text-[16px] text-[#0F172A]">Thermal Printer 58/80mm</h3>
+              <p class="font-mono text-[11px] text-slate-500 mt-2">Bluetooth / LAN / USB</p>
+            </div>
+          </li>
+          <li class="bg-white/95 border border-slate-200 shadow-sm hover:shadow-md hover:border-slate-300 rounded-2xl sm:rounded-3xl p-5 sm:p-6 flex items-start gap-4 transition-all"><svg
+              class="w-6 h-6 shrink-0 text-emerald-600" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 5v4M3 15v4M21 5v4M21 15v4M7 8v8M11 8v8M15 8v8M19 8v8"></path>
+            </svg>
+            <div>
+              <h3 class="vexa-heading-safe font-bold text-[16px] text-[#0F172A]">Barcode Scanner</h3>
+              <p class="font-mono text-[11px] text-slate-500 mt-2"><span class="lang-id">USB / pemindai 2D</span><span
+                  class="lang-en">USB / 2D scanning</span></p>
+            </div>
+          </li>
+          <li class="bg-white/95 border border-slate-200 shadow-sm hover:shadow-md hover:border-slate-300 rounded-2xl sm:rounded-3xl p-5 sm:p-6 flex items-start gap-4 transition-all"><svg
+              class="w-6 h-6 shrink-0 text-emerald-600" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 8v13H3V8"></path>
+              <path d="M1 3h22v5H1z"></path>
+              <path d="M10 12h4"></path>
+            </svg>
+            <div>
+              <h3 class="vexa-heading-safe font-bold text-[16px] text-[#0F172A]">Cash Drawer RJ11</h3>
+              <p class="font-mono text-[11px] text-slate-500 mt-2"><span class="lang-id">RJ11 / buka
+                  otomatis</span><span class="lang-en">RJ11 / automatic opening</span></p>
+            </div>
+          </li>
+          <li class="bg-white/95 border border-slate-200 shadow-sm hover:shadow-md hover:border-slate-300 rounded-2xl sm:rounded-3xl p-5 sm:p-6 flex items-start gap-4 transition-all"><svg
+              class="w-6 h-6 shrink-0 text-emerald-600" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect>
+              <path d="M12 18h.01"></path>
+            </svg>
+            <div>
+              <h3 class="vexa-heading-safe font-bold text-[16px] text-[#0F172A]">Android EDC/Sunmi</h3>
+              <p class="font-mono text-[11px] text-slate-500 mt-2"><span class="lang-id">Android / layanan
+                  meja</span><span class="lang-en">Android / tableside service</span></p>
+            </div>
+          </li>
         </ul>
-        <a href="https://wa.me/6285338000872?text=Halo%20tim%20vexaPOS.%20Saya%20ingin%20memeriksa%20kompatibilitas%20tablet%2C%20printer%2C%20scanner%2C%20dan%20laci%20kas%20yang%20sudah%20ada%20sebelum%20membeli%20perangkat%20baru." target="_blank" rel="noopener" class="w-full sm:w-auto min-h-[48px] inline-flex items-center justify-center self-stretch sm:self-start font-bold text-[14px] px-6 py-3 bg-[#0F141C] text-white rounded-2xl hover:-translate-y-0.5 transition-all text-center"><span class="lang-id">Audit Kompatibilitas Perangkat Saya</span><span class="lang-en">Audit My Device Compatibility</span></a>
+        <a href="https://wa.me/6285338000872?text=Halo%20tim%20vexaPOS.%20Saya%20ingin%20memeriksa%20kompatibilitas%20tablet%2C%20printer%2C%20scanner%2C%20dan%20laci%20kas%20yang%20sudah%20ada%20sebelum%20membeli%20perangkat%20baru."
+          target="_blank" rel="noopener"
+          class="w-full sm:w-auto min-h-[48px] inline-flex items-center justify-center self-stretch sm:self-start font-bold text-[14px] px-6 py-3.5 bg-slate-900 hover:bg-slate-800 text-white rounded-2xl shadow-sm hover:-translate-y-0.5 transition-all text-center"><span
+            class="lang-id">Audit Kompatibilitas Perangkat Saya</span><span class="lang-en">Audit My Device
+            Compatibility</span></a>
       </section>
 
-      <section id="pricing" aria-labelledby="pricing-title" class="liquid-glass rounded-2xl sm:rounded-3xl p-5 sm:p-10 lg:p-12 flex flex-col gap-6 sm:gap-8 scroll-mt-24">
-        <div class="flex flex-col gap-2.5 text-center max-w-[850px] mx-auto"><span class="inline-flex self-center px-3.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded-full font-mono text-[11px] font-bold uppercase"><span class="lang-id">HARGA TERBUKA • TANPA KOMISI TRANSAKSI</span><span class="lang-en">OPEN PRICING • NO TRANSACTION COMMISSION</span></span><h2 id="pricing-title" class="vexa-heading-safe font-extrabold text-[24px] sm:text-[36px] tracking-tight text-[#0F172A]"><span class="lang-id">Pilih Biaya yang Bisa Diprediksi. Hentikan Biaya yang Tidak Bisa Diaudit.</span><span class="lang-en">Choose Predictable Cost. Eliminate Untraceable Fees.</span></h2></div>
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-[1240px] mx-auto w-full items-stretch">
-          <article class="liquid-glass-card-2026 rounded-2xl sm:rounded-3xl p-5 sm:p-8 min-w-0 h-full flex flex-col justify-between gap-6"><div class="flex flex-col gap-4 min-w-0"><span class="inline-flex self-start px-3 py-1 bg-emerald-100 text-emerald-800 border border-emerald-300 rounded-full font-mono text-[10px] font-bold uppercase"><span class="lang-id">TRIAL 14 HARI</span><span class="lang-en">14-DAY TRIAL</span></span><h3 class="vexa-heading-safe font-bold text-[22px] text-[#0F172A]">Single Outlet Starter</h3><p class="text-[13.5px] text-slate-600"><span class="lang-id">Kasir online untuk satu outlet dengan satu perangkat aktif dan rekap harian.</span><span class="lang-en">Online checkout for one outlet with one active device and daily summaries.</span></p><div class="flex flex-wrap items-center gap-2"><span class="inline-flex whitespace-nowrap font-mono text-[14px] text-slate-400 line-through">Rp 249.000 /bulan</span><span class="inline-flex font-mono text-[10px] font-bold px-2 py-0.5 bg-amber-50 text-amber-700 border border-amber-200 rounded-full"><span class="lang-id">HARGA PELUNCURAN</span><span class="lang-en">LAUNCH PRICE</span></span></div><span class="inline-flex whitespace-nowrap self-start font-mono font-extrabold text-[18px] min-[360px]:text-[22px] sm:text-[30px] text-slate-900">Rp 149.000 /bulan</span><p class="font-mono text-[11px] text-slate-500"><span class="lang-id">Ditagih triwulanan (Rp447.000)</span><span class="lang-en">Billed quarterly (Rp447,000)</span></p><ul class="flex flex-col gap-2.5 text-[13px] text-slate-700 border-t border-slate-200 pt-4"><li>✓ <span class="lang-id">Kasir online + cetak struk</span><span class="lang-en">Online checkout + receipt printing</span></li><li>✓ <span class="lang-id">Akun admin &amp; staf kasir</span><span class="lang-en">Admin &amp; cashier accounts</span></li><li class="text-slate-400">× <span class="lang-id">Mode offline</span><span class="lang-en">Offline mode</span> <span class="inline-flex font-mono text-[10px] text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded"><span class="lang-id">Di Pro</span><span class="lang-en">Pro only</span></span></li><li class="text-slate-400">× <span class="lang-id">Inventaris resep</span><span class="lang-en">Recipe inventory</span> <span class="inline-flex font-mono text-[10px] text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded"><span class="lang-id">Di Pro</span><span class="lang-en">Pro only</span></span></li></ul></div><div class="flex flex-col gap-2.5"><a href="https://wa.me/6285338000872?text=Halo%20tim%20vexaPOS.%20Saya%20ingin%20mengaktifkan%20trial%2014%20hari%20Starter%20untuk%20outlet%20saya.%20Mohon%20kirim%20langkah%20onboarding%20dan%20pemeriksaan%20perangkat." target="_blank" rel="noopener" class="w-full min-h-[44px] inline-flex items-center justify-center text-center font-bold text-[13px] px-5 py-3 bg-emerald-600 text-white rounded-xl"><span class="lang-id">Aktifkan Trial Starter</span><span class="lang-en">Activate Starter Trial</span></a><a href="https://wa.me/6285338000872?text=Halo%20tim%20vexaPOS.%20Saya%20ingin%20demo%20paket%20Starter%20Rp149.000%20per%20bulan%2C%20ditagih%20triwulanan.%20Mohon%20jadwalkan%20konsultasi." target="_blank" rel="noopener" class="w-full min-h-[44px] inline-flex items-center justify-center text-center font-semibold text-[13px] px-5 py-3 bg-white/80 text-slate-800 border border-slate-200 rounded-xl"><span class="lang-id">Demo Paket Starter</span><span class="lang-en">Demo Starter Plan</span></a></div></article>
-          <article class="liquid-glass-card-2026 liquid-glass-glow rounded-2xl sm:rounded-3xl p-5 sm:p-8 min-w-0 h-full flex flex-col justify-between gap-6 border-2 border-emerald-500/60"><div class="flex flex-col gap-4 min-w-0"><span class="inline-flex self-start px-3 py-1 bg-emerald-600 text-white rounded-full font-mono text-[10px] font-bold uppercase"><span class="lang-id">OFFLINE-FIRST</span><span class="lang-en">OFFLINE-FIRST</span></span><h3 class="vexa-heading-safe font-bold text-[22px] text-[#0F172A]">Multi-Outlet Pro</h3><p class="text-[13.5px] text-slate-600"><span class="lang-id">Untuk restoran, bar, beach club, dan operasional multi-outlet.</span><span class="lang-en">For restaurants, bars, beach clubs, and multi-outlet operations.</span></p><div class="flex flex-wrap items-center gap-2"><span class="inline-flex whitespace-nowrap font-mono text-[14px] text-slate-400 line-through">Rp 449.000 /bulan</span><span class="inline-flex font-mono text-[10px] font-bold px-2 py-0.5 bg-amber-50 text-amber-700 border border-amber-200 rounded-full"><span class="lang-id">HARGA PELUNCURAN</span><span class="lang-en">LAUNCH PRICE</span></span></div><span class="inline-flex whitespace-nowrap self-start font-mono font-extrabold text-[18px] min-[360px]:text-[22px] sm:text-[30px] text-slate-900">Rp 349.000 /bulan</span><p class="font-mono text-[11px] text-slate-500"><span class="lang-id">Ditagih setiap 6 bulan (Rp2.094.000)</span><span class="lang-en">Billed every 6 months (Rp2,094,000)</span></p><ul class="flex flex-col gap-2.5 text-[13px] text-slate-700 border-t border-slate-200 pt-4"><li>✓ <span class="lang-id">Semua fitur Starter</span><span class="lang-en">Everything in Starter</span></li><li class="font-semibold">✓ <span class="lang-id">Mode offline + sinkronisasi otomatis saat koneksi pulih</span><span class="lang-en">Offline mode + automatic sync when connectivity returns</span></li><li>✓ <span class="lang-id">Inventaris resep &amp; audit staf</span><span class="lang-en">Recipe inventory &amp; staff audits</span></li><li>✓ <span class="lang-id">KDS &amp; dashboard multi-outlet</span><span class="lang-en">KDS &amp; multi-outlet dashboard</span></li></ul></div><a href="https://wa.me/6285338000872?text=Halo%20tim%20vexaPOS.%20Saya%20ingin%20demo%20paket%20Pro%20Rp349.000%20per%20bulan%2C%20ditagih%20setiap%206%20bulan.%20Mohon%20jadwalkan%20konsultasi%20multi-outlet." target="_blank" rel="noopener" class="w-full min-h-[48px] inline-flex items-center justify-center text-center font-bold text-[14px] px-5 py-3.5 bg-emerald-600 text-white rounded-xl"><span class="lang-id">Demo Paket Pro</span><span class="lang-en">Demo Pro Plan</span></a></article>
-          <article class="liquid-glass-card-2026 rounded-2xl sm:rounded-3xl p-5 sm:p-8 min-w-0 h-full flex flex-col justify-between gap-6"><div class="flex flex-col gap-4 min-w-0"><span class="inline-flex self-start px-3 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded-full font-mono text-[10px] font-bold uppercase">ENTERPRISE</span><h3 class="vexa-heading-safe font-bold text-[22px] text-[#0F172A]"><span class="lang-id">Implementasi Enterprise</span><span class="lang-en">Enterprise Deployment</span></h3><p class="text-[13.5px] text-slate-600"><span class="lang-id">Audit kebutuhan, rollout multi-outlet, dan SLA disusun sebelum kontrak.</span><span class="lang-en">Requirements audit, multi-outlet rollout, and SLA are defined before contract.</span></p><span class="inline-flex whitespace-nowrap self-start font-mono font-extrabold text-[18px] min-[360px]:text-[22px] sm:text-[30px] text-slate-900"><span class="lang-id">Harga Kustom</span><span class="lang-en">Custom Price</span></span><ul class="flex flex-col gap-2.5 text-[13px] text-slate-700 border-t border-slate-200 pt-4"><li>✓ <span class="lang-id">Semua fitur Pro</span><span class="lang-en">Everything in Pro</span></li><li>✓ <span class="lang-id">Audit kebutuhan &amp; rollout</span><span class="lang-en">Requirements audit &amp; rollout</span></li><li>✓ <span class="lang-id">SLA sesuai skala grup</span><span class="lang-en">Group-scale SLA</span></li></ul></div><a href="https://wa.me/6285338000872?text=Halo%20tim%20vexaPOS.%20Saya%20ingin%20audit%20kebutuhan%20untuk%20implementasi%20Enterprise%20multi-outlet.%20Mohon%20jadwalkan%20konsultasi." target="_blank" rel="noopener" class="w-full min-h-[48px] inline-flex items-center justify-center text-center font-semibold text-[13px] px-5 py-3.5 bg-[#0F141C] text-white rounded-xl"><span class="lang-id">Jadwalkan Audit Kebutuhan</span><span class="lang-en">Schedule a Requirements Audit</span></a></article>
+      <!-- Uji Lapangan with Interactive POS Simulator -->
+      <section id="uji-lapangan" aria-labelledby="uji-lapangan-title"
+        class="bg-[#0B1120] text-white border border-slate-800/90 rounded-2xl sm:rounded-3xl p-5 sm:p-10 lg:p-12 flex flex-col gap-6 sm:gap-8 scroll-mt-24 shadow-2xl relative overflow-hidden">
+        <div class="vexa-vertical-rule flex flex-col gap-2.5 max-w-[850px]"><span
+            class="inline-flex self-start px-3.5 py-1 bg-amber-500/10 text-amber-400 border border-amber-500/30 rounded-full font-mono text-[11px] font-bold uppercase"><span
+              class="lang-id">SIMULATOR INTERAKTIF • SHOW, DON'T JUST TELL</span><span class="lang-en">INTERACTIVE SIMULATOR • SHOW, DON'T JUST TELL</span></span>
+          <h2 id="uji-lapangan-title"
+            class="vexa-heading-safe font-extrabold text-[24px] sm:text-[36px] tracking-tight text-white"><span
+              class="lang-id">Jangan Percaya Demo yang Hanya Berjalan Saat Wi-Fi Sempurna.</span><span
+              class="lang-en">Do Not Trust a Demo That Only Works on Perfect Wi-Fi.</span></h2>
+          <p class="text-[14px] sm:text-[16px] text-slate-300"><span class="lang-id">Klik tombol simulasi di bawah ini untuk melihat langsung bagaimana mesin kasir vexaPOS tetap mencetak struk saat internet mati, lalu menyinkronkan 24 struk ke cloud secara instan begitu jaringan pulih.</span><span class="lang-en">Click the simulation buttons below to experience firsthand how vexaPOS continues printing receipts when internet drops, then auto-syncs 24 cached orders to the cloud instantly upon reconnection.</span></p>
         </div>
-      </section>
 
-      <section id="uji-lapangan" aria-labelledby="uji-lapangan-title" class="liquid-glass rounded-2xl sm:rounded-3xl p-5 sm:p-10 lg:p-12 flex flex-col gap-6 sm:gap-8 scroll-mt-24">
-        <div class="vexa-vertical-rule flex flex-col gap-2.5 max-w-[850px]"><span class="inline-flex self-start px-3.5 py-1 bg-emerald-50 text-emerald-700 border border-emerald-200 rounded-full font-mono text-[11px] font-bold uppercase"><span class="lang-id">BUKTIKAN SEBELUM BERLANGGANAN</span><span class="lang-en">PROVE IT BEFORE YOU SUBSCRIBE</span></span><h2 id="uji-lapangan-title" class="vexa-heading-safe font-extrabold text-[24px] sm:text-[36px] tracking-tight text-[#0F172A]"><span class="lang-id">Jangan Percaya Demo yang Hanya Berjalan Saat Wi-Fi Sempurna.</span><span class="lang-en">Do Not Trust a Demo That Only Works on Perfect Wi-Fi.</span></h2><p class="text-[14px] sm:text-[15px] text-slate-600"><span class="lang-id">Uji vexaPOS pada dua kondisi yang paling sering membongkar kelemahan POS biasa. Hasilnya harus terlihat di meja kasir, bukan hanya di slide penjualan.</span><span class="lang-en">Test vexaPOS against the two conditions that expose ordinary POS systems. The result must be visible at the cashier counter, not only in a sales deck.</span></p></div>
+        <!-- Interactive POS Simulator Widget -->
+        <div data-vexa-simulator class="bg-slate-900/95 border border-slate-800 rounded-2xl sm:rounded-3xl p-5 sm:p-7 flex flex-col gap-6 shadow-inner">
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-5 border-b border-slate-800">
+            <div class="flex flex-col gap-1.5">
+              <span class="font-mono text-[11px] text-slate-400 uppercase tracking-wider"><span class="lang-id">KONTROL STATUS JARINGAN</span><span class="lang-en">NETWORK SIMULATOR CONTROL</span></span>
+              <div class="flex flex-wrap items-center gap-2">
+                <button type="button" data-sim-btn="offline" aria-pressed="true"
+                  class="px-4 py-2.5 rounded-xl font-bold text-[12px] sm:text-[13px] bg-rose-600 text-white shadow-md transition-all cursor-pointer">
+                  ⚡ <span class="lang-id">Simulasikan Wi-Fi Putus</span><span class="lang-en">Simulate Wi-Fi Drop</span>
+                </button>
+                <button type="button" data-sim-btn="online" aria-pressed="false"
+                  class="px-4 py-2.5 rounded-xl font-semibold text-[12px] sm:text-[13px] bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all cursor-pointer">
+                  🟢 <span class="lang-id">Pulihkan Koneksi</span><span class="lang-en">Restore Connection</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="flex flex-col sm:items-end gap-1.5">
+              <span class="font-mono text-[11px] text-slate-400 uppercase tracking-wider"><span class="lang-id">STATUS KASIR LOKAL</span><span class="lang-en">LOCAL POS STATUS</span></span>
+              <div data-sim-status-pill class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full font-mono text-[11px] font-bold bg-rose-500/20 text-rose-300 border border-rose-500/40">
+                <span data-sim-dot class="w-2.5 h-2.5 rounded-full bg-rose-400 animate-ping" aria-hidden="true"></span>
+                <span data-sim-status-text>MODE OFFLINE • FIBER DROP</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Live Terminal Screen -->
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+            <div class="lg:col-span-2 bg-[#06090F] border border-slate-800 rounded-2xl p-5 flex flex-col justify-between gap-5 font-mono">
+              <div class="flex items-center justify-between border-b border-slate-800/80 pb-3">
+                <div class="flex items-center gap-2">
+                  <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+                  <span class="text-xs text-slate-400">IndexedDB Local Storage Buffer</span>
+                </div>
+                <span data-sim-synctime class="text-xs text-amber-400">Menunggu fiber pulih...</span>
+              </div>
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 py-2">
+                <div>
+                  <div class="text-[11px] text-slate-400 mb-1"><span class="lang-id">TRANSAKSI DI MEMORI LOKAL</span><span class="lang-en">LOCAL MEMORY QUEUE</span></div>
+                  <div class="flex items-baseline gap-2">
+                    <span data-sim-counter class="text-3xl sm:text-4xl font-extrabold text-white">24</span>
+                    <span class="text-xs text-slate-400 font-sans"><span class="lang-id">struk tersimpan di cache perangkat</span><span class="lang-en">receipts stored in device cache</span></span>
+                  </div>
+                </div>
+                <div class="px-4 py-2.5 rounded-xl bg-slate-800/80 border border-slate-700/80 sm:text-right">
+                  <span class="text-[10px] text-slate-400 block"><span class="lang-id">STATUS BUFFER</span><span class="lang-en">BUFFER STATE</span></span>
+                  <span data-sim-badge class="text-xs font-bold text-amber-300">24 Struk Tersimpan di Perangkat</span>
+                </div>
+              </div>
+              <div class="pt-3 border-t border-slate-800/80 text-[12px] text-slate-300 font-sans flex items-center gap-2">
+                <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span data-sim-note>Tiket dapur &amp; struk kasir tetap tercetak via LAN lokal. Bebas risiko.</span>
+              </div>
+            </div>
+
+            <div class="bg-[#06090F] border border-slate-800 rounded-2xl p-5 flex flex-col gap-3 font-mono text-xs">
+              <span class="text-slate-400 uppercase tracking-wider text-[11px] font-bold pb-2 border-b border-slate-800"><span class="lang-id">DIAGNOSTIK OPERASIONAL</span><span class="lang-en">OPERATIONAL DIAGNOSTICS</span></span>
+              <div class="flex items-center justify-between text-slate-300">
+                <span>Cetak Thermal LAN:</span>
+                <span class="text-emerald-400 font-bold">100% AKTIF</span>
+              </div>
+              <div class="flex items-center justify-between text-slate-300">
+                <span>Display Dapur (KDS):</span>
+                <span class="text-emerald-400 font-bold">LOKAL MIRROR</span>
+              </div>
+              <div class="flex items-center justify-between text-slate-300">
+                <span>Kecepatan Sinkron:</span>
+                <span class="text-amber-400 font-bold">0.8s / Otomatis</span>
+              </div>
+              <div class="flex items-center justify-between text-slate-300">
+                <span>Integritas Rekap:</span>
+                <span class="text-emerald-400 font-bold">0 Selisih Saldo</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
-          <article class="liquid-glass-card-2026 rounded-2xl sm:rounded-3xl p-5 sm:p-8 flex flex-col gap-5 h-full"><h3 class="vexa-heading-safe font-bold text-[18px] sm:text-[20px] text-[#0F172A]"><span class="lang-id">Uji Putus Koneksi</span><span class="lang-en">Connection-Loss Test</span></h3><ol class="flex flex-col gap-3 text-[13.5px] sm:text-[14px] text-slate-700 list-decimal pl-5"><li><span class="lang-id">Buat order</span><span class="lang-en">Create order</span></li><li><span class="lang-id">Cetak struk dan tiket dapur</span><span class="lang-en">Print receipt and kitchen ticket</span></li><li><span class="lang-id">Sambungkan kembali</span><span class="lang-en">Reconnect</span></li><li><span class="lang-id">Pastikan satu transaksi tersinkron tanpa input ulang</span><span class="lang-en">Verify one synced transaction with no re-entry</span></li></ol></article>
-          <article class="liquid-glass-card-2026 rounded-2xl sm:rounded-3xl p-5 sm:p-8 flex flex-col gap-5 h-full"><h3 class="vexa-heading-safe font-bold text-[18px] sm:text-[20px] text-[#0F172A]"><span class="lang-id">Uji Kebocoran Operasional</span><span class="lang-en">Operational-Leakage Test</span></h3><ol class="flex flex-col gap-3 text-[13.5px] sm:text-[14px] text-slate-700 list-decimal pl-5"><li><span class="lang-id">Potong stok resep</span><span class="lang-en">Deduct recipe stock</span></li><li><span class="lang-id">Void dengan PIN manajer</span><span class="lang-en">Void with manager PIN</span></li><li><span class="lang-id">Rekonsiliasi kas shift</span><span class="lang-en">Reconcile shift cash</span></li><li><span class="lang-id">Periksa laporan pemilik</span><span class="lang-en">Check the owner report</span></li></ol></article>
+          <article class="bg-slate-900/80 border border-slate-800 rounded-2xl sm:rounded-3xl p-5 sm:p-8 flex flex-col gap-5 h-full">
+            <h3 class="vexa-heading-safe font-bold text-[18px] sm:text-[20px] text-white"><span class="lang-id">Uji Putus Koneksi (On-Site Test)</span><span class="lang-en">Connection-Loss Test</span></h3>
+            <ol class="flex flex-col gap-3 text-[13.5px] sm:text-[14px] text-slate-300 list-decimal pl-5">
+              <li><span class="lang-id">Buat order makanan &amp; minuman di tablet kasir</span><span class="lang-en">Create food &amp; beverage order on cashier tablet</span></li>
+              <li><span class="lang-id">Cetak struk tamu dan tiket dapur (tetap keluar seketika)</span><span class="lang-en">Print guest receipt and kitchen ticket (prints instantly)</span></li>
+              <li><span class="lang-id">Sambungkan kembali kabel LAN / Wi-Fi</span><span class="lang-en">Reconnect the LAN cable or Wi-Fi network</span></li>
+              <li><span class="lang-id">Pastikan seluruh transaksi tersinkron rapi tanpa input ulang</span><span class="lang-en">Verify all queued transactions sync with zero re-entry</span></li>
+            </ol>
+          </article>
+          <article class="bg-slate-900/80 border border-slate-800 rounded-2xl sm:rounded-3xl p-5 sm:p-8 flex flex-col gap-5 h-full">
+            <h3 class="vexa-heading-safe font-bold text-[18px] sm:text-[20px] text-white"><span class="lang-id">Uji Kebocoran Operasional</span><span class="lang-en">Operational-Leakage Test</span></h3>
+            <ol class="flex flex-col gap-3 text-[13.5px] sm:text-[14px] text-slate-300 list-decimal pl-5">
+              <li><span class="lang-id">Potong stok bahan resep per gram/mililiter otomatis</span><span class="lang-en">Auto-deduct recipe ingredients by gram/ml</span></li>
+              <li><span class="lang-id">Kunci pembatalan (void) dengan PIN supervisor</span><span class="lang-en">Lock order cancellations (voids) with supervisor PIN</span></li>
+              <li><span class="lang-id">Rekonsiliasi laci kas per shift tanpa selisih hitung</span><span class="lang-en">Reconcile shift cash drawer with zero discrepancy</span></li>
+              <li><span class="lang-id">Periksa laporan laba &amp; pajak PB1 di smartphone pemilik</span><span class="lang-en">Check net profit &amp; PB1 tax reports directly on owner's phone</span></li>
+            </ol>
+          </article>
         </div>
-        <a href="https://wa.me/6285338000872?text=Halo%20tim%20vexaPOS.%20Saya%20ingin%20menjalankan%20uji%20putus%20koneksi%20dan%20kontrol%20kebocoran%20operasional%20di%20outlet%20saya.%20Mohon%20jadwalkan%20skenario%20uji." target="_blank" rel="noopener" class="w-full sm:w-auto min-h-[48px] inline-flex items-center justify-center self-stretch sm:self-start font-bold text-[14px] px-6 py-3 bg-amber-600 text-white rounded-2xl text-center"><span class="lang-id">Minta Skenario Uji di Outlet Saya</span><span class="lang-en">Request an On-Site Test Scenario</span></a>
+        <a href="https://wa.me/6285338000872?text=Halo%20tim%20vexaPOS.%20Saya%20ingin%20menjalankan%20uji%20putus%20koneksi%20dan%20kontrol%20kebocoran%20operasional%20di%20outlet%20saya.%20Mohon%20jadwalkan%20skenario%20uji."
+          target="_blank" rel="noopener"
+          class="w-full sm:w-auto min-h-[48px] inline-flex items-center justify-center self-stretch sm:self-start font-bold text-[14px] px-6 py-3 bg-amber-600 hover:bg-amber-700 text-white rounded-2xl text-center shadow-lg shadow-amber-600/25 transition-all"><span
+            class="lang-id">Minta Skenario Uji di Outlet Saya</span><span class="lang-en">Request an On-Site Test
+            Scenario</span></a>
       </section>
 
-      <section id="faq" aria-labelledby="faq-title" class="liquid-glass rounded-2xl sm:rounded-3xl p-5 sm:p-10 lg:p-12 flex flex-col gap-6 sm:gap-7 scroll-mt-24">
-        <div class="vexa-vertical-rule flex flex-col gap-2.5 max-w-[820px]"><span class="inline-flex self-start px-3.5 py-1 bg-amber-50 text-amber-800 border border-amber-200 rounded-full font-mono text-[11px] font-bold uppercase"><span class="lang-id">SEBELUM ANDA MEMINDAHKAN OPERASIONAL</span><span class="lang-en">BEFORE YOU MOVE OPERATIONS</span></span><h2 id="faq-title" class="vexa-heading-safe font-extrabold text-[24px] sm:text-[36px] tracking-tight text-[#0F172A]"><span class="lang-id">Jawab Ini Sebelum Sistem Lama Anda Diganti.</span><span class="lang-en">Answer These Before You Replace the Old System.</span></h2></div>
+      <!-- Testimoni / Social Proof Section -->
+      <section id="testimoni" aria-labelledby="testimoni-title"
+        class="liquid-glass rounded-2xl sm:rounded-3xl p-5 sm:p-10 lg:p-12 flex flex-col gap-8 scroll-mt-24">
+        <div class="vexa-vertical-rule flex flex-col gap-2.5 max-w-[850px]"><span
+            class="inline-flex self-start px-3.5 py-1 bg-amber-50 text-amber-800 border border-amber-200 rounded-full font-mono text-[11px] font-bold uppercase"><span
+              class="lang-id">BUKTI NYATA OPERASIONAL • REAL BALI OPERATORS</span><span class="lang-en">REAL OPERATIONAL PROOF • BALI OPERATORS</span></span>
+          <h2 id="testimoni-title"
+            class="vexa-heading-safe font-extrabold text-[24px] sm:text-[36px] tracking-tight text-[#0F172A]"><span
+              class="lang-id">Meja Kasir Mereka Tetap Tenang Saat Internet Mati di Puncak Jam Sibuk.</span><span
+              class="lang-en">Their Cashier Counters Kept Running When Internet Dropped Mid-Rush.</span></h2>
+          <p class="text-[14px] sm:text-[16px] text-slate-600"><span class="lang-id">Kisah nyata dari pemilik restoran, roastery, dan pengelola beach club di Bali yang mengandalkan vexaPOS untuk mengamankan arus kas saat ratusan tamu mengantre.</span><span class="lang-en">Real accounts from restaurant owners, roasteries, and beach club managers across Bali who trust vexaPOS to protect their cash flow during intense rushes.</span></p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <!-- Testimonial 1 -->
+          <article class="liquid-glass-card-2026 rounded-2xl sm:rounded-3xl p-6 sm:p-7 flex flex-col justify-between gap-6 hover:shadow-lg transition-all border border-slate-200/80 bg-white/80">
+            <div class="flex flex-col gap-4">
+              <div class="flex items-center justify-between gap-3">
+                <span class="inline-flex font-mono text-[10px] font-bold px-2.5 py-1 bg-amber-100 text-amber-800 rounded-full">
+                  ⚡ <span class="lang-id">Fiber Drop • 142 Struk Aman</span><span class="lang-en">Fiber Drop • 142 Orders Safe</span>
+                </span>
+                <div class="flex text-amber-500 text-sm tracking-tighter" aria-label="Rating 5 bintang">★★★★★</div>
+              </div>
+              <blockquote class="text-[14px] text-slate-700 leading-relaxed italic">
+                “<span class="lang-id">Pukul 17:30 saat sunset rush, kabel fiber optik utama putus mendadak. Dengan POS lama kami pasti kacau dan tamu komplain. Di vexaPOS, kasir tetap cetak tiket pesanan bar dan struk tamu tanpa freeze sedetik pun. Begitu internet nyala jam 19:00, 142 transaksi langsung tersinkron rapi ke cloud tanpa ada selisih 1 rupiah pun.</span><span class="lang-en">At 5:30 PM during our sunset rush, the main fiber cable snapped. With our old POS, service would halt and guests would complain. With vexaPOS, cashiers kept printing bar tickets and receipts without freezing. Once internet returned at 7:00 PM, all 142 transactions synced cleanly to the cloud with zero discrepancy.</span>”
+              </blockquote>
+            </div>
+
+            <div class="flex items-center gap-3.5 pt-4 border-t border-slate-200/80">
+              <img src="assets/images/testimonial-wayan.webp" alt="Wayan Darmawan" class="w-12 h-12 rounded-full object-cover border border-amber-300 shrink-0" width="48" height="48" loading="lazy" />
+              <div class="flex flex-col">
+                <strong class="font-bold text-[14px] text-slate-900">Wayan Darmawan</strong>
+                <span class="text-[12px] text-slate-500">General Manager</span>
+                <span class="font-mono text-[11px] font-semibold text-amber-700">Canggu Sands Beach Club • Berawa</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Testimonial 2 -->
+          <article class="liquid-glass-card-2026 rounded-2xl sm:rounded-3xl p-6 sm:p-7 flex flex-col justify-between gap-6 hover:shadow-lg transition-all border border-slate-200/80 bg-white/80">
+            <div class="flex flex-col gap-4">
+              <div class="flex items-center justify-between gap-3">
+                <span class="inline-flex font-mono text-[10px] font-bold px-2.5 py-1 bg-emerald-100 text-emerald-800 rounded-full">
+                  🌿 <span class="lang-id">3 Cabang • 0 Selisih Stok</span><span class="lang-en">3 Outlets • Zero Variance</span>
+                </span>
+                <div class="flex text-amber-500 text-sm tracking-tighter" aria-label="Rating 5 bintang">★★★★★</div>
+              </div>
+              <blockquote class="text-[14px] text-slate-700 leading-relaxed italic">
+                “<span class="lang-id">Di Ubud, sinyal seluler dan Wi-Fi sering drop saat hujan lebat. vexaPOS membuat kami tenang karena staf kasir tidak perlu restart tablet. Ditambah pemotongan stok biji kopi per resep gramatur, HPP harian kami di 3 cabang sekarang selalu akurat dan bisa diaudit setiap malam dari HP saya.</span><span class="lang-en">In Ubud, cell signals and Wi-Fi drop often during heavy downpours. vexaPOS gives us total peace of mind because staff never restart tablets. Combined with per-recipe gram-level stock deduction, our daily COGS across 3 outlets is always accurate and auditable every night from my phone.</span>”
+              </blockquote>
+            </div>
+
+            <div class="flex items-center gap-3.5 pt-4 border-t border-slate-200/80">
+              <img src="assets/images/testimonial-sarah.webp" alt="Sarah Jenkins" class="w-12 h-12 rounded-full object-cover border border-emerald-300 shrink-0" width="48" height="48" loading="lazy" />
+              <div class="flex flex-col">
+                <strong class="font-bold text-[14px] text-slate-900">Sarah Jenkins</strong>
+                <span class="text-[12px] text-slate-500">Operations Director</span>
+                <span class="font-mono text-[11px] font-semibold text-emerald-700">Ubud Organic Roastery &amp; Kitchen • Ubud</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Testimonial 3 -->
+          <article class="liquid-glass-card-2026 rounded-2xl sm:rounded-3xl p-6 sm:p-7 flex flex-col justify-between gap-6 hover:shadow-lg transition-all border border-slate-200/80 bg-white/80">
+            <div class="flex flex-col gap-4">
+              <div class="flex items-center justify-between gap-3">
+                <span class="inline-flex font-mono text-[10px] font-bold px-2.5 py-1 bg-blue-100 text-blue-800 rounded-full">
+                  🛡️ <span class="lang-id">Grup 4 Outlet • Audit Void &amp; PB1</span><span class="lang-en">4 Outlets • Void &amp; Tax Audit</span>
+                </span>
+                <div class="flex text-amber-500 text-sm tracking-tighter" aria-label="Rating 5 bintang">★★★★★</div>
+              </div>
+              <blockquote class="text-[14px] text-slate-700 leading-relaxed italic">
+                “<span class="lang-id">Sebelumnya kami sering pusing dengan void order tanpa jejak jelas dan perhitungan pajak PB1 + service charge yang keliru saat rombongan split bill. Sistem PIN supervisor vexaPOS mengunci semua kebocoran kasir, dan laporan konsolidasi multi-outlet kami sekarang 100% transparan.</span><span class="lang-en">Previously we struggled with untraceable order voids and inaccurate PB1 tax + service charge calculations during split bills. vexaPOS's supervisor PIN locked down cashier leaks, and our multi-outlet consolidated report is now 100% transparent.</span>”
+              </blockquote>
+            </div>
+
+            <div class="flex items-center gap-3.5 pt-4 border-t border-slate-200/80">
+              <img src="assets/images/testimonial-ketut.webp" alt="Ketut Adi Pratama" class="w-12 h-12 rounded-full object-cover border border-blue-300 shrink-0" width="48" height="48" loading="lazy" />
+              <div class="flex flex-col">
+                <strong class="font-bold text-[14px] text-slate-900">Ketut Adi Pratama</strong>
+                <span class="text-[12px] text-slate-500">Managing Partner &amp; Founder</span>
+                <span class="font-mono text-[11px] font-semibold text-blue-700">The Coastal Dining Group • Sanur &amp; Seminyak</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Pricing Section with Elevated Pro Tier and Unified Amber CTAs -->
+      <section id="pricing" aria-labelledby="pricing-title"
+        class="liquid-glass rounded-2xl sm:rounded-3xl p-5 sm:p-10 lg:p-12 flex flex-col gap-6 sm:gap-8 scroll-mt-24">
+        <div class="flex flex-col gap-2.5 text-center max-w-[850px] mx-auto"><span
+            class="inline-flex self-center px-3.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded-full font-mono text-[11px] font-bold uppercase"><span
+              class="lang-id">HARGA TERBUKA • TANPA KOMISI TRANSAKSI</span><span class="lang-en">OPEN PRICING • NO
+              TRANSACTION COMMISSION</span></span>
+          <h2 id="pricing-title"
+            class="vexa-heading-safe font-extrabold text-[24px] sm:text-[36px] tracking-tight text-[#0F172A]"><span
+              class="lang-id">Pilih Biaya yang Bisa Diprediksi. Hentikan Biaya yang Tidak Bisa Diaudit.</span><span
+              class="lang-en">Choose Predictable Cost. Eliminate Untraceable Fees.</span></h2>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-[1240px] mx-auto w-full items-stretch pt-2">
+          <!-- Starter Plan -->
+          <article
+            class="liquid-glass-card-2026 rounded-2xl sm:rounded-3xl p-5 sm:p-8 min-w-0 h-full flex flex-col justify-between gap-6">
+            <div class="flex flex-col gap-4 min-w-0"><span
+                class="inline-flex self-start px-3 py-1 bg-emerald-100 text-emerald-800 border border-emerald-300 rounded-full font-mono text-[10px] font-bold uppercase"><span
+                  class="lang-id">TRIAL 14 HARI</span><span class="lang-en">14-DAY TRIAL</span></span>
+              <h3 class="vexa-heading-safe font-bold text-[22px] text-[#0F172A]">Single Outlet Starter</h3>
+              <p class="text-[13.5px] text-slate-600"><span class="lang-id">Kasir online untuk satu outlet dengan satu
+                  perangkat aktif dan rekap harian.</span><span class="lang-en">Online checkout for one outlet with one
+                  active device and daily summaries.</span></p>
+              <div class="flex flex-wrap items-center gap-2"><span
+                  class="inline-flex whitespace-nowrap font-mono text-[14px] text-slate-400 line-through">Rp 249.000
+                  /bulan</span><span
+                  class="inline-flex font-mono text-[10px] font-bold px-2 py-0.5 bg-amber-50 text-amber-700 border border-amber-200 rounded-full"><span
+                    class="lang-id">HARGA PELUNCURAN</span><span class="lang-en">LAUNCH PRICE</span></span></div><span
+                class="inline-flex whitespace-nowrap self-start font-mono font-extrabold text-[18px] min-[360px]:text-[22px] sm:text-[30px] text-slate-900">Rp
+                149.000 /bulan</span>
+              <p class="font-mono text-[11px] text-slate-500"><span class="lang-id">Ditagih triwulanan
+                  (Rp447.000)</span><span class="lang-en">Billed quarterly (Rp447,000)</span></p>
+              <ul class="flex flex-col gap-2.5 text-[13px] text-slate-700 border-t border-slate-200 pt-4">
+                <li>✓ <span class="lang-id">Kasir online + cetak struk</span><span class="lang-en">Online checkout +
+                    receipt printing</span></li>
+                <li>✓ <span class="lang-id">Akun admin &amp; staf kasir</span><span class="lang-en">Admin &amp; cashier
+                    accounts</span></li>
+                <li class="text-slate-400">× <span class="lang-id">Mode offline</span><span class="lang-en">Offline
+                    mode</span> <span
+                    class="inline-flex font-mono text-[10px] text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded"><span
+                      class="lang-id">Di Pro</span><span class="lang-en">Pro only</span></span></li>
+                <li class="text-slate-400">× <span class="lang-id">Inventaris resep</span><span class="lang-en">Recipe
+                    inventory</span> <span
+                    class="inline-flex font-mono text-[10px] text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded"><span
+                      class="lang-id">Di Pro</span><span class="lang-en">Pro only</span></span></li>
+              </ul>
+            </div>
+            <div class="flex flex-col gap-2.5"><a
+                href="https://wa.me/6285338000872?text=Halo%20tim%20vexaPOS.%20Saya%20ingin%20mengaktifkan%20trial%2014%20hari%20Starter%20untuk%20outlet%20saya.%20Mohon%20kirim%20langkah%20onboarding%20dan%20pemeriksaan%20perangkat."
+                target="_blank" rel="noopener"
+                class="w-full min-h-[44px] inline-flex items-center justify-center text-center font-bold text-[13px] px-5 py-3 bg-amber-600 hover:bg-amber-700 text-white rounded-xl shadow-sm transition-all"><span
+                  class="lang-id">Aktifkan Trial Starter</span><span class="lang-en">Activate Starter Trial</span></a><a
+                href="https://wa.me/6285338000872?text=Halo%20tim%20vexaPOS.%20Saya%20ingin%20demo%20paket%20Starter%20Rp149.000%20per%20bulan%2C%20ditagih%20triwulanan.%20Mohon%20jadwalkan%20konsultasi."
+                target="_blank" rel="noopener"
+                class="w-full min-h-[44px] inline-flex items-center justify-center text-center font-semibold text-[13px] px-5 py-3 bg-white/80 hover:bg-white text-slate-800 border border-slate-200 rounded-xl transition-all"><span
+                  class="lang-id">Demo Paket Starter</span><span class="lang-en">Demo Starter Plan</span></a></div>
+          </article>
+
+          <!-- Multi-Outlet Pro Plan (Elevated, Highlighted Tier) -->
+          <article
+            class="relative lg:-translate-y-2 lg:scale-[1.03] z-10 bg-white border-2 border-amber-500 rounded-2xl sm:rounded-3xl p-5 sm:p-8 min-w-0 h-full flex flex-col justify-between gap-6 shadow-2xl shadow-amber-500/15">
+            <div class="flex flex-col gap-4 min-w-0">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="inline-flex self-start px-3 py-1 bg-amber-500 text-slate-950 rounded-full font-mono text-[10px] font-extrabold uppercase tracking-wide shadow-sm"><span
+                    class="lang-id">⭐ PALING POPULER • REKOMENDASI OUTLET BALI</span><span class="lang-en">⭐ MOST POPULAR • RECOMMENDED FOR BALI</span></span>
+                <span class="inline-flex self-start px-2.5 py-1 bg-emerald-100 text-emerald-800 rounded-full font-mono text-[10px] font-bold uppercase"><span
+                    class="lang-id">OFFLINE-FIRST</span><span class="lang-en">OFFLINE-FIRST</span></span>
+              </div>
+              <h3 class="vexa-heading-safe font-bold text-[22px] text-[#0F172A]">Multi-Outlet Pro</h3>
+              <p class="text-[13.5px] text-slate-600"><span class="lang-id">Untuk restoran, bar, beach club, dan
+                  operasional multi-outlet di Bali.</span><span class="lang-en">For restaurants, bars, beach clubs, and
+                  multi-outlet operations in Bali.</span></p>
+              <div class="flex flex-wrap items-center gap-2"><span
+                  class="inline-flex whitespace-nowrap font-mono text-[14px] text-slate-400 line-through">Rp 449.000
+                  /bulan</span><span
+                  class="inline-flex font-mono text-[10px] font-bold px-2 py-0.5 bg-amber-50 text-amber-700 border border-amber-200 rounded-full"><span
+                    class="lang-id">HARGA PELUNCURAN</span><span class="lang-en">LAUNCH PRICE</span></span></div><span
+                class="inline-flex whitespace-nowrap self-start font-mono font-extrabold text-[18px] min-[360px]:text-[22px] sm:text-[30px] text-slate-900">Rp
+                349.000 /bulan</span>
+              <p class="font-mono text-[11px] text-slate-500"><span class="lang-id">Ditagih setiap 6 bulan
+                  (Rp2.094.000)</span><span class="lang-en">Billed every 6 months (Rp2,094,000)</span></p>
+              <ul class="flex flex-col gap-2.5 text-[13px] text-slate-700 border-t border-slate-200 pt-4">
+                <li>✓ <span class="lang-id">Semua fitur Starter</span><span class="lang-en">Everything in Starter</span>
+                </li>
+                <li class="font-semibold text-emerald-800">✓ <span class="lang-id">Mode offline + sinkronisasi otomatis saat koneksi
+                    pulih</span><span class="lang-en">Offline mode + automatic sync when connectivity returns</span>
+                </li>
+                <li>✓ <span class="lang-id">Inventaris resep &amp; audit staf</span><span class="lang-en">Recipe
+                    inventory &amp; staff audits</span></li>
+                <li>✓ <span class="lang-id">KDS &amp; dashboard multi-outlet</span><span class="lang-en">KDS &amp;
+                    multi-outlet dashboard</span></li>
+              </ul>
+            </div><a
+              href="https://wa.me/6285338000872?text=Halo%20tim%20vexaPOS.%20Saya%20ingin%20demo%20paket%20Pro%20Rp349.000%20per%20bulan%2C%20ditagih%20setiap%206%20bulan.%20Mohon%20jadwalkan%20konsultasi%20multi-outlet."
+              target="_blank" rel="noopener"
+              class="w-full min-h-[48px] inline-flex items-center justify-center text-center font-bold text-[14px] px-5 py-3.5 bg-amber-600 hover:bg-amber-700 text-white rounded-xl shadow-lg shadow-amber-600/25 transition-all"><span
+                class="lang-id">Demo Paket Pro (Rekomendasi)</span><span class="lang-en">Demo Pro Plan (Recommended)</span></a>
+          </article>
+
+          <!-- Enterprise Plan -->
+          <article
+            class="liquid-glass-card-2026 rounded-2xl sm:rounded-3xl p-5 sm:p-8 min-w-0 h-full flex flex-col justify-between gap-6">
+            <div class="flex flex-col gap-4 min-w-0"><span
+                class="inline-flex self-start px-3 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded-full font-mono text-[10px] font-bold uppercase">ENTERPRISE</span>
+              <h3 class="vexa-heading-safe font-bold text-[22px] text-[#0F172A]"><span class="lang-id">Implementasi
+                  Enterprise</span><span class="lang-en">Enterprise Deployment</span></h3>
+              <p class="text-[13.5px] text-slate-600"><span class="lang-id">Audit kebutuhan, rollout multi-outlet, dan
+                  SLA disusun sebelum kontrak.</span><span class="lang-en">Requirements audit, multi-outlet rollout, and
+                  SLA are defined before contract.</span></p><span
+                class="inline-flex whitespace-nowrap self-start font-mono font-extrabold text-[18px] min-[360px]:text-[22px] sm:text-[30px] text-slate-900"><span
+                  class="lang-id">Harga Kustom</span><span class="lang-en">Custom Price</span></span>
+              <ul class="flex flex-col gap-2.5 text-[13px] text-slate-700 border-t border-slate-200 pt-4">
+                <li>✓ <span class="lang-id">Semua fitur Pro</span><span class="lang-en">Everything in Pro</span></li>
+                <li>✓ <span class="lang-id">Audit kebutuhan &amp; rollout teknisi on-site</span><span class="lang-en">Requirements audit
+                    &amp; on-site tech rollout</span></li>
+                <li>✓ <span class="lang-id">SLA prioritas sesuai skala grup</span><span class="lang-en">Priority group-scale SLA</span>
+                </li>
+              </ul>
+            </div><a
+              href="https://wa.me/6285338000872?text=Halo%20tim%20vexaPOS.%20Saya%20ingin%20audit%20kebutuhan%20untuk%20implementasi%20Enterprise%20multi-outlet.%20Mohon%20jadwalkan%20konsultasi."
+              target="_blank" rel="noopener"
+              class="w-full min-h-[48px] inline-flex items-center justify-center text-center font-bold text-[13px] px-5 py-3.5 bg-amber-600 hover:bg-amber-700 text-white rounded-xl shadow-sm transition-all"><span
+                class="lang-id">Jadwalkan Audit Enterprise</span><span class="lang-en">Schedule Enterprise
+                Audit</span></a>
+          </article>
+        </div>
+      </section>
+
+      <section id="faq" aria-labelledby="faq-title"
+        class="liquid-glass rounded-2xl sm:rounded-3xl p-5 sm:p-10 lg:p-12 flex flex-col gap-6 sm:gap-7 scroll-mt-24">
+        <div class="vexa-vertical-rule flex flex-col gap-2.5 max-w-[820px]"><span
+            class="inline-flex self-start px-3.5 py-1 bg-amber-50 text-amber-800 border border-amber-200 rounded-full font-mono text-[11px] font-bold uppercase"><span
+              class="lang-id">SEBELUM ANDA MEMINDAHKAN OPERASIONAL</span><span class="lang-en">BEFORE YOU MOVE
+              OPERATIONS</span></span>
+          <h2 id="faq-title"
+            class="vexa-heading-safe font-extrabold text-[24px] sm:text-[36px] tracking-tight text-[#0F172A]"><span
+              class="lang-id">Jawab Ini Sebelum Sistem Lama Anda Diganti.</span><span class="lang-en">Answer These
+              Before You Replace the Old System.</span></h2>
+        </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="vexa-faq-list">
-          <div class="faq-item liquid-glass-subtle rounded-2xl p-4 sm:p-5 border border-white/80 transition-all"><button type="button" class="faq-trigger w-full min-h-[44px] py-2 flex items-center justify-between gap-3 text-left cursor-pointer" aria-expanded="false"><span class="font-bold text-[15px] sm:text-[16px] text-slate-900"><span class="lang-id">Bagaimana vexaPOS tetap berfungsi saat internet mati total?</span><span class="lang-en">How does vexaPOS keep working with zero internet?</span></span><span aria-hidden="true" class="shrink-0 text-slate-500">⌄</span></button><div class="faq-collapse"><div class="overflow-hidden"><p class="text-[13.5px] sm:text-[14px] text-slate-600 leading-relaxed pt-3 mt-2 border-t border-slate-200/70"><span class="lang-id">Semua transaksi ditulis ke penyimpanan lokal perangkat terlebih dahulu, sehingga kasir, cetak struk, dan tiket dapur tetap jalan. Begitu koneksi pulih, data tersinkron otomatis ke laporan pusat tanpa input ulang.</span><span class="lang-en">Every transaction is written to on-device local storage first, so checkout, receipts, and kitchen tickets keep running. Once the connection recovers, data auto-syncs to central reports with no re-entry.</span></p></div></div></div>
-          <div class="faq-item liquid-glass-subtle rounded-2xl p-4 sm:p-5 border border-white/80 transition-all"><button type="button" class="faq-trigger w-full min-h-[44px] py-2 flex items-center justify-between gap-3 text-left cursor-pointer" aria-expanded="false"><span class="font-bold text-[15px] sm:text-[16px] text-slate-900"><span class="lang-id">Apakah ada onboarding &amp; pelatihan langsung di outlet kami?</span><span class="lang-en">Do you provide on-site onboarding &amp; training?</span></span><span aria-hidden="true" class="shrink-0 text-slate-500">⌄</span></button><div class="faq-collapse"><div class="overflow-hidden"><p class="text-[13.5px] sm:text-[14px] text-slate-600 leading-relaxed pt-3 mt-2 border-t border-slate-200/70"><span class="lang-id">Setup dan onboarding daring gratis untuk semua paket. Jika Anda menginginkan kunjungan teknisi langsung ke outlet di Bali (instalasi printer/LAN &amp; training kasir), tersedia opsi add-on on-site visit terjangkau (Rp500.000 sekali bayar) atau sudah termasuk penuh di paket Enterprise.</span><span class="lang-en">Free remote setup and onboarding are included with all plans. If you prefer our Bali-based team to visit your outlet in person for hardware setup and cashier training, an affordable on-site add-on is available (Rp500,000 one-time), or fully included in the Enterprise plan.</span></p></div></div></div>
-          <div class="faq-item liquid-glass-subtle rounded-2xl p-4 sm:p-5 border border-white/80 transition-all"><button type="button" class="faq-trigger w-full min-h-[44px] py-2 flex items-center justify-between gap-3 text-left cursor-pointer" aria-expanded="false"><span class="font-bold text-[15px] sm:text-[16px] text-slate-900"><span class="lang-id">Apakah mendukung Service Charge &amp; Pajak PB1?</span><span class="lang-en">Does it support Service Charge &amp; PB1 tax?</span></span><span aria-hidden="true" class="shrink-0 text-slate-500">⌄</span></button><div class="faq-collapse"><div class="overflow-hidden"><p class="text-[13.5px] sm:text-[14px] text-slate-600 leading-relaxed pt-3 mt-2 border-t border-slate-200/70"><span class="lang-id">Ya. Service charge 10% dan pajak restoran PB1 10% dihitung otomatis berurutan (PB1 dikenakan setelah service), persis seperti contoh struk kasir.</span><span class="lang-en">Yes. The 10% service charge and 10% PB1 restaurant tax are calculated automatically in sequence (PB1 applied after service), exactly like the cashier receipt example.</span></p></div></div></div>
-          <div class="faq-item liquid-glass-subtle rounded-2xl p-4 sm:p-5 border border-white/80 transition-all"><button type="button" class="faq-trigger w-full min-h-[44px] py-2 flex items-center justify-between gap-3 text-left cursor-pointer" aria-expanded="false"><span class="font-bold text-[15px] sm:text-[16px] text-slate-900"><span class="lang-id">Bisakah dipakai dengan printer dapur yang sudah ada?</span><span class="lang-en">Can we use our existing kitchen printers?</span></span><span aria-hidden="true" class="shrink-0 text-slate-500">⌄</span></button><div class="faq-collapse"><div class="overflow-hidden"><p class="text-[13.5px] sm:text-[14px] text-slate-600 leading-relaxed pt-3 mt-2 border-t border-slate-200/70"><span class="lang-id">Bisa. vexaPOS kompatibel dengan printer thermal 58/80mm standar (Bluetooth, USB, LAN) dan terminal Sunmi. Tim kami membantu pairing saat demo on-site.</span><span class="lang-en">Yes. vexaPOS works with standard 58/80mm thermal printers (Bluetooth, USB, LAN) and Sunmi terminals. Our team helps with pairing during the on-site demo.</span></p></div></div></div>
-          <div class="faq-item liquid-glass-subtle rounded-2xl p-4 sm:p-5 border border-white/80 transition-all"><button type="button" class="faq-trigger w-full min-h-[44px] py-2 flex items-center justify-between gap-3 text-left cursor-pointer" aria-expanded="false"><span class="font-bold text-[15px] sm:text-[16px] text-slate-900"><span class="lang-id">Bagaimana keamanan data jika tablet kasir rusak/hilang?</span><span class="lang-en">How safe is our data if the cashier tablet breaks?</span></span><span aria-hidden="true" class="shrink-0 text-slate-500">⌄</span></button><div class="faq-collapse"><div class="overflow-hidden"><p class="text-[13.5px] sm:text-[14px] text-slate-600 leading-relaxed pt-3 mt-2 border-t border-slate-200/70"><span class="lang-id">Setiap transaksi yang sudah tersinkron tersimpan di cloud dan bisa diakses dari perangkat lain. Akses PIN per staff bisa dicabut seketika, dan seluruh data milik Anda — dapat diekspor ke Excel &amp; PDF kapan saja.</span><span class="lang-en">Every synced transaction lives in the cloud and stays accessible from other devices. Per-staff PINs can be revoked instantly, and all data is yours — exportable to Excel &amp; PDF anytime.</span></p></div></div></div>
+          <div class="faq-item liquid-glass-subtle rounded-2xl p-4 sm:p-5 border border-white/80 transition-all"><button
+              type="button"
+              class="faq-trigger w-full min-h-[44px] py-2 flex items-center justify-between gap-3 text-left cursor-pointer"
+              aria-expanded="false"><span class="font-bold text-[15px] sm:text-[16px] text-slate-900"><span
+                  class="lang-id">Bagaimana vexaPOS tetap berfungsi saat internet mati total?</span><span
+                  class="lang-en">How does vexaPOS keep working with zero internet?</span></span><span
+                aria-hidden="true" class="shrink-0 text-slate-500">⌄</span></button>
+            <div class="faq-collapse">
+              <div class="overflow-hidden">
+                <p
+                  class="text-[13.5px] sm:text-[14px] text-slate-600 leading-relaxed pt-3 mt-2 border-t border-slate-200/70">
+                  <span class="lang-id">Semua transaksi ditulis ke penyimpanan lokal perangkat terlebih dahulu, sehingga
+                    kasir, cetak struk, dan tiket dapur tetap jalan. Begitu koneksi pulih, data tersinkron otomatis ke
+                    laporan pusat tanpa input ulang.</span><span class="lang-en">Every transaction is written to
+                    on-device local storage first, so checkout, receipts, and kitchen tickets keep running. Once the
+                    connection recovers, data auto-syncs to central reports with no re-entry.</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="faq-item liquid-glass-subtle rounded-2xl p-4 sm:p-5 border border-white/80 transition-all"><button
+              type="button"
+              class="faq-trigger w-full min-h-[44px] py-2 flex items-center justify-between gap-3 text-left cursor-pointer"
+              aria-expanded="false"><span class="font-bold text-[15px] sm:text-[16px] text-slate-900"><span
+                  class="lang-id">Apakah ada onboarding &amp; pelatihan langsung di outlet kami?</span><span
+                  class="lang-en">Do you provide on-site onboarding &amp; training?</span></span><span
+                aria-hidden="true" class="shrink-0 text-slate-500">⌄</span></button>
+            <div class="faq-collapse">
+              <div class="overflow-hidden">
+                <p
+                  class="text-[13.5px] sm:text-[14px] text-slate-600 leading-relaxed pt-3 mt-2 border-t border-slate-200/70">
+                  <span class="lang-id">Setup dan onboarding daring gratis untuk semua paket. Jika Anda menginginkan
+                    kunjungan teknisi langsung ke outlet di Bali (instalasi printer/LAN &amp; training kasir), tersedia
+                    opsi add-on on-site visit terjangkau (Rp500.000 sekali bayar) atau sudah termasuk penuh di paket
+                    Enterprise.</span><span class="lang-en">Free remote setup and onboarding are included with all
+                    plans. If you prefer our Bali-based team to visit your outlet in person for hardware setup and
+                    cashier training, an affordable on-site add-on is available (Rp500,000 one-time), or fully included
+                    in the Enterprise plan.</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="faq-item liquid-glass-subtle rounded-2xl p-4 sm:p-5 border border-white/80 transition-all"><button
+              type="button"
+              class="faq-trigger w-full min-h-[44px] py-2 flex items-center justify-between gap-3 text-left cursor-pointer"
+              aria-expanded="false"><span class="font-bold text-[15px] sm:text-[16px] text-slate-900"><span
+                  class="lang-id">Apakah mendukung Service Charge &amp; Pajak PB1?</span><span class="lang-en">Does it
+                  support Service Charge &amp; PB1 tax?</span></span><span aria-hidden="true"
+                class="shrink-0 text-slate-500">⌄</span></button>
+            <div class="faq-collapse">
+              <div class="overflow-hidden">
+                <p
+                  class="text-[13.5px] sm:text-[14px] text-slate-600 leading-relaxed pt-3 mt-2 border-t border-slate-200/70">
+                  <span class="lang-id">Ya. Service charge 10% dan pajak restoran PB1 10% dihitung otomatis berurutan
+                    (PB1 dikenakan setelah service), persis seperti contoh struk kasir.</span><span class="lang-en">Yes.
+                    The 10% service charge and 10% PB1 restaurant tax are calculated automatically in sequence (PB1
+                    applied after service), exactly like the cashier receipt example.</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="faq-item liquid-glass-subtle rounded-2xl p-4 sm:p-5 border border-white/80 transition-all"><button
+              type="button"
+              class="faq-trigger w-full min-h-[44px] py-2 flex items-center justify-between gap-3 text-left cursor-pointer"
+              aria-expanded="false"><span class="font-bold text-[15px] sm:text-[16px] text-slate-900"><span
+                  class="lang-id">Bisakah dipakai dengan printer dapur yang sudah ada?</span><span class="lang-en">Can
+                  we use our existing kitchen printers?</span></span><span aria-hidden="true"
+                class="shrink-0 text-slate-500">⌄</span></button>
+            <div class="faq-collapse">
+              <div class="overflow-hidden">
+                <p
+                  class="text-[13.5px] sm:text-[14px] text-slate-600 leading-relaxed pt-3 mt-2 border-t border-slate-200/70">
+                  <span class="lang-id">Bisa. vexaPOS kompatibel dengan printer thermal 58/80mm standar (Bluetooth, USB,
+                    LAN) dan terminal Sunmi. Tim kami membantu pairing saat demo on-site.</span><span
+                    class="lang-en">Yes. vexaPOS works with standard 58/80mm thermal printers (Bluetooth, USB, LAN) and
+                    Sunmi terminals. Our team helps with pairing during the on-site demo.</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="faq-item liquid-glass-subtle rounded-2xl p-4 sm:p-5 border border-white/80 transition-all"><button
+              type="button"
+              class="faq-trigger w-full min-h-[44px] py-2 flex items-center justify-between gap-3 text-left cursor-pointer"
+              aria-expanded="false"><span class="font-bold text-[15px] sm:text-[16px] text-slate-900"><span
+                  class="lang-id">Bagaimana keamanan data jika tablet kasir rusak/hilang?</span><span
+                  class="lang-en">How safe is our data if the cashier tablet breaks?</span></span><span
+                aria-hidden="true" class="shrink-0 text-slate-500">⌄</span></button>
+            <div class="faq-collapse">
+              <div class="overflow-hidden">
+                <p
+                  class="text-[13.5px] sm:text-[14px] text-slate-600 leading-relaxed pt-3 mt-2 border-t border-slate-200/70">
+                  <span class="lang-id">Setiap transaksi yang sudah tersinkron tersimpan di cloud dan bisa diakses dari
+                    perangkat lain. Akses PIN per staff bisa dicabut seketika, dan seluruh data milik Anda — dapat
+                    diekspor ke Excel &amp; PDF kapan saja.</span><span class="lang-en">Every synced transaction lives
+                    in the cloud and stays accessible from other devices. Per-staff PINs can be revoked instantly, and
+                    all data is yours — exportable to Excel &amp; PDF anytime.</span></p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section id="cta" aria-labelledby="cta-title" class="obsidian-glass-banner rounded-2xl sm:rounded-3xl p-6 sm:p-10 lg:p-16 flex flex-col lg:flex-row items-center justify-between gap-6 sm:gap-8 relative overflow-hidden text-white scroll-mt-24">
-        <div class="flex flex-col gap-3.5 sm:gap-4 max-w-[760px] text-center lg:text-left"><span class="inline-flex self-center lg:self-start px-3.5 py-1 bg-amber-400/10 text-amber-400 border border-amber-400/25 rounded-full font-mono text-[11px] font-bold uppercase"><span class="lang-id">KEPUTUSAN OPERASIONAL • BUKAN NANTI</span><span class="lang-en">AN OPERATING DECISION • NOT SOMEDAY</span></span><h2 id="cta-title" class="vexa-heading-safe font-extrabold text-[24px] min-[380px]:text-[28px] sm:text-[38px] tracking-tight text-white leading-tight"><span class="lang-id">Upgrade Sistem Kasir Anda Sebelum Gangguan Berikutnya Menguji Outlet Anda.</span><span class="lang-en">Upgrade Your POS Before the Next Disruption Tests Your Venue.</span></h2><p class="text-[14px] sm:text-[17px] text-slate-300 leading-relaxed"><span class="lang-id">Jika satu koneksi putus masih bisa menghentikan transaksi, sistem Anda belum layak menopang rush hour Bali. Jadwalkan audit teknis sekarang. Tim Extensia akan menguji alur offline, printer, jaringan lokal, dan kesiapan multi-outlet langsung di meja kasir Anda.</span><span class="lang-en">If one lost connection can still stop transactions, your system is not ready for Bali rush hours. Schedule a technical audit now. Extensia will test the offline flow, printers, local network, and multi-outlet readiness at your cashier counter.</span></p><p class="font-mono text-[11px] font-bold text-emerald-400"><span class="lang-id">SENIN–SABTU • 09.00–18.00 WITA</span><span class="lang-en">MON–SAT • 09.00–18.00 WITA</span></p></div>
-        <div class="flex flex-col gap-3 w-full lg:w-auto shrink-0"><a href="https://wa.me/6285338000872?text=Halo%20tim%20vexaPOS.%20Saya%20ingin%20menjadwalkan%20audit%20teknis%20untuk%20alur%20offline%2C%20printer%2C%20jaringan%20lokal%2C%20dan%20kesiapan%20multi-outlet." target="_blank" rel="noopener" class="w-full sm:w-auto min-h-[48px] inline-flex items-center justify-center text-center font-bold text-[14px] px-6 sm:px-8 py-3.5 sm:py-4 bg-amber-500 hover:bg-amber-600 text-slate-950 rounded-2xl transition-all"><span class="lang-id">Jadwalkan Audit Teknis Sekarang</span><span class="lang-en">Schedule a Technical Audit Now</span></a><a href="https://demo.vexapos.my.id/" target="_blank" rel="noopener" class="w-full sm:w-auto min-h-[48px] inline-flex items-center justify-center text-center font-semibold text-[14px] px-6 sm:px-8 py-3 sm:py-3.5 bg-white/10 hover:bg-white/20 text-white border border-white/20 rounded-2xl transition-all"><span class="lang-id">Uji Demo Offline-First</span><span class="lang-en">Test the Offline-First Demo</span></a></div>
+      <section id="cta" aria-labelledby="cta-title"
+        class="obsidian-glass-banner rounded-2xl sm:rounded-3xl p-6 sm:p-10 lg:p-16 flex flex-col lg:flex-row items-center justify-between gap-6 sm:gap-8 relative overflow-hidden text-white scroll-mt-24">
+        <div class="flex flex-col gap-3.5 sm:gap-4 max-w-[760px] text-center lg:text-left"><span
+            class="inline-flex self-center lg:self-start px-3.5 py-1 bg-amber-400/10 text-amber-400 border border-amber-400/25 rounded-full font-mono text-[11px] font-bold uppercase"><span
+              class="lang-id">KEPUTUSAN OPERASIONAL • BUKAN NANTI</span><span class="lang-en">AN OPERATING DECISION •
+              NOT SOMEDAY</span></span>
+          <h2 id="cta-title"
+            class="vexa-heading-safe font-extrabold text-[24px] min-[380px]:text-[28px] sm:text-[38px] tracking-tight text-white leading-tight">
+            <span class="lang-id">Upgrade Sistem Kasir Anda Sebelum Gangguan Berikutnya Menguji Outlet Anda.</span><span
+              class="lang-en">Upgrade Your POS Before the Next Disruption Tests Your Venue.</span></h2>
+          <p class="text-[14px] sm:text-[17px] text-slate-300 leading-relaxed"><span class="lang-id">Jika satu koneksi
+              putus masih bisa menghentikan transaksi, sistem Anda belum layak menopang rush hour Bali. Jadwalkan audit
+              teknis sekarang. Tim Extensia akan menguji alur offline, printer, jaringan lokal, dan kesiapan
+              multi-outlet langsung di meja kasir Anda.</span><span class="lang-en">If one lost connection can still
+              stop transactions, your system is not ready for Bali rush hours. Schedule a technical audit now. Extensia
+              will test the offline flow, printers, local network, and multi-outlet readiness at your cashier
+              counter.</span></p>
+          <p class="font-mono text-[11px] font-bold text-emerald-400"><span class="lang-id">SENIN–SABTU • 09.00–18.00
+              WITA</span><span class="lang-en">MON–SAT • 09.00–18.00 WITA</span></p>
+        </div>
+        <div class="flex flex-col gap-3 w-full lg:w-auto shrink-0"><a
+            href="https://wa.me/6285338000872?text=Halo%20tim%20vexaPOS.%20Saya%20ingin%20menjadwalkan%20audit%20teknis%20untuk%20alur%20offline%2C%20printer%2C%20jaringan%20lokal%2C%20dan%20kesiapan%20multi-outlet."
+            target="_blank" rel="noopener"
+            class="w-full sm:w-auto min-h-[48px] inline-flex items-center justify-center text-center font-bold text-[14px] px-6 sm:px-8 py-3.5 sm:py-4 bg-amber-500 hover:bg-amber-600 text-slate-950 rounded-2xl transition-all"><span
+              class="lang-id">Jadwalkan Audit Teknis Sekarang</span><span class="lang-en">Schedule a Technical Audit
+              Now</span></a><a href="https://demo.vexapos.my.id/" target="_blank" rel="noopener"
+            class="w-full sm:w-auto min-h-[48px] inline-flex items-center justify-center text-center font-semibold text-[14px] px-6 sm:px-8 py-3 sm:py-3.5 bg-white/10 hover:bg-white/20 text-white border border-white/20 rounded-2xl transition-all"><span
+              class="lang-id">Uji Demo Offline-First</span><span class="lang-en">Test the Offline-First Demo</span></a>
+        </div>
       </section>
     </main>
 
     <footer class="liquid-glass rounded-2xl sm:rounded-3xl p-5 sm:p-10 lg:p-12 flex flex-col gap-6 sm:gap-8">
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 gap-8 pb-8 border-b border-slate-200/80">
-        <div class="sm:col-span-2 md:col-span-5 flex flex-col gap-3"><div class="flex items-center gap-2.5"><img src="assets/images/extensialogo.png" alt="Extensia Creative Bali" class="w-8 h-8 object-contain" width="32" height="32" /><span class="font-extrabold text-[22px] text-slate-900">vexa<span class="text-emerald-600">POS</span></span></div><p class="text-[13.5px] text-slate-600 leading-relaxed"><span class="lang-id">vexaPOS adalah mesin kasir offline-first untuk kafe, restoran, beach club, resort, dan grup multi-outlet di Bali.</span><span class="lang-en">vexaPOS is an offline-first POS engine for cafes, restaurants, beach clubs, resorts, and multi-outlet groups in Bali.</span></p></div>
-        <nav aria-label="Tautan produk" class="md:col-span-3 flex flex-col gap-2"><span class="font-mono text-[11px] font-bold uppercase text-slate-400"><span class="lang-id">Produk</span><span class="lang-en">Product</span></span><a href="#operasional" class="font-medium text-[14px] text-slate-700 py-1"><span class="lang-id">Operasional</span><span class="lang-en">Operations</span></a><a href="#fitur" class="font-medium text-[14px] text-slate-700 py-1"><span class="lang-id">Fitur</span><span class="lang-en">Features</span></a><a href="#hardware" class="font-medium text-[14px] text-slate-700 py-1"><span class="lang-id">Perangkat</span><span class="lang-en">Hardware</span></a><a href="#pricing" class="font-medium text-[14px] text-slate-700 py-1"><span class="lang-id">Harga</span><span class="lang-en">Pricing</span></a><a href="#faq" class="font-medium text-[14px] text-slate-700 py-1"><span class="lang-id">Pertanyaan</span><span class="lang-en">FAQ</span></a></nav>
-        <div class="sm:col-span-2 md:col-span-4 flex flex-col gap-2.5"><span class="font-mono text-[11px] font-bold uppercase text-slate-400">BALI</span><p class="text-[13.5px] text-slate-600 leading-relaxed">Canggu &amp; Denpasar, Bali<br><span class="font-mono text-[11.5px] font-semibold text-slate-700"><span class="lang-id">Senin–Sabtu • 09.00–18.00 WITA</span><span class="lang-en">Mon–Sat • 09.00–18.00 WITA</span></span></p><a href="mailto:info@extensiacreativebali.com" class="font-semibold text-[13.5px] text-emerald-700 py-1 inline-block break-all">info@extensiacreativebali.com</a></div>
+        <div class="sm:col-span-2 md:col-span-5 flex flex-col gap-3">
+          <div class="flex items-center gap-2.5"><img src="assets/images/extensialogo.png" alt="Extensia Creative Bali"
+              class="w-8 h-8 object-contain" width="32" height="32" /><span
+              class="font-extrabold text-[22px] text-slate-900">vexa<span class="text-emerald-600">POS</span></span>
+          </div>
+          <p class="text-[13.5px] text-slate-600 leading-relaxed"><span class="lang-id">vexaPOS adalah mesin kasir
+              offline-first untuk kafe, restoran, beach club, resort, dan grup multi-outlet di Bali.</span><span
+              class="lang-en">vexaPOS is an offline-first POS engine for cafes, restaurants, beach clubs, resorts, and
+              multi-outlet groups in Bali.</span></p>
+        </div>
+        <nav aria-label="Tautan produk" class="md:col-span-3 flex flex-col gap-2"><span
+            class="font-mono text-[11px] font-bold uppercase text-slate-400"><span class="lang-id">Produk</span><span
+              class="lang-en">Product</span></span><a href="#operasional"
+            class="font-medium text-[14px] text-slate-700 py-1"><span class="lang-id">Operasional</span><span
+              class="lang-en">Operations</span></a><a href="#fitur"
+            class="font-medium text-[14px] text-slate-700 py-1"><span class="lang-id">Fitur</span><span
+              class="lang-en">Features</span></a><a href="#hardware"
+            class="font-medium text-[14px] text-slate-700 py-1"><span class="lang-id">Perangkat</span><span
+              class="lang-en">Hardware</span></a><a href="#pricing"
+            class="font-medium text-[14px] text-slate-700 py-1"><span class="lang-id">Harga</span><span
+              class="lang-en">Pricing</span></a><a href="#faq" class="font-medium text-[14px] text-slate-700 py-1"><span
+              class="lang-id">Pertanyaan</span><span class="lang-en">FAQ</span></a></nav>
+        <div class="sm:col-span-2 md:col-span-4 flex flex-col gap-2.5"><span
+            class="font-mono text-[11px] font-bold uppercase text-slate-400">BALI</span>
+          <p class="text-[13.5px] text-slate-600 leading-relaxed">Canggu &amp; Denpasar, Bali<br><span
+              class="font-mono text-[11.5px] font-semibold text-slate-700"><span class="lang-id">Senin–Sabtu •
+                09.00–18.00 WITA</span><span class="lang-en">Mon–Sat • 09.00–18.00 WITA</span></span></p><a
+            href="mailto:info@extensiacreativebali.com"
+            class="font-semibold text-[13.5px] text-emerald-700 py-1 inline-block break-all">info@extensiacreativebali.com</a>
+        </div>
       </div>
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-3 font-mono text-[11px] sm:text-[12px] text-slate-500 text-center sm:text-left"><span>&copy; 2026 <strong>vexaPOS</strong> • Extensia Creative Bali. <span class="lang-id">Dirancang dan dikembangkan di Bali.</span><span class="lang-en">Designed and engineered in Bali.</span></span><span class="flex items-center gap-3"><a href="/" class="font-semibold text-slate-700 py-1"><span class="lang-id">Beranda Extensia</span><span class="lang-en">Extensia Home</span></a><span aria-hidden="true">•</span><a href="https://wa.me/6285338000872" target="_blank" rel="noopener" class="font-semibold text-slate-700 py-1">WhatsApp</a></span></div>
+      <div
+        class="flex flex-col sm:flex-row items-center justify-between gap-3 font-mono text-[11px] sm:text-[12px] text-slate-500 text-center sm:text-left">
+        <span>&copy; 2026 <strong>vexaPOS</strong> • Extensia Creative Bali. <span class="lang-id">Dirancang dan
+            dikembangkan di Bali.</span><span class="lang-en">Designed and engineered in Bali.</span></span><span
+          class="flex items-center gap-3"><a href="/" class="font-semibold text-slate-700 py-1"><span
+              class="lang-id">Beranda Extensia</span><span class="lang-en">Extensia Home</span></a><span
+            aria-hidden="true">•</span><a href="https://wa.me/6285338000872" target="_blank" rel="noopener"
+            class="font-semibold text-slate-700 py-1">WhatsApp</a></span></div>
     </footer>
   </div>
 </body>
+
 </html>
