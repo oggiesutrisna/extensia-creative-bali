@@ -1423,8 +1423,162 @@
           class="flex items-center gap-3"><a href="/" class="font-semibold text-slate-700 py-1"><span
               class="lang-id">Beranda Extensia</span><span class="lang-en">Extensia Home</span></a><span
             aria-hidden="true">•</span><a href="https://wa.me/6285338000872" target="_blank" rel="noopener"
-            class="font-semibold text-slate-700 py-1">WhatsApp</a></span></div>
+            class="font-semibold text-slate-700 py-1">WhatsApp</a><span
+            aria-hidden="true">•</span><button type="button" data-open-legal-modal class="font-semibold text-slate-700 hover:text-amber-700 py-1 cursor-pointer"><span class="lang-id">Privasi &amp; Ketentuan</span><span class="lang-en">Privacy &amp; Terms</span></button></span></div>
     </footer>
+  </div>
+
+  <!-- ================= COOKIE CONSENT BANNER (ANTISLOP CRAFTED) ================= -->
+  <aside id="cookie-consent-banner" aria-label="Preferensi Cookie &amp; Privasi"
+    class="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-6 sm:max-w-md z-50 transition-all duration-300 transform translate-y-full opacity-0 pointer-events-none"
+    style="display: none;">
+    <div
+      class="bg-white border-2 border-slate-900 rounded-2xl p-5 shadow-[5px_5px_0px_0px_#0f172a] flex flex-col gap-3.5 text-slate-900">
+      <div class="flex items-start justify-between gap-3">
+        <div class="flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-amber-500 shrink-0" aria-hidden="true"></span>
+          <h3 class="font-bold text-sm tracking-tight text-slate-900">
+            <span class="lang-id">Preferensi Cookie &amp; Privasi</span>
+            <span class="lang-en">Cookie &amp; Privacy Preferences</span>
+          </h3>
+        </div>
+        <button type="button" data-open-legal-modal
+          class="text-xs text-slate-500 hover:text-slate-900 underline underline-offset-2 transition-colors cursor-pointer py-0.5">
+          <span class="lang-id">Kebijakan</span>
+          <span class="lang-en">Policy</span>
+        </button>
+      </div>
+      <p class="text-xs text-slate-600 leading-relaxed">
+        <span class="lang-id">Kami menggunakan cookie penting untuk menyimpan preferensi bahasa dan navigasi, serta analitik anonim untuk memantau performa tanpa melacak data pribadi Anda.</span>
+        <span class="lang-en">We use essential cookies for language and navigation settings, plus anonymous analytics to monitor performance without tracking personal identity.</span>
+      </p>
+      <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 pt-1">
+        <button type="button" id="cookie-accept-all"
+          class="flex-1 min-h-[44px] px-4 py-2.5 bg-slate-900 hover:bg-slate-800 text-white rounded-xl text-xs font-bold transition-all shadow-xs cursor-pointer text-center">
+          <span class="lang-id">Terima Semua</span>
+          <span class="lang-en">Accept All</span>
+        </button>
+        <button type="button" id="cookie-decline"
+          class="flex-1 min-h-[44px] px-4 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 rounded-xl text-xs font-semibold transition-all cursor-pointer text-center">
+          <span class="lang-id">Tolak Non-Esensial</span>
+          <span class="lang-en">Decline Non-Essential</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ================= LEGAL PRIVACY & TERMS MODAL ================= -->
+  <div id="legal-privacy-modal" role="dialog" aria-modal="true" aria-labelledby="legal-modal-title"
+    class="hidden fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 overflow-y-auto" aria-hidden="true">
+    <!-- Backdrop overlay -->
+    <div data-modal-backdrop class="fixed inset-0 bg-slate-950/60 transition-opacity backdrop-blur-xs"></div>
+
+    <!-- Modal Dialog Window -->
+    <div
+      class="relative w-full max-w-2xl bg-white border-2 border-slate-900 rounded-2xl sm:rounded-3xl shadow-[8px_8px_0px_0px_#0f172a] flex flex-col max-h-[90vh] z-10 overflow-hidden text-slate-900">
+      <!-- Modal Header -->
+      <div class="px-5 sm:px-7 py-4 sm:py-5 border-b border-slate-200 flex items-center justify-between gap-3 bg-slate-50/80">
+        <div class="flex flex-col">
+          <h2 id="legal-modal-title" class="font-extrabold text-base sm:text-lg text-slate-900 tracking-tight">
+            <span class="lang-id">Kebijakan Privasi &amp; Ketentuan Layanan</span>
+            <span class="lang-en">Privacy Policy &amp; Terms of Service</span>
+          </h2>
+          <span class="text-[11px] font-mono text-slate-500">VexaPOS &bull; Extensia Creative Bali &bull; Berlaku sejak 2026</span>
+        </div>
+        <button type="button" data-close-legal-modal aria-label="Tutup / Close modal"
+          class="min-w-[44px] min-h-[44px] flex items-center justify-center rounded-xl bg-white hover:bg-slate-200 border border-slate-200 text-slate-700 hover:text-slate-950 transition-all cursor-pointer">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Modal Body (Scrollable) -->
+      <div class="px-5 sm:px-7 py-5 sm:py-6 overflow-y-auto space-y-6 text-xs sm:text-sm text-slate-600 leading-relaxed divide-y divide-slate-100">
+        <!-- Section 1: Cookie Policy -->
+        <section class="space-y-2.5 pt-0">
+          <h3 class="font-bold text-sm sm:text-base text-slate-900 flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-amber-500" aria-hidden="true"></span>
+            <span class="lang-id">1. Penggunaan Cookie &amp; Penyimpanan Lokal</span>
+            <span class="lang-en">1. Cookie Usage &amp; Local Storage</span>
+          </h3>
+          <p>
+            <span class="lang-id">Website ini menggunakan teknologi penyimpanan data browser untuk meningkatkan pengalaman Anda:</span>
+            <span class="lang-en">This website uses browser storage technologies to improve your experience:</span>
+          </p>
+          <ul class="list-disc pl-5 space-y-1.5 text-slate-600">
+            <li>
+              <strong><span class="lang-id">Cookie Esensial:</span><span class="lang-en">Essential Cookies:</span></strong>
+              <span class="lang-id">Menyimpan preferensi bahasa (ID/EN) dan status persetujuan banner ini di <code>localStorage</code> agar tidak muncul berulang kali.</span>
+              <span class="lang-en">Stores language preferences (ID/EN) and consent status in <code>localStorage</code> to remember your settings.</span>
+            </li>
+            <li>
+              <strong><span class="lang-id">Analitik Terukur Anonim:</span><span class="lang-en">Anonymous Analytics:</span></strong>
+              <span class="lang-id">Jika diizinkan, kami mengumpulkan metrik performa halaman dan kecepatan muat tanpa mengidentifikasi alamat IP pribadi Anda.</span>
+              <span class="lang-en">If permitted, we collect page performance and load speed metrics without identifying personal IP addresses.</span>
+            </li>
+            <li>
+              <strong><span class="lang-id">Cache Offline VexaPOS:</span><span class="lang-en">VexaPOS Offline Cache:</span></strong>
+              <span class="lang-id">Aplikasi VexaPOS menyimpan katalog menu dan transaksi sementara di <code>IndexedDB</code> perangkat kasir saat koneksi internet terputus, dan disinkronkan langsung saat online.</span>
+              <span class="lang-en">The VexaPOS app caches menus and transactions locally in <code>IndexedDB</code> when internet drops, syncing automatically when back online.</span>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Section 2: Data Protection & Privacy -->
+        <section class="space-y-2.5 pt-6">
+          <h3 class="font-bold text-sm sm:text-base text-slate-900 flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-emerald-500" aria-hidden="true"></span>
+            <span class="lang-id">2. Perlindungan Data &amp; Privasi Klien</span>
+            <span class="lang-en">2. Data Protection &amp; Client Privacy</span>
+          </h3>
+          <p>
+            <span class="lang-id">Kami memegang prinsip integritas tinggi dalam operasional kasir F&amp;B di Bali:</span>
+            <span class="lang-en">We maintain strict operational integrity for F&amp;B businesses in Bali:</span>
+          </p>
+          <ul class="list-disc pl-5 space-y-1.5 text-slate-600">
+            <li><span class="lang-id">Kami tidak pernah menjual, menyewakan, atau memperdagangkan data omzet atau resep Anda kepada pihak ketiga mana pun.</span><span class="lang-en">We never sell, rent, or trade your sales figures or recipes to any third parties.</span></li>
+            <li><span class="lang-id">Nomor kontak pemesanan demo on-site hanya digunakan tim teknis untuk koordinasi audit perangkat kasir Anda.</span><span class="lang-en">Demo contact numbers are used exclusively by tech staff to coordinate on-site device audits.</span></li>
+            <li><span class="lang-id">Pemilik outlet memiliki hak penuh untuk mengekspor seluruh transaksi, struk, dan laporan laba ke Excel &amp; PDF kapan pun.</span><span class="lang-en">Outlet owners hold full rights to export all transaction receipts and profit reports to Excel &amp; PDF anytime.</span></li>
+          </ul>
+        </section>
+
+        <!-- Section 3: Terms of Service & POS SLA -->
+        <section class="space-y-2.5 pt-6">
+          <h3 class="font-bold text-sm sm:text-base text-slate-900 flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-blue-500" aria-hidden="true"></span>
+            <span class="lang-id">3. Ketentuan Layanan Kasir &amp; Kompatibilitas</span>
+            <span class="lang-en">3. POS Terms of Service &amp; Hardware</span>
+          </h3>
+          <p>
+            <span class="lang-id">Standar layanan VexaPOS untuk operasional bisnis restoran dan kafe:</span>
+            <span class="lang-en">VexaPOS service standards for restaurant and cafe operations:</span>
+          </p>
+          <ul class="list-disc pl-5 space-y-1.5 text-slate-600">
+            <li>
+              <strong><span class="lang-id">Kompatibilitas Bebas (Zero Hardware Lock):</span><span class="lang-en">Zero Hardware Lock:</span></strong>
+              <span class="lang-id">Anda bebas menggunakan tablet Android/iPad dan printer thermal standar yang sudah dimiliki tanpa paksaan beli hardware khusus.</span>
+              <span class="lang-en">You are free to use your existing Android/iPad tablets and standard thermal printers without forced hardware purchases.</span>
+            </li>
+            <li>
+              <strong><span class="lang-id">SLA Dukungan Darurat 24 Jam:</span><span class="lang-en">24/7 Emergency Support:</span></strong>
+              <span class="lang-id">Bantuan teknis darurat saat jam sibuk (peak rush) tersedia 24 jam via WhatsApp resmi <code>+62 853-3800-0872</code>.</span>
+              <span class="lang-en">Emergency technical support during peak rushes is available 24/7 via official WhatsApp at <code>+62 853-3800-0872</code>.</span>
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="px-5 sm:px-7 py-3.5 sm:py-4 bg-slate-50 border-t border-slate-200 flex items-center justify-between gap-3">
+        <span class="text-[11px] font-mono text-slate-400">DPS-01 SLA Standard</span>
+        <button type="button" data-close-legal-modal
+          class="min-h-[44px] px-6 py-2.5 bg-slate-900 hover:bg-slate-800 text-white rounded-xl text-xs font-bold transition-all cursor-pointer">
+          <span class="lang-id">Saya Mengerti</span>
+          <span class="lang-en">Understood</span>
+        </button>
+      </div>
+    </div>
   </div>
 </body>
 

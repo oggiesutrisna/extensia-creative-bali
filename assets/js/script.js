@@ -522,9 +522,120 @@ document.addEventListener("DOMContentLoaded", () => {
     // Default to offline demonstration
     updateState(true);
   };
+  // --- Cookie Consent Banner & Storage ---
+  const initCookieConsent = () => {
+    const banner = document.getElementById("cookie-consent-banner");
+    if (!banner) return;
+
+    const btnAccept = document.getElementById("cookie-accept-all");
+    const btnDecline = document.getElementById("cookie-decline");
+    const consentKey = "extensia_cookie_consent";
+
+    let consentValue = null;
+    try {
+      consentValue = localStorage.getItem(consentKey);
+    } catch {}
+
+    const hideBanner = () => {
+      banner.classList.add("translate-y-full", "opacity-0", "pointer-events-none");
+      banner.setAttribute("aria-hidden", "true");
+      setTimeout(() => {
+        banner.style.display = "none";
+      }, 350);
+    };
+
+    const showBanner = () => {
+      banner.style.display = "block";
+      // Force reflow
+      void banner.offsetWidth;
+      banner.classList.remove("translate-y-full", "opacity-0", "pointer-events-none");
+      banner.removeAttribute("aria-hidden");
+    };
+
+    if (!consentValue) {
+      // 1.2s delay for seamless initial page view
+      setTimeout(showBanner, 1200);
+    }
+
+    if (btnAccept) {
+      btnAccept.addEventListener("click", () => {
+        try {
+          localStorage.setItem(consentKey, "accepted");
+        } catch {}
+        hideBanner();
+        document.dispatchEvent(new CustomEvent("extensia:cookie-consent", { detail: { consent: "accepted" } }));
+      });
+    }
+
+    if (btnDecline) {
+      btnDecline.addEventListener("click", () => {
+        try {
+          localStorage.setItem(consentKey, "declined");
+        } catch {}
+        hideBanner();
+        document.dispatchEvent(new CustomEvent("extensia:cookie-consent", { detail: { consent: "declined" } }));
+      });
+    }
+  };
+
+  // --- Legal Privacy Policy & Terms Modal ---
+  const initLegalModal = () => {
+    const modal = document.getElementById("legal-privacy-modal");
+    if (!modal) return;
+
+    const triggers = document.querySelectorAll("[data-open-legal-modal]");
+    const closeButtons = modal.querySelectorAll("[data-close-legal-modal]");
+    const backdrop = modal.querySelector("[data-modal-backdrop]");
+    let previousActiveElement = null;
+
+    const openModal = () => {
+      previousActiveElement = document.activeElement;
+      modal.classList.remove("hidden");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+
+      const closeBtn = modal.querySelector("[data-close-legal-modal]");
+      if (closeBtn) {
+        setTimeout(() => closeBtn.focus(), 50);
+      }
+    };
+
+    const closeModal = () => {
+      modal.classList.add("hidden");
+      modal.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+
+      if (previousActiveElement && typeof previousActiveElement.focus === "function") {
+        previousActiveElement.focus();
+      }
+    };
+
+    triggers.forEach((trigger) => {
+      trigger.addEventListener("click", (e) => {
+        e.preventDefault();
+        openModal();
+      });
+    });
+
+    closeButtons.forEach((btn) => {
+      btn.addEventListener("click", closeModal);
+    });
+
+    if (backdrop) {
+      backdrop.addEventListener("click", closeModal);
+    }
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+        closeModal();
+      }
+    });
+  };
 
   initVexaFaq();
   initVexaBillCalc();
   initMobileNav();
   initVexaSimulator();
+  initCookieConsent();
+  initLegalModal();
 });
