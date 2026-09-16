@@ -109,11 +109,20 @@ module.exports = {
           "0%, 100%": { translate: "0 0" },
           "50%": { translate: "-4px -6px" },
         },
+        "promo-glow": {
+          "0%, 100%": {
+            boxShadow: "0 0 15px 2px rgba(239,68,68,0.25), 0 0 30px 4px rgba(239,68,68,0.10)",
+          },
+          "50%": {
+            boxShadow: "0 0 25px 6px rgba(239,68,68,0.40), 0 0 50px 12px rgba(245,158,11,0.15)",
+          },
+        },
       },
       animation: {
         "float-slow": "floatSlow 4s ease-in-out infinite",
         "float-delayed": "floatDelayed 4.8s ease-in-out infinite 0.8s",
         "float-reverse": "floatReverse 5.2s ease-in-out infinite 0.4s",
+        "promo-glow": "promo-glow 2.5s ease-in-out infinite",
       },
     },
   },
