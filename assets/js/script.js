@@ -276,27 +276,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // --- vexaPOS: FAQ Accordion (single-open, scoped, additive only) ---
   const initVexaFaq = () => {
-    const list = document.getElementById("vexa-faq-list") || document.getElementById("zivo-faq-list");
-    if (!list) return;
-    const items = list.querySelectorAll(".faq-item");
-    if (!items || items.length === 0) return;
+    document.querySelectorAll("#vexa-faq-list, #zivo-faq-list, #extensia-faq-list").forEach((list) => {
+      const items = list.querySelectorAll(".faq-item");
+      items.forEach((item) => {
+        const trigger = item.querySelector(".faq-trigger");
+        const panel = item.querySelector(".faq-collapse");
+        if (!trigger || !panel) return;
 
-    items.forEach((item) => {
-      const trigger = item.querySelector(".faq-trigger");
-      const panel = item.querySelector(".faq-collapse");
-      if (!trigger || !panel) return;
-
-      trigger.addEventListener("click", () => {
-        const isOpen = item.classList.contains("active");
-        items.forEach((other) => {
-          if (other !== item && other.classList.contains("active")) {
-            other.classList.remove("active");
-            const otherTrigger = other.querySelector(".faq-trigger");
-            if (otherTrigger) otherTrigger.setAttribute("aria-expanded", "false");
-          }
+        trigger.addEventListener("click", () => {
+          const isOpen = item.classList.contains("active");
+          items.forEach((other) => {
+            if (other !== item && other.classList.contains("active")) {
+              other.classList.remove("active");
+              const otherTrigger = other.querySelector(".faq-trigger");
+              if (otherTrigger) otherTrigger.setAttribute("aria-expanded", "false");
+            }
+          });
+          item.classList.toggle("active", !isOpen);
+          trigger.setAttribute("aria-expanded", String(!isOpen));
         });
-        item.classList.toggle("active", !isOpen);
-        trigger.setAttribute("aria-expanded", String(!isOpen));
       });
     });
   };
