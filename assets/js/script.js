@@ -1,5 +1,5 @@
 /**
- * Extensia Creative Bali — Main Script & Tailwind Configuration (CDN fallback only)
+ * Timehouse Creative Bali: Main Script & Tailwind Configuration (CDN fallback only)
  * Production uses assets/css/compiled.css. This config is ignored when CDN is removed.
  */
 
@@ -231,7 +231,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const setLanguage = (lang) => {
       document.documentElement.lang = lang;
       try {
-        localStorage.setItem("extensia_lang", lang);
+        localStorage.setItem("timehouse_lang", lang);
         localStorage.setItem("vexapos_preferred_lang", lang);
       } catch {}
 
@@ -264,6 +264,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let initialLanguage = document.documentElement.lang === "en" ? "en" : "id";
     try {
       const savedLang =
+        localStorage.getItem("timehouse_lang") ||
         localStorage.getItem("extensia_lang") ||
         localStorage.getItem("vexapos_preferred_lang") ||
         localStorage.getItem("zivopos_preferred_lang");
@@ -276,7 +277,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // --- vexaPOS: FAQ Accordion (single-open, scoped, additive only) ---
   const initVexaFaq = () => {
-    document.querySelectorAll("#vexa-faq-list, #zivo-faq-list, #extensia-faq-list").forEach((list) => {
+    document.querySelectorAll("#vexa-faq-list, #zivo-faq-list, #timehouse-faq-list").forEach((list) => {
       const items = list.querySelectorAll(".faq-item");
       items.forEach((item) => {
         const trigger = item.querySelector(".faq-trigger");
@@ -527,11 +528,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const btnAccept = document.getElementById("cookie-accept-all");
     const btnDecline = document.getElementById("cookie-decline");
-    const consentKey = "extensia_cookie_consent";
+    const consentKey = "timehouse_cookie_consent";
 
     let consentValue = null;
     try {
-      consentValue = localStorage.getItem(consentKey);
+      consentValue = localStorage.getItem(consentKey) || localStorage.getItem("extensia_cookie_consent");
     } catch {}
 
     const hideBanner = () => {
@@ -561,7 +562,7 @@ document.addEventListener("DOMContentLoaded", () => {
           localStorage.setItem(consentKey, "accepted");
         } catch {}
         hideBanner();
-        document.dispatchEvent(new CustomEvent("extensia:cookie-consent", { detail: { consent: "accepted" } }));
+        document.dispatchEvent(new CustomEvent("timehouse:cookie-consent", { detail: { consent: "accepted" } }));
       });
     }
 
@@ -571,7 +572,7 @@ document.addEventListener("DOMContentLoaded", () => {
           localStorage.setItem(consentKey, "declined");
         } catch {}
         hideBanner();
-        document.dispatchEvent(new CustomEvent("extensia:cookie-consent", { detail: { consent: "declined" } }));
+        document.dispatchEvent(new CustomEvent("timehouse:cookie-consent", { detail: { consent: "declined" } }));
       });
     }
   };

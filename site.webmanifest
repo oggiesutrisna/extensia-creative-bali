@@ -1,14 +1,14 @@
 {
-  "name": "Extensia Creative Bali",
-  "short_name": "Extensia Bali",
-  "description": "Studio Pengembangan Aplikasi & Software Kustom di Bali — Laravel, TanStack, Python.",
+  "name": "Timehouse Creative Bali",
+  "short_name": "Timehouse Bali",
+  "description": "Studio Pengembangan Aplikasi & Software Kustom di Bali: Laravel, TanStack, Python.",
   "id": "https://www.extensiacreativebali.my.id/",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#FFF9D5",
-  "theme_color": "#FFF9D5",
+  "background_color": "#FFFFFF",
+  "theme_color": "#FFFFFF",
   "lang": "id",
   "icons": [
     {

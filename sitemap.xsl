@@ -7,7 +7,7 @@
   <xsl:template match="/">
     <html xmlns="http://www.w3.org/1999/xhtml" lang="id">
       <head>
-        <title>XML Sitemap — Extensia Creative Bali</title>
+        <title>XML Sitemap: Timehouse Creative Bali</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <style type="text/css">
@@ -173,11 +173,11 @@
       <body>
         <div class="container">
           <div class="header">
-            <div class="brand-badge">Extensia Creative Bali</div>
+            <div class="brand-badge">Timehouse Creative Bali</div>
             <h1>XML Sitemap Index</h1>
             <p class="subtitle">
               Peta situs XML resmi untuk mesin pencari seperti Google, Bing, dan Yandex.
-              Dikelola oleh <a href="https://www.extensiacreativebali.my.id/">Extensia Creative Bali</a>.
+              Dikelola oleh <a href="https://www.extensiacreativebali.my.id/">Timehouse Creative Bali</a>.
             </p>
           </div>
           <div class="stats-bar">
@@ -228,7 +228,7 @@
             </table>
           </div>
           <div class="footer">
-            <div>Extensia Creative Bali — Studio Aplikasi Kustom &amp; Software House Bali</div>
+            <div>Timehouse Creative Bali: Studio Aplikasi Kustom &amp; Software House Bali</div>
             <div><a href="https://www.extensiacreativebali.my.id/">Kembali ke Beranda &#8594;</a></div>
           </div>
         </div>

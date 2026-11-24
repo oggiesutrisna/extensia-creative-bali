@@ -1,8 +1,8 @@
-# Extensia Creative Bali
+# Timehouse Creative Bali
 
 > Studio Pengembangan Aplikasi & Software Kustom Berbasis di Bali (Canggu & Denpasar).
 
-Landing page resmi **Extensia Creative Bali** dengan gaya desain **Neubrutalism Bali Tech** dan halaman produk khusus untuk **vexaPOS** (Sistem Point of Sale & Inventaris Cloud Multi-Outlet).
+Landing page resmi **Timehouse Creative Bali** dengan gaya desain **Neubrutalism Bali Tech** dan halaman produk khusus untuk **vexaPOS** (Sistem Point of Sale & Inventaris Cloud Multi-Outlet).
 
 ---
 
@@ -40,7 +40,7 @@ extensia-creative-bali/
 │       ├── frangipani.webp                      # Ornamen bunga jepun (unreferenced, opsional)
 │       └── logo.svg / hero-mockup.svg / og-preview.svg
 │
-├── index.html                                   # Landing page utama Extensia Creative Bali
+├── index.html                                   # Landing page utama Timehouse Creative Bali
 ├── vexapos.html                                 # Halaman produk & showcase klien vexaPOS
 ├── vercel.json                                  # Clean URLs, cache & security headers
 ├── robots.txt / sitemap.xml / site.webmanifest
@@ -65,4 +65,4 @@ Proyek ini adalah static site modern yang siap di-deploy langsung ke Vercel:
 
 ---
 
-&copy; 2026 **Extensia Creative Bali**. All rights reserved.
+&copy; 2026 **Timehouse Creative Bali**. All rights reserved.
