@@ -13,7 +13,9 @@
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="author" content="Timehouse Creative Bali" />
-  <meta name="theme-color" content="#FFFFFF" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
   <meta name="geo.region" content="ID-BA" />
   <meta name="geo.placename" content="Canggu, Badung, Denpasar, Bali, Indonesia" />
   <meta name="geo.position" content="-8.6481;115.1385" />
@@ -228,7 +230,26 @@
   }
   </script>
 
+  <!-- Typography Fonts (Bebas Neue + Plus Jakarta Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Plus+Jakarta+Sans:wght@700&amp;display=swap" />
+
   <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #ffffff;
+      --fg: #000000;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #000000;
+        --fg: #ffffff;
+      }
+    }
+
     *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
@@ -236,15 +257,15 @@
     }
 
     html, body {
-      background-color: #ffffff;
-      color: #000000;
+      background-color: var(--bg);
+      color: var(--fg);
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
 
     ::selection {
-      background-color: #000000;
-      color: #ffffff;
+      background-color: var(--fg);
+      color: var(--bg);
     }
 
     main {
@@ -256,28 +277,30 @@
       justify-content: center;
       text-align: center;
       padding: clamp(24px, 6vw, 48px);
-      gap: clamp(12px, 2vw, 24px);
+      gap: clamp(10px, 2vw, 24px);
     }
 
     h1 {
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-weight: 900;
-      font-size: clamp(2.35rem, 11.2vw, 9.5rem);
-      line-height: 0.92;
-      letter-spacing: -0.04em;
-      color: #000000;
+      font-family: "Bebas Neue", "Impact", "Arial Narrow", sans-serif;
+      font-weight: 400;
+      font-size: clamp(4.25rem, 17vw, 15rem);
+      line-height: 0.9;
+      letter-spacing: 0.035em;
+      color: var(--fg);
+      -webkit-text-stroke: 0.035em var(--fg);
+      paint-order: stroke fill;
       text-transform: uppercase;
       max-width: 100%;
       overflow-wrap: break-word;
     }
 
     p {
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       font-weight: 700;
-      font-size: clamp(0.95rem, 1.9vw, 1.5rem);
+      font-size: clamp(1rem, 2.2vw, 1.875rem);
       line-height: 1.35;
       letter-spacing: 0.16em;
-      color: #000000;
+      color: var(--fg);
       text-transform: uppercase;
     }
   </style>

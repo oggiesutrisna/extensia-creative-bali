@@ -9,9 +9,9 @@ Repositori ini berisi halaman utama minimalis **TIMEHOUSE** (`index.html`) serta
 ## Halaman Utama & Produk
 
 ### 1. Halaman Utama Minimalis (`index.html`)
-- **Tampilan Layar Tunggal**: Menampilkan judul **TIMEHOUSE** dan subjudul **COMING SOON** tepat di tengah layar (`min-height: 100dvh`) dengan latar putih solid (`#FFFFFF`) dan teks hitam (`#000000`, rasio kontras `21:1`).
-- **Tipografi Swiss Helvetica**: Menggunakan `"Helvetica Neue", Helvetica, Arial, sans-serif` (`font-weight: 900` untuk judul dan `font-weight: 700` untuk subjudul) dengan skala fluid `clamp()` agar tetap satu baris dan terbaca dari `320px` hingga layar desktop.
-- **Mandiri & Tanpa Dependensi Eksternal**: Seluruh gaya ditulis inline (`0 KB` JavaScript dan nol request CSS/font eksternal).
+- **Tampilan Layar Tunggal & Adaptif Light/Dark**: Menampilkan judul **TIMEHOUSE** dan subjudul **COMING SOON** tepat di tengah layar (`min-height: 100dvh`), otomatis mengikuti tema browser/perangkat melalui `prefers-color-scheme` (latar `#FFFFFF` dengan teks `#000000` pada light mode, atau latar `#000000` dengan teks `#FFFFFF` pada dark mode; rasio kontras `21:1` di kedua mode).
+- **Tipografi Display**: Menggunakan **Bebas Neue** (skala besar & tebal) untuk judul **TIMEHOUSE** dan **Plus Jakarta Sans** (`700`) untuk subjudul **COMING SOON** melalui Google Fonts, dengan skala fluid `clamp()` agar tetap satu baris dari `320px` hingga layar desktop.
+- **Ringan & Inline CSS**: Seluruh tata letak memakai CSS inline tanpa skrip JS (`0 KB` JavaScript) dan tanpa stylesheet Tailwind.
 - **Metadata SEO**: Dilengkapi `<title>`, `meta description`, `canonical`, tag `geo.*`, Open Graph (`1200x630`), Twitter Card, dan JSON-LD (`ProfessionalService` / `LocalBusiness`, `SoftwareApplication`, `WebSite`, serta `WebPage`).
 
 ### 2. Halaman Produk VexaPOS (`vexapos.html`)
